@@ -31,7 +31,11 @@ const config: Config = {
         600: '#707070'
       }
     },
-    extend: {}
+    extend: {
+      fontFamily: {
+        kern: ['var(--font-kern)']
+      }
+    }
   },
   plugins: []
 }

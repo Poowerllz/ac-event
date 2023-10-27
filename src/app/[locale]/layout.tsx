@@ -1,11 +1,9 @@
+import { kern } from '@/common/utils/fonts'
 import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
 import { notFound } from 'next/navigation'
 import './globals.css'
 
 const locales = ['pt-br', 'en']
-
-const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
   title: 'Create Next App',
@@ -23,8 +21,8 @@ export default function LocaleLayout({
   if (!isValidLocale) notFound()
 
   return (
-    <html lang={locale}>
-      <body className={inter.className}>{children}</body>
+    <html lang={locale} className={kern.className}>
+      <body>{children}</body>
     </html>
   )
 }
