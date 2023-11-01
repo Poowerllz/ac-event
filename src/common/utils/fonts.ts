@@ -53,16 +53,6 @@ export const kern = localFont({
       style: 'italic'
     },
     {
-      path: '../../../public/fonts/standard/kern-standard-black.woff2',
-      weight: '900',
-      style: 'normal'
-    },
-    {
-      path: '../../../public/fonts/standard/kern-standard-black-italic.woff2',
-      weight: '900',
-      style: 'italic'
-    },
-    {
       path: '../../../public/fonts/compressed/kern-compressed-thin.woff2',
       weight: '100',
       style: 'normal'
