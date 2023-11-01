@@ -1,7 +1,7 @@
 version: '3.8'
 services:
   app:
-    image: anacouto-website
+    image: website-ac
     container_name: 'anacouto-website'
     build:
       dockerfile: Dockerfile
