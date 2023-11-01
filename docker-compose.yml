@@ -1,11 +1,12 @@
-version: "3.8"
+version: '3.8'
 services:
   app:
     image: anacouto-website
+    container_name: 'anacouto-website'
     build:
       dockerfile: Dockerfile
     ports:
-      - "3000:3000"
+      - '3000:3000'
     networks:
       - nginx_proxy
 
