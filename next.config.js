@@ -3,7 +3,7 @@
 const withNextIntl = require('next-intl/plugin')('./src/i18n.ts')
 
 const nextConfig = {
-    output: "standalone",
+  output: 'standalone'
 }
 
 module.exports = withNextIntl(nextConfig)
