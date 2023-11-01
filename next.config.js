@@ -2,6 +2,8 @@
 
 const withNextIntl = require('next-intl/plugin')('./src/i18n.ts')
 
-const nextConfig = {}
+const nextConfig = {
+  output: 'standalone'
+}
 
 module.exports = withNextIntl(nextConfig)
