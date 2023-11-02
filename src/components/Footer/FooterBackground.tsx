@@ -11,15 +11,27 @@ import { usePathname } from 'next/navigation'
 import { useEffect, useState } from 'react'
 import { PageBackgroundsProps } from './footer'
 
-const pageBackgrounds: PageBackgroundsProps = {
+const pageBackgroundsPtBr: PageBackgroundsProps = {
   '/': BgHome,
   '/quem-somos': BgWhoWeAre,
   '/o-que-fazemos': BgWhatWeDo,
   '/case-internal': BgCaseInternal
 }
 
+const pageBackgroundsEn: PageBackgroundsProps = {
+  '/en': BgHome,
+  '/en/quem-somos': BgWhoWeAre,
+  '/en/o-que-fazemos': BgWhatWeDo,
+  '/en/case-internal': BgCaseInternal
+}
+
 export function FooterBackground() {
   const pathname = usePathname()
+
+  const pageBackgrounds = pathname.startsWith('/en')
+    ? pageBackgroundsEn
+    : pageBackgroundsPtBr
+
   const [background, setBackground] = useState<StaticImageData | string>(
     pageBackgrounds[pathname]
   )
