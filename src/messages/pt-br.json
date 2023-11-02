@@ -23,7 +23,49 @@
       "title": "Time Executivo"
     }
   },
-  "WhatWeDo": {},
+  "WhatWeDo": {
+    "firstSection": {
+      "title": "Lorem ipsum em design gráfico e editoração é um texto padrão.",
+      "subtitle": "Desenvolvemos Estratégias de Marca e Publicidade para criar um alinhamento perfeito entre Marca, Negócio, Comunicação e Cultura."
+    },
+    "secondSection": {
+      "title": "É FAZ Comunicação",
+      "span": "Metodologia",
+      "subtitle": "Do estratégico ao tático. Do tático ao operacional. Nossa oferta de serviços é construída a partir de uma metodologia proprietária baseada em três pilares estratégicos."
+    },
+    "thirdSection": {
+      "span": "Especialidades",
+      "links": {
+        "firstItem": {
+          "title": "Marca",
+          "subtitle": "Example"
+        },
+        "secondItem": {
+          "title": "Negócio",
+          "subtitle": "Example"
+        },
+        "thirdItem": {
+          "title": "Comunicação",
+          "subtitle": "Planejamento, Mídia, Criação, Produção, Social."
+        },
+        "fourthItem": {
+          "title": "Cultura",
+          "subtitle": "Example"
+        },
+        "fifthItem": {
+          "title": "Inovação",
+          "subtitle": "Example"
+        },
+        "sixItem": {
+          "title": "Valometry",
+          "subtitle": "Example"
+        }
+      }
+    },
+    "fourthSection": {
+      "title": "Time Executivo"
+    }
+  },
   "Components": {
     "Footer": {
       "title": {

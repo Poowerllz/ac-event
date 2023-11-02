@@ -23,7 +23,49 @@
       "title": "Executive Team"
     }
   },
-  "WhatWeDo": {},
+  "WhatWeDo": {
+    "firstSection": {
+      "title": "Lorem ipsum in graphic design and publishing is standard text.",
+      "subtitle": "We develop Brand and Advertising Strategies to create a perfect alignment between Brand, Business, Communication and Culture."
+    },
+    "secondSection": {
+      "title": "É FAZ Comunicação",
+      "span": "Methodology",
+      "subtitle": "From strategic to tactical. From tactical to operational. Our service offering is built on a proprietary methodology based on three strategic pillars."
+    },
+    "thirdSection": {
+      "span": "Specialties",
+      "links": {
+        "firstItem": {
+          "title": "Brand",
+          "subtitle": "Example"
+        },
+        "secondItem": {
+          "title": "Business",
+          "subtitle": "Example"
+        },
+        "thirdItem": {
+          "title": "Communication",
+          "subtitle": "Planning, Media, Creation, Production, Social."
+        },
+        "fourthItem": {
+          "title": "Culture",
+          "subtitle": "Example"
+        },
+        "fifthItem": {
+          "title": "Innovation",
+          "subtitle": "Example"
+        },
+        "sixItem": {
+          "title": "Valometry",
+          "subtitle": "Example"
+        }
+      }
+    },
+    "fourthSection": {
+      "title": "Executive Team"
+    }
+  },
   "Components": {
     "Footer": {
       "title": {
