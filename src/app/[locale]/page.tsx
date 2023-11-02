@@ -1,10 +1,12 @@
 // 'use client'
 import { useTranslations } from 'next-intl'
 import Image from 'next/image'
-import { FaBars } from 'react-icons/fa'
-import MenuButton from './TailwindButton'
 import { Message } from './Message'
 import Header from './Header'
+import React from 'react'
+import { Grid, Autoplay, Navigation, Pagination } from 'swiper/modules'
+import { Swiper, SwiperSlide } from 'swiper/react'
+import { SwiperClient } from './Swiper'
 
 export default function Home() {
   const t = useTranslations('Home')
@@ -100,6 +102,14 @@ export default function Home() {
           />
         </div>
       </div>
+      <Message
+        title={
+          'Há três décadas construimos marcas que geram valor para o mundo'
+        }
+        subTitle={'Quem somos'}
+      />
+
+      <SwiperClient />
     </main>
   )
 }

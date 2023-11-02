@@ -1,4 +1,3 @@
-// 'use client'
 import { useTranslations } from 'next-intl'
 import Image from 'next/image'
 import { FaBars } from 'react-icons/fa'
@@ -8,8 +7,8 @@ export default function Header() {
   const t = useTranslations('Home')
 
   return (
-    <main
-      className="block h-screen w-full flex-col justify-between p-20 font-kern font-bold"
+    <div
+      className="flex h-screen w-full flex-col justify-between p-20 font-kern font-bold"
       style={{ background: '#FF4917' }}
     >
       {/* <h1>{t('title')}</h1> */}
@@ -22,24 +21,25 @@ export default function Header() {
         />
         <MenuButton />
       </div>
-      <div className="grid h-full grid-cols-3">
-        <div className="col-rows-1 flex w-28 items-end">
-          <p className="text-white text-6xl">É FAZ FALA</p>
+
+      <div className="flex items-end justify-between">
+        <div className=" flex w-28 items-end">
+          <p className="text-6xl text-white">É FAZ FALA</p>
         </div>
 
-        <div className="col-rows-2 flex items-end justify-center">
-          <Image
-            src={'/images/sua-imagem.png'}
-            alt={'Imagem'}
-            width={200}
-            height={200}
-          />
+        <div className="flex items-center justify-center">
+          <div className="circle">
+            <video controls width="100%" height="100%">
+              <source src="seu-video.mp4" type="video/mp4" />
+              Seu navegador não suporta vídeo HTML5.
+            </video>
+          </div>
         </div>
 
-        <div className="col-rows-1 flex items-end justify-end">
-          <FaBars size={24} />
+        <div className="flex items-end justify-end">
+          <Image src={'/arrowdown.svg'} alt={'Imagem'} width={22} height={50} />
         </div>
       </div>
-    </main>
+    </div>
   )
 }

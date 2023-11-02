@@ -25,3 +25,18 @@ body {
     )
     rgb(var(--background-start-rgb));
 }
+
+.circle {
+  width: 773px;
+  height: 773px;
+  border-radius: 50%;
+  background: transparent;
+  overflow: hidden;
+  position: relative;
+}
+
+.circle video {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}

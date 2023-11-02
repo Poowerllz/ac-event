@@ -3,6 +3,10 @@ import type { Metadata } from 'next'
 import { notFound } from 'next/navigation'
 import './globals.css'
 
+import 'swiper/css'
+import 'swiper/css/navigation'
+import 'swiper/css/pagination'
+
 const locales = ['pt-br', 'en']
 
 export const metadata: Metadata = {
