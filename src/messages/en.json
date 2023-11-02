@@ -6,6 +6,35 @@
   "Cases": {},
   "InternalCases": {},
   "WhoWeAre": {},
-  "Contact": {},
-  "WhatWeDo": {}
+  "Contact": {
+    "title": "Vamos destravar o valor do seu negócio?"
+  },
+  "WhatWeDo": {},
+  "Components": {
+    "Footer": {
+      "title": {
+        "firstLine": "Let's unlock the value ",
+        "secondLine": "of your business?"
+      },
+      "subtitle": "Leave your contact here.",
+      "contacts": {
+        "address": {
+          "firstItem": "R. Mourato Coelho, 1404",
+          "secondItem": "Vila Madalena",
+          "thirdItem": "ZIPCODE 05417 011",
+          "fourthItem": "TEL 55 11 3089 4949"
+        },
+        "social": {
+          "firstItem": "Instagram",
+          "secondItem": "Youtube",
+          "thirdItem": "Facebook",
+          "fourthItem": "LinkedIn"
+        },
+        "copyright": {
+          "firstItem": "Privacy Policy",
+          "secondItem": "Ethics and Compliance"
+        }
+      }
+    }
+  }
 }

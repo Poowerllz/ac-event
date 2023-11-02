@@ -61,7 +61,14 @@ export const kern = localFont({
       path: '../../../public/fonts/standard/kern-standard-black-italic.woff2',
       weight: '900',
       style: 'italic'
-    },
+    }
+  ],
+  fallback: ['sans-serif'],
+  variable: '--font-kern'
+})
+
+export const kernCompressed = localFont({
+  src: [
     {
       path: '../../../public/fonts/compressed/kern-compressed-thin.woff2',
       weight: '100',
@@ -114,5 +121,5 @@ export const kern = localFont({
     }
   ],
   fallback: ['sans-serif'],
-  variable: '--font-kern'
+  variable: '--font-kern-compressed'
 })

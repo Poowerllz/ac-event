@@ -1,3 +1,4 @@
+import { cn } from '@/common/utils/cn'
 import { Button } from '@/components/Client'
 import { useTranslations } from 'next-intl'
 import Image from 'next/image'
@@ -6,7 +7,12 @@ import logo from '../../../public/images/svg/logo.svg'
 export default function Home() {
   const t = useTranslations('Home')
   return (
-    <main className="bg-primary text-secondary-200 flex w-full flex-col items-center justify-between p-24 font-bold">
+    <main
+      className={cn(
+        'flex w-full flex-col items-center justify-between p-24 font-bold text-secondary-200',
+        'bg-primary'
+      )}
+    >
       <h1>{t('title')}</h1>
       <div className="flex items-center justify-between px-24 ">
         <div className="relative h-auto w-60">

@@ -39,7 +39,8 @@ const config: Config = {
     },
     extend: {
       fontFamily: {
-        kern: ['var(--font-kern)']
+        kern: ['var(--font-kern)'],
+        kernCompressed: ['var(--font-kern-compressed)']
       }
     }
   },

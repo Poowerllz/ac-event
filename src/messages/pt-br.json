@@ -6,6 +6,35 @@
   "Cases": {},
   "InternalCases": {},
   "WhoWeAre": {},
-  "Contact": {},
-  "WhatWeDo": {}
+  "Contact": {
+    "title": "<p>Vamos destravar <br>o valor do seu negócio?</br></p>"
+  },
+  "WhatWeDo": {},
+  "Components": {
+    "Footer": {
+      "title": {
+        "firstLine": "Vamos destravar ",
+        "secondLine": "o valor do seu negócio?"
+      },
+      "subtitle": "Deixe seu contato por aqui.",
+      "contacts": {
+        "address": {
+          "firstItem": "R. Mourato Coelho, 1404",
+          "secondItem": "Vila Madalena",
+          "thirdItem": "CEP 05417 011",
+          "fourthItem": "TEL 55 11 3089 4949"
+        },
+        "social": {
+          "firstItem": "Instagram",
+          "secondItem": "Youtube",
+          "thirdItem": "Facebook",
+          "fourthItem": "LinkedIn"
+        },
+        "copyright": {
+          "firstItem": "Política de Privacidade",
+          "secondItem": "Ética e Compliance"
+        }
+      }
+    }
+  }
 }
