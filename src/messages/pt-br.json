@@ -7,7 +7,10 @@
   "InternalCases": {},
   "WhoWeAre": {},
   "Contact": {
-    "title": "<p>Vamos destravar <br>o valor do seu negócio?</br></p>"
+    "firstSection": {
+      "title": "Lorem ipsum em design gráfico e editoração é um texto padrão.",
+      "subtitle": "Desenvolvemos Estratégias de Marca e Publicidade para criar um alinhamento perfeito entre Marca, Negócio, Comunicação e Cultura."
+    }
   },
   "WhatWeDo": {},
   "Components": {

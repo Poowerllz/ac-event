@@ -7,7 +7,10 @@
   "InternalCases": {},
   "WhoWeAre": {},
   "Contact": {
-    "title": "Vamos destravar o valor do seu negócio?"
+    "firstSection": {
+      "title": "Lorem ipsum in graphic design and publishing is standard text.",
+      "subtitle": "We develop Brand and Advertising Strategies to create a perfect alignment between Brand, Business, Communication and Culture."
+    }
   },
   "WhatWeDo": {},
   "Components": {
