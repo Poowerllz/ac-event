@@ -1,22 +1,21 @@
 import { Button } from '@/components/Client'
 import { useTranslations } from 'next-intl'
 import Image from 'next/image'
+import logo from '../../../public/images/svg/logo.svg'
 
 export default function Home() {
   const t = useTranslations('Home')
   return (
-    <main
-      className="flex min-h-screen flex-col items-center justify-between p-24  font-kern font-bold"
-      style={{ background: '#FF4917', width: '1920px', height: '1080px' }}
-    >
+    <main className="bg-primary text-secondary-200 flex w-full flex-col items-center justify-between p-24 font-bold">
       <h1>{t('title')}</h1>
       <div className="flex items-center justify-between px-24 ">
-        <Image
-          src={'/images/logo.png'}
-          alt={'Imagem da logo'}
-          width={100}
-          height={100}
-        />
+        <div className="relative h-auto w-60">
+          <Image
+            src={logo}
+            alt={'Imagem da logo'}
+            style={{ height: 'auto', width: '100%' }}
+          />
+        </div>
         <div className="lg:hidden">
           <i className="gr GrMenu" />
           <Button>Buttão</Button>

@@ -9,6 +9,11 @@ const config: Config = {
   ],
   theme: {
     colors: {
+      primary: '#FF4917',
+      secondary: {
+        100: '#E7E8DE',
+        200: '#E2E8D3'
+      },
       success: {
         100: '#d4edda',
         200: '#28a745',
