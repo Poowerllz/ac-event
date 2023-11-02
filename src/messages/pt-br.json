@@ -36,30 +36,20 @@
     "thirdSection": {
       "span": "Especialidades",
       "links": {
-        "firstItem": {
-          "title": "Marca",
-          "subtitle": "Example"
-        },
-        "secondItem": {
-          "title": "Negócio",
-          "subtitle": "Example"
-        },
-        "thirdItem": {
-          "title": "Comunicação",
-          "subtitle": "Planejamento, Mídia, Criação, Produção, Social."
-        },
-        "fourthItem": {
-          "title": "Cultura",
-          "subtitle": "Example"
-        },
-        "fifthItem": {
-          "title": "Inovação",
-          "subtitle": "Example"
-        },
-        "sixItem": {
-          "title": "Valometry",
-          "subtitle": "Example"
-        }
+        "firstItem": "Marca",
+        "secondItem": "Negócio",
+        "thirdItem": "Comunicação",
+        "fourthItem": "Comunicação",
+        "fifthItem": "Inovação",
+        "sixItem": "Valometry"
+      },
+      "hoverLinks": {
+        "firstItem": "Example",
+        "secondItem": "Example",
+        "thirdItem": "Planejamento, Mídia, Criação, Produção, Social.",
+        "fourthItem": "Example",
+        "fifthItem": "Example",
+        "sixItem": "Example"
       }
     },
     "fourthSection": {

@@ -36,30 +36,20 @@
     "thirdSection": {
       "span": "Specialties",
       "links": {
-        "firstItem": {
-          "title": "Brand",
-          "subtitle": "Example"
-        },
-        "secondItem": {
-          "title": "Business",
-          "subtitle": "Example"
-        },
-        "thirdItem": {
-          "title": "Communication",
-          "subtitle": "Planning, Media, Creation, Production, Social."
-        },
-        "fourthItem": {
-          "title": "Culture",
-          "subtitle": "Example"
-        },
-        "fifthItem": {
-          "title": "Innovation",
-          "subtitle": "Example"
-        },
-        "sixItem": {
-          "title": "Valometry",
-          "subtitle": "Example"
-        }
+        "firstItem": "Brand",
+        "secondItem": "Business",
+        "thirdItem": "Communication",
+        "fourthItem": "Culture",
+        "fifthItem": "Innovation",
+        "sixItem": "Valometry"
+      },
+      "hoverLinks": {
+        "firstItem": "Example",
+        "secondItem": "Example",
+        "thirdItem": "Planning, Media, Creation, Production, Social.",
+        "fourthItem": "Example",
+        "fifthItem": "Example",
+        "sixItem": "Example"
       }
     },
     "fourthSection": {

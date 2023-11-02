@@ -7,6 +7,23 @@ import { Fragment } from 'react'
 export default function WhatWeDo() {
   const t = useTranslations('WhatWeDo')
 
+  const linksKeys = [
+    'thirdSection.links.firstItem',
+    'thirdSection.links.secondItem',
+    'thirdSection.links.thirdItem',
+    'thirdSection.links.fourthItem',
+    'thirdSection.links.fifthItem',
+    'thirdSection.links.sixItem'
+  ]
+  const hoverLinksKeys = [
+    'thirdSection.hoverLinks.firstItem',
+    'thirdSection.hoverLinks.secondItem',
+    'thirdSection.hoverLinks.thirdItem',
+    'thirdSection.hoverLinks.fourthItem',
+    'thirdSection.hoverLinks.fifthItem',
+    'thirdSection.hoverLinks.sixItem'
+  ]
+
   return (
     <Fragment>
       <section className="mb-40 flex w-full flex-col gap-10 px-5 py-10 md:px-10 lg:px-20">
@@ -45,6 +62,28 @@ export default function WhatWeDo() {
           </span>
           <hr className={cn('h-0.5 w-full border-0', 'bg-white')} />
         </div>
+
+        <ul className="relative">
+          {linksKeys.map((key, index) => {
+            return (
+              <Fragment key={key}>
+                <li className="relative font-kernCompressed text-6xl font-bold text-white transition hover:text-primary hover:transition">
+                  {t(key)}
+                  <br />
+                  <span className="relative bottom-2 right-2 text-xs text-white lg:absolute">
+                    {t(hoverLinksKeys[index])}
+                  </span>
+                </li>
+                <hr
+                  className={cn(
+                    'mb-6 h-0.5 w-full border-0',
+                    'bg-gray-300 opacity-50'
+                  )}
+                />
+              </Fragment>
+            )
+          })}
+        </ul>
       </section>
     </Fragment>
   )
