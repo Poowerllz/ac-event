@@ -3,7 +3,10 @@
 import Image from 'next/image'
 import { ImageGallerySectionProps } from './imageGallerySection'
 
-export function ImageGallerySection({ images }: ImageGallerySectionProps) {
+export function ImageGallerySection({
+  images,
+  text
+}: ImageGallerySectionProps) {
   return (
     <div className="grid h-full w-full grid-cols-1 gap-20 md:grid-cols-2 md:gap-4 lg:grid-cols-4">
       <div className="col-span-1 h-full w-full">
@@ -18,13 +21,13 @@ export function ImageGallerySection({ images }: ImageGallerySectionProps) {
           />
         </div>
 
-        <span className="text-lg leading-none text-white">
+        <span className="text-lg leading-none">
           Propósito <br /> engajador <br /> e de impacto
         </span>
       </div>
 
       <div className="col-span-2 flex flex-col justify-between gap-2 md:col-span-1">
-        <span className="text-lg leading-none text-white">
+        <span className="text-lg leading-none">
           Propósito <br /> engajador <br /> e de impacto
         </span>
 
@@ -65,7 +68,7 @@ export function ImageGallerySection({ images }: ImageGallerySectionProps) {
           />
         </div>
 
-        <span className="text-lg leading-none text-white">
+        <span className="text-lg leading-none">
           Propósito <br /> engajador <br /> e de impacto
         </span>
       </div>

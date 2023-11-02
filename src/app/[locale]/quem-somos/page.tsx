@@ -43,8 +43,8 @@ export default function WhoWeAre() {
         </div>
       </section>
 
-      <section className="mb-20 flex w-full flex-col items-center justify-center gap-10 bg-black px-5 py-10 md:px-10 lg:px-20">
-        <h2 className="my-32 text-center font-kernCompressed text-4xl font-bold text-white sm:text-6xl md:w-2/5">
+      <section className="mb-20 flex w-full flex-col items-center justify-center gap-10 bg-black px-5 py-10 text-white md:px-10 lg:px-20">
+        <h2 className="my-32 text-center font-kernCompressed text-4xl font-bold sm:text-6xl md:w-2/5">
           {t('thirdSection.title')}
         </h2>
 

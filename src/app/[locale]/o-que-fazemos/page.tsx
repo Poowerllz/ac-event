@@ -3,6 +3,7 @@ import TitleLogo from '@/images/svg/titleLogo.svg'
 import { useTranslations } from 'next-intl'
 import Image from 'next/image'
 import { Fragment } from 'react'
+import { GallerySection } from './common'
 
 export default function WhatWeDo() {
   const t = useTranslations('WhatWeDo')
@@ -84,6 +85,14 @@ export default function WhatWeDo() {
             )
           })}
         </ul>
+      </section>
+
+      <section className="flex w-full flex-col items-center justify-center gap-10 px-5 py-10 text-black md:px-10 lg:px-20">
+        <h2 className="my-32 text-center font-kernCompressed text-4xl font-bold sm:text-6xl md:w-2/5">
+          {t('fourthSection.title')}
+        </h2>
+
+        <GallerySection />
       </section>
     </Fragment>
   )
