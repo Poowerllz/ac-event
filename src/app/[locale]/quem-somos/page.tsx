@@ -3,6 +3,7 @@ import Chart from '@/images/svg/whoWeAreChart.svg'
 import { useTranslations } from 'next-intl'
 import Image from 'next/image'
 import { Fragment } from 'react'
+import { GallerySection } from './common'
 
 export default function WhoWeAre() {
   const t = useTranslations('Contact')
@@ -40,6 +41,14 @@ export default function WhoWeAre() {
             style={{ height: 'auto', width: '100%' }}
           />
         </div>
+      </section>
+
+      <section className="mb-20 flex w-full flex-col items-center justify-center gap-10 bg-black px-20 py-10">
+        <h2 className="my-32 text-center font-kernCompressed text-6xl font-bold text-white md:w-2/5">
+          {t('thirdSection.title')}
+        </h2>
+
+        <GallerySection />
       </section>
     </Fragment>
   )
