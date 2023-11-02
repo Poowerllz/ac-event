@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Camada_1" data-name="Camada 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1757.75 645.73">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+        stroke: #000;
+        stroke-miterlimit: 10;
+        stroke-width: .85px;
+      }
+
+      .cls-2 {
+        letter-spacing: -.02em;
+      }
+
+      .cls-2, .cls-3 {
+        font-family: Kern-StandardRegular, 'Kern Standard';
+        font-size: 27px;
+      }
+
+      .cls-4 {
+        letter-spacing: -.02em;
+      }
+
+      .cls-4, .cls-5 {
+        font-size: 28px;
+      }
+
+      .cls-4, .cls-5, .cls-6 {
+        font-family: Kern-StandardBold, 'Kern Standard';
+        font-weight: 700;
+      }
+
+      .cls-5 {
+        letter-spacing: -.02em;
+      }
+
+      .cls-6 {
+        font-size: 26.51px;
+        letter-spacing: -.02em;
+      }
+
+      .cls-3 {
+        letter-spacing: -.02em;
+      }
+    </style>
+  </defs>
+  <text class="cls-6" transform="translate(327.6 637.4)"><tspan x="0" y="0">Onda 01 – Produto</tspan></text>
+  <text class="cls-4" transform="translate(1.95 617.93)"><tspan x="0" y="0">Comunicação</tspan></text>
+  <text class="cls-6" transform="translate(832.46 637.4)"><tspan x="0" y="0">Onda 02 – Pessoas</tspan></text>
+  <text class="cls-6" transform="translate(1334.5 637.4)"><tspan x="0" y="0">Onda 03 – Propósito</tspan></text>
+  <path class="cls-1" d="m0,393.3h100.25s132.12,0,132.12,0c25.58,0,46.32-20.74,46.32-46.32v-38.33c0-25.58,20.74-46.32,46.32-46.32h198.3v.02h212.33c25.58,0,46.32-20.74,46.32-46.32v-38.33c0-25.58,20.74-46.32,46.32-46.32h412.31c25.58,0,46.32-20.74,46.32-46.32v-38.33c0-25.58,20.74-46.32,46.32-46.32h424.54"/>
+  <path class="cls-1" d="m0,515.35h100.25s132.12,0,132.12,0c25.58,0,46.32-20.74,46.32-46.32v-38.33c0-25.58,20.74-46.32,46.32-46.32h198.3v.02h212.33c25.58,0,46.32-20.74,46.32-46.32v-38.33c0-25.58,20.74-46.32,46.32-46.32h412.31c25.58,0,46.32-20.74,46.32-46.32v-38.33c0-25.58,20.74-46.32,46.32-46.32h424.54"/>
+  <path class="cls-1" d="m0,637.4h100.25s132.12,0,132.12,0c25.58,0,46.32-20.74,46.32-46.32v-38.33c0-25.58,20.74-46.32,46.32-46.32h198.3v.02h212.33c25.58,0,46.32-20.74,46.32-46.32v-38.33c0-25.58,20.74-46.32,46.32-46.32h412.31c25.58,0,46.32-20.74,46.32-46.32v-38.33c0-25.58,20.74-46.32,46.32-46.32h424.54"/>
+  <text class="cls-3" transform="translate(327.6 241.89)"><tspan x="0" y="0">Conhecimento</tspan></text>
+  <text class="cls-3" transform="translate(327.6 362.76)"><tspan x="0" y="0">Custo-benefício</tspan></text>
+  <text class="cls-3" transform="translate(327.6 483.84)"><tspan x="0" y="0">Diferenciais</tspan></text>
+  <text class="cls-3" transform="translate(832.46 113.45)"><tspan x="0" y="0">Identificação</tspan></text>
+  <text class="cls-2" transform="translate(832.46 234.32)"><tspan x="0" y="0">Fidelização</tspan></text>
+  <text class="cls-3" transform="translate(832.46 355.4)"><tspan x="0" y="0">Conexão emocional</tspan></text>
+  <text class="cls-3" transform="translate(1334.5 104.9)"><tspan x="0" y="0">Ecossistema de impacto</tspan></text>
+  <text class="cls-3" transform="translate(1334.5 225.98)"><tspan x="0" y="0">Mobilização</tspan></text>
+  <text class="cls-5" transform="translate(1.95 375.4)"><tspan x="0" y="0">Marca</tspan></text>
+  <text class="cls-4" transform="translate(1.95 494.94)"><tspan x="0" y="0">Negócio</tspan></text>
+</svg>
