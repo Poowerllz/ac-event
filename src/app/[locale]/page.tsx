@@ -19,83 +19,86 @@ export default function Home() {
         }
         subTitle={'Quem somos'}
       />
-      <div className="grid w-full grid-cols-2 grid-rows-5 gap-2">
-        <div className="col-span-2 row-span-1">
+      <div className="w-full flex-col gap-3">
+        <div className="w-full">
           <Image
-            src={'/images/bannerOne.png'}
+            src={'/images/imagemgrid1.png'}
             alt="Imagem 1"
-            layout="responsive"
-            width={100}
-            height={200}
+            objectFit="cover"
+            width={1865}
+            height={814}
           />
         </div>
+        <div className="my-3 flex justify-between gap-3">
+          <div className="w-3/6">
+            <div className="mb-3">
+              <Image
+                src={'/images/imagemgrid2.png'}
+                alt="Imagem 2"
+                objectFit="cover"
+                width={918}
+                height={919}
+              />
+            </div>
+            <Image
+              src={'/images/imagemgrid4.png'}
+              alt="Imagem 4"
+              objectFit="cover"
+              width={918}
+              height={421}
+            />
+          </div>
 
-        <Image
-          src={'/images/bannerOne.png'}
-          alt="Imagem 1"
-          width={200}
-          height={200}
-        />
-        <Image
-          src={'/images/bannerOne.png'}
-          alt="Imagem 2"
-          width={200}
-          height={200}
-        />
-        <Image
-          src={'/images/bannerOne.png'}
-          alt="Imagem 3"
-          width={200}
-          height={200}
-        />
-        <Image
-          src={'/images/bannerOne.png'}
-          alt="Imagem 2"
-          width={200}
-          height={200}
-        />
-        <Image
-          src={'/images/bannerOne.png'}
-          alt="Imagem 4"
-          width={200}
-          height={200}
-        />
-        <Image
-          src={'/images/bannerOne.png'}
-          alt="Imagem 5"
-          width={200}
-          height={200}
-        />
-        <Image
-          src={'/images/bannerOne.png'}
-          alt="Imagem 4"
-          width={200}
-          height={200}
-        />
-        <Image
-          src={'/images/bannerOne.png'}
-          alt="Imagem 6"
-          width={200}
-          height={200}
-        />
-        <Image
-          src={'/images/bannerOne.png'}
-          alt="Imagem 7"
-          width={200}
-          height={200}
-        />
-        <Image
-          src={'/images/bannerOne.png'}
-          alt="Imagem 8"
-          width={200}
-          height={200}
-        />
-        <Image
-          src={'/images/bannerOne.png'}
-          alt="Imagem 9"
-          width={200}
-          height={200}
-        />
+          <div className="w-3/6 ">
+            <div className="mb-3">
+              <Image
+                src={'/images/imagemgrid3.png'}
+                alt="Imagem 3"
+                objectFit="cover"
+                width={918}
+                height={421}
+              />
+            </div>
+            <Image
+              src={'/images/imagemgrid5.png'}
+              alt="Imagem 5"
+              objectFit="cover"
+              width={918}
+              height={421}
+            />
+          </div>
+        </div>
+        <div className="flex justify-between gap-3 ">
+          <Image
+            src={'/images/imagemgrid6.png'}
+            alt="Imagem 6"
+            objectFit="cover"
+            width={437}
+            height={421}
+          />
+          <Image
+            src={'/images/imagemgrid7.png'}
+            alt="Imagem 7"
+            objectFit="cover"
+            width={437}
+            height={421}
+          />
+          <Image
+            src={'/images/imagemgrid6.png'}
+            alt="Imagem 8"
+            objectFit="cover"
+            width={437}
+            height={421}
+          />
+          <Image
+            src={'/images/imagemgrid7.png'}
+            alt="Imagem 9"
+            objectFit="cover"
+            width={437}
+            height={421}
+            style={{ width: '25%', height: '25%' }}
+          />
+        </div>
       </div>
     </main>
   )
