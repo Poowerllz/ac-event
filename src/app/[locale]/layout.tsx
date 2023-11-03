@@ -4,6 +4,7 @@ import type { Metadata } from 'next'
 import { notFound } from 'next/navigation'
 import './globals.css'
 
+import Header from '@/components/Header'
 import 'swiper/css'
 import 'swiper/css/navigation'
 import 'swiper/css/pagination'
@@ -28,6 +29,7 @@ export default function LocaleLayout({
   return (
     <html lang={locale} className={kern.className}>
       <body>
+        <Header />
         <main className="h-full w-full">{children}</main>
         <Footer />
       </body>

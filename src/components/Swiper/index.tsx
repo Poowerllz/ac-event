@@ -1,11 +1,10 @@
 'use client'
-import { Grid, Autoplay, Navigation, Pagination } from 'swiper/modules'
-import { Swiper, SwiperSlide } from 'swiper/react'
 import Image from 'next/image'
+import { Autoplay, Grid, Navigation, Pagination } from 'swiper/modules'
+import { Swiper, SwiperSlide } from 'swiper/react'
 
-import '../../../../public/images/havaianas.png'
+import '@/images/havaianas.png'
 export const SwiperClient = () => {
-  //   const images: any[] = [{ image: '../../../../public/images/havaianas.png' }]
   const images: string[] = [
     'havaianas',
     'havaianas',
@@ -16,6 +15,7 @@ export const SwiperClient = () => {
     'havaianas',
     'havaianas'
   ]
+
   return (
     <div className="flex w-full justify-center">
       <Swiper

@@ -1,15 +1,10 @@
-import { useTranslations } from 'next-intl'
+import { cn } from '@/common/utils/cn'
 import Image from 'next/image'
-import Header from './Header'
-import { Message } from './Message'
+import { Message } from '../../components/Message'
 
 export default function Home() {
-  const t = useTranslations('Home')
-
   return (
     <main className="block w-full flex-col justify-between font-kern font-bold">
-      {/* <h1>{t('title')}</h1> */}
-      <Header />
       <Message
         title={
           'Há três décadas construimos marcas que geram valor para o mundo'
@@ -18,7 +13,12 @@ export default function Home() {
       />
       <div className="relative w-full flex-col gap-3">
         <div className="relative w-full">
-          <button className="absolute left-5 top-5 flex h-8 w-20 items-center justify-center rounded bg-white p-2 text-black">
+          <button
+            className={cn(
+              'absolute left-5 top-5 flex h-8 w-20 items-center justify-center rounded p-2',
+              'bg-white text-black'
+            )}
+          >
             <text>Case</text>
           </button>
           <Image
@@ -37,7 +37,12 @@ export default function Home() {
         <div className="my-3 flex justify-between gap-3">
           <div className="relative w-3/6">
             <div className="relative mb-3">
-              <button className="absolute left-5 top-5 flex h-8 w-20 items-center justify-center rounded bg-white p-2 text-black">
+              <button
+                className={cn(
+                  'absolute left-5 top-5 flex h-8 w-20 items-center justify-center rounded p-2',
+                  'bg-white text-black'
+                )}
+              >
                 <text>Case</text>
               </button>
               <Image
@@ -54,7 +59,12 @@ export default function Home() {
               </div>
             </div>
             <div className="relative">
-              <button className="absolute left-5 top-5 flex h-8 w-20 items-center justify-center rounded bg-white p-2 text-black">
+              <button
+                className={cn(
+                  'absolute left-5 top-5 flex h-8 w-20 items-center justify-center rounded p-2',
+                  'bg-white text-black'
+                )}
+              >
                 <text>Case</text>
               </button>
               <Image
@@ -65,7 +75,12 @@ export default function Home() {
                 height={421}
                 style={{ width: '100%' }}
               />
-              <div className="absolute bottom-5 left-5 flex flex-col items-start gap-1 text-white">
+              <div
+                className={cn(
+                  'absolute bottom-5 left-5 flex flex-col items-start gap-1',
+                  'text-white'
+                )}
+              >
                 <span className="text-4xl">Cosan</span>
                 <span className="text-2lg">O valor que o país gera.</span>
               </div>
@@ -74,7 +89,12 @@ export default function Home() {
 
           <div className="relative w-3/6">
             <div className="relative mb-3">
-              <button className="absolute left-5 top-5 flex h-8 w-20 items-center justify-center rounded bg-white p-2 text-black">
+              <button
+                className={cn(
+                  'absolute left-5 top-5 flex h-8 w-20 items-center justify-center rounded p-2',
+                  'bg-white text-black'
+                )}
+              >
                 <text>Case</text>
               </button>
               <Image
@@ -91,7 +111,12 @@ export default function Home() {
               </div>
             </div>
             <div className="relative">
-              <button className="absolute left-5 top-5 flex h-8 w-20 items-center justify-center rounded bg-white p-2 text-black">
+              <button
+                className={cn(
+                  'absolute left-5 top-5 flex h-8 w-20 items-center justify-center rounded p-2',
+                  'bg-white text-black'
+                )}
+              >
                 <text>Case</text>
               </button>
               <Image
@@ -111,7 +136,12 @@ export default function Home() {
         </div>
         <div className="flex justify-between gap-3 ">
           <div className="relative w-1/4">
-            <button className="absolute left-5 top-5 flex h-8 w-20 items-center justify-center rounded bg-white p-2 text-black">
+            <button
+              className={cn(
+                'absolute left-5 top-5 flex h-8 w-20 items-center justify-center rounded p-2',
+                'bg-white text-black'
+              )}
+            >
               <text>Case</text>
             </button>
             <Image
@@ -128,7 +158,12 @@ export default function Home() {
             </div>
           </div>
           <div className="relative w-1/4">
-            <button className="absolute left-5 top-5 flex h-8 w-20 items-center justify-center rounded bg-white p-2 text-black">
+            <button
+              className={cn(
+                'absolute left-5 top-5 flex h-8 w-20 items-center justify-center rounded p-2',
+                'bg-white text-black'
+              )}
+            >
               <text>Case</text>
             </button>
             <Image
@@ -162,7 +197,12 @@ export default function Home() {
             </div>
           </div>
           <div className="relative w-1/4">
-            <button className="absolute left-5 top-5 flex h-8 w-20 items-center justify-center rounded bg-white p-2 text-black">
+            <button
+              className={cn(
+                'absolute left-5 top-5 flex h-8 w-20 items-center justify-center rounded p-2',
+                'bg-white text-black'
+              )}
+            >
               <text>Case</text>
             </button>
             <Image
