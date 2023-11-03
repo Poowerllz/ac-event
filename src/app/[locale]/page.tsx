@@ -1,13 +1,7 @@
-// 'use client'
 import { useTranslations } from 'next-intl'
 import Image from 'next/image'
-import { Message } from './Message'
 import Header from './Header'
-import React from 'react'
-import { Grid, Autoplay, Navigation, Pagination } from 'swiper/modules'
-import { Swiper, SwiperSlide } from 'swiper/react'
-import { SwiperClient } from './Swiper'
-import { Button } from '@material-tailwind/react'
+import { Message } from './Message'
 
 export default function Home() {
   const t = useTranslations('Home')
@@ -192,8 +186,6 @@ export default function Home() {
         }
         subTitle={'O que fazemos'}
       />
-
-      <SwiperClient />
     </main>
   )
 }
