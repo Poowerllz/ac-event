@@ -23,7 +23,10 @@ export default function Home() {
         subTitle={'Quem somos'}
       />
       <div className="relative w-full flex-col gap-3">
-        <div className="w-full">
+        <div className="relative w-full">
+          <button className="absolute left-5 top-5 flex h-8 w-20 items-center justify-center rounded bg-white p-2 text-black">
+            <text>Case</text>
+          </button>
           <Image
             src={'/images/imagemgrid1.png'}
             alt="Imagem 1"
@@ -32,14 +35,15 @@ export default function Home() {
             height={814}
             style={{ width: '100%' }}
           />
-          <button className="absolute left-3 top-3 flex h-8 w-20 items-center justify-center rounded bg-white p-2 text-black">
-            <text>Case</text>
-          </button>
+          <div className="absolute bottom-5 left-5 flex flex-col items-start gap-1 text-white">
+            <span className="text-4xl">Grupo Sabin</span>
+            <span className="text-2lg">Propósito aqui</span>
+          </div>
         </div>
         <div className="my-3 flex justify-between gap-3">
           <div className="relative w-3/6">
             <div className="relative mb-3">
-              <button className="absolute left-3 top-3 flex h-8 w-20 items-center justify-center rounded bg-white p-2 text-black">
+              <button className="absolute left-5 top-5 flex h-8 w-20 items-center justify-center rounded bg-white p-2 text-black">
                 <text>Case</text>
               </button>
               <Image
@@ -50,9 +54,13 @@ export default function Home() {
                 height={919}
                 style={{ width: '100%' }}
               />
+              <div className="absolute bottom-5 left-5 flex flex-col items-start gap-1 text-white">
+                <span className="text-4xl">Zuk</span>
+                <span className="text-2lg">O valor que o país gera.</span>
+              </div>
             </div>
             <div className="relative">
-              <button className="absolute left-3 top-3 flex h-8 w-20 items-center justify-center rounded bg-white p-2 text-black">
+              <button className="absolute left-5 top-5 flex h-8 w-20 items-center justify-center rounded bg-white p-2 text-black">
                 <text>Case</text>
               </button>
               <Image
@@ -63,12 +71,16 @@ export default function Home() {
                 height={421}
                 style={{ width: '100%' }}
               />
+              <div className="absolute bottom-5 left-5 flex flex-col items-start gap-1 text-white">
+                <span className="text-4xl">Cosan</span>
+                <span className="text-2lg">O valor que o país gera.</span>
+              </div>
             </div>
           </div>
 
           <div className="relative w-3/6">
             <div className="relative mb-3">
-              <button className="absolute left-3 top-3 flex h-8 w-20 items-center justify-center rounded bg-white p-2 text-black">
+              <button className="absolute left-5 top-5 flex h-8 w-20 items-center justify-center rounded bg-white p-2 text-black">
                 <text>Case</text>
               </button>
               <Image
@@ -79,9 +91,13 @@ export default function Home() {
                 height={421}
                 style={{ width: '100%' }}
               />
+              <div className="absolute bottom-5 left-5 flex flex-col items-start gap-1 text-white">
+                <span className="text-4xl">Natura</span>
+                <span className="text-2lg">Tododia Todanoite</span>
+              </div>
             </div>
             <div className="relative">
-              <button className="absolute left-3 top-3 flex h-8 w-20 items-center justify-center rounded bg-white p-2 text-black">
+              <button className="absolute left-5 top-5 flex h-8 w-20 items-center justify-center rounded bg-white p-2 text-black">
                 <text>Case</text>
               </button>
               <Image
@@ -92,12 +108,16 @@ export default function Home() {
                 height={421}
                 style={{ width: '100%' }}
               />
+              <div className="absolute bottom-5 left-5 flex flex-col items-start gap-1 text-white">
+                <span className="text-4xl">HappyEggs</span>
+                <span className="text-2lg">Texto aqui</span>
+              </div>
             </div>
           </div>
         </div>
         <div className="flex justify-between gap-3 ">
           <div className="relative w-1/4">
-            <button className="absolute left-3 top-3 flex h-8 w-20 items-center justify-center rounded bg-white p-2 text-black">
+            <button className="absolute left-5 top-5 flex h-8 w-20 items-center justify-center rounded bg-white p-2 text-black">
               <text>Case</text>
             </button>
             <Image
@@ -108,9 +128,13 @@ export default function Home() {
               height={421}
               style={{ width: '100%', height: '100%' }}
             />
+            <div className="absolute bottom-5 left-5 flex flex-col items-start gap-1 text-white">
+              <span className="text-4xl">Branding Brasil</span>
+              <span className="text-2lg">O valor que o país gera.</span>
+            </div>
           </div>
           <div className="relative w-1/4">
-            <button className="absolute left-3 top-3 flex h-8 w-20 items-center justify-center rounded bg-white p-2 text-black">
+            <button className="absolute left-5 top-5 flex h-8 w-20 items-center justify-center rounded bg-white p-2 text-black">
               <text>Case</text>
             </button>
             <Image
@@ -121,9 +145,13 @@ export default function Home() {
               height={421}
               style={{ width: '100%', height: '100%' }}
             />
+            <div className="absolute bottom-5 left-5 flex flex-col items-start gap-1 text-white">
+              <span className="text-4xl">Trends 2023</span>
+              <span className="text-2lg">Baixe agora.</span>
+            </div>
           </div>
           <div className="relative w-1/4">
-            <button className="absolute left-3 top-3 flex h-8 w-20 items-center justify-center rounded bg-white p-2 text-black">
+            <button className="absolute left-5 top-5 flex h-8 w-20 items-center justify-center rounded bg-white p-2 text-black">
               <text>Case</text>
             </button>
             <Image
@@ -134,9 +162,13 @@ export default function Home() {
               height={421}
               style={{ width: '100%', height: '100%' }}
             />
+            <div className="absolute bottom-5 left-5 flex flex-col items-start gap-1 text-white">
+              <span className="text-4xl">Branding Brasil</span>
+              <span className="text-2lg">O valor que o país gera.</span>
+            </div>
           </div>
           <div className="relative w-1/4">
-            <button className="absolute left-3 top-3 flex h-8 w-20 items-center justify-center rounded bg-white p-2 text-black">
+            <button className="absolute left-5 top-5 flex h-8 w-20 items-center justify-center rounded bg-white p-2 text-black">
               <text>Case</text>
             </button>
             <Image
@@ -147,6 +179,10 @@ export default function Home() {
               height={421}
               style={{ width: '100%', height: '100%' }}
             />
+            <div className="absolute bottom-5 left-5 flex flex-col items-start gap-1 text-white">
+              <span className="text-4xl">Trends 2023</span>
+              <span className="text-2lg">Baixe agora.</span>
+            </div>
           </div>
         </div>
       </div>
