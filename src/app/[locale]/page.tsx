@@ -106,7 +106,7 @@ export default function Home() {
         title={
           'Há três décadas construimos marcas que geram valor para o mundo'
         }
-        subTitle={'Quem somos'}
+        subTitle={'O que fazemos'}
       />
 
       <SwiperClient />
