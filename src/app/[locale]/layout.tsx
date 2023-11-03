@@ -1,4 +1,4 @@
-import { kern } from '@/common/utils/fonts'
+import { kern, kernCompressed } from '@/common/utils/fonts'
 import { Footer } from '@/components/Footer'
 import type { Metadata } from 'next'
 import { notFound } from 'next/navigation'
@@ -27,7 +27,10 @@ export default function LocaleLayout({
   if (!isValidLocale) notFound()
 
   return (
-    <html lang={locale} className={kern.className}>
+    <html
+      lang={locale}
+      className={`${kern.variable} ${kernCompressed.variable}`}
+    >
       <body>
         <Header />
         <main className="h-full w-full">{children}</main>

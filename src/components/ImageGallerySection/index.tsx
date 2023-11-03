@@ -8,8 +8,8 @@ export function ImageGallerySection({
   text
 }: ImageGallerySectionProps) {
   return (
-    <div className="grid h-full w-full grid-cols-1 gap-20 md:grid-cols-2 md:gap-4 lg:grid-cols-4">
-      <div className="col-span-1 h-full w-full">
+    <div className="flex h-full w-full flex-col justify-center gap-10 md:flex-row md:gap-4">
+      <div className="flex flex-col gap-5 md:gap-0">
         <div className="relative mb-4 h-auto w-full">
           <Image
             property="true"
@@ -21,13 +21,13 @@ export function ImageGallerySection({
           />
         </div>
 
-        <span className="text-lg leading-none">
+        <span className="text-2xl leading-none">
           Propósito <br /> engajador <br /> e de impacto
         </span>
       </div>
 
-      <div className="col-span-2 flex flex-col justify-between gap-2 md:col-span-1">
-        <span className="text-lg leading-none">
+      <div className="flex flex-col justify-between gap-2">
+        <span className="hidden text-2xl leading-none md:flex">
           Propósito <br /> engajador <br /> e de impacto
         </span>
 
@@ -43,7 +43,7 @@ export function ImageGallerySection({
         </div>
       </div>
 
-      <div className="col-span-1 h-full w-full">
+      <div className="flex">
         <div className="relative h-auto w-full">
           <Image
             property="true"
@@ -56,7 +56,7 @@ export function ImageGallerySection({
         </div>
       </div>
 
-      <div className="col-span-2 flex flex-col justify-normal gap-2 md:col-span-1">
+      <div className="flex flex-col justify-normal gap-5 md:gap-0">
         <div className="relative mb-4 h-auto w-full">
           <Image
             property="true"
@@ -68,7 +68,7 @@ export function ImageGallerySection({
           />
         </div>
 
-        <span className="text-lg leading-none">
+        <span className="text-2xl leading-none">
           Propósito <br /> engajador <br /> e de impacto
         </span>
       </div>

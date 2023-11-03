@@ -5,8 +5,8 @@
   "Articles": {},
   "Cases": {},
   "InternalCases": {},
-  "WhoWeAre": {},
-  "Contact": {
+  "Contact": {},
+  "WhoWeAre": {
     "firstSection": {
       "title": "Lorem ipsum in graphic design and publishing is standard text.",
       "subtitle": "We develop Brand and Advertising Strategies to create a perfect alignment between Brand, Business, Communication and Culture."
@@ -16,7 +16,12 @@
       "subtitle": "The Brands that generate the most value for the business are at the wave 3 level and differentiate themselves in the way they relate to people."
     },
     "thirdSection": {
-      "title": "We can help your organization evolve at the speed it needs",
+      "title": {
+        "firstLine": "We can help",
+        "secondLine": "your organization evolve at",
+        "thirdLine": "the speed",
+        "fourthLine": "it needs"
+      },
       "phrase": "Engaging and impactful purpose"
     },
     "fourthSection": {
