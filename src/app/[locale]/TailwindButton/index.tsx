@@ -11,7 +11,7 @@ const MenuButton = () => {
   }
 
   return (
-    <IconButton onClick={toggleMenu} className="bg-transparent border-none">
+    <IconButton onClick={toggleMenu} className="border-none bg-transparent">
       <FaBars size={24} />
     </IconButton>
   )
