@@ -29,6 +29,7 @@ export default function Home() {
             objectFit="cover"
             width={1865}
             height={814}
+            style={{ width: '100%' }}
           />
         </div>
         <div className="my-3 flex justify-between gap-3">
@@ -40,6 +41,7 @@ export default function Home() {
                 objectFit="cover"
                 width={918}
                 height={919}
+                style={{ width: '100%' }}
               />
             </div>
             <Image
@@ -48,6 +50,7 @@ export default function Home() {
               objectFit="cover"
               width={918}
               height={421}
+              style={{ width: '100%' }}
             />
           </div>
 
@@ -59,6 +62,7 @@ export default function Home() {
                 objectFit="cover"
                 width={918}
                 height={421}
+                style={{ width: '100%' }}
               />
             </div>
             <Image
@@ -67,6 +71,7 @@ export default function Home() {
               objectFit="cover"
               width={918}
               height={421}
+              style={{ width: '100%' }}
             />
           </div>
         </div>
@@ -77,6 +82,7 @@ export default function Home() {
             objectFit="cover"
             width={437}
             height={421}
+            style={{ width: '25%' }}
           />
           <Image
             src={'/images/imagemgrid7.png'}
@@ -84,6 +90,7 @@ export default function Home() {
             objectFit="cover"
             width={437}
             height={421}
+            style={{ width: '25%' }}
           />
           <Image
             src={'/images/imagemgrid6.png'}
@@ -91,6 +98,7 @@ export default function Home() {
             objectFit="cover"
             width={437}
             height={421}
+            style={{ width: '25%' }}
           />
           <Image
             src={'/images/imagemgrid7.png'}
@@ -98,7 +106,7 @@ export default function Home() {
             objectFit="cover"
             width={437}
             height={421}
-            style={{ width: '25%', height: '25%' }}
+            style={{ width: '25%' }}
           />
         </div>
       </div>
