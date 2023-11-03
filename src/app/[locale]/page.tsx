@@ -11,7 +11,7 @@ export default function Home() {
         }
         subTitle={'Quem somos'}
       />
-      <div className="relative w-full flex-col gap-3">
+      <div className="relative w-full flex-col gap-3 px-7">
         <div className="relative w-full">
           <button
             className={cn(
