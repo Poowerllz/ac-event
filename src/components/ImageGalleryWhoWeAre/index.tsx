@@ -1,12 +1,12 @@
 'use client'
 
 import Image from 'next/image'
-import { ImageGallerySectionProps } from './imageGallerySection'
+import { ImageGalleryWhoWeAreProps } from './imageGalleryWhoWeAre'
 
-export function ImageGallerySection({
+export function ImageGalleryWhoWeAre({
   images,
   text
-}: ImageGallerySectionProps) {
+}: ImageGalleryWhoWeAreProps) {
   return (
     <div className="flex h-full w-full flex-col justify-center gap-10 md:flex-row md:gap-4">
       <div className="flex flex-col gap-5 md:gap-0">

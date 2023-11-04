@@ -18,8 +18,8 @@
     "thirdSection": {
       "title": {
         "firstLine": "We can help",
-        "secondLine": "your organization evolve at",
-        "thirdLine": "the speed",
+        "secondLine": "your organization evolve",
+        "thirdLine": " at the speed",
         "fourthLine": "it needs"
       },
       "phrase": "Engaging and impactful purpose"
@@ -58,7 +58,12 @@
       }
     },
     "fourthSection": {
-      "title": "We can help your organization evolve at the speed it needs"
+      "title": {
+        "firstLine": "We can help",
+        "secondLine": "your organization evolve",
+        "thirdLine": " at the speed",
+        "fourthLine": "it needs"
+      }
     }
   },
   "Components": {

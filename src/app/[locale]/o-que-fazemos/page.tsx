@@ -88,8 +88,14 @@ export default function WhatWeDo() {
       </section>
 
       <section className="flex w-full flex-col items-center justify-center gap-10 px-5 py-10 text-black md:px-10 lg:px-20">
-        <h2 className="my-32 text-center font-kernCompressed text-4xl font-bold sm:text-6xl md:w-2/5">
-          {t('fourthSection.title')}
+        <h2 className="my-7 self-start font-kernCompressed text-4xl font-bold sm:my-24 sm:text-5xl md:text-[4.7rem] md:leading-[4.7rem]">
+          {t('fourthSection.title.firstLine')}
+          <br />
+          {t('fourthSection.title.secondLine')}
+          <br />
+          {t('fourthSection.title.thirdLine')}
+          <br />
+          {t('fourthSection.title.fourthLine')}
         </h2>
 
         <GallerySection />

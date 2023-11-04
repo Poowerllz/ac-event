@@ -58,7 +58,12 @@
       }
     },
     "fourthSection": {
-      "title": "Podemos ajudar sua organização a evoluir na velocidade que precisa"
+      "title": {
+        "firstLine": "Podemos ajudar",
+        "secondLine": "sua organização a",
+        "thirdLine": "evoluir na velocidade",
+        "fourthLine": "que precisa"
+      }
     }
   },
   "Components": {
