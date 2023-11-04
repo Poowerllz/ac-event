@@ -23,8 +23,8 @@ body {
 }
 
 .circle {
-  width: 773px;
-  height: 773px;
+  /* width: 773px;
+  height: 773px; */
   border-radius: 50%;
   background: transparent;
   overflow: hidden;

@@ -4,14 +4,14 @@ import { Message } from '../../components/Message'
 
 export default function Home() {
   return (
-    <main className="block w-full flex-col justify-between font-kern font-bold">
+    <main className="block w-full flex-col items-center justify-between font-kern font-bold sm:px-7">
       <Message
         title={
           'Há três décadas construimos marcas que geram valor para o mundo'
         }
         subTitle={'Quem somos'}
       />
-      <div className="relative w-full flex-col gap-3 px-7">
+      <div className="relative w-full flex-col gap-1 md:gap-3 ">
         <div className="relative w-full">
           <button
             className={cn(
@@ -34,9 +34,9 @@ export default function Home() {
             <span className="text-2lg">Propósito aqui</span>
           </div>
         </div>
-        <div className="my-3 flex justify-between gap-3">
-          <div className="relative w-3/6">
-            <div className="relative mb-3">
+        <div className="my-1 flex flex-col justify-between gap-3 md:my-3 md:flex-row ">
+          <div className="relative h-96 w-full md:w-3/6 lg:w-3/6">
+            <div className="relative mb-3 w-full">
               <button
                 className={cn(
                   'absolute left-5 top-5 flex h-8 w-20 items-center justify-center rounded p-2',
@@ -54,11 +54,13 @@ export default function Home() {
                 style={{ width: '100%' }}
               />
               <div className="absolute bottom-5 left-5 flex flex-col items-start gap-1 text-white">
-                <span className="text-4xl">Zuk</span>
-                <span className="text-2lg">O valor que o país gera.</span>
+                <span className="text-2xl md:text-4xl">Zuk</span>
+                <span className="md:text-2lg text-base">
+                  O valor que o país gera.
+                </span>
               </div>
             </div>
-            <div className="relative">
+            <div className="relative w-full">
               <button
                 className={cn(
                   'absolute left-5 top-5 flex h-8 w-20 items-center justify-center rounded p-2',
@@ -81,14 +83,16 @@ export default function Home() {
                   'text-white'
                 )}
               >
-                <span className="text-4xl">Cosan</span>
-                <span className="text-2lg">O valor que o país gera.</span>
+                <span className="text-2xl md:text-4xl">Cosan</span>
+                <span className="md:text-2lg text-base">
+                  O valor que o país gera.
+                </span>
               </div>
             </div>
           </div>
 
-          <div className="relative w-3/6">
-            <div className="relative mb-3">
+          <div className="relative h-96 w-full md:w-3/6 lg:w-3/6">
+            <div className="relative mb-3 w-full">
               <button
                 className={cn(
                   'absolute left-5 top-5 flex h-8 w-20 items-center justify-center rounded p-2',
@@ -106,11 +110,11 @@ export default function Home() {
                 style={{ width: '100%' }}
               />
               <div className="absolute bottom-5 left-5 flex flex-col items-start gap-1 text-white">
-                <span className="text-4xl">Natura</span>
-                <span className="text-2lg">Tododia Todanoite</span>
+                <span className="text-2xl md:text-4xl">Natura</span>
+                <span className="md:text-2lg text-base">Tododia Todanoite</span>
               </div>
             </div>
-            <div className="relative">
+            <div className="relative w-full">
               <button
                 className={cn(
                   'absolute left-5 top-5 flex h-8 w-20 items-center justify-center rounded p-2',
@@ -128,14 +132,15 @@ export default function Home() {
                 style={{ width: '100%' }}
               />
               <div className="absolute bottom-5 left-5 flex flex-col items-start gap-1 text-white">
-                <span className="text-4xl">HappyEggs</span>
-                <span className="text-2lg">Texto aqui</span>
+                <span className="text-2xl md:text-4xl">HappyEggs</span>
+                <span className="md:text-2lg text-base">Texto aqui</span>
               </div>
             </div>
           </div>
         </div>
-        <div className="flex justify-between gap-3 ">
-          <div className="relative w-1/4">
+
+        <div className="flex-wrap justify-between gap-3 md:flex-row ">
+          <div className="relative w-1/2 md:w-1/4">
             <button
               className={cn(
                 'absolute left-5 top-5 flex h-8 w-20 items-center justify-center rounded p-2',
@@ -153,11 +158,13 @@ export default function Home() {
               style={{ width: '100%', height: '100%' }}
             />
             <div className="absolute bottom-5 left-5 flex flex-col items-start gap-1 text-white">
-              <span className="text-4xl">Branding Brasil</span>
-              <span className="text-2lg">O valor que o país gera.</span>
+              <span className="text-2xl md:text-4xl">Branding Brasil</span>
+              <span className="md:text-2lg text-base">
+                O valor que o país gera.
+              </span>
             </div>
           </div>
-          <div className="relative w-1/4">
+          <div className="relative w-1/2 md:w-1/4">
             <button
               className={cn(
                 'absolute left-5 top-5 flex h-8 w-20 items-center justify-center rounded p-2',
@@ -175,11 +182,11 @@ export default function Home() {
               style={{ width: '100%', height: '100%' }}
             />
             <div className="absolute bottom-5 left-5 flex flex-col items-start gap-1 text-white">
-              <span className="text-4xl">Trends 2023</span>
-              <span className="text-2lg">Baixe agora.</span>
+              <span className="text-2xl md:text-4xl">Trends 2023</span>
+              <span className="md:text-2lg text-base">Baixe agora.</span>
             </div>
           </div>
-          <div className="relative w-1/4">
+          <div className="relative w-1/2 md:w-1/4">
             <button className="absolute left-5 top-5 flex h-8 w-20 items-center justify-center rounded bg-white p-2 text-black">
               <text>Case</text>
             </button>
@@ -192,11 +199,13 @@ export default function Home() {
               style={{ width: '100%', height: '100%' }}
             />
             <div className="absolute bottom-5 left-5 flex flex-col items-start gap-1 text-white">
-              <span className="text-4xl">Branding Brasil</span>
-              <span className="text-2lg">O valor que o país gera.</span>
+              <span className="text-2xl md:text-4xl">Branding Brasil</span>
+              <span className="md:text-2lg text-base">
+                O valor que o país gera.
+              </span>
             </div>
           </div>
-          <div className="relative w-1/4">
+          <div className="relative w-1/2 md:w-1/4">
             <button
               className={cn(
                 'absolute left-5 top-5 flex h-8 w-20 items-center justify-center rounded p-2',
@@ -214,8 +223,8 @@ export default function Home() {
               style={{ width: '100%', height: '100%' }}
             />
             <div className="absolute bottom-5 left-5 flex flex-col items-start gap-1 text-white">
-              <span className="text-4xl">Trends 2023</span>
-              <span className="text-2lg">Baixe agora.</span>
+              <span className="text-2xl md:text-4xl">Trends 2023</span>
+              <span className="md:text-2lg text-base">Baixe agora.</span>
             </div>
           </div>
         </div>
