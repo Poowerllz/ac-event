@@ -10,6 +10,7 @@ const config: Config = {
     colors: {
       white: '#FFF',
       black: '#000',
+      off_white: '#E2E8D3',
       primary: '#FF4917',
       secondary: {
         100: '#E7E8DE',

@@ -1,110 +1,54 @@
-'use client'
-import { cn } from '@/common/utils/cn'
-import useMediaQuery from '@/hooks/useMediaQuery'
 import Image from 'next/image'
-import { ArrowMobile } from '../arrowMobile'
+import HeaderImage from './HeaderImage'
+import Menu from './Menu'
 
 export default function Header() {
-  const isMobile = useMediaQuery('(max-width: 600px)')
   return (
-    <>
-      {isMobile ? (
-        <>
-          <div className="flex h-auto w-full flex-col bg-primary px-7 pt-28 ">
-            <div className="mb-80 flex items-center justify-between md:mb-5">
-              <Image
-                src={'/images/logo.png'}
-                alt={'Imagem da logo'}
-                width={100}
-                height={100}
-              />{' '}
-              <Image
-                src={'menu.svg'}
-                alt={'Imagem da logo'}
-                width={25}
-                height={15}
-                style={{ cursor: 'pointer' }}
-              />
-            </div>
+    <div className="relative h-screen w-full overflow-hidden bg-primary">
+      <video
+        loop
+        muted
+        autoPlay
+        width="100%"
+        height="100%"
+        className="absolute h-full w-full object-cover"
+      >
+        <source src="./images/home/background.mp4" type="video/mp4" />
+        Seu navegador não suporta vídeo HTML5.
+      </video>
 
-            <div className="flex h-full w-full justify-between align-bottom">
-              <div className="absolute top-52 z-50 flex w-28 items-end md:relative md:top-0">
-                <p className={cn('text-5xl font-bold', 'text-white')}>
-                  É FAZ FALA
-                </p>
-              </div>
+      <div className="relative h-full w-full px-6 sm:px-16">
+        <HeaderImage />
 
-              <div className="circlemobile relative w-full overflow-hidden">
-                <video
-                  controls
-                  width="100%"
-                  height="100%"
-                  className="absolute h-full w-full "
-                >
-                  <source src="seu-video.mp4" type="video/mp4" />
-                  Seu navegador não suporta vídeo HTML5.
-                </video>
-              </div>
+        <Image
+          src={'/images/logo.png'}
+          alt={'Imagem da logo'}
+          className="absolute top-16 z-10"
+          height={100}
+          width={100}
+        />
 
-              <div className="absolute bottom-56 right-7 items-end justify-end sm:flex md:relative md:right-0">
-                <ArrowMobile name={'arrowdown'} />
-              </div>
-            </div>
-          </div>
-        </>
-      ) : (
-        <>
-          <div className="flex w-full flex-col bg-primary  px-20 py-28   lg:px-20">
-            <div className="mb-80 flex items-center justify-between md:mb-5">
-              <Image
-                src={'/images/logo.png'}
-                alt={'Imagem da logo'}
-                width={100}
-                height={100}
-              />
-              <Image
-                src={'menu.svg'}
-                alt={'Imagem da logo'}
-                width={25}
-                height={15}
-                style={{ cursor: 'pointer' }}
-              />
-            </div>
+        <Image
+          src={'arrowdown.svg'}
+          alt={'Imagem de uma seta'}
+          className="absolute bottom-20 right-6 z-10 w-4 sm:right-16 sm:w-6"
+          width={24}
+          height={24}
+        />
 
-            <div className=" flex h-full justify-between align-bottom">
-              <div className=" absolute top-60 z-50 flex w-28 items-end md:relative md:top-0">
-                <p className={cn('text-6xl font-bold', 'text-white')}>
-                  É FAZ FALA
-                </p>
-              </div>
+        <p
+          className={
+            'absolute top-28 z-10 text-5xl font-bold text-white sm:bottom-20 sm:top-auto'
+          }
+        >
+          É<br />
+          FAZ
+          <br />
+          FALA
+        </p>
 
-              <div className="flex w-full items-center justify-center">
-                <div className="circle md:circlemobile relative overflow-hidden">
-                  <video
-                    controls
-                    width="100%"
-                    height="auto"
-                    className="absolute h-full w-full"
-                  >
-                    <source src="seu-video.mp4" type="video/mp4" />
-                    Seu navegador não suporta vídeo HTML5.
-                  </video>
-                </div>
-              </div>
-
-              <div className="absolute right-14 items-end justify-end sm:flex md:relative md:right-0">
-                <Image
-                  src={'/arrowdown.svg'}
-                  alt={'Imagem'}
-                  width={22}
-                  height={50}
-                  className="bg-image cursor-pointer"
-                />
-              </div>
-            </div>
-          </div>
-        </>
-      )}
-    </>
+        <Menu />
+      </div>
+    </div>
   )
 }
