@@ -1,10 +1,11 @@
 import { cn } from '@/common/utils/cn'
 import Logo from '@/images/svg/logo.svg'
-import MascotLogo from '@/images/svg/mascotLogo.svg'
 import { useTranslations } from 'next-intl'
 import Image from 'next/image'
 import Link from 'next/link'
+import { AnaCoutoMascot } from '../AnaCoutoMascot'
 import { FooterBackground } from './FooterBackground'
+import { FooterBase } from './FooterBase'
 
 export function Footer() {
   const t = useTranslations('Components.Footer')
@@ -40,18 +41,13 @@ export function Footer() {
   ]
 
   return (
-    <footer className="relative flex w-full flex-col gap-80 bg-black px-20 py-10">
+    <FooterBase>
       <FooterBackground />
 
-      <div className="z-10 flex w-full flex-col justify-between gap-10 text-white lg:flex-row">
+      <div className="z-10 flex w-full flex-col justify-between gap-10 lg:flex-row">
         <div className="flex flex-col">
           <div className="relative mb-5 h-auto w-10">
-            <Image
-              property="true"
-              src={MascotLogo}
-              alt="Personagem da logo da Ana Couto"
-              style={{ height: 'auto', width: '100%' }}
-            />
+            <AnaCoutoMascot fill="text-black" />
           </div>
 
           <p className="mb-10 font-kernCompressed text-4xl font-semibold">
@@ -64,7 +60,7 @@ export function Footer() {
           <hr className={cn('h-0.5 w-full border-0', 'bg-white')} />
         </div>
 
-        <div className="flex flex-col justify-between gap-10 sm:h-2/4 sm:flex-row sm:gap-20">
+        <div className="mr-24 flex flex-wrap justify-between gap-10 sm:mr-0 sm:h-2/4 sm:flex-row sm:gap-20">
           <div className="flex flex-col gap-1">
             <span className="text-sm font-semibold">São Paulo</span>
             {addressKeys.map(key => {
@@ -116,6 +112,6 @@ export function Footer() {
           style={{ height: 'auto', width: '100%' }}
         />
       </div>
-    </footer>
+    </FooterBase>
   )
 }
