@@ -17,6 +17,13 @@ export default function Header() {
                 alt={'Imagem da logo'}
                 width={100}
                 height={100}
+              />{' '}
+              <Image
+                src={'menu.svg'}
+                alt={'Imagem da logo'}
+                width={25}
+                height={15}
+                style={{ cursor: 'pointer' }}
               />
             </div>
 
@@ -27,7 +34,6 @@ export default function Header() {
                 </p>
               </div>
 
-              {/* <div className="flex w-full justify-center"> */}
               <div className="circlemobile relative w-full overflow-hidden">
                 <video
                   controls
@@ -39,9 +45,8 @@ export default function Header() {
                   Seu navegador não suporta vídeo HTML5.
                 </video>
               </div>
-              {/* </div> */}
 
-              <div className="absolute bottom-5 right-7 items-end justify-end sm:flex md:relative md:right-0">
+              <div className="absolute bottom-56 right-7 items-end justify-end sm:flex md:relative md:right-0">
                 <ArrowMobile name={'arrowdown'} />
               </div>
             </div>
@@ -49,7 +54,6 @@ export default function Header() {
         </>
       ) : (
         <>
-          {' '}
           <div className="flex w-full flex-col bg-primary  px-20 py-28   lg:px-20">
             <div className="mb-80 flex items-center justify-between md:mb-5">
               <Image
@@ -57,6 +61,13 @@ export default function Header() {
                 alt={'Imagem da logo'}
                 width={100}
                 height={100}
+              />
+              <Image
+                src={'menu.svg'}
+                alt={'Imagem da logo'}
+                width={25}
+                height={15}
+                style={{ cursor: 'pointer' }}
               />
             </div>
 
@@ -81,12 +92,13 @@ export default function Header() {
                 </div>
               </div>
 
-              <div className="absolute  right-14 items-end justify-end sm:flex md:relative md:right-0">
+              <div className="absolute right-14 items-end justify-end sm:flex md:relative md:right-0">
                 <Image
                   src={'/arrowdown.svg'}
                   alt={'Imagem'}
                   width={22}
                   height={50}
+                  className="bg-image cursor-pointer"
                 />
               </div>
             </div>
