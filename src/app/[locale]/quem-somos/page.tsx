@@ -53,8 +53,9 @@ export default function WhoWeAre() {
           <br />
           {t('thirdSection.title.fourthLine')}
         </h2>
-
-        <GallerySection />
+        <div>
+          <GallerySection />
+        </div>
       </section>
 
       <section className="mb-20 flex w-full flex-col gap-10 px-5 py-10 md:px-10 lg:px-20">

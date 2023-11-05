@@ -1,9 +1,8 @@
 'use client'
 import Image from 'next/image'
-import { Autoplay, Grid, Navigation, Pagination } from 'swiper/modules'
 import { Swiper, SwiperSlide } from 'swiper/react'
+import 'swiper/swiper-bundle.css'
 
-import '@/images/havaianas.png'
 export const SwiperClient = () => {
   const images: string[] = [
     'havaianas',
@@ -27,16 +26,11 @@ export const SwiperClient = () => {
           display: 'flex',
           justifyContent: 'space-between'
         }}
-        modules={[Navigation, Pagination, Autoplay, Grid]}
-        autoplay={{ delay: 0 }}
-        // grid={{ rows: 2, fill: 'row' }}
         centeredSlides={true}
         spaceBetween={0}
-        navigation={{
-          prevEl: ''
-        }}
-        slidesPerView={3}
+        slidesPerView={2}
         loop={true}
+        freeMode={true}
       >
         {images.map((item: any, idx: any) => (
           <SwiperSlide

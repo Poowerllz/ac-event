@@ -2,9 +2,13 @@
 
 import { shimmer } from '@/common/utils/shimmer'
 import { toBase64 } from '@/common/utils/toBase64'
+// eslint-disable-next-line import/no-unresolved
 import BgCaseInternal from '@/images/png/caseInternal.png'
+// eslint-disable-next-line import/no-unresolved
 import BgHome from '@/images/png/home.png'
+// eslint-disable-next-line import/no-unresolved
 import BgWhatWeDo from '@/images/png/whatWeDo.png'
+// eslint-disable-next-line import/no-unresolved
 import BgWhoWeAre from '@/images/png/whoWeAre.png'
 import Image, { StaticImageData } from 'next/image'
 import { usePathname } from 'next/navigation'
