@@ -6,7 +6,7 @@ import { Fragment } from 'react'
 import { ExecutiveTeamSection, GallerySection } from './common'
 
 export default function WhoWeAre() {
-  const t = useTranslations('Contact')
+  const t = useTranslations('WhoWeAre')
 
   return (
     <Fragment>
@@ -44,8 +44,14 @@ export default function WhoWeAre() {
       </section>
 
       <section className="mb-20 flex w-full flex-col items-center justify-center gap-10 bg-black px-5 py-10 text-white md:px-10 lg:px-20">
-        <h2 className="my-32 text-center font-kernCompressed text-4xl font-bold sm:text-6xl md:w-2/5">
-          {t('thirdSection.title')}
+        <h2 className="my-24 text-center font-kernCompressed text-4xl font-bold sm:text-5xl md:text-[4.7rem] md:leading-[4.7rem]">
+          {t('thirdSection.title.firstLine')}
+          <br />
+          {t('thirdSection.title.secondLine')}
+          <br />
+          {t('thirdSection.title.thirdLine')}
+          <br />
+          {t('thirdSection.title.fourthLine')}
         </h2>
         <div>
           <GallerySection />

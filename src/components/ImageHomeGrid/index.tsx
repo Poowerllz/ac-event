@@ -3,6 +3,8 @@ import { cn } from '@/common/utils/cn'
 import useMediaQuery from '@/hooks/useMediaQuery'
 import Image from 'next/image'
 import { ImageGalleryHome } from '../ImageGalleryHome'
+import React from 'react'
+
 
 export const ImageHomeGrid = () => {
   const isMobile = useMediaQuery('(max-width: 600px)')
