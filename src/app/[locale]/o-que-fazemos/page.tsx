@@ -27,7 +27,7 @@ export default function WhatWeDo() {
 
   return (
     <Fragment>
-      <section className="mb-40 flex w-full flex-col gap-10 px-5 py-10 md:px-10 lg:px-20">
+      <section className="mb-40 flex w-full flex-col gap-10 px-6 py-10 sm:px-16">
         <h1 className="font-kernCompressed text-6xl font-bold sm:w-3/5 sm:text-6xl lg:text-8xl">
           {t('firstSection.title')}
         </h1>
@@ -37,7 +37,7 @@ export default function WhatWeDo() {
         </p>
       </section>
 
-      <section className="relative mb-20 flex w-full flex-col gap-10 px-5 py-10 md:px-10 lg:px-20">
+      <section className="relative mb-20 flex w-full flex-col gap-10 px-6 py-10 sm:px-16">
         <div>
           <span className="font-extrabold">{t('secondSection.span')}</span>
           <hr className={cn('h-0.5 w-full border-0', 'bg-gray-300')} />
@@ -56,7 +56,7 @@ export default function WhatWeDo() {
         </div>
       </section>
 
-      <section className="relative mb-20 flex w-full flex-col gap-10 bg-black px-5 py-10 md:px-10 lg:px-20">
+      <section className="relative flex w-full flex-col gap-10 bg-black px-6 py-10 sm:mb-20 sm:px-16">
         <div>
           <span className="font-extrabold text-white">
             {t('thirdSection.span')}
@@ -87,8 +87,8 @@ export default function WhatWeDo() {
         </ul>
       </section>
 
-      <section className="flex w-full flex-col items-center justify-center gap-10 px-5 py-10 text-black md:px-10 lg:px-20">
-        <h2 className="my-7 self-start font-kernCompressed text-4xl font-bold sm:my-24 sm:text-5xl md:text-[4.7rem] md:leading-[4.7rem]">
+      <section className="flex w-full flex-col items-center justify-center gap-10 px-3 py-10 text-black sm:px-6">
+        <h2 className="my-7 ml-7 self-start font-kernCompressed text-5xl font-bold sm:my-24 sm:ml-10 sm:text-4xl sm:text-5xl md:text-[4.7rem] md:leading-[4.7rem]">
           {t('fourthSection.title.firstLine')}
           <br />
           {t('fourthSection.title.secondLine')}
