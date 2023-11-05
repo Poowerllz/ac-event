@@ -1,6 +1,7 @@
 import Image from 'next/image'
 import HeaderImage from './HeaderImage'
 import Menu from './Menu'
+import Link from 'next/link'
 
 export default function Header() {
   return (
@@ -20,13 +21,15 @@ export default function Header() {
       <div className="relative h-full w-full px-6 sm:px-16">
         <HeaderImage />
 
-        <Image
-          src={'/images/logo.png'}
-          alt={'Imagem da logo'}
-          className="absolute top-16 z-10"
-          height={100}
-          width={100}
-        />
+        <Link href={'/'} scroll={false}>
+          <Image
+            src={'/images/logo.png'}
+            alt={'Imagem da logo'}
+            className="absolute top-16 z-10 cursor-pointer"
+            height={100}
+            width={100}
+          />
+        </Link>
 
         <Image
           src={'arrowdown.svg'}
@@ -38,7 +41,7 @@ export default function Header() {
 
         <p
           className={
-            'absolute top-28 z-10 text-5xl font-bold text-white sm:bottom-20 sm:top-auto'
+            'absolute top-28 z-10 text-5xl font-bold text-white sm:bottom-20 sm:top-auto sm:text-7xl'
           }
         >
           É<br />

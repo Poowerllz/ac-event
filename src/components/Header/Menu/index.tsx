@@ -37,6 +37,7 @@ const Menu = () => {
               <Image
                 src={'/images/logo.png'}
                 alt={'Imagem da logo'}
+                className="w-16 sm:w-36"
                 quality={100}
                 height={150}
                 width={150}
