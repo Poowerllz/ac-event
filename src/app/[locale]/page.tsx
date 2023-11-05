@@ -3,7 +3,7 @@ import { ImageHomeGrid } from '@/components/ImageHomeGrid'
 
 export default function Home() {
   return (
-    <main className="block w-full flex-col items-center justify-between px-4 font-kern font-bold sm:px-7">
+    <main className="block w-full flex-col items-center justify-between font-kern font-bold">
       <Message
         title={
           'Há três décadas construimos marcas que geram valor para o mundo'
