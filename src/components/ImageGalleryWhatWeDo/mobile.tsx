@@ -1,6 +1,8 @@
 'use client'
 
 import Image from 'next/image'
+import { ImageGalleryWhatWeDoSubtitle } from './ImageGalleryWhatWeDoSubtitle'
+import { ImageGalleryWhatWeDoTitle } from './ImageGalleryWhatWeDoTitle'
 import { ImageGalleryWhatWeDoProps } from './imageGalleryWhatWeDo'
 
 export function ImageGalleryWhatWeDoMobile({
@@ -23,13 +25,12 @@ export function ImageGalleryWhatWeDoMobile({
         </div>
 
         <div className="flex justify-between">
-          <span className="font-kernCompressed text-2xl font-bold leading-none">
-            Lorem ipsum
-          </span>
-          <span className="text-xs font-bold leading-none">
+          <ImageGalleryWhatWeDoTitle>Lorem ipsum</ImageGalleryWhatWeDoTitle>
+
+          <ImageGalleryWhatWeDoSubtitle>
             Através de parceria <br /> estratégica entre cliente <br /> e
             agência chegamos.
-          </span>
+          </ImageGalleryWhatWeDoSubtitle>
         </div>
       </div>
 
@@ -47,13 +48,12 @@ export function ImageGalleryWhatWeDoMobile({
         </div>
 
         <div className="flex justify-between">
-          <span className="font-kernCompressed text-2xl font-bold leading-none">
-            Dolor
-          </span>
-          <span className="text-xs font-bold leading-none">
+          <ImageGalleryWhatWeDoTitle>Dolor</ImageGalleryWhatWeDoTitle>
+
+          <ImageGalleryWhatWeDoSubtitle>
             Através de parceria <br /> estratégica entre cliente <br /> e
             agência chegamos.
-          </span>
+          </ImageGalleryWhatWeDoSubtitle>
         </div>
       </div>
 
@@ -71,13 +71,12 @@ export function ImageGalleryWhatWeDoMobile({
         </div>
 
         <div className="flex justify-between">
-          <span className="font-kernCompressed text-2xl font-bold leading-none">
-            Lorem ipsum
-          </span>
-          <span className="text-xs font-bold leading-none">
+          <ImageGalleryWhatWeDoTitle>Dolor</ImageGalleryWhatWeDoTitle>
+
+          <ImageGalleryWhatWeDoSubtitle>
             Através de parceria <br /> estratégica entre cliente <br /> e
             agência chegamos.
-          </span>
+          </ImageGalleryWhatWeDoSubtitle>
         </div>
       </div>
 
@@ -95,13 +94,12 @@ export function ImageGalleryWhatWeDoMobile({
         </div>
 
         <div className="flex justify-between">
-          <span className="font-kernCompressed text-2xl font-bold leading-none">
-            Lorem ipsum
-          </span>
-          <span className="text-xs font-bold leading-none">
+          <ImageGalleryWhatWeDoTitle>Dolor</ImageGalleryWhatWeDoTitle>
+
+          <ImageGalleryWhatWeDoSubtitle>
             Através de parceria <br /> estratégica entre cliente <br /> e
             agência chegamos.
-          </span>
+          </ImageGalleryWhatWeDoSubtitle>
         </div>
       </div>
     </div>

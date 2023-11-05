@@ -1,6 +1,8 @@
 'use client'
 
 import Image from 'next/image'
+import { ImageGalleryWhatWeDoSubtitle } from './ImageGalleryWhatWeDoSubtitle'
+import { ImageGalleryWhatWeDoTitle } from './ImageGalleryWhatWeDoTitle'
 import { ImageGalleryWhatWeDoProps } from './imageGalleryWhatWeDo'
 
 export function ImageGalleryWhatWeDoDesktop({
@@ -21,27 +23,23 @@ export function ImageGalleryWhatWeDoDesktop({
             loading="lazy"
           />
 
-          <span className="font-kernCompressed text-2xl font-bold leading-none">
-            Lorem ipsum
-          </span>
+          <ImageGalleryWhatWeDoTitle>Lorem ipsum</ImageGalleryWhatWeDoTitle>
         </div>
 
-        <span className="text-xs font-bold leading-none">
+        <ImageGalleryWhatWeDoSubtitle>
           Através de parceria <br /> estratégica entre cliente <br /> e agência
           chegamos.
-        </span>
+        </ImageGalleryWhatWeDoSubtitle>
       </div>
 
       <div className="flex flex-col gap-5 self-end">
-        <div className="flex flex-col justify-between gap-2 lg:flex-row lg:gap-1">
-          <span className="font-kernCompressed text-2xl font-bold leading-none">
-            Dolor
-          </span>
+        <div className="flex flex-col justify-between gap-2 lg:flex-row lg:gap-4">
+          <ImageGalleryWhatWeDoTitle>Dolor</ImageGalleryWhatWeDoTitle>
 
-          <span className="text-xs font-bold leading-none">
+          <ImageGalleryWhatWeDoSubtitle>
             Através de parceria <br /> estratégica entre cliente <br /> e
             agência chegamos.
-          </span>
+          </ImageGalleryWhatWeDoSubtitle>
         </div>
 
         <div className="relative h-auto w-full">
@@ -57,15 +55,13 @@ export function ImageGalleryWhatWeDoDesktop({
       </div>
 
       <div className="flex flex-col justify-between gap-12 self-end">
-        <span className="text-xs font-bold leading-none">
+        <ImageGalleryWhatWeDoSubtitle>
           Através de parceria <br /> estratégica entre cliente <br /> e agência
           chegamos.
-        </span>
+        </ImageGalleryWhatWeDoSubtitle>
 
         <div className="relative h-auto w-full">
-          <span className="font-kernCompressed text-2xl font-bold leading-none">
-            Lorem ipsum
-          </span>
+          <ImageGalleryWhatWeDoTitle>Lorem ipsum</ImageGalleryWhatWeDoTitle>
 
           <Image
             property="true"
@@ -91,15 +87,13 @@ export function ImageGalleryWhatWeDoDesktop({
             loading="lazy"
           />
 
-          <span className="flex text-xs font-bold leading-none">
+          <ImageGalleryWhatWeDoSubtitle>
             Através de parceria <br /> estratégica entre cliente <br /> e
             agência chegamos.
-          </span>
+          </ImageGalleryWhatWeDoSubtitle>
         </div>
 
-        <span className="font-kernCompressed text-2xl font-bold">
-          Lorem ipsum
-        </span>
+        <ImageGalleryWhatWeDoTitle>Lorem ipsum</ImageGalleryWhatWeDoTitle>
       </div>
     </div>
   )
