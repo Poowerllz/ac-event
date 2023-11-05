@@ -5,15 +5,13 @@ import Image from 'next/image'
 import { ImageGalleryHome } from '../ImageGalleryHome'
 import React from 'react'
 
-
 export const ImageHomeGrid = () => {
   const isMobile = useMediaQuery('(max-width: 600px)')
   return (
     <>
       {isMobile ? (
         <>
-          {' '}
-          <div className="relative h-auto w-full flex-col gap-1  ">
+          <div className="relative h-auto w-full flex-col gap-1 px-4 ">
             <div className="relative w-full">
               <button
                 className={cn(
@@ -149,7 +147,7 @@ export const ImageHomeGrid = () => {
       ) : (
         <>
           {' '}
-          <div className="relative h-auto w-full flex-col gap-1 md:gap-3 ">
+          <div className="relative h-auto w-full flex-col gap-3 px-7">
             <div className="relative w-full">
               <button
                 className={cn(
@@ -168,12 +166,12 @@ export const ImageHomeGrid = () => {
                 style={{ width: '100%' }}
               />
               <div className="absolute bottom-5 left-5 flex flex-col items-start gap-1 text-white">
-                <span className="text-2xl md:text-4xl">Grupo Sabin</span>
-                <span className="md:text-2lg text-base">Propósito aqui</span>
+                <span className="text-4xl">Grupo Sabin</span>
+                <span className="text-2lg">Propósito aqui</span>
               </div>
             </div>
             <div className="my-1 flex flex-col justify-between gap-3 md:my-3 md:flex-row ">
-              <div className="relative w-full md:w-3/6 lg:w-3/6">
+              <div className="relative w-3/6 lg:w-3/6">
                 <div className="relative mb-3 w-full">
                   <button
                     className={cn(
@@ -192,8 +190,8 @@ export const ImageHomeGrid = () => {
                     style={{ width: '100%', height: '100%' }}
                   />
                   <div className="absolute bottom-5 left-5 flex flex-col items-start gap-1 text-white">
-                    <span className="text-2xl md:text-4xl">Zuk</span>
-                    <span className="md:text-2lg text-base">
+                    <span className="md:text-4xl">Zuk</span>
+                    <span className="md:text-2lg ">
                       O valor que o país gera.
                     </span>
                   </div>
@@ -221,15 +219,15 @@ export const ImageHomeGrid = () => {
                       'text-white'
                     )}
                   >
-                    <span className="text-2xl md:text-4xl">Cosan</span>
-                    <span className="md:text-2lg text-base">
+                    <span className="md:text-4xl">Cosan</span>
+                    <span className="md:text-2lg">
                       O valor que o país gera.
                     </span>
                   </div>
                 </div>
               </div>
 
-              <div className="relative w-full md:w-3/6 lg:w-3/6">
+              <div className="relative w-3/6 lg:w-3/6">
                 <div className="relative mb-3 w-full">
                   <button
                     className={cn(
@@ -248,10 +246,8 @@ export const ImageHomeGrid = () => {
                     style={{ width: '100%' }}
                   />
                   <div className="absolute bottom-5 left-5 flex flex-col items-start gap-1 text-white">
-                    <span className="text-2xl md:text-4xl">Natura</span>
-                    <span className="md:text-2lg text-base">
-                      Tododia Todanoite
-                    </span>
+                    <span className="md:text-4xl">Natura</span>
+                    <span className="md:text-2lg">Tododia Todanoite</span>
                   </div>
                 </div>
                 <div className="relative w-full">
@@ -272,8 +268,8 @@ export const ImageHomeGrid = () => {
                     style={{ width: '100%' }}
                   />
                   <div className="absolute bottom-5 left-5 flex flex-col items-start gap-1 text-white">
-                    <span className="text-2xl md:text-4xl">HappyEggs</span>
-                    <span className="md:text-2lg text-base">Texto aqui</span>
+                    <span className="md:text-4xl">HappyEggs</span>
+                    <span className="md:text-2lg">Texto aqui</span>
                   </div>
                 </div>
               </div>
