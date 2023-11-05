@@ -5,8 +5,8 @@
   "Articles": {},
   "Cases": {},
   "InternalCases": {},
-  "WhoWeAre": {},
-  "Contact": {
+  "Contact": {},
+  "WhoWeAre": {
     "firstSection": {
       "title": "Lorem ipsum em design gráfico e editoração é um texto padrão.",
       "subtitle": "Desenvolvemos Estratégias de Marca e Publicidade para criar um alinhamento perfeito entre Marca, Negócio, Comunicação e Cultura."
@@ -16,7 +16,12 @@
       "subtitle": "As Marcas que mais geram valor para o negócio estão no patamar da onda 3 e se diferenciam na forma como se relacionam com as pessoas."
     },
     "thirdSection": {
-      "title": "Podemos ajudar sua organização a evoluir na velocidade que precisa",
+      "title": {
+        "firstLine": "Podemos ajudar",
+        "secondLine": "sua organização a",
+        "thirdLine": "evoluir na velocidade",
+        "fourthLine": "que precisa"
+      },
       "phrase": "Propósito engajador e de impacto"
     },
     "fourthSection": {
@@ -53,7 +58,12 @@
       }
     },
     "fourthSection": {
-      "title": "Podemos ajudar sua organização a evoluir na velocidade que precisa"
+      "title": {
+        "firstLine": "Podemos ajudar",
+        "secondLine": "sua organização a",
+        "thirdLine": "evoluir na velocidade",
+        "fourthLine": "que precisa"
+      }
     }
   },
   "Components": {

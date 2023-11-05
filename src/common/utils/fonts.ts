@@ -63,6 +63,7 @@ export const kern = localFont({
       style: 'italic'
     }
   ],
+  display: 'swap',
   fallback: ['sans-serif'],
   variable: '--font-kern'
 })
@@ -120,6 +121,7 @@ export const kernCompressed = localFont({
       style: 'italic'
     }
   ],
+  display: 'swap',
   fallback: ['sans-serif'],
   variable: '--font-kern-compressed'
 })
