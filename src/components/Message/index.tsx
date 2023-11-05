@@ -13,36 +13,36 @@ export const Message = ({ title, subTitle, arrow }: MessageProps) => {
       {isMobile ? (
         <>
           {arrow ? (
-            <div className="md:px:20 relative flex h-auto w-full flex-col items-center justify-between px-3 pb-80 pt-60 md:h-screen md:flex-row">
-              <h1 className="w-full font-kernCompressed text-4xl font-bold sm:text-6xl md:pr-80 lg:text-8xl">
+            <div className=" flex h-auto w-full flex-col items-center justify-between px-6 pb-80 pt-60">
+              <h1 className="w-full font-kernCompressed text-5xl font-bold sm:text-6xl">
                 {title}
               </h1>
 
-              <div className="relative flex h-full w-full flex-col  justify-between md:w-auto ">
-                <div className="absolute -top-72  h-full w-full -rotate-180 transform cursor-pointer  md:relative">
+              <div className="relative flex h-full w-full flex-col  justify-between">
+                <div className="absolute -top-72  h-full w-full -rotate-180 transform cursor-pointer">
                   <ArrowMobile name={'arrowtop'} />
                 </div>
 
-                <div className="absolute -right-11 top-28 ml-auto flex -rotate-90  transform cursor-pointer items-center justify-end  md:relative   ">
+                <div className="absolute -right-11 top-28 ml-auto flex -rotate-90  transform cursor-pointer items-center justify-end">
                   <AiOutlinePlusCircle size={20} />
                   <p className="w-100 ml-1 text-xs ">{subTitle}</p>
                 </div>
               </div>
             </div>
           ) : (
-            <div className="md:px:20 relative flex h-auto w-full flex-col items-center justify-between px-3 pb-96 pt-28 md:h-screen md:flex-row">
-              <h1 className="w-full font-kernCompressed text-4xl font-bold sm:text-6xl ">
+            <div className="relative flex h-auto w-full flex-col items-center justify-between px-6 pb-96 pt-28">
+              <h1 className="w-full font-kernCompressed text-5xl font-bold sm:text-6xl ">
                 {title}
               </h1>
 
-              <div className="relative flex h-full w-full flex-col  justify-between md:w-auto ">
+              <div className="relative flex h-full w-full flex-col  justify-between">
                 {arrow && (
-                  <div className="absolute -top-44  h-full w-full -rotate-180 transform cursor-pointer  md:relative">
+                  <div className="absolute -top-44  h-full w-full -rotate-180 transform cursor-pointer">
                     <ArrowMobile name={'arrowtop'} />
                   </div>
                 )}
 
-                <div className="absolute -right-11 top-32 ml-auto flex -rotate-90 transform cursor-pointer items-center justify-end  md:relative md:mr-3  ">
+                <div className="absolute -right-11 top-32 ml-auto flex -rotate-90 transform cursor-pointer items-center justify-end  ">
                   <AiOutlinePlusCircle size={20} />
                   <p className="w-100 ml-1 text-xs">{subTitle}</p>
                 </div>
@@ -52,7 +52,7 @@ export const Message = ({ title, subTitle, arrow }: MessageProps) => {
         </>
       ) : (
         <>
-          <div className="relative flex h-screen w-full flex-col justify-between px-14  py-32">
+          <div className="relative flex h-screen w-full flex-col justify-between px-16  py-32">
             {arrow ? (
               <div className="flex h-full w-full justify-between align-top">
                 <h1 className="pr-1 font-kernCompressed font-bold lg:text-8xl">
