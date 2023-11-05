@@ -5,6 +5,7 @@ import Image from 'next/image'
 import { ImageGalleryHome } from '../ImageGalleryHome'
 import React from 'react'
 
+
 export const ImageHomeGrid = () => {
   const isMobile = useMediaQuery('(max-width: 600px)')
   return (
