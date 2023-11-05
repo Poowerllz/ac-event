@@ -42,6 +42,7 @@ export function FooterBackground() {
 
   useEffect(() => {
     setBackground(pageBackgrounds[pathname] || '')
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [pathname])
 
   return (

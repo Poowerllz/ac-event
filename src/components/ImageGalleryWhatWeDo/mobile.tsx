@@ -7,8 +7,6 @@ export function ImageGalleryWhatWeDoMobile({
   images,
   text
 }: ImageGalleryWhatWeDoProps) {
-  console.log('teste')
-
   return (
     <div className="flex h-full w-full flex-col content-stretch items-stretch justify-center gap-4 md:gap-8">
       <div className="flex flex-col justify-between gap-5">
