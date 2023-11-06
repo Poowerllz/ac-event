@@ -47,7 +47,7 @@ export function Footer() {
       <div className="z-10 flex w-full flex-col justify-between gap-10 lg:flex-row">
         <div className="flex flex-col">
           <div className="relative mb-5 h-auto w-10">
-            <AnaCoutoMascot fill="text-black" />
+            <AnaCoutoMascot />
           </div>
 
           <p className="mb-10 font-kernCompressed text-4xl font-semibold">

@@ -8,7 +8,7 @@ export function ImageGalleryWhoWeAre({
   text
 }: ImageGalleryWhoWeAreProps) {
   return (
-    <div className="flex h-full w-full flex-col justify-center gap-10 md:flex-row md:gap-4">
+    <div className="grid h-full w-full grid-cols-4 content-stretch items-stretch justify-center gap-4 md:gap-8">
       <div className="flex flex-col gap-5 md:gap-0">
         <div className="relative mb-4 h-auto w-full">
           <Image
