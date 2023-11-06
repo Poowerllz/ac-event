@@ -32,12 +32,15 @@ export default function Carousel() {
     cssEase: 'linear'
   }
   return (
-    <div className="flex h-40 w-full flex-row ">
-      <Slider {...settings} className="h-screen w-full text-center">
+    <div className="flex h-40 w-full flex-row overflow-hidden">
+      <Slider
+        {...settings}
+        className="flew-row flex h-screen w-full flex-row overflow-hidden  text-center"
+      >
         {images.map((img, idx) => (
           <div
             key={idx}
-            className="flex h-auto w-1/3 items-center justify-center"
+            className="flex h-auto w-1/5 flex-row items-center  justify-center overflow-hidden"
           >
             <Image
               src={`/images/${img}.png`}

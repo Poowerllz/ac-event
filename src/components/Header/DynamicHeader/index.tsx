@@ -64,7 +64,7 @@ const DynamicHeader = () => {
       {!pathData.invert && (
         <p
           className={
-            'text- white absolute top-28 z-10 text-5xl font-bold sm:bottom-20 sm:top-auto sm:text-7xl'
+            'absolute top-28 z-10 text-5xl font-bold text-white sm:bottom-20 sm:top-auto sm:text-7xl'
           }
         >
           É<br />
