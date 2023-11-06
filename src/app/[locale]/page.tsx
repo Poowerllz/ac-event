@@ -1,11 +1,6 @@
-import { cn } from '@/common/utils/cn'
-import Image from 'next/image'
+import Carousel from '@/components/Swiper'
 import { Message } from '../../components/Message'
-import { ImageGalleryHome } from '@/components/ImageGalleryHome'
-import { AiOutlinePlusCircle } from 'react-icons/ai'
-import { ArrowMobile } from '@/components/arrowMobile'
 import { ImageHomeGrid } from '@/components/ImageHomeGrid'
-import { SwiperClient } from '@/components/Swiper'
 
 export default function Home() {
   return (
@@ -26,6 +21,8 @@ export default function Home() {
         subTitle={'O que fazemos'}
         arrow={false}
       />
+      <Carousel />
+      <Carousel />
     </main>
   )
 }
