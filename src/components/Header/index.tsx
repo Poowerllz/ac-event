@@ -1,11 +1,11 @@
 import Image from 'next/image'
-import HeaderImage from './HeaderImage'
+import DynamicHeader from './DynamicHeader'
 import Menu from './Menu'
 import Link from 'next/link'
 
 export default function Header() {
   return (
-    <div className="relative h-screen w-full overflow-hidden bg-primary">
+    <div className="relative flex h-screen w-full items-center justify-center overflow-hidden bg-primary">
       <video
         loop
         muted
@@ -18,39 +18,10 @@ export default function Header() {
         Seu navegador não suporta vídeo HTML5.
       </video>
 
+      {/*  do logic to hide background */}
+      <div className="absolute z-30 h-[46vw] w-[46vw] rounded-full" />
       <div className="relative h-full w-full px-6 sm:px-16">
-        <HeaderImage />
-
-        <Link href={'/'} scroll={false}>
-          <Image
-            src={'/images/logo.png'}
-            alt={'Imagem da logo'}
-            className="absolute top-16 z-10 cursor-pointer"
-            height={100}
-            width={100}
-          />
-        </Link>
-
-        <Image
-          src={'arrowdown.svg'}
-          alt={'Imagem de uma seta'}
-          className="absolute bottom-20 right-6 z-10 w-4 sm:right-16 sm:w-6"
-          width={24}
-          height={24}
-        />
-
-        <p
-          className={
-            'absolute top-28 z-10 text-5xl font-bold text-white sm:bottom-20 sm:top-auto sm:text-7xl'
-          }
-        >
-          É<br />
-          FAZ
-          <br />
-          FALA
-        </p>
-
-        <Menu />
+        <DynamicHeader />
       </div>
     </div>
   )
