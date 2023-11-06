@@ -17,8 +17,7 @@ export function FooterBase({ children }: { children: ReactNode }) {
   return (
     <footer
       className={cn(
-        'relative flex w-full flex-col gap-10 bg-black px-6 py-10 sm:gap-80 sm:px-16',
-        textColor
+        'relative flex min-h-screen w-full flex-col justify-between gap-12 bg-black px-6 py-10 text-white sm:gap-0 sm:px-16'
       )}
     >
       {children}
