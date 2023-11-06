@@ -1,5 +1,6 @@
 'use client'
 import useMediaQuery from '@/hooks/useMediaQuery'
+import eFazEFala from '@/images/svg/eFazEFala.svg'
 import Image from 'next/image'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
@@ -67,16 +68,14 @@ const DynamicHeader = () => {
       />
 
       {pathData.showText && (
-        <p
-          className={
-            'absolute top-28 z-10 text-5xl font-bold text-white sm:bottom-20 sm:top-auto sm:text-7xl'
-          }
-        >
-          É<br />
-          FAZ
-          <br />
-          FALA
-        </p>
+        <div className="absolute top-28 z-10 sm:bottom-20 sm:top-auto">
+          <Image
+            property="true"
+            src={eFazEFala}
+            alt="Tipografia: É Faz E Fala"
+            style={{ height: 'auto', width: '45%' }}
+          />
+        </div>
       )}
     </>
   )
