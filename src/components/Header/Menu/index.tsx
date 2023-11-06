@@ -1,4 +1,5 @@
 'use client'
+import { cn } from '@/common/utils/cn'
 import Image from 'next/image'
 import Link from 'next/link'
 import React, { useState } from 'react'
@@ -79,7 +80,12 @@ const Menu: React.FC<Props> = ({ invertColor }) => {
                 scroll={false}
                 onClick={() => setMenuIsOpen(false)}
               >
-                <h3 className="text-off_white cursor-pointer font-kernCompressed text-6xl font-bold hover:text-primary sm:text-8xl">
+                <h3
+                  className={cn(
+                    'cursor-pointer font-kernCompressed text-6xl font-bold hover:text-primary sm:text-8xl',
+                    'text-off_white'
+                  )}
+                >
                   {item.label}
                 </h3>
               </Link>
