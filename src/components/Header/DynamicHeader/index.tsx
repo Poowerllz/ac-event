@@ -1,17 +1,22 @@
 'use client'
 import useMediaQuery from '@/hooks/useMediaQuery'
-import { usePathname } from 'next/navigation'
 import Image from 'next/image'
-import React from 'react'
 import Link from 'next/link'
+import { usePathname } from 'next/navigation'
 import Menu from '../Menu'
 
 const pathImages: {
-  [x: string]: { mobile: string; desktop: string; invert?: boolean }
+  [x: string]: {
+    mobile: string
+    desktop: string
+    showText?: boolean
+    invert?: boolean
+  }
 } = {
   '/': {
     mobile: 'background-orange-mobile.png',
-    desktop: 'background-orange.png'
+    desktop: 'background-orange.png',
+    showText: true
   },
   '/o-que-fazemos': {
     mobile: 'background-black-mobile.png',
@@ -61,7 +66,7 @@ const DynamicHeader = () => {
         {...(pathData.invert && { style: { filter: 'invert(100%)' } })}
       />
 
-      {!pathData.invert && (
+      {pathData.showText && (
         <p
           className={
             'text- white absolute top-28 z-10 text-5xl font-bold sm:bottom-20 sm:top-auto sm:text-7xl'
