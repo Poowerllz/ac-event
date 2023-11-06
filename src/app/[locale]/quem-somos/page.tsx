@@ -10,7 +10,7 @@ export default function WhoWeAre() {
 
   return (
     <Fragment>
-      <section className="mb-40 flex w-full flex-col gap-10 px-5 py-10 md:px-10 lg:px-20">
+      <section className="mb-40 flex w-full flex-col gap-10 px-6 py-10 sm:px-16">
         <h1 className="font-kernCompressed text-6xl font-bold sm:w-3/5 sm:text-6xl lg:text-8xl">
           {t('firstSection.title')}
         </h1>
@@ -20,7 +20,7 @@ export default function WhoWeAre() {
         </p>
       </section>
 
-      <section className="mb-20 flex w-full flex-col gap-10 px-5 py-10 md:px-10 lg:px-20">
+      <section className="relative mb-20 flex w-full flex-col gap-10 px-6 py-10 sm:px-16">
         <hr className={cn('h-0.5 w-full border-0', 'bg-gray-300')} />
 
         <div className="mb-32 flex flex-col justify-between gap-10 sm:flex-row">
@@ -43,7 +43,7 @@ export default function WhoWeAre() {
         </div>
       </section>
 
-      <section className="mb-20 flex w-full flex-col items-center justify-center gap-10 bg-black px-5 py-10 text-white md:px-10 lg:px-20">
+      <section className="flex w-full flex-col items-center justify-center gap-10 bg-black px-3 py-10 text-white sm:px-6">
         <h2 className="my-24 text-center font-kernCompressed text-4xl font-bold sm:text-5xl md:text-[4.7rem] md:leading-[4.7rem]">
           {t('thirdSection.title.firstLine')}
           <br />
@@ -53,13 +53,12 @@ export default function WhoWeAre() {
           <br />
           {t('thirdSection.title.fourthLine')}
         </h2>
-        <div>
-          <GallerySection />
-        </div>
+
+        <GallerySection />
       </section>
 
-      <section className="mb-20 flex w-full flex-col gap-10 px-5 py-10 md:px-10 lg:px-20">
-        <h2 className="font-kernCompressed text-4xl font-bold sm:text-6xl md:w-2/5">
+      <section className="w-full flex-col gap-10 px-3 py-10 sm:px-6">
+        <h2 className="my-12 font-kernCompressed text-4xl font-bold sm:text-5xl md:text-[4.7rem] md:leading-[4.7rem]">
           {t('fourthSection.title')}
         </h2>
 
