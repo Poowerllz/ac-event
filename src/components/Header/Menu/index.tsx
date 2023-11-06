@@ -3,7 +3,11 @@ import Image from 'next/image'
 import Link from 'next/link'
 import React, { useState } from 'react'
 
-const Menu = () => {
+type Props = {
+  invertColor?: boolean
+}
+
+const Menu: React.FC<Props> = ({ invertColor }) => {
   const [menuIsOpen, setMenuIsOpen] = useState(false)
 
   const items = [
@@ -22,7 +26,10 @@ const Menu = () => {
         className="absolute right-6 top-16 z-10 cursor-pointer sm:right-16"
         width={25}
         height={15}
-        style={{ cursor: 'pointer' }}
+        style={{
+          cursor: 'pointer',
+          ...(invertColor && { filter: 'invert(100%)' })
+        }}
         onClick={() => setMenuIsOpen(true)}
       />
 
