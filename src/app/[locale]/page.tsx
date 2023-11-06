@@ -1,3 +1,4 @@
+import Carousel from '@/components/Swiper'
 import { Message } from '../../components/Message'
 import { ImageHomeGrid } from '@/components/ImageHomeGrid'
 
@@ -20,6 +21,8 @@ export default function Home() {
         subTitle={'O que fazemos'}
         arrow={false}
       />
+      <Carousel />
+      <Carousel />
     </main>
   )
 }
