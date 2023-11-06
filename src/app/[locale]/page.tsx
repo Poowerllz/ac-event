@@ -21,8 +21,34 @@ export default function Home() {
         subTitle={'O que fazemos'}
         arrow={false}
       />
-      <Carousel />
-      <Carousel />
+      <Carousel
+        images={[
+          'havaianas',
+          'ifood',
+          'raizen',
+          'vl',
+          'bs2',
+          'havaianas',
+          'ifood',
+          'raizen',
+          'vl',
+          'bs2'
+        ]}
+      />
+      <Carousel
+        images={[
+          'nextel',
+          'parperfeito',
+          'grupo',
+          'uol',
+          'tele',
+          'nextel',
+          'parperfeito',
+          'grupo',
+          'uol',
+          'tele'
+        ]}
+      />
     </main>
   )
 }

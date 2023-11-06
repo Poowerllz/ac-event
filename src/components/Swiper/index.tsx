@@ -4,23 +4,9 @@ import Slider from 'react-slick'
 import 'slick-carousel/slick/slick.css'
 import 'slick-carousel/slick/slick-theme.css'
 import Image from 'next/image'
+import { ImagesProps } from './type'
 
-export default function Carousel() {
-  const images: string[] = [
-    'havaianas',
-    'havaianas',
-    'havaianas',
-    'havaianas',
-    'havaianas',
-    'havaianas',
-    'havaianas',
-    'havaianas',
-    'havaianas',
-    'havaianas',
-    'havaianas',
-    'havaianas'
-  ]
-
+export default function Carousel({ images }: ImagesProps) {
   const settings = {
     dots: true,
     infinite: true,
@@ -43,7 +29,7 @@ export default function Carousel() {
             className="flex h-auto w-1/5 flex-row items-center  justify-center overflow-hidden"
           >
             <Image
-              src={`/images/${img}.png`}
+              src={`/images/${img}.svg`}
               alt={`Imagem ${idx + 1}`}
               objectFit="cover"
               width={165}
