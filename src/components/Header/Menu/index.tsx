@@ -1,8 +1,11 @@
 'use client'
 import { cn } from '@/common/utils/cn'
+import logoAnaCouto from '@/images/logo.png'
+import iconCloseButon from '@/images/svg/times.svg'
 import Image from 'next/image'
 import Link from 'next/link'
 import React, { useState } from 'react'
+import iconMenu from '../../../../public/menu.svg'
 
 type Props = {
   invertColor?: boolean
@@ -22,7 +25,7 @@ const Menu: React.FC<Props> = ({ invertColor }) => {
   return (
     <>
       <Image
-        src={'menu.svg'}
+        src={iconMenu}
         alt={'Imagem de um menu'}
         className="absolute right-6 top-16 z-10 cursor-pointer sm:right-16"
         width={25}
@@ -43,7 +46,7 @@ const Menu: React.FC<Props> = ({ invertColor }) => {
               onClick={() => setMenuIsOpen(false)}
             >
               <Image
-                src={'/images/logo.png'}
+                src={logoAnaCouto}
                 alt={'Imagem da logo'}
                 className="w-16 sm:w-36"
                 quality={100}
@@ -51,6 +54,7 @@ const Menu: React.FC<Props> = ({ invertColor }) => {
                 width={150}
               />
             </Link>
+
             <div className="flex items-center gap-4 sm:gap-10">
               <h2 className="text-md cursor-pointer font-kernCompressed font-normal text-white hover:text-primary sm:text-2xl">
                 Loja
@@ -63,7 +67,7 @@ const Menu: React.FC<Props> = ({ invertColor }) => {
               </h2>
               <Image
                 onClick={() => setMenuIsOpen(false)}
-                src={'./images/svg/times.svg'}
+                src={iconCloseButon}
                 className="w-4 cursor-pointer sm:w-6"
                 alt={'Ícone para fechar'}
                 width={24}

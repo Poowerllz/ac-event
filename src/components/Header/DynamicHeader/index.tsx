@@ -1,12 +1,14 @@
 'use client'
 import useMediaQuery from '@/hooks/useMediaQuery'
+import logoAnaCouto from '@/images/logo.png'
 import eFazEFala from '@/images/svg/eFazEFala.svg'
 import Image from 'next/image'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
+import iconArrowDonw from '../../../../public/arrowdown.svg'
 import Menu from '../Menu'
 
-const pathImages: {
+const pathImagesBr: {
   [x: string]: {
     mobile: string
     desktop: string
@@ -30,10 +32,34 @@ const pathImages: {
   }
 }
 
+const pathImagesEn: {
+  [x: string]: {
+    mobile: string
+    desktop: string
+    showText?: boolean
+    invert?: boolean
+  }
+} = {
+  '/en': {
+    mobile: 'background-orange-mobile.png',
+    desktop: 'background-orange.png',
+    showText: true
+  },
+  '/en/o-que-fazemos': {
+    mobile: 'background-black-mobile.png',
+    desktop: 'background-black.png'
+  },
+  '/en/quem-somos': {
+    mobile: 'background-white-mobile.png',
+    desktop: 'background-white.png',
+    invert: true
+  }
+}
+
 const DynamicHeader = () => {
   const isMobile = useMediaQuery('(max-width: 600px)')
-  const path: keyof typeof pathImages = usePathname() as any
-  const pathData = pathImages[path]
+  const path: keyof typeof pathImagesBr = usePathname() as any
+  const pathData = pathImagesBr[path] ?? pathImagesEn[path]
 
   return (
     <>
@@ -49,7 +75,7 @@ const DynamicHeader = () => {
 
       <Link href={'/'} scroll={false}>
         <Image
-          src={'/images/logo.png'}
+          src={logoAnaCouto}
           alt={'Imagem da logo'}
           className="absolute top-16 z-10 cursor-pointer"
           height={100}
@@ -59,7 +85,7 @@ const DynamicHeader = () => {
       </Link>
 
       <Image
-        src={'arrowdown.svg'}
+        src={iconArrowDonw}
         alt={'Imagem de uma seta'}
         className="absolute bottom-20 right-6 z-10 w-4 sm:right-16 sm:w-6"
         width={24}
