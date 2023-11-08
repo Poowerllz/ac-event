@@ -1,9 +1,26 @@
-import Image from 'next/image'
+'use client'
+
+import { usePathname } from 'next/navigation'
 import DynamicHeader from './DynamicHeader'
-import Menu from './Menu'
-import Link from 'next/link'
+
+const pagesBr: { [key: string]: string } = {
+  '/': './images/home/background.mp4',
+  '/quem-somos': './images/home/background.mp4',
+  '/o-que-fazemos': './images/home/background.mp4'
+}
+
+const pagesEn: { [key: string]: string } = {
+  '/en': './images/home/background.mp4',
+  '/en/quem-somos': './images/home/background.mp4',
+  '/en/o-que-fazemos': './images/home/background.mp4'
+}
 
 export default function Header() {
+  const pathname = usePathname()
+  const pathData = pagesBr[pathname] ?? pagesEn[pathname]
+
+  console.log('pathdata', pathData)
+
   return (
     <div className="relative flex h-screen w-full items-center justify-center overflow-hidden bg-primary">
       <video
@@ -14,7 +31,7 @@ export default function Header() {
         height="100%"
         className="absolute h-full w-full object-cover"
       >
-        <source src="./images/home/background.mp4" type="video/mp4" />
+        <source src={pathData} type="video/mp4" />
         Seu navegador não suporta vídeo HTML5.
       </video>
 
