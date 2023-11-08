@@ -34,6 +34,41 @@ export default function Cases() {
           territórios comuns, como humanização, proximidade e bem-estar.
         </p>
       </section>
+
+      <section className="flex w-full flex-col gap-1 md:gap-7 md:p-7">
+        <div className="flex flex-col gap-1 md:flex-row md:gap-7">
+          <div className="flex-1">
+            <Image
+              src={'/images/s.png'}
+              alt="Imagem 1"
+              objectFit="cover"
+              width={1865}
+              height={814}
+              style={{ width: 'auto' }}
+            />
+          </div>
+          <div className="flex-1">
+            <Image
+              src={'/images/sorriso.png'}
+              alt="Imagem 1"
+              objectFit="cover"
+              width={1865}
+              height={814}
+              style={{ width: 'auto' }}
+            />
+          </div>
+        </div>
+        <div className="w-full">
+          <Image
+            src={'/images/gruposabin.png'}
+            alt="Imagem 1"
+            objectFit="cover"
+            width={1865}
+            height={814}
+            style={{ width: '100%' }}
+          />
+        </div>
+      </section>
     </>
   )
 }
