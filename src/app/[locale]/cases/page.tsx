@@ -126,6 +126,67 @@ export default function Cases() {
           />
         </div>
       </section>
+
+      <section className="flex h-auto w-full flex-col items-start justify-between gap-16 px-6 pb-52 pt-16 sm:px-16 md:flex-row md:gap-72">
+        <div className="flex-1">
+          <h1 className="font-bold">Ficha técnica</h1>
+        </div>
+        <div className="flex-1">
+          <h1 className="font-bold">Ana Couto</h1>
+          <p className="font-medium">
+            Sócio-Diretor de Marca – Napoleon Fujisawa <br />
+            Gerente de Estratégia – Luiza Cortoni <br />
+            Estrategista – Marcela Deliza <br />
+            Atendimento – Ana Paula Rondinelli <br />
+            Conteúdo – Amanda Cinelli e Lucas Figueira <br />
+            Designers Gráficos – Thalles Ferreira e Davi Friese <br />
+            Refino Tipográfico – Fabio Haag Type <br />
+            Produção/Arte-finalistas – João Braz e Priscila Pollo
+          </p>
+        </div>
+        <div className="flex-1">
+          <h1 className="font-bold">Cliente</h1>
+          <p className="font-medium">
+            CEO – Lídia Abdalla <br />
+            Sócia-fundadora – Sandra Costa <br />
+            Sócia-fundadora – Janete Vaz <br />
+            Dir. de Relacionamento – Bruno Siqueira <br />
+            Head de Marketing – Leonardo Alves{' '}
+          </p>
+        </div>
+      </section>
+
+      <section className="flex h-screen w-full flex-col justify-between bg-black px-6 py-10 sm:px-16 md:px-7">
+        <span className="text-white md:text-xl">Outros cases</span>
+        <div className="relative flex flex-col gap-1 md:flex-row md:gap-6 ">
+          <div className="relative flex-1">
+            <Image
+              src={'/images/caseZuk.png'}
+              alt="Imagem 1"
+              objectFit="cover"
+              width={1865}
+              height={814}
+              style={{ width: 'auto' }}
+            />
+            <div className="absolute bottom-5 left-5 flex flex-col items-start gap-1 text-white">
+              <span className="md:text-4xl">Zuk</span>
+            </div>
+          </div>
+          <div className="flex-1">
+            <Image
+              src={'/images/caseNatura.png'}
+              alt="Imagem 1"
+              objectFit="cover"
+              width={1865}
+              height={814}
+              style={{ width: 'auto' }}
+            />
+            <div className="absolute bottom-5 left-5 flex flex-col items-start gap-1 text-white">
+              <span className="md:text-4xl">Zuk</span>
+            </div>
+          </div>
+        </div>
+      </section>
     </>
   )
 }
