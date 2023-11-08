@@ -58,9 +58,9 @@ const pathImagesEn: {
 
 const DynamicHeader = () => {
   const isMobile = useMediaQuery('(max-width: 600px)')
-
   const path: keyof typeof pathImagesBr = usePathname() as any
   const pathData = pathImagesBr[path] ?? pathImagesEn[path]
+
 
   return (
     <>
@@ -93,19 +93,15 @@ const DynamicHeader = () => {
         height={24}
         {...(pathData.invert && { style: { filter: 'invert(100%)' } })}
       />
-          {pathData.showText && (
-            <div className="absolute top-28 z-10 sm:bottom-20 sm:top-auto">
-              <Image
-                property="true"
-                src={eFazEFala}
-                alt="Tipografia: É Faz E Fala"
-                style={{ height: 'auto', width: '45%' }}
-              />
-            </div>
-          )}
-        </>
-      ) : (
-        <Menu />
+      {pathData.showText && (
+        <div className="absolute top-28 z-10 sm:bottom-20 sm:top-auto">
+          <Image
+            property="true"
+            src={eFazEFala}
+            alt="Tipografia: É Faz E Fala"
+            style={{ height: 'auto', width: '45%' }}
+          />
+        </div>
       )}
     </>
   )
