@@ -19,7 +19,7 @@ const Menu: React.FC<Props> = ({ invertColor }) => {
     { label: 'O que fazemos', path: 'o-que-fazemos' },
     { label: 'Cases', path: '' },
     { label: 'Artigos', path: '' },
-    { label: 'Contato', path: '' }
+    { label: 'Contato', path: '/contato' }
   ]
 
   return (

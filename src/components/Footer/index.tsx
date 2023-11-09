@@ -44,7 +44,7 @@ export function Footer() {
     <FooterBase>
       <FooterBackground />
 
-      <div className="z-10 flex w-full flex-col justify-between gap-10 lg:flex-row">
+      <div className="z-10 flex w-full flex-col justify-between gap-10 px-6 py-10 sm:px-16 lg:flex-row">
         <div className="flex flex-col">
           <div className="relative mb-5 h-auto w-10">
             <AnaCoutoMascot />
@@ -104,7 +104,7 @@ export function Footer() {
         </div>
       </div>
 
-      <div className="relative h-auto w-full">
+      <div className="relative h-auto w-full px-6 py-10 sm:px-16">
         <Image
           property="true"
           src={Logo}

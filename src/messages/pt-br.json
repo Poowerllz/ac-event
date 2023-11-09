@@ -5,7 +5,79 @@
   "Articles": {},
   "Cases": {},
   "InternalCases": {},
-  "Contact": {},
+  "Contact": {
+    "firstSection": {
+      "title": {
+        "firstLine": "Get in touch.",
+        "secondLine": "Drop in.",
+        "thirdLine": "Hang out."
+      },
+      "contacts": {
+        "address": {
+          "firstItem": "R. Mourato Coelho, 1404",
+          "secondItem": "Vila Madalena",
+          "thirdItem": "CEP 05417 011",
+          "fourthItem": "TEL 55 11 3089 4949"
+        },
+        "social": {
+          "firstItem": "Instagram",
+          "secondItem": "Youtube",
+          "thirdItem": "Facebook",
+          "fourthItem": "LinkedIn"
+        },
+        "copyright": {
+          "firstItem": "Política de Privacidade",
+          "secondItem": "Ética e Compliance"
+        }
+      }
+    },
+    "secondSection": {
+      "form": {
+        "title": "Vai ser um prazer conversar com você.",
+        "firstColunm": {
+          "firstInput": {
+            "name": "name",
+            "label": "Nome"
+          },
+          "secondInput": {
+            "name": "email",
+            "label": "E-mail"
+          },
+          "thirdInput": {
+            "name": "telephone",
+            "label": "Telefone"
+          },
+          "fourthInput": {
+            "name": "state",
+            "label": "Estado"
+          }
+        },
+        "secondColunm": {
+          "firstInput": {
+            "name": "currentJob",
+            "label": "Cargo atual"
+          },
+          "secondInput": {
+            "name": "company",
+            "label": "Empresa"
+          },
+          "thirdInput": {
+            "name": "marketSegment",
+            "label": "Segmento do merado"
+          },
+          "fourthInput": {
+            "name": "numberCollaborators",
+            "label": "Número de colaboradores"
+          }
+        },
+        "textarea": {
+          "name": "contactTextareaForm",
+          "label": "Gostaria de comentar alguma coisa antes do nosso encontro?"
+        },
+        "button": "Enviar"
+      }
+    }
+  },
   "WhoWeAre": {
     "firstSection": {
       "title": "Lorem ipsum em design gráfico e editoração é um texto padrão.",

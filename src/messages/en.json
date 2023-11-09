@@ -5,7 +5,79 @@
   "Articles": {},
   "Cases": {},
   "InternalCases": {},
-  "Contact": {},
+  "Contact": {
+    "firstSection": {
+      "title": {
+        "firstLine": "Get in touch.",
+        "secondLine": "Drop in.",
+        "thirdLine": "Hang out."
+      },
+      "contacts": {
+        "address": {
+          "firstItem": "R. Mourato Coelho, 1404",
+          "secondItem": "Vila Madalena",
+          "thirdItem": "ZIPCODE 05417 011",
+          "fourthItem": "TEL 55 11 3089 4949"
+        },
+        "social": {
+          "firstItem": "Instagram",
+          "secondItem": "Youtube",
+          "thirdItem": "Facebook",
+          "fourthItem": "LinkedIn"
+        },
+        "copyright": {
+          "firstItem": "Privacy Policy",
+          "secondItem": "Ethics and Compliance"
+        }
+      }
+    },
+    "secondSection": {
+      "form": {
+        "title": "It will be a pleasure to talk to you.",
+        "firstColunm": {
+          "firstInput": {
+            "name": "name",
+            "label": "Name"
+          },
+          "secondInput": {
+            "name": "email",
+            "label": "Email"
+          },
+          "thirdInput": {
+            "name": "telephone",
+            "label": "Telephone"
+          },
+          "fourthInput": {
+            "name": "state",
+            "label": "State"
+          }
+        },
+        "secondColunm": {
+          "firstInput": {
+            "name": "currentJob",
+            "label": "Current Job"
+          },
+          "secondInput": {
+            "name": "company",
+            "label": "Company"
+          },
+          "thirdInput": {
+            "name": "marketSegment",
+            "label": "Market segment"
+          },
+          "fourthInput": {
+            "name": "numberCollaborators",
+            "label": "Number of collaborators"
+          }
+        },
+        "textarea": {
+          "name": "contactTextareaForm",
+          "label": "Would you like to comment on anything before our meeting?"
+        },
+        "button": "Send"
+      }
+    }
+  },
   "WhoWeAre": {
     "firstSection": {
       "title": "Lorem ipsum in graphic design and publishing is standard text.",

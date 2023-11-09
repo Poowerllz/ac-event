@@ -1,4 +1,5 @@
 'use client'
+
 import useMediaQuery from '@/hooks/useMediaQuery'
 import logoAnaCouto from '@/images/logo.png'
 import eFazEFala from '@/images/svg/eFazEFala.svg'
@@ -7,60 +8,12 @@ import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import iconArrowDonw from '../../../../public/arrowdown.svg'
 import Menu from '../Menu'
-
-const pathImagesBr: {
-  [x: string]: {
-    mobile: string
-    desktop: string
-    showText?: boolean
-    invert?: boolean
-  }
-} = {
-  '/': {
-    mobile: 'background-orange-mobile.png',
-    desktop: 'background-orange.png',
-    showText: true
-  },
-  '/o-que-fazemos': {
-    mobile: 'background-black-mobile.png',
-    desktop: 'background-black.png'
-  },
-  '/quem-somos': {
-    mobile: 'background-white-mobile.png',
-    desktop: 'background-white.png',
-    invert: true
-  }
-}
-
-const pathImagesEn: {
-  [x: string]: {
-    mobile: string
-    desktop: string
-    showText?: boolean
-    invert?: boolean
-  }
-} = {
-  '/en': {
-    mobile: 'background-orange-mobile.png',
-    desktop: 'background-orange.png',
-    showText: true
-  },
-  '/en/o-que-fazemos': {
-    mobile: 'background-black-mobile.png',
-    desktop: 'background-black.png'
-  },
-  '/en/quem-somos': {
-    mobile: 'background-white-mobile.png',
-    desktop: 'background-white.png',
-    invert: true
-  }
-}
+import { pathImagesBr, pathImagesEn } from './common'
 
 const DynamicHeader = () => {
   const isMobile = useMediaQuery('(max-width: 600px)')
   const path: keyof typeof pathImagesBr = usePathname() as any
   const pathData = pathImagesBr[path] ?? pathImagesEn[path]
-
 
   return (
     <>
