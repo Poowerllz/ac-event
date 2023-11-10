@@ -21,7 +21,7 @@ export function CasesGalleryContainer() {
   return (
     <Fragment>
       {galleries
-        .slice(2)
+        .slice(1)
         .map(
           (cases, index) =>
             cases.length > 0 && <CasesGallery key={index} cases={cases} />
