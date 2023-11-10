@@ -1,3 +1,4 @@
+import { ContactForm } from '@/components/ContactForm'
 import { useTranslations } from 'next-intl'
 import Link from 'next/link'
 import { Fragment } from 'react'
@@ -148,8 +149,16 @@ export default function Contact() {
         </div>
       </section>
 
-      <section className="mb-40 flex w-full flex-col gap-10 px-6 py-10 sm:px-16">
-        <span className="text-base font-bold">Contato</span>
+      <section className="flex w-full flex-col items-center gap-10 bg-black px-6 py-10 text-white sm:px-16">
+        <div className="flex w-full max-w-[1080px] flex-col gap-6">
+          <h2 className="font-kernCompressed text-3xl font-bold sm:text-5xl">
+            {t('secondSection.form.title.firstLine')}
+            <br />
+            {t('secondSection.form.title.secondLine')}
+          </h2>
+
+          <ContactForm />
+        </div>
       </section>
     </Fragment>
   )

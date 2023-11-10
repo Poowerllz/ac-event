@@ -33,7 +33,10 @@
     },
     "secondSection": {
       "form": {
-        "title": "Vai ser um prazer conversar com você.",
+        "title": {
+          "firstLine": "Vai ser um prazer ",
+          "secondLine": "conversar com você."
+        },
         "firstColunm": {
           "firstInput": {
             "name": "name",

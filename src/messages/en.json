@@ -33,7 +33,10 @@
     },
     "secondSection": {
       "form": {
-        "title": "It will be a pleasure to talk to you.",
+        "title": {
+          "firstLine": "It will be a pleasure ",
+          "secondLine": "to talk to you."
+        },
         "firstColunm": {
           "firstInput": {
             "name": "name",
