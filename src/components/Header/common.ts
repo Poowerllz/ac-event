@@ -14,7 +14,7 @@ const videosHeader: VideosHeaderProps = {
   '/cases': {
     src: '../images/home/background.mp4'
   },
-  '/case/': {
+  '/cases/': {
     hasBackgroundColor: true,
     color: 'bg-white',
     src: '../images/home/background.mp4'

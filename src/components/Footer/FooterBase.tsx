@@ -19,8 +19,8 @@ export function FooterBase({ children }: { children: ReactNode }) {
     <footer
       className={cn(
         'relative flex min-h-screen w-full flex-col justify-between gap-12 bg-black text-white sm:gap-0',
-        pathData.styles.color,
-        pathData.styles.minHeight && pathData.styles.minHeight
+        pathData?.styles?.color,
+        pathData?.styles?.minHeight && pathData?.styles?.minHeight
       )}
     >
       {children}

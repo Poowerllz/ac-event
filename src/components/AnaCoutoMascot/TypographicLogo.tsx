@@ -20,7 +20,7 @@ export function TypographicLogo() {
         data-name="LogoTipograficaAnaCouto"
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 169.23 28.68"
-        style={{ fill: pathData.color }}
+        style={{ fill: pathData?.color ?? '#fff' }}
       >
         <path
           className="cls-1"

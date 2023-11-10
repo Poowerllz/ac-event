@@ -26,7 +26,7 @@ const backgrounds: BackgroundsProps = {
     isImage: false,
     color: 'bg-black'
   },
-  '/case/': {
+  '/cases/': {
     isImage: false,
     color: 'bg-black'
   },
