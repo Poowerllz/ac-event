@@ -1,6 +1,5 @@
-import Logo from '@/images/svg/logo.svg'
 import { useTranslations } from 'next-intl'
-import Image from 'next/image'
+import { TypographicLogo } from '../AnaCoutoMascot/TypographicLogo'
 import { FooterBackground } from './FooterBackground'
 import { FooterBase } from './FooterBase'
 import { FooterContacts } from './FooterContacts'
@@ -50,14 +49,7 @@ export function Footer() {
         copyright={copyrightKeys}
       />
 
-      <div className="relative h-auto w-full px-6 py-10 sm:px-16">
-        <Image
-          property="true"
-          src={Logo}
-          alt="Logo com a escrita Ana Couto"
-          style={{ height: 'auto', width: '100%' }}
-        />
-      </div>
+      <TypographicLogo />
     </FooterBase>
   )
 }

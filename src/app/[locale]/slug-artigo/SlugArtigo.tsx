@@ -17,7 +17,7 @@ export default function SlugArtigo() {
       </section>
 
       <section className="flex w-full flex-col gap-10 p-14 sm:px-16">
-        <div className="flex flex-col items-start justify-between gap-20 sm:flex-row sm:gap-40">
+        <div className="flex items-start justify-between gap-40">
           <span className="font-bold">Insights</span>
           <p>
             2023 já está no ar! E essa viagem já começou repleta de
@@ -29,7 +29,7 @@ export default function SlugArtigo() {
         </div>
 
         <form className="flex w-full flex-col lg:flex-row">
-          <div className="flex w-full flex-col justify-center bg-off_white p-16 max-[420px]:p-8 sm:p-36">
+          <div className="flex w-full flex-col justify-center bg-off_white p-36">
             <h3 className="text-3xl font-bold">Inscreve-se aqui</h3>
             <span className="mb-4">
               Preencha o formulário para acessar o calendário.

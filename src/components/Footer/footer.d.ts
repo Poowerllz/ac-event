@@ -1,16 +1,10 @@
-type Background = {
+export type Background = {
   isImage: boolean
   src?: StaticImageData
   color?: string
 }
 
 export type BackgroundsProps = Record<string, Background>
-
-export interface PathDataProps {
-  isImage: boolean
-  src?: string
-  color?: string
-}
 
 export interface FooterContactsProps {
   title: string[]
@@ -19,3 +13,12 @@ export interface FooterContactsProps {
   social: { name: string; href: string }[]
   copyright: string[]
 }
+
+export type ColorTextBackground = {
+  styles: {
+    color: string
+    minHeight?: string
+  }
+}
+
+export type ColorTextBackgroundProps = Record<string, ColorTextBackground>

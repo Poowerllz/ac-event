@@ -1,5 +1,6 @@
 'use client'
 
+import { getPathData } from '@/common/utils/getPathData'
 import useMediaQuery from '@/hooks/useMediaQuery'
 import logoAnaCouto from '@/images/logo.png'
 import eFazEFala from '@/images/svg/eFazEFala.svg'
@@ -9,17 +10,17 @@ import { usePathname } from 'next/navigation'
 import iconArrowDonw from '../../../../public/arrowdown.svg'
 import Menu from '../Menu'
 import { pathImagesBr, pathImagesEn } from './common'
+import { BackgroundHeaderProps } from './type'
 
 const DynamicHeader = () => {
   const isMobile = useMediaQuery('(max-width: 600px)')
 
-  const rawPath = usePathname()
-  const pathSegments = rawPath.split('/')
-
-  const shouldModifyPath = pathSegments.length > 2
-  const path = shouldModifyPath ? `/${pathSegments[1]}/` : rawPath
-
-  const pathData = pathImagesBr[path] ?? pathImagesEn[path]
+  const rawPath: string = usePathname()
+  const pathData: BackgroundHeaderProps = getPathData(
+    rawPath,
+    pathImagesBr,
+    pathImagesEn
+  )
 
   return (
     <>

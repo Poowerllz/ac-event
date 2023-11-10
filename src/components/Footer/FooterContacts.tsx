@@ -13,14 +13,23 @@ export function FooterContacts({
   social,
   copyright
 }: FooterContactsProps) {
-  const pathname = usePathname()
+  const rawPath = usePathname()
+  const pathSegments = rawPath.split('/')
 
-  if (pathname === '/contato') {
+  const shouldModifyPath = pathSegments.length > 2
+  const path = shouldModifyPath ? `/${pathSegments[1]}/` : rawPath
+
+  if (path === '/contato') {
     return <></>
   }
 
   return (
-    <div className="z-10 flex w-full flex-col justify-between gap-10 px-6 py-10 sm:px-16 lg:flex-row">
+    <div
+      className={cn(
+        'z-10 flex w-full flex-col justify-between gap-10 px-6 py-10 sm:px-16 lg:flex-row',
+        path === '/slug-artigo' && 'text-black'
+      )}
+    >
       <div className="flex flex-col">
         <div className="relative mb-5 h-auto w-10">
           <AnaCoutoMascot />

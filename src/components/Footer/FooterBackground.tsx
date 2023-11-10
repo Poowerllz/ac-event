@@ -1,22 +1,16 @@
 'use client'
 
 import { cn } from '@/common/utils/cn'
+import { getPathData } from '@/common/utils/getPathData'
 import { shimmer } from '@/common/utils/shimmer'
 import { toBase64 } from '@/common/utils/toBase64'
 import Image from 'next/image'
 import { usePathname } from 'next/navigation'
 import { pathBackgroundEn, pathBackgroundPtBr } from './common'
-import { PathDataProps } from './footer'
 
 export function FooterBackground() {
-  const rawPath = usePathname()
-  const pathSegments = rawPath.split('/')
-
-  const shouldModifyPath = pathSegments.length > 2
-  const path = shouldModifyPath ? `/${pathSegments[1]}/` : rawPath
-
-  const pathData: PathDataProps =
-    pathBackgroundPtBr[path] ?? pathBackgroundEn[path]
+  const rawPath: string = usePathname()
+  const pathData = getPathData(rawPath, pathBackgroundPtBr, pathBackgroundEn)
 
   if (!pathData.isImage) {
     return <div className={cn('absolute h-full w-full', pathData.color)} />
