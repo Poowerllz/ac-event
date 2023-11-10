@@ -61,7 +61,6 @@ const DynamicHeader = () => {
   const path: keyof typeof pathImagesBr = usePathname() as any
   const pathData = pathImagesBr[path] ?? pathImagesEn[path]
 
-
   return (
     <>
       <Image
