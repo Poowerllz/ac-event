@@ -21,6 +21,10 @@ const backgroundsHeader: BackgroundsHeaderProps = {
     desktop: 'background-white.png',
     invert: true
   },
+  '/case/': {
+    hasBackgroundColor: true,
+    color: 'bg-primary'
+  },
   '/contato': {
     mobile: 'background-contato-mobile.png',
     desktop: 'background-contato-desktop.png',

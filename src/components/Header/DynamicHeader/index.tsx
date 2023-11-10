@@ -12,7 +12,13 @@ import { pathImagesBr, pathImagesEn } from './common'
 
 const DynamicHeader = () => {
   const isMobile = useMediaQuery('(max-width: 600px)')
-  const path: keyof typeof pathImagesBr = usePathname() as any
+
+  const rawPath = usePathname()
+  const pathSegments = rawPath.split('/')
+
+  const shouldModifyPath = pathSegments.length > 2
+  const path = shouldModifyPath ? `/${pathSegments[1]}/` : rawPath
+
   const pathData = pathImagesBr[path] ?? pathImagesEn[path]
 
   return (

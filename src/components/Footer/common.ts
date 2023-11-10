@@ -1,5 +1,4 @@
 import { createPath } from '@/common/utils/createPathImages'
-import BgCaseInternal from '@/images/png/caseInternal.png'
 import BgHome from '@/images/png/home.png'
 import BgWhatWeDo from '@/images/png/whatWeDo.png'
 import BgWhoWeAre from '@/images/png/whoWeAre.png'
@@ -22,9 +21,9 @@ export const backgrounds: BackgroundsProps = {
     isImage: false,
     color: 'bg-black'
   },
-  '/case-internal': {
-    isImage: true,
-    src: BgCaseInternal
+  '/case/': {
+    isImage: false,
+    color: 'bg-black'
   },
   '/contato': {
     isImage: false,
@@ -33,6 +32,10 @@ export const backgrounds: BackgroundsProps = {
   '/artigos': {
     isImage: false,
     color: 'bg-black'
+  },
+  '/slug-artigo': {
+    isImage: false,
+    color: 'bg-white'
   }
 }
 

@@ -2,11 +2,21 @@
 
 import { usePathname } from 'next/navigation'
 import DynamicHeader from './DynamicHeader'
+import { MenuLogo } from './MenuLogo'
 import { pathVideoEn, pathVideoPtBr } from './common'
 
 export default function Header() {
-  const path = usePathname()
+  const rawPath = usePathname()
+  const pathSegments = rawPath.split('/')
+
+  const shouldModifyPath = pathSegments.length > 2
+  const path = shouldModifyPath ? `/${pathSegments[1]}/` : rawPath
+
   const pathData = pathVideoPtBr[path] ?? pathVideoEn[path]
+
+  if (pathData.hasBackgroundColor) {
+    return <MenuLogo bgColor={pathData.color || ''} />
+  }
 
   return (
     <div className="relative flex h-screen w-full items-center justify-center overflow-hidden bg-primary">

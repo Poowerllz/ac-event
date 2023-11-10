@@ -11,3 +11,11 @@ export interface PathDataProps {
   src?: string
   color?: string
 }
+
+export interface FooterContactsProps {
+  title: string[]
+  subtitle: string
+  address: string[]
+  social: { name: string; href: string }[]
+  copyright: string[]
+}

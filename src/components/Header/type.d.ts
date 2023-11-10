@@ -1,4 +1,6 @@
 export type VideoHeaderProps = {
+  hasBackgroundColor?: boolean
+  color?: string
   src: string
 }
 

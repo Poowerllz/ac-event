@@ -38,7 +38,7 @@ const Menu: React.FC<Props> = ({ invertColor }) => {
       />
 
       {menuIsOpen && (
-        <div className="fixed left-0 z-50 flex h-screen w-screen flex-col overflow-auto bg-black p-6 sm:p-16">
+        <div className="fixed left-0 top-0 z-50 flex h-screen w-screen flex-col overflow-auto bg-black p-6 sm:p-16">
           <div className="flex w-full items-center justify-between">
             <Link
               href={'/'}

@@ -9,7 +9,12 @@ import { pathBackgroundEn, pathBackgroundPtBr } from './common'
 import { PathDataProps } from './footer'
 
 export function FooterBackground() {
-  const path = usePathname()
+  const rawPath = usePathname()
+  const pathSegments = rawPath.split('/')
+
+  const shouldModifyPath = pathSegments.length > 2
+  const path = shouldModifyPath ? `/${pathSegments[1]}/` : rawPath
+
   const pathData: PathDataProps =
     pathBackgroundPtBr[path] ?? pathBackgroundEn[path]
 

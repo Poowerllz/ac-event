@@ -14,7 +14,17 @@ const videosHeader: VideosHeaderProps = {
   '/cases': {
     src: '../images/home/background.mp4'
   },
+  '/case/': {
+    hasBackgroundColor: true,
+    color: 'bg-white',
+    src: '../images/home/background.mp4'
+  },
   '/artigos': {
+    src: '../images/home/background.mp4'
+  },
+  '/slug-artigo': {
+    hasBackgroundColor: true,
+    color: 'bg-primary',
     src: '../images/home/background.mp4'
   },
   '/contato': {
