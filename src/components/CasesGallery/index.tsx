@@ -14,21 +14,21 @@ interface CasesGalleryProps {
 export function CasesGallery({ cases }: CasesGalleryProps) {
   const divsClass = [
     'col-span-2',
-    'row-span-2 row-start-2',
-    'col-start-1 row-start-4',
-    'col-start-2 row-start-2',
-    'row-span-2 col-start-2 row-start-3'
+    'max-[640px]:col-span-2 row-start-2 sm:row-span-2',
+    'max-[640px]:col-span-2 sm:col-start-1 row-start-3 sm:row-start-4',
+    'max-[640px]:col-span-2 sm:col-start-2 row-start-4 sm:row-start-2',
+    'max-[640px]:col-span-2 sm:row-span-2 sm:col-start-2 row-start-5 sm:row-start-3'
   ]
 
   return (
-    <div className="grid min-h-[200vh] grid-cols-2 grid-rows-4 gap-4">
+    <div className="grid min-h-[200vh] grid-cols-2 grid-rows-5 gap-4 sm:grid-rows-4">
       {cases.map((post, index: number) => (
         <Link
           key={index}
           href={`/cases/${post.slug}`}
           className={`relative flex flex-col items-start justify-between transition hover:grayscale ${divsClass[index]}`}
         >
-          <span className="m-4 hidden rounded-md bg-white px-2 py-[0.1rem] font-bold sm:top-5 sm:flex">
+          <span className="m-4 rounded-md bg-white px-2 py-[0.1rem] font-bold sm:top-5 sm:flex">
             Cases
           </span>
 
