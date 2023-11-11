@@ -46,6 +46,14 @@ const config: Config = {
       }
     }
   },
-  plugins: []
+  plugins: [
+    function ({ addUtilities }: any) {
+      const newUtilities = {
+        '.hidden-md': { display: 'none' }
+      }
+
+      addUtilities(newUtilities, ['responsive', 'hover'])
+    }
+  ]
 }
 export default config
