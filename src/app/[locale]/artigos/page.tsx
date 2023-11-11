@@ -2,6 +2,11 @@ import Image from 'next/image'
 import More from '@/images/svg/more.svg'
 import { ArrowMobile } from '@/components/arrowMobile'
 import { cn } from '@/common/utils/cn'
+import image1 from '@/images/artigo1.png'
+import image2 from '@/images/artigo2.png'
+import image3 from '@/images/artigo3.png'
+import image4 from '@/images/artigo4.png'
+import image5 from '@/images/artigo5.png'
 
 export default function Artigos() {
   return (
@@ -27,7 +32,7 @@ export default function Artigos() {
         </button>
       </section>
 
-      <section className="flex w-full">
+      <section className="mb-20 flex w-full">
         <div className="relative h-auto w-full flex-col gap-3 px-7">
           <div className="relative w-full">
             <button
@@ -51,7 +56,7 @@ export default function Artigos() {
               </text>
             </button>
             <Image
-              src={'/images/imagemgrid1.png'}
+              src={image1}
               alt="Imagem 1"
               objectFit="cover"
               width={1865}
@@ -88,7 +93,7 @@ export default function Artigos() {
                   </text>
                 </button>
                 <Image
-                  src={'/images/imagemgrid2.png'}
+                  src={image2}
                   alt="Imagem 2"
                   objectFit="cover"
                   width={918}
@@ -125,7 +130,7 @@ export default function Artigos() {
                   </text>
                 </button>
                 <Image
-                  src={'/images/imagemgrid3.png'}
+                  src={image3}
                   alt="Imagem 3"
                   objectFit="cover"
                   width={918}
@@ -163,7 +168,7 @@ export default function Artigos() {
                   </text>
                 </button>
                 <Image
-                  src={'/images/imagemgrid4.png'}
+                  src={image4}
                   alt="Imagem 4"
                   objectFit="cover"
                   width={918}
@@ -199,7 +204,7 @@ export default function Artigos() {
                   </text>
                 </button>
                 <Image
-                  src={'/images/imagemgrid5.png'}
+                  src={image5}
                   alt="Imagem 5"
                   objectFit="cover"
                   width={918}
