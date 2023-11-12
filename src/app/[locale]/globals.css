@@ -23,6 +23,11 @@ body {
   margin: 0 auto;
 }
 
+.slick-list .slick-track {
+  display: flex;
+  align-items: center;
+}
+
 .circle {
   width: 773px;
   height: 773px;

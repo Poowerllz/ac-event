@@ -51,6 +51,7 @@ export default function Home() {
           'tele'
         ]}
       />
+      <div className="bp-10 h-10" />
     </main>
   )
 }
