@@ -28,7 +28,7 @@ export default function WhatWeDo() {
   return (
     <Fragment>
       <section className="mb-40 flex w-full flex-col gap-10 px-6 py-10 sm:px-16">
-        <h1 className="font-kernCompressed text-6xl font-bold sm:w-3/5 sm:text-6xl lg:text-8xl">
+        <h1 className="font-kernCompressed text-5xl font-bold sm:w-3/5 sm:text-6xl lg:text-8xl">
           {t('firstSection.title')}
         </h1>
 
@@ -87,7 +87,7 @@ export default function WhatWeDo() {
         </ul>
       </section>
 
-      <section className="flex w-full flex-col items-center justify-center gap-10 px-3 py-10 text-black sm:px-6">
+      <section className="flex w-full flex-col items-center justify-center gap-10 px-2 py-10 text-black sm:px-4">
         <h2 className="mb-7 ml-7 self-start font-kernCompressed text-5xl font-bold sm:mb-14 sm:ml-10 sm:text-5xl md:text-[4.7rem] md:leading-[4.7rem]">
           {t('fourthSection.title.firstLine')}
           <br />
