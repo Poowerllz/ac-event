@@ -3,8 +3,8 @@
 import useMediaQuery from '@/hooks/useMediaQuery'
 import { useEffect, useState } from 'react'
 import { ImageGalleryWhatWeDoDesktop } from './desktop'
-import { ImageGalleryWhatWeDoProps } from './imageGalleryWhatWeDo'
 import { ImageGalleryWhatWeDoMobile } from './mobile'
+import { ImageGalleryWhatWeDoProps } from './type'
 
 export function ImageGalleryWhatWeDo({
   images,

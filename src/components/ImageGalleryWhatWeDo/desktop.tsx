@@ -3,7 +3,7 @@
 import Image from 'next/image'
 import { ImageGalleryWhatWeDoSubtitle } from './ImageGalleryWhatWeDoSubtitle'
 import { ImageGalleryWhatWeDoTitle } from './ImageGalleryWhatWeDoTitle'
-import { ImageGalleryWhatWeDoProps } from './imageGalleryWhatWeDo'
+import { ImageGalleryWhatWeDoProps } from './type'
 
 export function ImageGalleryWhatWeDoDesktop({
   images,

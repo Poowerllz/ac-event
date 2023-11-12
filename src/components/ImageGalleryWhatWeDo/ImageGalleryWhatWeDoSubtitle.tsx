@@ -5,5 +5,7 @@ export function ImageGalleryWhatWeDoSubtitle({
 }: {
   children: ReactNode
 }) {
-  return <p className="text-sm font-bold leading-none sm:text-lg">{children}</p>
+  return (
+    <p className="text-sm font-light leading-none sm:text-lg">{children}</p>
+  )
 }
