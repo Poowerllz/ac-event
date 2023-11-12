@@ -1,4 +1,5 @@
 import { cn } from '@/common/utils/cn'
+import ArrowTop from '@/images/svg/arrowtop.svg'
 import TitleLogo from '@/images/svg/titleLogo.svg'
 import { useTranslations } from 'next-intl'
 import Image from 'next/image'
@@ -27,24 +28,39 @@ export default function WhatWeDo() {
 
   return (
     <Fragment>
-      <section className="mb-40 flex w-full flex-col gap-10 px-6 py-10 sm:px-16">
-        <h1 className="font-kernCompressed text-5xl font-bold sm:w-3/5 sm:text-6xl lg:text-8xl">
-          {t('firstSection.title')}
+      <section className="relative mb-40 flex w-full flex-col gap-10 px-6 py-10 sm:px-16">
+        <div className="absolute right-6 top-6 sm:right-16">
+          <Image
+            src={ArrowTop}
+            alt="Jump To Top"
+            className="h-[34.92px] sm:h-[52.38px]"
+          />
+        </div>
+
+        <h1 className="mt-12 font-kernCompressed text-5xl font-bold sm:mt-0 sm:w-3/5 sm:text-6xl lg:text-8xl">
+          Lorem ipsum em <br />
+          design gráfico e <br />
+          editoração é um <br />
+          texto padrão.
         </h1>
 
-        <p className="md:text-1xl self-end text-base font-semibold sm:text-lg md:w-3/12 lg:text-2xl">
-          {t('firstSection.subtitle')}
+        <p className="self-end text-sm font-semibold sm:text-lg md:w-3/12 lg:text-2xl">
+          Desenvolvemos Estratégias de <br /> Marca e Publicidade para criar um
+          <br /> alinhamento perfeito entre Marca, <br /> Negócio, Comunicação e
+          Cultura.
         </p>
       </section>
 
-      <section className="relative mb-20 flex w-full flex-col gap-10 px-6 py-10 sm:px-16">
+      <section className="relative flex w-full flex-col gap-10 px-6 py-10 sm:mb-20 sm:px-16">
         <div>
           <span className="font-extrabold">{t('secondSection.span')}</span>
           <hr className={cn('h-0.5 w-full border-0', 'bg-gray-300')} />
         </div>
 
-        <p className="md:text-1xl relative w-2/4 self-end text-base font-semibold sm:text-lg md:absolute md:top-24 md:w-3/12 lg:text-2xl">
-          {t('secondSection.subtitle')}
+        <p className="self-end text-sm font-semibold sm:self-start sm:text-lg md:w-3/12 lg:text-2xl">
+          Do estratégico ao tático. Do tático ao <br /> operacional. Nossa
+          oferta de serviços <br /> é construída a partir de uma <br />{' '}
+          metodologia proprietária baseada em <br /> três pilares estratégicos.
         </p>
 
         <div className="relative h-auto w-full">
@@ -68,13 +84,16 @@ export default function WhatWeDo() {
           {linksKeys.map((key, index) => {
             return (
               <Fragment key={key}>
-                <li className="relative font-kernCompressed text-6xl font-bold text-white transition hover:text-primary hover:transition">
+                <li className="relative font-kernCompressed text-3xl font-bold text-white transition hover:text-primary hover:transition sm:text-6xl">
                   {t(key)}
+
                   <br />
-                  <span className="relative bottom-2 right-2 text-xs text-white lg:absolute">
+
+                  <span className="absolute bottom-0 right-2 text-[0.55rem] text-white sm:bottom-2 sm:text-xs">
                     {t(hoverLinksKeys[index])}
                   </span>
                 </li>
+
                 <hr
                   className={cn(
                     'mb-6 h-0.5 w-full border-0',
@@ -88,14 +107,8 @@ export default function WhatWeDo() {
       </section>
 
       <section className="flex w-full flex-col items-center justify-center gap-10 px-2 py-10 text-black sm:px-4">
-        <h2 className="mb-7 ml-7 self-start font-kernCompressed text-5xl font-bold sm:mb-14 sm:ml-10 sm:text-5xl md:text-[4.7rem] md:leading-[4.7rem]">
-          {t('fourthSection.title.firstLine')}
-          <br />
-          {t('fourthSection.title.secondLine')}
-          <br />
-          {t('fourthSection.title.thirdLine')}
-          <br />
-          {t('fourthSection.title.fourthLine')}
+        <h2 className="ml-4 self-start font-kernCompressed text-5xl font-bold sm:mb-14 sm:ml-10 sm:text-5xl md:text-[4.7rem] md:leading-[4.7rem]">
+          Lorem ipsum
         </h2>
 
         <GallerySection />
