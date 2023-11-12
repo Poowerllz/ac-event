@@ -1,12 +1,12 @@
-import Image from 'next/image'
-import More from '@/images/svg/more.svg'
-import { ArrowMobile } from '@/components/arrowMobile'
 import { cn } from '@/common/utils/cn'
+import { ArrowMobile } from '@/components/arrowMobile'
 import image1 from '@/images/artigo1.png'
 import image2 from '@/images/artigo2.png'
 import image3 from '@/images/artigo3.png'
 import image4 from '@/images/artigo4.png'
 import image5 from '@/images/artigo5.png'
+import More from '@/images/svg/more.svg'
+import Image from 'next/image'
 
 export default function Artigos() {
   return (
@@ -33,7 +33,7 @@ export default function Artigos() {
       </section>
 
       <section className="mb-20 flex w-full">
-        <div className="relative h-auto w-full flex-col gap-3 px-7">
+        <div className="relative h-auto w-full flex-col gap-3 px-1 sm:px-4">
           <div className="relative w-full">
             <button
               className={cn(
@@ -69,6 +69,7 @@ export default function Artigos() {
               </span>
             </div>
           </div>
+
           <div className="my-1 flex flex-col justify-between gap-3 md:my-3 md:flex-row ">
             <div className="relative w-full lg:w-3/6">
               <div className="relative mb-3 w-full">
