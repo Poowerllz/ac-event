@@ -59,7 +59,7 @@ const DynamicHeader = () => {
             property="true"
             src={eFazEFala}
             alt="Tipografia: É Faz E Fala"
-            style={{ height: 'auto', width: '45%' }}
+            style={{ height: 'auto', width: '55%' }}
           />
         </div>
       )}
