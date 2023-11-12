@@ -26,7 +26,7 @@ export function ImageGalleryWhoWeAre({
         </span>
       </div>
 
-      <div className="flex flex-col justify-between gap-2">
+      <div className="flex flex-col gap-5 self-end">
         <span className="hidden text-2xl leading-none md:flex">
           Propósito <br /> engajador <br /> e de impacto
         </span>
