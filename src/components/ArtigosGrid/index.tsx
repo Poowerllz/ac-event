@@ -18,7 +18,7 @@ export default function ArtigosGrid() {
             <div className="relative w-full">
               <button
                 className={cn(
-                  'absolute left-3 top-3 flex h-6 w-20 items-center justify-center rounded-sm p-2 md:left-5 md:top-5 md:h-8 md:w-24',
+                  'absolute right-2 top-2 flex h-6 w-20 items-center justify-center rounded-sm p-2 md:left-5 md:top-5 md:h-8 md:w-24',
                   'bg-white text-black'
                 )}
               >
@@ -28,7 +28,7 @@ export default function ArtigosGrid() {
               </button>
               <button
                 className={cn(
-                  'absolute left-24 top-3 flex h-6 w-20 items-center justify-center rounded-sm p-2 md:left-32  md:top-5 md:h-8 md:w-24',
+                  'absolute right-24 top-2 flex h-6 w-20 items-center justify-center rounded-sm p-2 md:left-32  md:top-5 md:h-8 md:w-24',
                   'bg-white text-black'
                 )}
               >
@@ -43,7 +43,7 @@ export default function ArtigosGrid() {
                 height={150}
                 style={{ width: '100%', height: '150px', objectFit: 'cover' }}
               />
-              <div className="absolute bottom-3 left-3 flex w-1/3 flex-col items-start gap-1 text-white md:bottom-5 md:left-5 md:w-1/6">
+              <div className="absolute bottom-2 left-2 flex w-1/3 flex-col items-start gap-1 text-white md:bottom-5 md:left-5 md:w-1/6">
                 <span className="text-sm leading-4 md:text-3xl">
                   Branding na cadeira do CEO
                 </span>
@@ -54,7 +54,7 @@ export default function ArtigosGrid() {
                 <div className="relative mb-1 w-full">
                   <button
                     className={cn(
-                      'absolute left-3 top-3 flex h-6 w-20 items-center justify-center rounded-sm p-2 md:left-5 md:top-5 md:h-8 md:w-24',
+                      'absolute right-2 top-2 flex h-6 w-20 items-center justify-center rounded-sm p-2 md:left-5 md:top-5 md:h-8 md:w-24',
                       'bg-white text-black'
                     )}
                   >
@@ -64,7 +64,7 @@ export default function ArtigosGrid() {
                   </button>
                   <button
                     className={cn(
-                      'absolute left-24 top-3 flex h-6 w-20 items-center justify-center rounded-sm p-2 md:left-32  md:top-5 md:h-8 md:w-24',
+                      'absolute right-24 top-2 flex h-6 w-20 items-center justify-center rounded-sm p-2 md:left-32  md:top-5 md:h-8 md:w-24',
                       'bg-white text-black'
                     )}
                   >
@@ -83,7 +83,7 @@ export default function ArtigosGrid() {
                       objectFit: 'cover'
                     }}
                   />
-                  <div className="absolute bottom-3 left-3 flex w-2/3 flex-col items-start gap-1 text-white md:bottom-5 md:left-5 md:w-3/5">
+                  <div className="absolute bottom-2 left-2 flex w-2/3 flex-col items-start gap-1 text-white md:bottom-5 md:left-5 md:w-3/5">
                     <span className="text-sm leading-4 md:text-3xl">
                       Proposito decodificado: um olhar renovador sobre um tema
                       cansado
@@ -93,7 +93,7 @@ export default function ArtigosGrid() {
                 <div className="relative  w-full">
                   <button
                     className={cn(
-                      'absolute left-3 top-3 flex h-6 w-20 items-center justify-center rounded-sm p-2 md:left-5 md:top-5 md:h-8 md:w-24',
+                      'absolute right-2 top-2 flex h-6 w-20 items-center justify-center rounded-sm p-2 md:left-5 md:top-5 md:h-8 md:w-24',
                       'bg-white text-black'
                     )}
                   >
@@ -103,7 +103,7 @@ export default function ArtigosGrid() {
                   </button>
                   <button
                     className={cn(
-                      'absolute left-24 top-3 flex h-6 w-20 items-center justify-center rounded-sm p-2 md:left-32  md:top-5 md:h-8 md:w-24',
+                      'absolute right-24 top-2 flex h-6 w-20 items-center justify-center rounded-sm p-2 md:left-32  md:top-5 md:h-8 md:w-24',
                       'bg-white text-black'
                     )}
                   >
@@ -122,7 +122,7 @@ export default function ArtigosGrid() {
                       objectFit: 'cover'
                     }}
                   />
-                  <div className="absolute bottom-3 left-3 flex w-2/5 flex-col items-start gap-1 text-white md:bottom-5 md:left-5">
+                  <div className="absolute bottom-2 left-2 flex w-2/5 flex-col items-start gap-1 text-white md:bottom-5 md:left-5">
                     <span className="text-sm leading-4 md:text-3xl">
                       Qual o valor da brasilidade criativa?
                     </span>
@@ -134,7 +134,7 @@ export default function ArtigosGrid() {
                 <div className="relative mb-1 w-full">
                   <button
                     className={cn(
-                      'absolute left-3 top-3 flex h-6 w-20 items-center justify-center rounded-sm p-2 md:left-5 md:top-5 md:h-8 md:w-24',
+                      'absolute right-2 top-2 flex h-6 w-20 items-center justify-center rounded-sm p-2 md:left-5 md:top-5 md:h-8 md:w-24',
                       'bg-white text-black'
                     )}
                   >
@@ -144,7 +144,7 @@ export default function ArtigosGrid() {
                   </button>
                   <button
                     className={cn(
-                      'absolute left-24 top-3 flex h-6 w-20 items-center justify-center rounded-sm p-2 md:left-32  md:top-5 md:h-8 md:w-24',
+                      'absolute right-24 top-2 flex h-6 w-20 items-center justify-center rounded-sm p-2 md:left-32  md:top-5 md:h-8 md:w-24',
                       'bg-white text-black'
                     )}
                   >
@@ -164,7 +164,7 @@ export default function ArtigosGrid() {
                     }}
                   />
 
-                  <div className="absolute bottom-3 left-3 flex w-1/3 flex-col items-start gap-1 text-white md:bottom-5 md:left-5">
+                  <div className="absolute bottom-2 left-2 flex w-1/3 flex-col items-start gap-1 text-white md:bottom-5 md:left-5">
                     <span className="text-sm leading-4 md:text-3xl">
                       Qual o valor da nova economia?
                     </span>
@@ -173,7 +173,7 @@ export default function ArtigosGrid() {
                 <div className="relative w-full">
                   <button
                     className={cn(
-                      'absolute left-3 top-3 flex h-6 w-20 items-center justify-center rounded-sm p-2 md:left-5 md:top-5 md:h-8 md:w-24',
+                      'absolute right-2 top-2 flex h-6 w-20 items-center justify-center rounded-sm p-2 md:left-5 md:top-5 md:h-8 md:w-24',
                       'bg-white text-black'
                     )}
                   >
@@ -183,7 +183,7 @@ export default function ArtigosGrid() {
                   </button>
                   <button
                     className={cn(
-                      'absolute left-24 top-3 flex h-6 w-20 items-center justify-center rounded-sm p-2 md:left-32  md:top-5 md:h-8 md:w-24',
+                      'absolute right-24 top-2 flex h-6 w-20 items-center justify-center rounded-sm p-2 md:left-32  md:top-5 md:h-8 md:w-24',
                       'bg-white text-black'
                     )}
                   >
@@ -202,7 +202,7 @@ export default function ArtigosGrid() {
                       objectFit: 'cover'
                     }}
                   />
-                  <div className="absolute bottom-3 left-3 flex w-2/3 flex-col items-start gap-1 text-white md:bottom-5 md:left-5 md:w-2/6">
+                  <div className="absolute bottom-2 left-2 flex w-2/3 flex-col items-start gap-1 text-white md:bottom-5 md:left-5 md:w-2/6">
                     <span className="text-sm leading-4 md:text-3xl">
                       Como as marcas se comportam no meio digital?
                     </span>
