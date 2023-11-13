@@ -75,7 +75,7 @@ export const ImageGalleryHome = () => {
               height={421}
               style={{ width: '100%', height: '100%' }}
             />
-            <div className="absolute bottom-5 left-5 flex flex-col items-start gap-1 text-white">
+            <div className="absolute bottom-5 left-5 flex flex-col items-start gap-3 text-white">
               <span className="text-2xl md:text-4xl">Branding Brasil</span>
               <span className="text-xs leading-3">
                 O valor que o país gera.

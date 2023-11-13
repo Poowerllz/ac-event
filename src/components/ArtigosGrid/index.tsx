@@ -50,9 +50,9 @@ export default function ArtigosGrid() {
                 </span>
               </div>
             </div>
-            <div className="my-1 flex flex-col justify-between gap-3 md:my-3 md:flex-row ">
+            <div className="my-1 flex flex-col justify-between gap-1 md:my-3 md:flex-row ">
               <div className="relative w-full lg:w-3/6">
-                <div className="relative mb-3 w-full">
+                <div className="relative mb-1 w-full">
                   <button
                     className={cn(
                       'absolute left-3 top-3 flex h-6 w-20 items-center justify-center rounded-sm p-2 md:left-5 md:top-5 md:h-8 md:w-24',
@@ -88,7 +88,6 @@ export default function ArtigosGrid() {
                     </span>
                   </div>
                 </div>
-
                 <div className="relative  w-full">
                   <button
                     className={cn(
@@ -127,7 +126,7 @@ export default function ArtigosGrid() {
               </div>
 
               <div className="relative w-full md:w-3/6">
-                <div className="relative mb-3 w-full">
+                <div className="relative mb-1 w-full">
                   <button
                     className={cn(
                       'absolute left-3 top-3 flex h-6 w-20 items-center justify-center rounded-sm p-2 md:left-5 md:top-5 md:h-8 md:w-24',

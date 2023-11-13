@@ -143,8 +143,7 @@ export const ImageHomeGrid = () => {
         </div>
       ) : (
         <>
-          {' '}
-          <div className="relative h-auto w-full flex-col gap-3 px-1 sm:px-4">
+          <div className="relative h-auto w-full flex-col gap-4 px-1 sm:px-4">
             <div className="relative w-full">
               <button
                 className={cn(
@@ -167,9 +166,9 @@ export const ImageHomeGrid = () => {
                 <span className="text-2lg">Propósito aqui</span>
               </div>
             </div>
-            <div className="my-1 flex flex-col justify-between gap-3 md:my-3 md:flex-row ">
+            <div className="my-1 flex flex-col justify-between gap-4 md:my-4 md:flex-row ">
               <div className="relative w-3/6 lg:w-3/6">
-                <div className="relative mb-3 w-full">
+                <div className="relative mb-4 w-full">
                   <button
                     className={cn(
                       'absolute left-5 top-5 flex h-8 w-20 items-center justify-center rounded p-2',
@@ -225,7 +224,7 @@ export const ImageHomeGrid = () => {
               </div>
 
               <div className="relative w-3/6 lg:w-3/6">
-                <div className="relative mb-3 w-full">
+                <div className="relative mb-4 w-full">
                   <button
                     className={cn(
                       'absolute left-5 top-5 flex h-8 w-20 items-center justify-center rounded p-2',
@@ -272,7 +271,7 @@ export const ImageHomeGrid = () => {
               </div>
             </div>
 
-            <div className="flex justify-between gap-1 ">
+            <div className="flex justify-between gap-4 ">
               <ImageGalleryHome />
             </div>
           </div>
