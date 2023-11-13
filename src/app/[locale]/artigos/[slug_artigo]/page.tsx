@@ -10,13 +10,13 @@ import { Fragment } from 'react'
 export default function SlugArtigo() {
   return (
     <Fragment>
-      <section className="mb-40 flex w-full flex-col gap-10 bg-primary px-6 py-10 pb-32 sm:px-16">
-        <h1 className="self-center text-center font-kernCompressed text-3xl font-bold sm:w-3/5 sm:text-6xl lg:text-7xl">
+      <section className="flex w-full flex-col gap-10 bg-primary px-6 py-10 pb-32 sm:mb-40 sm:px-16">
+        <h1 className="self-center text-center font-kernCompressed text-5xl font-bold sm:w-3/5 sm:text-6xl lg:text-7xl">
           Organização e ideias em ação: baixe o seu calendário 2023
         </h1>
       </section>
 
-      <section className="flex w-full flex-col gap-10 p-14 sm:px-16">
+      <section className="flex w-full flex-col gap-10 p-8 sm:px-16">
         <div className="flex flex-col items-start justify-between gap-20 sm:flex-row sm:gap-40">
           <span className="font-bold">Insights</span>
           <p>
@@ -68,7 +68,7 @@ export default function SlugArtigo() {
         </div>
       </section>
 
-      <section className="mb-40 flex w-full flex-col gap-10 bg-black p-14 sm:px-16">
+      <section className="flex w-full flex-col gap-10 bg-black p-8 sm:mb-40 sm:px-16">
         <div className="flex items-start justify-between">
           <span className="text-base font-bold text-white">
             Veja mais insights
