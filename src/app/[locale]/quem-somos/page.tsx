@@ -27,10 +27,9 @@ export default function WhoWeAre() {
           texto padrão.
         </h1>
 
-        <p className="w-auto self-end text-sm font-semibold sm:text-base lg:text-lg xl:text-2xl">
-          Desenvolvemos Estratégias de <br /> Marca e Publicidade para criar um
-          <br /> alinhamento perfeito entre Marca, <br /> Negócio, Comunicação e
-          Cultura.
+        <p className="w-auto max-w-[240px] self-end text-sm font-semibold sm:text-base lg:max-w-[360px] lg:text-lg xl:text-2xl">
+          Desenvolvemos Estratégias de Marca e Publicidade para criar um
+          alinhamento perfeito entre Marca, Negócio, Comunicação e Cultura.
         </p>
       </section>
 
@@ -46,10 +45,9 @@ export default function WhoWeAre() {
             propósito hoje
           </h2>
 
-          <p className="w-auto self-end text-sm font-semibold sm:text-base md:self-start lg:text-lg xl:text-2xl">
-            As Marcas que mais geram valor para o <br /> negócio estão no
-            patamar da onda 3 e <br /> se diferenciam na forma como se <br />
-            relacionam com as pessoas.
+          <p className="w-auto max-w-[240px] self-end text-sm font-semibold sm:text-base md:self-start lg:max-w-[360px] lg:text-lg xl:text-2xl">
+            As Marcas que mais geram valor para o negócio estão no patamar da
+            onda 3 e se diferenciam na forma como se relacionam com as pessoas.
           </p>
         </div>
 

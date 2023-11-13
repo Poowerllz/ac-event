@@ -44,10 +44,9 @@ export default function WhatWeDo() {
           texto padrão.
         </h1>
 
-        <p className="w-auto self-end text-sm font-semibold sm:text-base lg:text-lg xl:text-2xl">
-          Desenvolvemos Estratégias de <br /> Marca e Publicidade para criar um
-          <br /> alinhamento perfeito entre Marca, <br /> Negócio, Comunicação e
-          Cultura.
+        <p className="w-auto max-w-[220px] self-end text-sm font-semibold sm:text-base lg:max-w-[360px] lg:text-lg xl:text-2xl">
+          Desenvolvemos Estratégias de Marca e Publicidade para criar um
+          alinhamento perfeito entre Marca, Negócio, Comunicação e Cultura.
         </p>
       </section>
 
@@ -57,10 +56,10 @@ export default function WhatWeDo() {
           <hr className={cn('h-0.5 w-full border-0', 'bg-gray-300')} />
         </div>
 
-        <p className="absolute right-6 top-24 w-auto self-end text-sm font-semibold max-[490px]:text-xs sm:right-16 sm:self-start sm:text-lg lg:text-2xl">
-          Do estratégico ao tático. Do tático ao <br /> operacional. Nossa
-          oferta de serviços <br /> é construída a partir de uma <br />{' '}
-          metodologia proprietária baseada em <br /> três pilares estratégicos.
+        <p className="absolute right-6 top-24 w-auto max-w-[220px] self-end text-sm font-semibold sm:right-16 sm:text-base lg:max-w-[360px] lg:text-lg xl:text-2xl">
+          Do estratégico ao tático. Do tático ao operacional. Nossa oferta de
+          serviços é construída a partir de uma metodologia proprietária baseada
+          em três pilares estratégicos.
         </p>
 
         <div className="relative h-auto w-full">
