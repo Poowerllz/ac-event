@@ -10,7 +10,7 @@ export function ImageGalleryWhatWeDoDesktop({
   text
 }: ImageGalleryWhatWeDoProps) {
   return (
-    <div className="grid h-full w-full grid-cols-4 content-stretch items-stretch justify-center gap-4 md:gap-8">
+    <div className="grid h-full w-full grid-cols-4 content-stretch items-stretch justify-center gap-2 md:gap-4">
       <div className="flex flex-col justify-between gap-5">
         <div className="relative h-auto w-full">
           <Image

@@ -6,7 +6,7 @@ export function ImageGalleryWhoWeAreMobile({
   text
 }: ImageGalleryWhoWeAreProps) {
   return (
-    <div className="flex h-full w-full flex-col content-stretch items-stretch justify-center gap-2 md:gap-8">
+    <div className="flex h-full w-full flex-col content-stretch items-stretch justify-center gap-2 md:gap-4">
       <div className="flex flex-col justify-between gap-5">
         <div className="relative mb-4 h-auto w-full">
           <Image
