@@ -39,10 +39,9 @@ export default function ArtigosGrid() {
               <Image
                 src={image1}
                 alt="Imagem 1"
-                objectFit="cover"
                 width={1865}
                 height={150}
-                style={{ width: '100%', height: '150px' }}
+                style={{ width: '100%', height: '150px', objectFit: 'cover' }}
               />
               <div className="absolute bottom-3 left-3 flex w-1/3 flex-col items-start gap-1 text-white md:bottom-5 md:left-5 md:w-1/6">
                 <span className="text-sm leading-4 md:text-3xl">
@@ -76,10 +75,13 @@ export default function ArtigosGrid() {
                   <Image
                     src={image2}
                     alt="Imagem 2"
-                    objectFit={'cover'}
                     width={918}
                     height={150}
-                    style={{ width: '100%', height: '150px' }}
+                    style={{
+                      width: '100%',
+                      height: '150px',
+                      objectFit: 'cover'
+                    }}
                   />
                   <div className="absolute bottom-3 left-3 flex w-2/3 flex-col items-start gap-1 text-white md:bottom-5 md:left-5 md:w-3/5">
                     <span className="text-sm leading-4 md:text-3xl">
@@ -112,10 +114,13 @@ export default function ArtigosGrid() {
                   <Image
                     src={image3}
                     alt="Imagem 3"
-                    objectFit="cover"
                     width={918}
                     height={316}
-                    style={{ width: '100%', height: '150px' }}
+                    style={{
+                      width: '100%',
+                      height: '150px',
+                      objectFit: 'cover'
+                    }}
                   />
                   <div className="absolute bottom-3 left-3 flex w-2/5 flex-col items-start gap-1 text-white md:bottom-5 md:left-5">
                     <span className="text-sm leading-4 md:text-3xl">
@@ -150,10 +155,13 @@ export default function ArtigosGrid() {
                   <Image
                     src={image4}
                     alt="Imagem 4"
-                    objectFit="cover"
                     width={918}
                     height={316}
-                    style={{ width: '100%', height: '150px' }}
+                    style={{
+                      width: '100%',
+                      height: '150px',
+                      objectFit: 'cover'
+                    }}
                   />
 
                   <div className="absolute bottom-3 left-3 flex w-1/3 flex-col items-start gap-1 text-white md:bottom-5 md:left-5">
@@ -186,10 +194,13 @@ export default function ArtigosGrid() {
                   <Image
                     src={image5}
                     alt="Imagem 5"
-                    objectFit="cover"
                     width={918}
                     height={150}
-                    style={{ width: '100%', height: '150px' }}
+                    style={{
+                      width: '100%',
+                      height: '150px',
+                      objectFit: 'cover'
+                    }}
                   />
                   <div className="absolute bottom-3 left-3 flex w-2/3 flex-col items-start gap-1 text-white md:bottom-5 md:left-5 md:w-2/6">
                     <span className="text-sm leading-4 md:text-3xl">
@@ -229,10 +240,9 @@ export default function ArtigosGrid() {
                 <Image
                   src={image1}
                   alt="Imagem 1"
-                  objectFit="cover"
                   width={1865}
                   height={814}
-                  style={{ width: '100%' }}
+                  style={{ width: '100%', objectFit: 'cover' }}
                 />
                 <div className="absolute bottom-3 left-3 flex w-1/3 flex-col items-start gap-1 text-white md:bottom-5 md:left-5 md:w-1/6">
                   <span className="text-sm leading-4 md:text-3xl">
@@ -266,10 +276,13 @@ export default function ArtigosGrid() {
                     <Image
                       src={image2}
                       alt="Imagem 2"
-                      objectFit="cover"
                       width={918}
                       height={919}
-                      style={{ width: '100%', height: '100%' }}
+                      style={{
+                        width: '100%',
+                        height: '100%',
+                        objectFit: 'cover'
+                      }}
                     />
                     <div className="absolute bottom-3 left-3 flex w-2/3 flex-col items-start gap-1 text-white md:bottom-5 md:left-5 md:w-3/5">
                       <span className="text-sm leading-4 md:text-3xl">
@@ -303,10 +316,9 @@ export default function ArtigosGrid() {
                     <Image
                       src={image3}
                       alt="Imagem 3"
-                      objectFit="cover"
                       width={918}
                       height={421}
-                      style={{ width: '100%' }}
+                      style={{ width: '100%', objectFit: 'cover' }}
                     />
                     <div className="absolute bottom-3 left-3 flex w-2/5 flex-col items-start gap-1 text-white md:bottom-5 md:left-5">
                       <span className="text-sm leading-4 md:text-3xl">
@@ -341,10 +353,9 @@ export default function ArtigosGrid() {
                     <Image
                       src={image4}
                       alt="Imagem 4"
-                      objectFit="cover"
                       width={918}
                       height={421}
-                      style={{ width: '100%' }}
+                      style={{ width: '100%', objectFit: 'cover' }}
                     />
 
                     <div className="absolute bottom-3 left-3 flex w-1/3 flex-col items-start gap-1 text-white md:bottom-5 md:left-5">
@@ -377,10 +388,9 @@ export default function ArtigosGrid() {
                     <Image
                       src={image5}
                       alt="Imagem 5"
-                      objectFit="cover"
                       width={918}
                       height={421}
-                      style={{ width: '100%' }}
+                      style={{ width: '100%', objectFit: 'cover' }}
                     />
                     <div className="absolute bottom-3 left-3 flex w-2/3 flex-col items-start gap-1 text-white md:bottom-5 md:left-5 md:w-2/6">
                       <span className="text-sm leading-4 md:text-3xl">
