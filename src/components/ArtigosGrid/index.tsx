@@ -14,7 +14,7 @@ export default function ArtigosGrid() {
     <>
       {isMobile ? (
         <section className="mb-20 flex w-full">
-          <div className="relative h-auto w-full flex-col gap-3 px-7">
+          <div className="relative h-auto w-full flex-col gap-1 px-1">
             <div className="relative w-full">
               <button
                 className={cn(
@@ -50,7 +50,7 @@ export default function ArtigosGrid() {
                 </span>
               </div>
             </div>
-            <div className="my-1 flex flex-col justify-between gap-1 md:my-3 md:flex-row ">
+            <div className="my-1 flex flex-col justify-between gap-1 md:my-1 md:flex-row ">
               <div className="relative w-full lg:w-3/6">
                 <div className="relative mb-1 w-full">
                   <button
@@ -76,7 +76,7 @@ export default function ArtigosGrid() {
                   <Image
                     src={image2}
                     alt="Imagem 2"
-                    objectFit="cover"
+                    objectFit={'cover'}
                     width={918}
                     height={150}
                     style={{ width: '100%', height: '150px' }}
@@ -188,7 +188,7 @@ export default function ArtigosGrid() {
                     alt="Imagem 5"
                     objectFit="cover"
                     width={918}
-                    height={316}
+                    height={150}
                     style={{ width: '100%', height: '150px' }}
                   />
                   <div className="absolute bottom-3 left-3 flex w-2/3 flex-col items-start gap-1 text-white md:bottom-5 md:left-5 md:w-2/6">
@@ -204,7 +204,7 @@ export default function ArtigosGrid() {
       ) : (
         <>
           <section className="mb-20 flex w-full">
-            <div className="relative h-auto w-full flex-col gap-3 px-7">
+            <div className="relative h-auto w-full flex-col gap-4 px-4">
               <div className="relative w-full">
                 <button
                   className={cn(
@@ -240,9 +240,9 @@ export default function ArtigosGrid() {
                   </span>
                 </div>
               </div>
-              <div className="my-1 flex flex-col justify-between gap-3 md:my-3 md:flex-row ">
+              <div className="my-1 flex flex-col justify-between gap-4 md:my-4 md:flex-row ">
                 <div className="relative w-full lg:w-3/6">
-                  <div className="relative mb-3 w-full">
+                  <div className="relative mb-4 w-full">
                     <button
                       className={cn(
                         'absolute left-3 top-3 flex h-6 w-20 items-center justify-center rounded-sm p-2 md:left-5 md:top-5 md:h-8 md:w-24',
@@ -279,7 +279,7 @@ export default function ArtigosGrid() {
                     </div>
                   </div>
 
-                  <div className="relative  w-full">
+                  <div className="relative w-full">
                     <button
                       className={cn(
                         'absolute left-3 top-3 flex h-6 w-20 items-center justify-center rounded-sm p-2 md:left-5 md:top-5 md:h-8 md:w-24',
@@ -317,7 +317,7 @@ export default function ArtigosGrid() {
                 </div>
 
                 <div className="relative w-full md:w-3/6">
-                  <div className="relative mb-3 w-full">
+                  <div className="relative mb-4 w-full">
                     <button
                       className={cn(
                         'absolute left-3 top-3 flex h-6 w-20 items-center justify-center rounded-sm p-2 md:left-5 md:top-5 md:h-8 md:w-24',
