@@ -38,6 +38,10 @@ const backgrounds: BackgroundsProps = {
     isImage: false,
     color: 'bg-black'
   },
+  '/artigos/': {
+    isImage: false,
+    color: 'bg-white'
+  },
   '/slug-artigo': {
     isImage: false,
     color: 'bg-white'
@@ -88,6 +92,11 @@ const colorTextBackground: ColorTextBackgroundProps = {
   '/artigos': {
     styles: {
       color: 'text-white'
+    }
+  },
+  '/artigos/': {
+    styles: {
+      color: 'text-black'
     }
   },
   '/slug-artigo': {

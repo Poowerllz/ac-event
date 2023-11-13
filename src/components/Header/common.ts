@@ -22,6 +22,11 @@ const videosHeader: VideosHeaderProps = {
   '/artigos': {
     src: '../images/home/background.mp4'
   },
+  '/artigos/': {
+    hasBackgroundColor: true,
+    color: 'bg-primary',
+    src: ''
+  },
   '/slug-artigo': {
     hasBackgroundColor: true,
     color: 'bg-primary',

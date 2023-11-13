@@ -1,10 +1,12 @@
 'use client'
 
 import { cn } from '@/common/utils/cn'
+import { getPathData } from '@/common/utils/getPathData'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { AnaCoutoMascot } from '../AnaCoutoMascot'
-import { FooterContactsProps } from './footer'
+import { colorTextEn, colorTextPtBr } from './common'
+import { ColorTextBackground, FooterContactsProps } from './footer'
 
 export function FooterContacts({
   title,
@@ -19,6 +21,14 @@ export function FooterContacts({
   const shouldModifyPath = pathSegments.length > 2
   const path = shouldModifyPath ? `/${pathSegments[1]}/` : rawPath
 
+  const pathData: ColorTextBackground = getPathData(
+    rawPath,
+    colorTextPtBr,
+    colorTextEn
+  )
+
+  console.log(path)
+
   if (path === '/contato') {
     return <></>
   }
@@ -27,7 +37,7 @@ export function FooterContacts({
     <div
       className={cn(
         'z-10 flex w-full flex-col justify-between gap-10 px-6 py-10 sm:px-16 lg:flex-row',
-        path === '/slug-artigo' && 'text-black'
+        pathData?.styles?.color
       )}
     >
       <div className="flex flex-col">
