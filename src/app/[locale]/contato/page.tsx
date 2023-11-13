@@ -44,7 +44,7 @@ export default function Contact() {
 
   return (
     <Fragment>
-      <section className="relative mb-40 flex w-full flex-col gap-10 px-6 py-10 sm:px-16 min-[895px]:flex-row">
+      <section className="relative flex w-full flex-col gap-10 px-6 py-10 max-[393px]:px-3 sm:mb-40 sm:px-16 min-[895px]:flex-row">
         <div className="absolute right-6 top-6 sm:right-16">
           <Image
             src={ArrowTop}
@@ -61,7 +61,7 @@ export default function Contact() {
         />
       </section>
 
-      <section className="flex w-full flex-col items-center gap-10 bg-black px-6 py-10 text-white sm:px-16">
+      <section className="flex w-full flex-col items-center gap-10 bg-black px-6 py-10 text-white max-[393px]:px-3 sm:px-16">
         <div className="flex w-full max-w-[1080px] flex-col gap-6">
           <h2 className="font-kernCompressed text-3xl font-bold sm:text-5xl">
             {t('secondSection.form.title.firstLine')}

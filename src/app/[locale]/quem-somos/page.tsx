@@ -11,7 +11,7 @@ export default function WhoWeAre() {
 
   return (
     <Fragment>
-      <section className="relative mb-40 flex w-full flex-col gap-10 px-6 py-10 sm:px-16">
+      <section className="relative flex w-full flex-col gap-10 px-6 py-10 sm:px-16 md:mb-40">
         <div className="absolute right-6 top-6 sm:right-16">
           <Image
             src={ArrowTop}
@@ -20,14 +20,14 @@ export default function WhoWeAre() {
           />
         </div>
 
-        <h1 className="mt-12 font-kernCompressed text-5xl font-bold sm:mt-0 sm:w-3/5 sm:text-6xl lg:text-8xl">
+        <h1 className="mt-12 w-auto font-kernCompressed text-5xl font-bold sm:mt-0 sm:text-6xl lg:text-7xl xl:text-8xl">
           Lorem ipsum em <br />
           design gráfico e <br />
           editoração é um <br />
           texto padrão.
         </h1>
 
-        <p className="self-end text-sm font-semibold sm:text-lg md:w-3/12 lg:text-2xl">
+        <p className="w-auto self-end text-sm font-semibold sm:text-base lg:text-lg xl:text-2xl">
           Desenvolvemos Estratégias de <br /> Marca e Publicidade para criar um
           <br /> alinhamento perfeito entre Marca, <br /> Negócio, Comunicação e
           Cultura.
@@ -37,8 +37,8 @@ export default function WhoWeAre() {
       <section className="relative flex w-full flex-col gap-10 px-6 py-10 sm:mb-20 sm:px-16">
         <hr className={cn('h-0.5 w-full border-0', 'bg-gray-300')} />
 
-        <div className="relative flex w-full flex-col gap-10 sm:mb-32 sm:flex-row sm:justify-between">
-          <h2 className="font-kernCompressed text-4xl font-bold sm:w-2/5 sm:text-7xl">
+        <div className="relative flex w-full flex-col justify-between gap-10 sm:mb-32 md:flex-row">
+          <h2 className="w-auto font-kernCompressed text-4xl font-bold sm:text-5xl lg:text-6xl xl:text-7xl">
             O futuro de uma
             <br />
             marca está em seu
@@ -46,7 +46,7 @@ export default function WhoWeAre() {
             propósito hoje
           </h2>
 
-          <p className="self-end text-sm font-semibold sm:self-start sm:text-lg md:w-3/12 lg:text-2xl">
+          <p className="w-auto self-end text-sm font-semibold sm:text-base md:self-start lg:text-lg xl:text-2xl">
             As Marcas que mais geram valor para o <br /> negócio estão no
             patamar da onda 3 e <br /> se diferenciam na forma como se <br />
             relacionam com as pessoas.

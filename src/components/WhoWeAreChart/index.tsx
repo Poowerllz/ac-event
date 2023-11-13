@@ -6,7 +6,7 @@ import ChartMobile from '@/images/svg/whoWeAreChartMobile.svg'
 import Image from 'next/image'
 
 export function WhoWeAreChart() {
-  const isMobile = useMediaQuery('(max-width: 640px)')
+  const isMobile = useMediaQuery('(max-width: 768px)')
 
   return (
     <div className="relative h-auto w-full">

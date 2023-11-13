@@ -10,7 +10,7 @@ export function ImageGalleryWhoWeAre({
   images,
   text
 }: ImageGalleryWhoWeAreProps) {
-  const isMobile = useMediaQuery('(max-width: 640px)')
+  const isMobile = useMediaQuery('(max-width: 768px)')
   const [isMobileView, setIsMobileView] = useState<boolean>(isMobile)
 
   useEffect(() => {

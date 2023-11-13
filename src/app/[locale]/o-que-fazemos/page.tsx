@@ -28,7 +28,7 @@ export default function WhatWeDo() {
 
   return (
     <Fragment>
-      <section className="relative mb-40 flex w-full flex-col gap-10 px-6 py-10 sm:px-16">
+      <section className="relative flex w-full flex-col gap-10 px-6 py-10 sm:px-16 md:mb-40">
         <div className="absolute right-6 top-6 sm:right-16">
           <Image
             src={ArrowTop}
@@ -37,14 +37,14 @@ export default function WhatWeDo() {
           />
         </div>
 
-        <h1 className="mt-12 font-kernCompressed text-5xl font-bold sm:mt-0 sm:w-3/5 sm:text-6xl lg:text-8xl">
+        <h1 className="mt-12 w-auto font-kernCompressed text-5xl font-bold sm:mt-0 sm:text-6xl lg:text-7xl xl:text-8xl">
           Lorem ipsum em <br />
           design gráfico e <br />
           editoração é um <br />
           texto padrão.
         </h1>
 
-        <p className="self-end text-sm font-semibold sm:text-lg md:w-3/12 lg:text-2xl">
+        <p className="w-auto self-end text-sm font-semibold sm:text-base lg:text-lg xl:text-2xl">
           Desenvolvemos Estratégias de <br /> Marca e Publicidade para criar um
           <br /> alinhamento perfeito entre Marca, <br /> Negócio, Comunicação e
           Cultura.
@@ -57,7 +57,7 @@ export default function WhatWeDo() {
           <hr className={cn('h-0.5 w-full border-0', 'bg-gray-300')} />
         </div>
 
-        <p className="self-end text-sm font-semibold sm:self-start sm:text-lg md:w-3/12 lg:text-2xl">
+        <p className="absolute right-6 top-24 w-auto self-end text-sm font-semibold max-[490px]:text-xs sm:right-16 sm:self-start sm:text-lg lg:text-2xl">
           Do estratégico ao tático. Do tático ao <br /> operacional. Nossa
           oferta de serviços <br /> é construída a partir de uma <br />{' '}
           metodologia proprietária baseada em <br /> três pilares estratégicos.

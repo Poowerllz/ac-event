@@ -70,7 +70,12 @@ export function FirstSectionMobile({
             >
               <h4 className="mb-5 text-base font-bold">{people.area}</h4>
 
-              <div className="grid grid-cols-2 gap-4 break-words">
+              <div
+                className={cn(
+                  'grid gap-4 break-words',
+                  people.members.length > 1 && 'grid-cols-2'
+                )}
+              >
                 {people.members.map(member => {
                   return (
                     <div key={member.name}>
