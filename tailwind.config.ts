@@ -41,7 +41,7 @@ const config: Config = {
     },
     extend: {
       animation: {
-        'text-reveal': 'text-reveal 1s linear both'
+        'text-reveal': 'text-reveal 0.95s linear both'
       },
       keyframes: {
         'text-reveal': {
