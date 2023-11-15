@@ -1,3 +1,4 @@
+import { Typography } from '@/components/ui/Typography'
 import Link from 'next/link'
 import { Fragment } from 'react'
 import { FirstSectionProps } from './types'
@@ -53,13 +54,16 @@ export function FirstSectionDesktop({
   return (
     <Fragment>
       <div className="mt-12 flex w-full flex-col gap-10 sm:mt-0">
-        <h1 className="font-kernCompressed text-6xl font-bold sm:w-3/5 xl:text-7xl 2xl:text-8xl">
+        <Typography
+          as="h1"
+          className="text-6xl sm:w-3/5 xl:text-7xl 2xl:text-8xl"
+        >
           {title[0]}
           <br />
           {title[1]}
           <br />
           {title[2]}
-        </h1>
+        </Typography>
 
         <div className="mr-24 flex flex-wrap gap-10 sm:mr-0 sm:h-2/4 sm:flex-row sm:gap-20">
           <div className="flex flex-col gap-1 font-bold">

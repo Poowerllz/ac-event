@@ -1,5 +1,6 @@
 import { cn } from '@/common/utils/cn'
 import { WhoWeAreChart } from '@/components/WhoWeAreChart'
+import { Typography } from '@/components/ui/Typography'
 import ArrowTop from '@/images/svg/arrowtop.svg'
 import { useTranslations } from 'next-intl'
 import Image from 'next/image'
@@ -20,12 +21,12 @@ export default function WhoWeAre() {
           />
         </div>
 
-        <h1 className="mt-12 w-auto font-kernCompressed text-5xl font-bold sm:mt-0 sm:text-6xl lg:text-7xl xl:text-8xl">
+        <Typography as="h1">
           Lorem ipsum em <br />
           design gráfico e <br />
           editoração é um <br />
           texto padrão.
-        </h1>
+        </Typography>
 
         <p className="w-auto max-w-[240px] self-end text-sm font-semibold sm:text-base lg:max-w-[360px] lg:text-lg xl:text-2xl">
           Desenvolvemos Estratégias de Marca e Publicidade para criar um
@@ -37,13 +38,13 @@ export default function WhoWeAre() {
         <hr className={cn('h-0.5 w-full border-0', 'bg-gray-300')} />
 
         <div className="relative flex w-full flex-col justify-between gap-10 sm:mb-32 md:flex-row">
-          <h2 className="w-auto font-kernCompressed text-4xl font-bold sm:text-5xl lg:text-6xl xl:text-7xl">
+          <Typography as="h2">
             O futuro de uma
             <br />
             marca está em seu
             <br />
             propósito hoje
-          </h2>
+          </Typography>
 
           <p className="w-auto max-w-[240px] self-end text-sm font-semibold sm:text-base md:self-start lg:max-w-[360px] lg:text-lg xl:text-2xl">
             As Marcas que mais geram valor para o negócio estão no patamar da
@@ -55,7 +56,10 @@ export default function WhoWeAre() {
       </section>
 
       <section className="flex w-full flex-col items-center justify-center gap-10 bg-black px-2 py-10 text-white sm:px-4">
-        <h2 className="my-24 text-center font-kernCompressed text-4xl font-bold sm:text-5xl md:text-[4.7rem] md:leading-[4.7rem]">
+        <Typography
+          as="h2"
+          className="py-24 text-center md:text-[4.7rem] md:leading-[4.7rem]"
+        >
           {t('thirdSection.title.firstLine')}
           <br />
           {t('thirdSection.title.secondLine')}
@@ -63,15 +67,17 @@ export default function WhoWeAre() {
           {t('thirdSection.title.thirdLine')}
           <br />
           {t('thirdSection.title.fourthLine')}
-        </h2>
-
+        </Typography>
         <GallerySection />
       </section>
 
       <section className="mb-4 w-full flex-col gap-10 px-2 sm:px-4 sm:py-10">
-        <h2 className="my-12 ml-4 font-kernCompressed text-4xl font-bold sm:text-5xl md:text-[4.7rem] md:leading-[4.7rem]">
+        <Typography
+          as="h2"
+          className="py-24 md:text-[4.7rem] md:leading-[4.7rem]"
+        >
           {t('fourthSection.title')}
-        </h2>
+        </Typography>
 
         <ExecutiveTeamSection />
       </section>

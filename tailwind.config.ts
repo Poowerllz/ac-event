@@ -40,6 +40,16 @@ const config: Config = {
       }
     },
     extend: {
+      animation: {
+        'text-reveal': 'text-reveal 1s linear both'
+      },
+      keyframes: {
+        'text-reveal': {
+          '0%': { transform: 'translateY(92%)', opacity: '1' },
+          '50%': { transform: 'translateY(30%)', opacity: '1' },
+          '55%': { transform: 'translateY(0%)', opacity: '1' }
+        }
+      },
       fontFamily: {
         kern: ['var(--font-kern)'],
         kernCompressed: ['var(--font-kern-compressed)']

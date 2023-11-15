@@ -1,5 +1,6 @@
 import { ContactForm } from '@/components/ContactForm'
 import { ContactSections } from '@/components/pages/Contact'
+import { Typography } from '@/components/ui/Typography'
 import ArrowTop from '@/images/svg/arrowtop.svg'
 import { useTranslations } from 'next-intl'
 import Image from 'next/image'
@@ -63,11 +64,11 @@ export default function Contact() {
 
       <section className="flex w-full flex-col items-center gap-10 bg-black px-6 py-10 text-white max-[393px]:px-3 sm:px-16">
         <div className="flex w-full max-w-[1080px] flex-col gap-6">
-          <h2 className="font-kernCompressed text-3xl font-bold sm:text-5xl">
+          <Typography as="h2" className="text-3xl">
             {t('secondSection.form.title.firstLine')}
             <br />
             {t('secondSection.form.title.secondLine')}
-          </h2>
+          </Typography>
 
           <ContactForm />
         </div>

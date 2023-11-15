@@ -27,8 +27,6 @@ export function FooterContacts({
     colorTextEn
   )
 
-  console.log(path)
-
   if (path === '/contato') {
     return <></>
   }

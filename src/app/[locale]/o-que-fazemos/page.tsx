@@ -1,4 +1,5 @@
 import { cn } from '@/common/utils/cn'
+import { Typography } from '@/components/ui/Typography'
 import ArrowTop from '@/images/svg/arrowtop.svg'
 import TitleLogo from '@/images/svg/titleLogo.svg'
 import { useTranslations } from 'next-intl'
@@ -37,12 +38,12 @@ export default function WhatWeDo() {
           />
         </div>
 
-        <h1 className="mt-12 w-auto font-kernCompressed text-5xl font-bold sm:mt-0 sm:text-6xl lg:text-7xl xl:text-8xl">
+        <Typography as="h1">
           Lorem ipsum em <br />
           design gráfico e <br />
           editoração é um <br />
           texto padrão.
-        </h1>
+        </Typography>
 
         <p className="w-auto max-w-[220px] self-end text-sm font-semibold sm:text-base lg:max-w-[360px] lg:text-lg xl:text-2xl">
           Desenvolvemos Estratégias de Marca e Publicidade para criar um
@@ -106,9 +107,12 @@ export default function WhatWeDo() {
       </section>
 
       <section className="flex w-full flex-col items-center justify-center gap-10 px-2 py-10 text-black sm:px-4">
-        <h2 className="ml-4 self-start font-kernCompressed text-5xl font-bold sm:mb-14 sm:ml-10 sm:text-5xl md:text-[4.7rem] md:leading-[4.7rem]">
+        <Typography
+          as="h2"
+          className="self-start pl-4 sm:pb-14 sm:pl-10 md:text-[4.7rem] md:leading-[4.7rem]"
+        >
           Lorem ipsum
-        </h2>
+        </Typography>
 
         <GallerySection />
       </section>
