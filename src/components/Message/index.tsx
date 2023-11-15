@@ -1,10 +1,9 @@
 'use client'
-import { AiOutlinePlusCircle } from 'react-icons/ai'
-import { MessageProps } from './type'
-import Image from 'next/image'
-import { useTranslations } from 'next-intl'
 import useMediaQuery from '@/hooks/useMediaQuery'
+import { AiOutlinePlusCircle } from 'react-icons/ai'
 import { ArrowMobile } from '../arrowMobile'
+import { Typography } from '../ui/Typography'
+import { MessageProps } from './type'
 
 export const Message = ({ title, subTitle, arrow }: MessageProps) => {
   const isMobile = useMediaQuery('(max-width: 600px)')
@@ -14,9 +13,7 @@ export const Message = ({ title, subTitle, arrow }: MessageProps) => {
         <>
           {arrow ? (
             <div className=" flex h-auto w-full flex-col items-center justify-between px-6 pb-80 pt-60">
-              <h1 className="w-full font-kernCompressed text-5xl font-bold sm:text-6xl">
-                {title}
-              </h1>
+              <Typography as="h1">{title}</Typography>
 
               <div className="relative flex h-full w-full flex-col  justify-between">
                 <div className="absolute -top-72  h-full w-full -rotate-180 transform cursor-pointer">
@@ -31,9 +28,7 @@ export const Message = ({ title, subTitle, arrow }: MessageProps) => {
             </div>
           ) : (
             <div className="relative flex h-auto w-full flex-col items-center justify-between px-6 pb-96 pt-28">
-              <h1 className="w-full font-kernCompressed text-5xl font-bold sm:text-6xl ">
-                {title}
-              </h1>
+              <Typography as="h1">{title}</Typography>
 
               <div className="relative flex h-full w-full flex-col  justify-between">
                 {arrow && (
@@ -55,9 +50,7 @@ export const Message = ({ title, subTitle, arrow }: MessageProps) => {
           <div className="relative flex h-screen w-full flex-col justify-between px-16  py-32">
             {arrow ? (
               <div className="flex h-full w-full justify-between align-top">
-                <h1 className="pr-1 font-kernCompressed font-bold lg:text-8xl">
-                  {title}
-                </h1>
+                <Typography as="h1">{title}</Typography>
 
                 <div className="flex h-full w-full -rotate-180 transform items-end pr-80">
                   <div className="cursor-pointer">
@@ -67,9 +60,7 @@ export const Message = ({ title, subTitle, arrow }: MessageProps) => {
               </div>
             ) : (
               <div className=" flex h-full w-full justify-between pr-80 align-top">
-                <h1 className="pr-96 font-kernCompressed font-bold lg:text-8xl">
-                  {title}
-                </h1>
+                <Typography as="h1">{title}</Typography>
               </div>
             )}
 
