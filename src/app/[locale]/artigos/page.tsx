@@ -26,7 +26,7 @@ export default function Artigos() {
 
         <button className="flex items-center justify-center gap-2 self-start">
           <Image src={More} alt="More Icon" width={24} height={24} />
-          <span className="font-bold leading-3">Filtrar por cases</span>
+          <span className="font-bold leading-3">Filtrar por interesse</span>
         </button>
       </section>
 
