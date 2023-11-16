@@ -64,7 +64,7 @@ export default function Contact() {
 
       <section className="flex w-full flex-col items-center gap-10 bg-black px-6 py-10 text-white max-[393px]:px-3 sm:px-16">
         <div className="flex w-full max-w-[1080px] flex-col gap-6">
-          <Typography as="h2" className="text-3xl">
+          <Typography as="h2" className="text-3xl" animation={false}>
             {t('secondSection.form.title.firstLine')}
             <br />
             {t('secondSection.form.title.secondLine')}

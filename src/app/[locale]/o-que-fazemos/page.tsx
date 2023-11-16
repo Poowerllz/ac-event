@@ -110,6 +110,7 @@ export default function WhatWeDo() {
         <Typography
           as="h2"
           className="self-start pl-4 sm:pb-14 sm:pl-10 md:text-[4.7rem] md:leading-[4.7rem]"
+          animation={false}
         >
           Lorem ipsum
         </Typography>

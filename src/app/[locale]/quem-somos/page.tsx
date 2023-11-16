@@ -75,6 +75,7 @@ export default function WhoWeAre() {
         <Typography
           as="h2"
           className="py-24 md:text-[4.7rem] md:leading-[4.7rem]"
+          animation={false}
         >
           {t('fourthSection.title')}
         </Typography>
