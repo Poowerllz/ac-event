@@ -1,8 +1,6 @@
 import Carousel from '@/components/Swiper'
 import { Message } from '../../components/Message'
 import { ImageHomeGrid } from '@/components/ImageHomeGrid'
-import DynamicHeader from '@/components/Header/DynamicHeader'
-import Image from 'next/image'
 
 export default function Home() {
   return (

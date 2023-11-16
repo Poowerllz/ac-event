@@ -12,6 +12,7 @@ import 'swiper/css/navigation'
 import 'swiper/css/pagination'
 import 'swiper/css/scrollbar'
 import 'swiper/css/grid'
+import Script from 'next/script'
 
 const locales = ['pt-br', 'en']
 
@@ -36,6 +37,10 @@ export default function LocaleLayout({
       className={`${kern.variable} ${kernCompressed.variable}`}
     >
       <body>
+        <Script
+          type="text/javascript"
+          src="https://d335luupugsy2.cloudfront.net/js/rdstation-forms/stable/rdstation-forms.min.js"
+        />
         <Header />
         <main className="h-full w-full">{children}</main>
         <Footer />
