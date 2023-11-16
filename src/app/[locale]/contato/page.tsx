@@ -4,6 +4,7 @@ import { Typography } from '@/components/ui/Typography'
 import ArrowTop from '@/images/svg/arrowtop.svg'
 import { useTranslations } from 'next-intl'
 import Image from 'next/image'
+import Script from 'next/script'
 import { Fragment } from 'react'
 
 export default function Contact() {
