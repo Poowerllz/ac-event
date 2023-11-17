@@ -16,7 +16,9 @@ export function CasesGalleryContainer() {
 
   const handleShowMoreCases = () => {
     setCount(prevCount => prevCount + 1)
-    loopThroughCases(count + 1, mockCases, 5)
+    const data = loopThroughCases(count + 1, mockCases, 5)
+
+    setCaseToShow(prevCases => [...prevCases, ...data])
   }
 
   useEffect(() => {
