@@ -14,7 +14,6 @@ export default function WhatWeDo() {
     'thirdSection.links.firstItem',
     'thirdSection.links.secondItem',
     'thirdSection.links.thirdItem',
-    'thirdSection.links.fourthItem',
     'thirdSection.links.fifthItem',
     'thirdSection.links.sixItem'
   ]
@@ -22,7 +21,6 @@ export default function WhatWeDo() {
     'thirdSection.hoverLinks.firstItem',
     'thirdSection.hoverLinks.secondItem',
     'thirdSection.hoverLinks.thirdItem',
-    'thirdSection.hoverLinks.fourthItem',
     'thirdSection.hoverLinks.fifthItem',
     'thirdSection.hoverLinks.sixItem'
   ]
