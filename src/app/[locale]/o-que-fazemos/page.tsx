@@ -39,15 +39,15 @@ export default function WhatWeDo() {
         </div>
 
         <Typography as="h1">
-          Lorem ipsum em <br />
-          design gráfico e <br />
-          editoração é um <br />
-          texto padrão.
+          Somos a anacouto. <br />
+          Somos branding <br />e comunicação.
         </Typography>
 
         <p className="w-auto max-w-[220px] self-end text-sm font-semibold sm:text-base lg:max-w-[360px] lg:text-lg xl:text-2xl">
-          Desenvolvemos Estratégias de Marca e Publicidade para criar um
-          alinhamento perfeito entre Marca, Negócio, Comunicação e Cultura.
+          Há 30 anos alinhamos marca, negócio e comunicação para fazer criações
+          icônicas através do nosso método proprietário. Usamos toda a nossa
+          potência de propósito para impulsionar o valor de pessoas e
+          organizações.
         </p>
       </section>
 
@@ -58,9 +58,9 @@ export default function WhatWeDo() {
         </div>
 
         <p className="absolute right-6 top-24 w-auto max-w-[220px] self-end text-sm font-semibold sm:right-16 sm:text-base lg:max-w-[360px] lg:text-lg xl:text-2xl">
-          Do estratégico ao tático. Do tático ao operacional. Nossa oferta de
-          serviços é construída a partir de uma metodologia proprietária baseada
-          em três pilares estratégicos.
+          Do estratégico ao tático. Do tático ao operacional. Somos o ciclo
+          completo e concreto de entregas a partir da nossa metodologia
+          proprietária.
         </p>
 
         <div className="relative h-auto w-full">
