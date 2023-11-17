@@ -57,13 +57,14 @@ export const Message = ({
         </>
       ) : (
         <>
-          <div className="relative flex h-screen w-full flex-col justify-between px-16  py-32">
+          <div className="relative flex h-auto  w-full flex-col justify-between px-16 py-52 ">
+            {/*py-32*/}
             {arrow ? (
-              <div className="flex h-full w-full justify-between align-top">
+              <div className="flex h-full w-full justify-between  align-top">
                 <Typography as="h1">{title}</Typography>
 
                 <div className="flex h-full w-full -rotate-180 transform items-end pr-80">
-                  <div className="cursor-pointer">
+                  <div className="cursor-pointer ">
                     <ArrowMobile name="arrowtop" />
                   </div>
                 </div>
