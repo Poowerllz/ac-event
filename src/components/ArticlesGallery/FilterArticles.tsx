@@ -1,16 +1,23 @@
 'use client'
 
 import More from '@/images/svg/more.svg'
+import { useGetAllCategories } from '@/service/posts/categories/useGetAllCategories'
 import { GetPostsProps } from '@/service/posts/type'
+import { useGetAllPosts } from '@/service/posts/useGetAllPosts'
 import Image from 'next/image'
-import { useState } from 'react'
+import { Dispatch, SetStateAction, useState } from 'react'
+import { filterArticlesByCategory } from './common'
 
 interface FilterArticlesProps {
-  addGallery: (cases: Array<GetPostsProps>) => void
+  galleries: GetPostsProps[][]
+  setGalleries: Dispatch<SetStateAction<GetPostsProps[][]>>
 }
 
-export function FilterArticles({ addGallery }: FilterArticlesProps) {
-  const options = ['Downloads', 'Artigos', 'Matérias']
+export function FilterArticles({
+  galleries,
+  setGalleries
+}: FilterArticlesProps) {
+  const { data: options } = useGetAllCategories()
   const [selectedOption, setSelectedOption] = useState<string | null>(null)
   const [isMenuOpen, setIsMenuOpen] = useState(false)
 
@@ -21,8 +28,6 @@ export function FilterArticles({ addGallery }: FilterArticlesProps) {
   const handleOptionSelect = (option: string) => {
     setSelectedOption(option)
     setIsMenuOpen(false)
-
-    // addGallery(filteredCases)
   }
 
   return (
@@ -34,7 +39,7 @@ export function FilterArticles({ addGallery }: FilterArticlesProps) {
         >
           <Image src={More} alt="More Icon" width={24} height={24} />
           <span className="font-bold leading-3">
-            {selectedOption || 'Filtrar por cases'}
+            {selectedOption || 'Filtrar por interesse'}
           </span>
         </button>
       </div>

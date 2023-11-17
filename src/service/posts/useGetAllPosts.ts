@@ -35,5 +35,10 @@ export const useGetAllPosts = () => {
     handleGetAllPosts()
   }, [])
 
-  return { galleries, loading, handleGetAllPosts, addGallery }
+  return {
+    galleries,
+    setGalleries,
+    loading,
+    handleGetAllPosts
+  }
 }

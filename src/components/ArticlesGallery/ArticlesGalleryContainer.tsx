@@ -1,15 +1,22 @@
 'use client'
 
 import More from '@/images/svg/more.svg'
+import { GetPostsProps } from '@/service/posts/type'
 import { useGetAllPosts } from '@/service/posts/useGetAllPosts'
 import Image from 'next/image'
-import { Fragment } from 'react'
+import { Fragment, useState } from 'react'
 import { ArticlesGallery } from '.'
 import { Spinner } from '../ui/Spinner'
-import { FilterArticles } from './FilterArticles'
 
 export function ArticlesGalleryContainer() {
-  const { galleries, handleGetAllPosts, loading, addGallery } = useGetAllPosts()
+  const { galleries, handleGetAllPosts, loading } = useGetAllPosts()
+  const [postsToShow, setPostShow] = useState<GetPostsProps[][]>(galleries)
+
+  const handleShowMoreCases = () => {
+    handleGetAllPosts()
+
+    setPostShow(prevCases => [...prevCases, ...galleries])
+  }
 
   if (loading) {
     return (
@@ -21,7 +28,7 @@ export function ArticlesGalleryContainer() {
 
   return (
     <Fragment>
-      <FilterArticles addGallery={addGallery} />
+      {/* <FilterArticles galleries={galleries} setGalleries={setPostShow} /> */}
 
       <ArticlesGallery posts={galleries} />
 
