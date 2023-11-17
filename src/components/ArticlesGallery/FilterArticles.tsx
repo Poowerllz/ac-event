@@ -1,22 +1,16 @@
 'use client'
 
 import More from '@/images/svg/more.svg'
+import { GetPostsProps } from '@/service/posts/type'
 import Image from 'next/image'
-import { Dispatch, SetStateAction, useState } from 'react'
-import {
-  Case,
-  filterCasesByCategory,
-  mockCases,
-  mockCategories
-} from './common'
+import { useState } from 'react'
 
-interface FilterCasesProps<T extends Case[][]> {
-  setPostToShow: Dispatch<SetStateAction<T>>
+interface FilterArticlesProps {
+  addGallery: (cases: Array<GetPostsProps>) => void
 }
 
-export function FilterCases<T extends Case[][]>({
-  setPostToShow
-}: FilterCasesProps<T>) {
+export function FilterArticles({ addGallery }: FilterArticlesProps) {
+  const options = ['Downloads', 'Artigos', 'Matérias']
   const [selectedOption, setSelectedOption] = useState<string | null>(null)
   const [isMenuOpen, setIsMenuOpen] = useState(false)
 
@@ -28,14 +22,7 @@ export function FilterCases<T extends Case[][]>({
     setSelectedOption(option)
     setIsMenuOpen(false)
 
-    const filteredCases = filterCasesByCategory(option, mockCases)
-
-    const chunkedCases: T = [] as unknown as T
-    for (let i = 0; i < filteredCases.length; i += 5) {
-      chunkedCases.push(filteredCases.slice(i, i + 5) as T[number])
-    }
-
-    setPostToShow(chunkedCases)
+    // addGallery(filteredCases)
   }
 
   return (
@@ -55,7 +42,7 @@ export function FilterCases<T extends Case[][]>({
       {isMenuOpen && (
         <div className="absolute left-6 top-10 z-10 max-h-52 overflow-auto rounded border bg-white shadow sm:left-16">
           <ul>
-            {mockCategories.map(option => (
+            {options.map(option => (
               <li
                 key={option}
                 onClick={() => handleOptionSelect(option)}

@@ -1,51 +1,36 @@
 'use client'
 
+import { useFilterGallery } from '@/hooks/useFilterGallery'
 import More from '@/images/svg/more.svg'
 import Image from 'next/image'
 import { Fragment, useEffect, useState } from 'react'
 import { CasesGallery } from '.'
+import { FilterCases } from './FilterCases'
 import { Case, mockCases } from './common'
 
 export function CasesGalleryContainer() {
-  const postsPerPage = 5
+  const [caseToShow, setCaseToShow] = useState<Case[][]>([])
 
-  const [casesToShow, setCasesToShow] = useState<Case[][]>([])
+  const { loopThroughCases } = useFilterGallery()
   const [count, setCount] = useState(1)
-
-  const loopThroughCases = (count: number) => {
-    const newCases: Case[] = []
-
-    for (
-      let i = count * postsPerPage - postsPerPage;
-      i < postsPerPage * count;
-      i++
-    ) {
-      if (mockCases[i] !== undefined) {
-        newCases.push(mockCases[i])
-      }
-    }
-
-    const chunkedCases: Case[][] = []
-    for (let i = 0; i < newCases.length; i += 5) {
-      chunkedCases.push(newCases.slice(i, i + 5))
-    }
-
-    setCasesToShow(prevCases => [...prevCases, ...chunkedCases])
-  }
 
   const handleShowMoreCases = () => {
     setCount(prevCount => prevCount + 1)
-    loopThroughCases(count + 1)
+    loopThroughCases(count + 1, mockCases, 5)
   }
 
   useEffect(() => {
     setCount(prevCount => prevCount + 1)
-    loopThroughCases(count)
+    const data = loopThroughCases(count, mockCases, 5)
+
+    setCaseToShow(prevCases => [...prevCases, ...data])
   }, [])
 
   return (
     <Fragment>
-      <CasesGallery cases={casesToShow} />
+      <FilterCases setPostToShow={setCaseToShow} />
+
+      <CasesGallery cases={caseToShow} />
 
       <button
         className="flex items-center justify-center gap-2 self-center"

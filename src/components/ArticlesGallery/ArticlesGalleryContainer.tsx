@@ -6,9 +6,10 @@ import Image from 'next/image'
 import { Fragment } from 'react'
 import { ArticlesGallery } from '.'
 import { Spinner } from '../ui/Spinner'
+import { FilterArticles } from './FilterArticles'
 
 export function ArticlesGalleryContainer() {
-  const { galleries, handleGetAllPosts, loading } = useGetAllPosts()
+  const { galleries, handleGetAllPosts, loading, addGallery } = useGetAllPosts()
 
   if (loading) {
     return (
@@ -20,12 +21,10 @@ export function ArticlesGalleryContainer() {
 
   return (
     <Fragment>
-      {galleries
-        .slice(1)
-        .map(
-          (cases, index) =>
-            cases.length > 0 && <ArticlesGallery key={index} cases={cases} />
-        )}
+      <FilterArticles addGallery={addGallery} />
+
+      <ArticlesGallery posts={galleries} />
+
       <button
         className="flex items-center justify-center gap-2 self-center"
         onClick={() => handleGetAllPosts()}
