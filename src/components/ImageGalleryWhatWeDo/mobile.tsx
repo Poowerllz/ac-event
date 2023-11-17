@@ -25,7 +25,7 @@ export function ImageGalleryWhatWeDoMobile({
         </div>
 
         <div className="flex justify-between">
-          <ImageGalleryWhatWeDoTitle>COCRIAÇÃO</ImageGalleryWhatWeDoTitle>
+          <ImageGalleryWhatWeDoTitle>Cocriação</ImageGalleryWhatWeDoTitle>
 
           <ImageGalleryWhatWeDoSubtitle>
             Através da parceria <br /> estratégica entre cliente
@@ -49,7 +49,7 @@ export function ImageGalleryWhatWeDoMobile({
         </div>
 
         <div className="flex justify-between">
-          <ImageGalleryWhatWeDoTitle>AGILIDADE </ImageGalleryWhatWeDoTitle>
+          <ImageGalleryWhatWeDoTitle>Agilidade</ImageGalleryWhatWeDoTitle>
 
           <ImageGalleryWhatWeDoSubtitle>
             Com a aplicação de metodologias
@@ -72,7 +72,7 @@ export function ImageGalleryWhatWeDoMobile({
         </div>
 
         <div className="flex justify-between">
-          <ImageGalleryWhatWeDoTitle>SOLUÇÃO</ImageGalleryWhatWeDoTitle>
+          <ImageGalleryWhatWeDoTitle>Solução</ImageGalleryWhatWeDoTitle>
 
           <ImageGalleryWhatWeDoSubtitle>
             Em encontros com diferentes <br /> tons e objetivos, como <br />
@@ -96,7 +96,7 @@ export function ImageGalleryWhatWeDoMobile({
 
         <div className="flex justify-between">
           <ImageGalleryWhatWeDoTitle>
-            APRENDIZADO GERA AUTONOMIA
+            Aprendizado gera autonomia
           </ImageGalleryWhatWeDoTitle>
 
           <ImageGalleryWhatWeDoSubtitle>

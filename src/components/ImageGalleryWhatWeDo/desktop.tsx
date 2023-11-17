@@ -23,7 +23,7 @@ export function ImageGalleryWhatWeDoDesktop({
             loading="lazy"
           />
 
-          <ImageGalleryWhatWeDoTitle>COCRIAÇÃO</ImageGalleryWhatWeDoTitle>
+          <ImageGalleryWhatWeDoTitle>Cocriação</ImageGalleryWhatWeDoTitle>
         </div>
 
         <ImageGalleryWhatWeDoSubtitle>
@@ -35,7 +35,9 @@ export function ImageGalleryWhatWeDoDesktop({
 
       <div className="flex flex-col gap-5 self-end">
         <div className="flex flex-col justify-between gap-2 lg:flex-row lg:gap-4">
-          <ImageGalleryWhatWeDoTitle>AGILIDADE</ImageGalleryWhatWeDoTitle>
+          <div className="mt-auto">
+            <ImageGalleryWhatWeDoTitle>Agilidade</ImageGalleryWhatWeDoTitle>
+          </div>
 
           <ImageGalleryWhatWeDoSubtitle>
             Com a aplicação de metodologias <br /> ágeis e reuniões de sprints.
@@ -62,7 +64,7 @@ export function ImageGalleryWhatWeDoDesktop({
         </ImageGalleryWhatWeDoSubtitle>
 
         <div className="relative h-auto w-full">
-          <ImageGalleryWhatWeDoTitle>SOLUÇÃO</ImageGalleryWhatWeDoTitle>
+          <ImageGalleryWhatWeDoTitle>Solução</ImageGalleryWhatWeDoTitle>
 
           <Image
             property="true"
@@ -95,7 +97,7 @@ export function ImageGalleryWhatWeDoDesktop({
         </div>
 
         <ImageGalleryWhatWeDoTitle>
-          APRENDIZADO GERA AUTONOMIA{' '}
+          Aprendizado gera autonomia
         </ImageGalleryWhatWeDoTitle>
       </div>
     </div>
