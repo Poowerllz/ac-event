@@ -22,15 +22,17 @@ export default function WhoWeAre() {
         </div>
 
         <Typography as="h1">
-          Lorem ipsum em <br />
-          design gráfico e <br />
-          editoração é um <br />
-          texto padrão.
+          Somos a anacouto.
+          <br />
+          Somos branding
+          <br />e comunicação.
         </Typography>
 
         <p className="w-auto max-w-[240px] self-end text-sm font-semibold sm:text-base lg:max-w-[360px] lg:text-lg xl:text-2xl">
-          Desenvolvemos Estratégias de Marca e Publicidade para criar um
-          alinhamento perfeito entre Marca, Negócio, Comunicação e Cultura.
+          Há 30 anos alinhamos marca, negócio e comunicação para fazer criações
+          icônicas através do nosso método proprietário. Usamos toda a nossa
+          potência de propósito para impulsionar o valor de pessoas e
+          organizações.
         </p>
       </section>
 
@@ -41,14 +43,15 @@ export default function WhoWeAre() {
           <Typography as="h2">
             O futuro de uma
             <br />
-            marca está em seu
+            marca é feito
             <br />
-            propósito hoje
+            de propósito.
           </Typography>
 
           <p className="w-auto max-w-[240px] self-end text-sm font-semibold sm:text-base md:self-start lg:max-w-[360px] lg:text-lg xl:text-2xl">
-            As Marcas que mais geram valor para o negócio estão no patamar da
-            onda 3 e se diferenciam na forma como se relacionam com as pessoas.
+            As Ondas do Branding são um método proprietário anacouto para gerar
+            e gerir valor de marcas. A Onda 3 representa as que se diferenciam
+            na forma de relacionar com as pessoas.
           </p>
         </div>
 
@@ -60,13 +63,18 @@ export default function WhoWeAre() {
           as="h2"
           className="py-24 text-center md:text-[4.7rem] md:leading-[4.7rem]"
         >
-          {t('thirdSection.title.firstLine')}
+          {/* {t('thirdSection.title.firstLine')}
           <br />
           {t('thirdSection.title.secondLine')}
           <br />
           {t('thirdSection.title.thirdLine')}
           <br />
-          {t('thirdSection.title.fourthLine')}
+          {t('thirdSection.title.fourthLine')} */}
+          Fazemos a (r)evolução
+          <br />
+          que a sua organização
+          <br />
+          precisa
         </Typography>
         <GallerySection />
       </section>

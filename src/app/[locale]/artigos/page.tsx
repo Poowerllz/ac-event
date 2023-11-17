@@ -9,10 +9,10 @@ export default function Artigos() {
       <section className="flex w-full flex-col gap-10 px-6 py-10 sm:mb-40 sm:px-16">
         <div>
           <Typography as="h1">
-            Lorem ipsum em <br />
-            design gráfico e <br />
-            editoração é um <br />
-            texto padrão.
+            Nossas ideias que <br />
+            transbordaram e se <br />
+            concretizaram em <br />
+            artigos e papers.
           </Typography>
 
           <div className="relative flex h-full w-full flex-col  justify-between">

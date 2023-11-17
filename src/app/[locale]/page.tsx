@@ -7,7 +7,7 @@ export default function Home() {
     <main className="block w-full flex-col items-center justify-between overflow-hidden font-kern  font-bold">
       <Message
         title={
-          'Há três décadas construimos marcas que geram valor para o mundo'
+          'Somos feitos de propósito para transformar organizações e pessoas, alinhando marca, negócio e comunicação. Somos a anacouto.'
         }
         subTitle={'Quem somos'}
         arrow={true}
@@ -16,7 +16,7 @@ export default function Home() {
       <ImageHomeGrid />
       <Message
         title={
-          'Há três décadas construimos marcas que geram valor para o mundo'
+          'Há 30 anos criamos o extraordinário para marcas que impactam o mundo com mais valor e amor.'
         }
         subTitle={'O que fazemos'}
         arrow={false}

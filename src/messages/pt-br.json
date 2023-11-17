@@ -8,7 +8,7 @@
   "Contact": {
     "firstSection": {
       "title": {
-        "firstLine": "Get in touch.",
+        "firstLine": "Vamos expandir ideias",
         "secondLine": "Drop in.",
         "thirdLine": "Hang out."
       },
@@ -100,7 +100,7 @@
       "phrase": "Propósito engajador e de impacto"
     },
     "fourthSection": {
-      "title": "Time Executivo"
+      "title": "Time executivo que faz de propósito"
     }
   },
   "WhatWeDo": {
@@ -144,8 +144,8 @@
   "Components": {
     "Footer": {
       "title": {
-        "firstLine": "Vamos destravar ",
-        "secondLine": "o valor do seu negócio?"
+        "firstLine": "Vamos unir mentes",
+        "secondLine": "e transbordar ideias?"
       },
       "subtitle": "Deixe seu contato por aqui.",
       "contacts": {

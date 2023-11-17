@@ -112,7 +112,7 @@ export default function WhatWeDo() {
           className="self-start pl-4 sm:pb-14 sm:pl-10 md:text-[4.7rem] md:leading-[4.7rem]"
           animation={false}
         >
-          Lorem ipsum
+          Fazer junto para encantar e impulsionar.
         </Typography>
 
         <GallerySection />
