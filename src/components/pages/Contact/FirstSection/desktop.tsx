@@ -117,19 +117,20 @@ export function FirstSectionDesktop({
         </div>
       </div>
 
-      <div className="flex w-1/2 flex-col justify-between gap-10">
+      <div className="flex w-1/2 flex-col justify-between gap-6">
         {people.map(people => (
           <div key={people.area}>
-            <h4 className="mb-5 text-base font-bold">{people.area}</h4>
+            <h4 className="mb-3 text-base font-bold">{people.area}</h4>
             {people.members.map(member => {
               return (
                 <Fragment key={member.name}>
                   <h2 className="font-kernCompressed text-4xl font-bold">
                     {member.name}
                   </h2>
-                  <p className="mb-5">{member.office}</p>
+                  <p className="mb-3">{member.office}</p>
                   <p>{member.email}</p>
                   <p>{member.tel}</p>
+                  <br></br>
                 </Fragment>
               )
             })}
