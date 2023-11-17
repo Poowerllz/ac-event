@@ -3,24 +3,24 @@ import { VideoHeaderProps, VideosHeaderProps } from './type'
 
 const videosHeader: VideosHeaderProps = {
   '/': {
-    src: '../images/home/background.mp4'
+    src: 'https://youtu.be/uYFVJNrOt9g'
   },
   '/quem-somos': {
-    src: '../images/home/background.mp4'
+    src: 'https://youtu.be/uYFVJNrOt9g'
   },
   '/o-que-fazemos': {
-    src: '../images/home/background.mp4'
+    src: 'https://youtu.be/uYFVJNrOt9g'
   },
   '/cases': {
-    src: '../images/home/background.mp4'
+    src: 'https://youtu.be/uYFVJNrOt9g'
   },
   '/cases/': {
     hasBackgroundColor: true,
     color: 'bg-white',
-    src: '../images/home/background.mp4'
+    src: 'https://youtu.be/uYFVJNrOt9g'
   },
   '/artigos': {
-    src: '../images/home/background.mp4'
+    src: 'https://youtu.be/uYFVJNrOt9g'
   },
   '/artigos/': {
     hasBackgroundColor: true,
@@ -30,10 +30,10 @@ const videosHeader: VideosHeaderProps = {
   '/slug-artigo': {
     hasBackgroundColor: true,
     color: 'bg-primary',
-    src: '../images/home/background.mp4'
+    src: 'https://youtu.be/uYFVJNrOt9g'
   },
   '/contato': {
-    src: '../images/home/background.mp4'
+    src: 'https://youtu.be/uYFVJNrOt9g'
   }
 }
 

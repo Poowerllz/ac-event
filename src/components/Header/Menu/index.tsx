@@ -5,14 +5,13 @@ import iconCloseButon from '@/images/svg/times.svg'
 import Image from 'next/image'
 import Link from 'next/link'
 import React, { useEffect, useState } from 'react'
-import iconMenu from '../../../../public/menu.svg'
 import { motion, AnimatePresence } from 'framer-motion'
 
 type Props = {
-  invertColor?: boolean
+  refOpen: any
 }
 
-const Menu: React.FC<Props> = ({ invertColor }) => {
+const Menu: React.FC<Props> = ({ refOpen }) => {
   const [menuIsOpen, setMenuIsOpen] = useState(false)
 
   const items = [
@@ -33,18 +32,7 @@ const Menu: React.FC<Props> = ({ invertColor }) => {
 
   return (
     <>
-      <Image
-        src={iconMenu}
-        alt={'Imagem de um menu'}
-        className="absolute right-6 top-16 z-10 cursor-pointer sm:right-16"
-        width={25}
-        height={15}
-        style={{
-          cursor: 'pointer',
-          ...(invertColor && { filter: 'invert(100%)' })
-        }}
-        onClick={() => setMenuIsOpen(true)}
-      />
+      <button onClick={() => setMenuIsOpen(true)} ref={refOpen} />
 
       <div className="absolute right-10 top-16 flex items-center justify-center sm:right-20">
         <AnimatePresence>

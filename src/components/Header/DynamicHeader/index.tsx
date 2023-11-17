@@ -11,9 +11,29 @@ import iconArrowDonw from '../../../../public/arrowdown.svg'
 import Menu from '../Menu'
 import { pathImagesBr, pathImagesEn } from './common'
 import { BackgroundHeaderProps } from './type'
+import React, { useRef, useState } from 'react'
+import { motion, AnimatePresence } from 'framer-motion'
 
-const DynamicHeader = () => {
+export type Props = {
+  hideButtonRef: any
+  videoPath: string
+  onPause: () => void
+}
+
+const Path = (props: any) => (
+  <motion.path
+    fill="transparent"
+    strokeWidth="3"
+    stroke="hsl(0, 0%, 18%)"
+    strokeLinecap="round"
+    {...props}
+  />
+)
+
+const DynamicHeader: React.FC<Props> = ({ hideButtonRef, onPause }) => {
+  const [showBackground, setShowBackground] = useState(true)
   const isMobile = useMediaQuery('(max-width: 600px)')
+  const MenuRef = useRef<any>()
 
   const rawPath: string = usePathname()
   const pathData: BackgroundHeaderProps = getPathData(
@@ -24,15 +44,79 @@ const DynamicHeader = () => {
 
   return (
     <>
-      <Image
-        src={`/images/home/${pathData[isMobile ? 'mobile' : 'desktop']}`}
-        className="absolute top-0 h-full w-full object-cover"
-        alt="Background of Ana Couto"
-        quality={100}
-        fill
+      <button
+        className="none"
+        ref={hideButtonRef}
+        onClick={() => setShowBackground(!showBackground)}
       />
 
-      <Menu invertColor={pathData.invert} />
+      <AnimatePresence>
+        {showBackground && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{
+              opacity: 1,
+              transition: {
+                duration: 0
+              }
+            }}
+            exit={{ opacity: 0 }}
+          >
+            <Image
+              src={`/images/home/${pathData[isMobile ? 'mobile' : 'desktop']}`}
+              className="absolute top-0 h-full w-full object-cover"
+              alt="Background of Ana Couto"
+              quality={100}
+              fill
+            />
+          </motion.div>
+        )}
+      </AnimatePresence>
+
+      <motion.nav
+        initial={false}
+        animate={!showBackground ? 'open' : 'closed'}
+        onClick={
+          showBackground
+            ? () => MenuRef.current.click()
+            : () => {
+                setShowBackground(true)
+                onPause()
+              }
+        }
+      >
+        <div
+          className="absolute right-6 top-16 z-10 cursor-pointer sm:right-16"
+          style={{
+            filter: pathData.invert ? 'invert(0)' : 'invert(1)'
+          }}
+        >
+          <svg width="23" height="23" viewBox="0 0 23 23">
+            <Path
+              variants={{
+                closed: { d: 'M 2 2.5 L 20 2.5' },
+                open: { d: 'M 3 16.5 L 17 2.5' }
+              }}
+            />
+            <Path
+              d="M 2 9.423 L 20 9.423"
+              variants={{
+                closed: { opacity: 1 },
+                open: { opacity: 0 }
+              }}
+              transition={{ duration: 0.1 }}
+            />
+            <Path
+              variants={{
+                closed: { d: 'M 2 16.346 L 20 16.346' },
+                open: { d: 'M 3 2.5 L 17 16.346' }
+              }}
+            />
+          </svg>
+        </div>
+      </motion.nav>
+
+      <Menu refOpen={MenuRef} />
 
       <Link href={'/'} scroll={false}>
         <Image
@@ -53,16 +137,24 @@ const DynamicHeader = () => {
         height={24}
         {...(pathData.invert && { style: { filter: 'invert(100%)' } })}
       />
-      {pathData.showText && (
-        <div className="absolute top-28 z-10 sm:bottom-20 sm:top-auto">
-          <Image
-            property="true"
-            src={eFazEFala}
-            alt="Tipografia: É Faz E Fala"
-            style={{ height: 'auto', width: '55%' }}
-          />
-        </div>
-      )}
+
+      <AnimatePresence>
+        {pathData.showText && showBackground && (
+          <motion.div
+            initial={{ left: '-200px' }}
+            animate={{ left: 'inherit' }}
+            exit={{ left: '-200px' }}
+            className="absolute top-28 z-10 sm:bottom-20 sm:top-auto"
+          >
+            <Image
+              property="true"
+              src={eFazEFala}
+              alt="Tipografia: É Faz E Fala"
+              style={{ height: 'auto', width: '55%' }}
+            />
+          </motion.div>
+        )}
+      </AnimatePresence>
     </>
   )
 }
