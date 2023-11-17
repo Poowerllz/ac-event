@@ -1,7 +1,5 @@
 import { CasesGalleryContainer } from '@/components/CasesGallery/CasesGalleryContainer'
-import FilterCases from '@/components/CasesGallery/FilterCases'
 import { Typography } from '@/components/ui/Typography'
-import Image from 'next/image'
 import { Fragment } from 'react'
 
 export default async function Cases() {
@@ -14,8 +12,6 @@ export default async function Cases() {
           editoração é um <br />
           texto padrão.
         </Typography>
-
-        <FilterCases />
       </section>
 
       <section className="mb-40 flex w-full flex-col gap-10 px-1 py-10 sm:px-4">

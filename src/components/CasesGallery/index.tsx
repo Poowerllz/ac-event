@@ -24,21 +24,21 @@ export function CasesGallery({ cases }: CasesGalleryProps) {
     <Fragment>
       {cases?.map((item, itemIndex) => (
         <div
-          key={item[itemIndex].title}
+          key={String(itemIndex)}
           className="grid min-h-[200vh] grid-cols-2 grid-rows-5 gap-4 sm:grid-rows-4"
         >
-          {item?.map((post, postItem) => (
+          {item?.map((post, postIndex) => (
             <Link
-              key={post.title + String(postItem)}
-              href={`/${post.href}`}
-              className={`relative flex flex-col items-start justify-between transition hover:grayscale ${divsClass[postItem]}`}
+              key={String(postIndex)}
+              href={`/${post?.href ?? '#'}`}
+              className={`relative flex flex-col items-start justify-between transition hover:grayscale ${divsClass[postIndex]}`}
             >
               <span className="m-4 rounded-md bg-white px-2 py-[0.1rem] font-bold sm:top-5 sm:flex">
                 Cases
               </span>
 
               <Image
-                src={post.thumbnail || BackgroundPlaceholder}
+                src={post?.thumbnail || BackgroundPlaceholder}
                 alt="Image"
                 className="absolute top-0 -z-[1] object-cover"
                 width={1024}
@@ -50,7 +50,7 @@ export function CasesGallery({ cases }: CasesGalleryProps) {
               />
 
               <h5 className="m-4 text-base font-bold text-white transition max-[425px]:text-sm sm:text-2xl">
-                {post.title}
+                {post?.title ?? ''}
               </h5>
             </Link>
           ))}
