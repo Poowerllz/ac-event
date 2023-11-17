@@ -86,13 +86,28 @@ const Menu: React.FC<Props> = ({ refOpen }) => {
                   </Link>
 
                   <div className="flex items-center gap-4 sm:gap-10">
-                    <h2 className="text-md cursor-pointer font-kernCompressed font-normal text-white hover:text-primary sm:text-2xl">
+                    <h2
+                      onClick={() =>
+                        (window.location.href = 'http://www.laje-ac.com.br/')
+                      }
+                      className="text-md cursor-pointer font-kernCompressed font-normal text-white hover:text-primary sm:text-2xl"
+                    >
                       Loja
                     </h2>
-                    <h2 className="text-md cursor-pointer font-kernCompressed font-normal text-white hover:text-primary sm:text-2xl">
+                    <h2
+                      onClick={() =>
+                        (window.location.href = 'https://valometry.com.br/')
+                      }
+                      className="text-md cursor-pointer font-kernCompressed font-normal text-white hover:text-primary sm:text-2xl"
+                    >
                       Valometry
                     </h2>
-                    <h2 className="text-md cursor-pointer font-kernCompressed font-normal text-white hover:text-primary sm:text-2xl">
+                    <h2
+                      onClick={() =>
+                        (window.location.href = 'https://anacouto.gupy.io/')
+                      }
+                      className="text-md cursor-pointer font-kernCompressed font-normal text-white hover:text-primary sm:text-2xl"
+                    >
                       Carreiras
                     </h2>
                     <Image

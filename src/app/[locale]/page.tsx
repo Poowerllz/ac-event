@@ -10,6 +10,7 @@ export default function Home() {
           'Há três décadas construimos marcas que geram valor para o mundo'
         }
         subTitle={'Quem somos'}
+        pathSubtitle="/quem-somos"
         arrow={true}
       />
 
@@ -20,6 +21,7 @@ export default function Home() {
         }
         subTitle={'O que fazemos'}
         arrow={false}
+        pathSubtitle="/quem-somos"
       />
       <Carousel
         images={[
