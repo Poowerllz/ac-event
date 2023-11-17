@@ -1,3 +1,5 @@
+export type Categories = string[]
+
 export interface Case {
   href: string
   title: string
@@ -665,3 +667,43 @@ export const mockCases: Case[] = [
       'https://www.anacouto.com.br/wp-content/uploads/2018/07/thumbs_arezzoco.jpg'
   }
 ]
+
+export const mockCategories: Categories = [
+  'Todas',
+  'Comunicação',
+  'Estratégia',
+  'Naming',
+  'Universo Visual e Verbal',
+  'Criação',
+  'Marca',
+  'Identidade Visual',
+  'Posicionamento',
+  'Experiência',
+  'ilustração 3d',
+  'tipografia',
+  'Shooting',
+  'Embalagem',
+  'Identidade Verbal',
+  'Portfólio',
+  'Arquitetura',
+  'CX',
+  'Data Analytics',
+  'Design de Serviços',
+  'Digital',
+  'UX'
+]
+
+export const filterCasesByCategory = (
+  selectedOption: string | null,
+  cases: Case[]
+) => {
+  if (!selectedOption || selectedOption === 'Todas') {
+    return cases
+  }
+
+  const filteredCases = cases.filter(caseItem =>
+    caseItem.categories.includes(selectedOption)
+  )
+
+  return filteredCases
+}
