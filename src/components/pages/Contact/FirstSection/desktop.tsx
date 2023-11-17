@@ -124,7 +124,7 @@ export function FirstSectionDesktop({
             {people.members.map(member => {
               return (
                 <Fragment key={member.name}>
-                  <h2 className="font-kernCompressed text-4xl font-bold">
+                  <h2 className="font-kernCompressed text-4xl font-bold	 leading-5">
                     {member.name}
                   </h2>
                   <p className="mb-3">{member.office}</p>
