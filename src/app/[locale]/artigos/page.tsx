@@ -1,8 +1,6 @@
 import { ArticlesGalleryContainer } from '@/components/ArticlesGallery/ArticlesGalleryContainer'
 import { ArrowMobile } from '@/components/arrowMobile'
 import { Typography } from '@/components/ui/Typography'
-import More from '@/images/svg/more.svg'
-import Image from 'next/image'
 import { Fragment } from 'react'
 
 export default function Artigos() {
@@ -23,11 +21,6 @@ export default function Artigos() {
             </div>
           </div>
         </div>
-
-        <button className="flex items-center justify-center gap-2 self-start">
-          <Image src={More} alt="More Icon" width={24} height={24} />
-          <span className="font-bold leading-3">Filtrar por interesse</span>
-        </button>
       </section>
 
       <section className="mb-40 flex w-full flex-col gap-10 px-1 py-10 sm:px-4">
