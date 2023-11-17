@@ -1,34 +1,55 @@
 'use client'
 
 import More from '@/images/svg/more.svg'
-import { useGetAllPosts } from '@/service/posts/useGetAllPosts'
 import Image from 'next/image'
-import { Fragment } from 'react'
+import { Fragment, useEffect, useState } from 'react'
 import { CasesGallery } from '.'
-import { Spinner } from '../ui/Spinner'
+import { Case, mockCases } from './common'
 
 export function CasesGalleryContainer() {
-  const { galleries, handleGetAllPosts, loading } = useGetAllPosts()
+  const postsPerPage = 5
 
-  if (loading) {
-    return (
-      <div className="flex min-h-screen items-center justify-center">
-        <Spinner />
-      </div>
-    )
+  const [casesToShow, setCasesToShow] = useState<Case[][]>([])
+  const [count, setCount] = useState(1)
+
+  const loopThroughCases = (count: number) => {
+    const newCases: Case[] = []
+
+    for (
+      let i = count * postsPerPage - postsPerPage;
+      i < postsPerPage * count;
+      i++
+    ) {
+      if (mockCases[i] !== undefined) {
+        newCases.push(mockCases[i])
+      }
+    }
+
+    const chunkedCases: Case[][] = []
+    for (let i = 0; i < newCases.length; i += 5) {
+      chunkedCases.push(newCases.slice(i, i + 5))
+    }
+
+    setCasesToShow(prevCases => [...prevCases, ...chunkedCases])
   }
+
+  const handleShowMoreCases = () => {
+    setCount(prevCount => prevCount + 1)
+    loopThroughCases(count + 1)
+  }
+
+  useEffect(() => {
+    setCount(prevCount => prevCount + 1)
+    loopThroughCases(count)
+  }, [])
 
   return (
     <Fragment>
-      {galleries
-        .slice(1)
-        .map(
-          (cases, index) =>
-            cases.length > 0 && <CasesGallery key={index} cases={cases} />
-        )}
+      <CasesGallery cases={casesToShow} />
+
       <button
         className="flex items-center justify-center gap-2 self-center"
-        onClick={() => handleGetAllPosts()}
+        onClick={handleShowMoreCases}
       >
         <Image src={More} alt="More Icon" width={24} height={24} />
       </button>

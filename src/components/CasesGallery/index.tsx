@@ -3,12 +3,12 @@
 import { shimmer } from '@/common/utils/shimmer'
 import { toBase64 } from '@/common/utils/toBase64'
 import BackgroundPlaceholder from '@/images/png/background-placeholder.png'
-import { GetPostsProps } from '@/service/posts/type'
 import Image from 'next/image'
 import Link from 'next/link'
-
+import { Fragment } from 'react'
+import { Case } from './common'
 interface CasesGalleryProps {
-  cases: Array<GetPostsProps>
+  cases: Array<Case[]>
 }
 
 export function CasesGallery({ cases }: CasesGalleryProps) {
@@ -21,46 +21,41 @@ export function CasesGallery({ cases }: CasesGalleryProps) {
   ]
 
   return (
-    <div className="grid min-h-[200vh] grid-cols-2 grid-rows-5 gap-4 sm:grid-rows-4">
-      {cases.map((post, index: number) => (
-        <Link
-          key={post.id}
-          href={`/cases/${post.slug}`}
-          className={`relative flex flex-col items-start justify-between transition hover:grayscale ${divsClass[index]}`}
+    <Fragment>
+      {cases?.map((item, itemIndex) => (
+        <div
+          key={item[itemIndex].title}
+          className="grid min-h-[200vh] grid-cols-2 grid-rows-5 gap-4 sm:grid-rows-4"
         >
-          <span className="m-4 rounded-md bg-white px-2 py-[0.1rem] font-bold sm:top-5 sm:flex">
-            Cases
-          </span>
+          {item?.map((post, postItem) => (
+            <Link
+              key={post.title + String(postItem)}
+              href={`/${post.href}`}
+              className={`relative flex flex-col items-start justify-between transition hover:grayscale ${divsClass[postItem]}`}
+            >
+              <span className="m-4 rounded-md bg-white px-2 py-[0.1rem] font-bold sm:top-5 sm:flex">
+                Cases
+              </span>
 
-          <Image
-            src={
-              post?._embedded['wp:featuredmedia']?.[0]?.media_details?.sizes?.[
-                'full-width-horizontal'
-              ]?.source_url || BackgroundPlaceholder
-            }
-            alt="Image"
-            className="absolute top-0 -z-[1] object-cover"
-            width={
-              post?._embedded['wp:featuredmedia']?.[0]?.media_details?.sizes?.[
-                'full-width-horizontal'
-              ]?.width || 1024
-            }
-            height={
-              post?._embedded['wp:featuredmedia']?.[0]?.media_details?.sizes?.[
-                'full-width-horizontal'
-              ]?.height || 576
-            }
-            style={{ width: '100%', height: '100%' }}
-            placeholder={`data:image/svg+xml;base64,${toBase64(
-              shimmer(700, 475)
-            )}`}
-          />
+              <Image
+                src={post.thumbnail || BackgroundPlaceholder}
+                alt="Image"
+                className="absolute top-0 -z-[1] object-cover"
+                width={1024}
+                height={576}
+                style={{ width: '100%', height: '100%' }}
+                placeholder={`data:image/svg+xml;base64,${toBase64(
+                  shimmer(700, 475)
+                )}`}
+              />
 
-          <h5 className="m-4 text-base font-bold text-white transition max-[425px]:text-sm sm:text-2xl">
-            {post.title.rendered}
-          </h5>
-        </Link>
+              <h5 className="m-4 text-base font-bold text-white transition max-[425px]:text-sm sm:text-2xl">
+                {post.title}
+              </h5>
+            </Link>
+          ))}
+        </div>
       ))}
-    </div>
+    </Fragment>
   )
 }
