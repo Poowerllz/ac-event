@@ -92,7 +92,7 @@ const Menu: React.FC<Props> = ({ refOpen }) => {
                       }
                       className="text-md cursor-pointer font-kernCompressed font-normal text-white hover:text-primary sm:text-2xl"
                     >
-                      Loja
+                      Laje
                     </h2>
                     <h2
                       onClick={() =>
