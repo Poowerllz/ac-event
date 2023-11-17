@@ -7,6 +7,7 @@ export const useGetAllPosts = () => {
   const [page, setPage] = useState<number>(1)
   const [loading, setLoading] = useState<boolean>(false)
   const [galleries, setGalleries] = useState<Array<Array<GetPostsProps>>>([[]])
+  const [homeData, setHomeData] = useState<GetPostsProps[]>([])
 
   const addGallery = (cases: Array<GetPostsProps>) => {
     const newGallery = cases.slice(0, 5)
@@ -31,9 +32,33 @@ export const useGetAllPosts = () => {
     }
   }
 
+  const handleGetHomePosts = async () => {
+    try {
+      setLoading(true)
+
+      const res = await api.get(`/posts?_embed&per_page=4`)
+
+      setHomeData(res.data)
+    } catch (error) {
+      if (!error) return
+      const customError = new Error('Get Home Posts Error') as CustomError
+      customError.details = { ...error }
+      throw customError
+    } finally {
+      setLoading(false)
+    }
+  }
+
   useEffect(() => {
     handleGetAllPosts()
+    handleGetHomePosts()
   }, [])
 
-  return { galleries, loading, handleGetAllPosts, addGallery }
+  return {
+    galleries,
+    setGalleries,
+    homeData,
+    loading,
+    handleGetAllPosts
+  }
 }

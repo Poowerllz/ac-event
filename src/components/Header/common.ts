@@ -24,7 +24,7 @@ const videosHeader: VideosHeaderProps = {
   },
   '/artigos/': {
     hasBackgroundColor: true,
-    color: 'bg-primary',
+    color: 'bg-transparent',
     src: ''
   },
   '/slug-artigo': {
