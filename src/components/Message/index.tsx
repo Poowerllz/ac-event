@@ -4,9 +4,16 @@ import { AiOutlinePlusCircle } from 'react-icons/ai'
 import { ArrowMobile } from '../arrowMobile'
 import { Typography } from '../ui/Typography'
 import { MessageProps } from './type'
+import Link from 'next/link'
 
-export const Message = ({ title, subTitle, arrow }: MessageProps) => {
+export const Message = ({
+  title,
+  subTitle,
+  arrow,
+  pathSubtitle
+}: MessageProps) => {
   const isMobile = useMediaQuery('(max-width: 600px)')
+
   return (
     <>
       {isMobile ? (
@@ -20,10 +27,12 @@ export const Message = ({ title, subTitle, arrow }: MessageProps) => {
                   <ArrowMobile name={'arrowtop'} />
                 </div>
 
-                <div className="absolute -right-11 top-28 ml-auto flex -rotate-90  transform cursor-pointer items-center justify-end">
-                  <AiOutlinePlusCircle size={20} />
-                  <p className="w-100 ml-1 text-xs ">{subTitle}</p>
-                </div>
+                <Link href={pathSubtitle}>
+                  <div className="absolute -right-11 top-28 ml-auto flex -rotate-90  transform cursor-pointer items-center justify-end">
+                    <AiOutlinePlusCircle size={20} />
+                    <p className="w-100 ml-1 text-xs ">{subTitle}</p>
+                  </div>
+                </Link>
               </div>
             </div>
           ) : (
@@ -36,24 +45,26 @@ export const Message = ({ title, subTitle, arrow }: MessageProps) => {
                     <ArrowMobile name={'arrowtop'} />
                   </div>
                 )}
-
-                <div className="absolute -right-11 top-32 ml-auto flex -rotate-90 transform cursor-pointer items-center justify-end  ">
-                  <AiOutlinePlusCircle size={20} />
-                  <p className="w-100 ml-1 text-xs">{subTitle}</p>
-                </div>
+                <Link href={pathSubtitle}>
+                  <div className="absolute -right-11 top-32 ml-auto flex -rotate-90 transform cursor-pointer items-center justify-end ">
+                    <AiOutlinePlusCircle size={20} />
+                    <p className="w-100 ml-1 text-xs">{subTitle}</p>
+                  </div>
+                </Link>
               </div>
             </div>
           )}
         </>
       ) : (
         <>
-          <div className="relative flex h-screen w-full flex-col justify-between px-16  py-32">
+          <div className="relative flex h-auto  w-full flex-col justify-between px-16 py-52 ">
+            {/*py-32*/}
             {arrow ? (
-              <div className="flex h-full w-full justify-between align-top">
+              <div className="flex h-full w-full justify-between  align-top">
                 <Typography as="h1">{title}</Typography>
 
                 <div className="flex h-full w-full -rotate-180 transform items-end pr-80">
-                  <div className="cursor-pointer">
+                  <div className="cursor-pointer ">
                     <ArrowMobile name="arrowtop" />
                   </div>
                 </div>
@@ -65,10 +76,12 @@ export const Message = ({ title, subTitle, arrow }: MessageProps) => {
             )}
 
             <div className="flex w-full justify-end pl-20 ">
-              <div className="absolute bottom-44 right-0 flex -rotate-90 transform cursor-pointer items-center justify-end ">
-                <AiOutlinePlusCircle size={24} />
-                <p className="w-100 ml-3">{subTitle}</p>
-              </div>
+              <Link href={pathSubtitle}>
+                <div className="absolute bottom-44 right-0 flex -rotate-90 transform cursor-pointer items-center justify-end ">
+                  <AiOutlinePlusCircle size={24} />
+                  <p className="w-100 ml-3">{subTitle}</p>
+                </div>
+              </Link>
             </div>
           </div>
         </>

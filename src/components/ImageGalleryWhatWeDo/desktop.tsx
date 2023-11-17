@@ -23,22 +23,22 @@ export function ImageGalleryWhatWeDoDesktop({
             loading="lazy"
           />
 
-          <ImageGalleryWhatWeDoTitle>Lorem ipsum</ImageGalleryWhatWeDoTitle>
+          <ImageGalleryWhatWeDoTitle>COCRIAÇÃO</ImageGalleryWhatWeDoTitle>
         </div>
 
         <ImageGalleryWhatWeDoSubtitle>
-          Através de parceria <br /> estratégica entre cliente <br /> e agência
-          chegamos.
+          Através de parceria <br /> estratégica entre cliente <br /> e agência,
+          chegamos às perguntas <br />
+          certas para desenhar cada solução.
         </ImageGalleryWhatWeDoSubtitle>
       </div>
 
       <div className="flex flex-col gap-5 self-end">
         <div className="flex flex-col justify-between gap-2 lg:flex-row lg:gap-4">
-          <ImageGalleryWhatWeDoTitle>Dolor</ImageGalleryWhatWeDoTitle>
+          <ImageGalleryWhatWeDoTitle>AGILIDADE</ImageGalleryWhatWeDoTitle>
 
           <ImageGalleryWhatWeDoSubtitle>
-            Através de parceria <br /> estratégica entre cliente <br /> e
-            agência chegamos.
+            Com a aplicação de metodologias <br /> ágeis e reuniões de sprints.
           </ImageGalleryWhatWeDoSubtitle>
         </div>
 
@@ -56,12 +56,13 @@ export function ImageGalleryWhatWeDoDesktop({
 
       <div className="flex flex-col justify-between gap-12 self-end">
         <ImageGalleryWhatWeDoSubtitle>
-          Através de parceria <br /> estratégica entre cliente <br /> e agência
-          chegamos.
+          Em encontros com diferentes <br />
+          tons e objetivos, como workshops, <br />
+          senergizers e provokes.
         </ImageGalleryWhatWeDoSubtitle>
 
         <div className="relative h-auto w-full">
-          <ImageGalleryWhatWeDoTitle>Lorem ipsum</ImageGalleryWhatWeDoTitle>
+          <ImageGalleryWhatWeDoTitle>SOLUÇÃO</ImageGalleryWhatWeDoTitle>
 
           <Image
             property="true"
@@ -88,12 +89,14 @@ export function ImageGalleryWhatWeDoDesktop({
           />
 
           <ImageGalleryWhatWeDoSubtitle>
-            Através de parceria <br /> estratégica entre cliente <br /> e
-            agência chegamos.
+            Com reuniões de sprints e <br />
+            ferramentas de Design Thinking.
           </ImageGalleryWhatWeDoSubtitle>
         </div>
 
-        <ImageGalleryWhatWeDoTitle>Lorem ipsum</ImageGalleryWhatWeDoTitle>
+        <ImageGalleryWhatWeDoTitle>
+          APRENDIZADO GERA AUTONOMIA{' '}
+        </ImageGalleryWhatWeDoTitle>
       </div>
     </div>
   )

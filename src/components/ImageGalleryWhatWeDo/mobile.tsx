@@ -25,11 +25,12 @@ export function ImageGalleryWhatWeDoMobile({
         </div>
 
         <div className="flex justify-between">
-          <ImageGalleryWhatWeDoTitle>Lorem ipsum</ImageGalleryWhatWeDoTitle>
+          <ImageGalleryWhatWeDoTitle>COCRIAÇÃO</ImageGalleryWhatWeDoTitle>
 
           <ImageGalleryWhatWeDoSubtitle>
-            Através de parceria <br /> estratégica entre cliente <br /> e
-            agência chegamos.
+            Através da parceria <br /> estratégica entre cliente
+            <br /> e agência, chegamos <br /> às perguntas certas <br />
+            para desenhar cada solução.
           </ImageGalleryWhatWeDoSubtitle>
         </div>
       </div>
@@ -48,11 +49,11 @@ export function ImageGalleryWhatWeDoMobile({
         </div>
 
         <div className="flex justify-between">
-          <ImageGalleryWhatWeDoTitle>Dolor</ImageGalleryWhatWeDoTitle>
+          <ImageGalleryWhatWeDoTitle>AGILIDADE </ImageGalleryWhatWeDoTitle>
 
           <ImageGalleryWhatWeDoSubtitle>
-            Através de parceria <br /> estratégica entre cliente <br /> e
-            agência chegamos.
+            Com a aplicação de metodologias
+            <br /> ágeis e reuniões de sprints.
           </ImageGalleryWhatWeDoSubtitle>
         </div>
       </div>
@@ -71,11 +72,11 @@ export function ImageGalleryWhatWeDoMobile({
         </div>
 
         <div className="flex justify-between">
-          <ImageGalleryWhatWeDoTitle>Dolor</ImageGalleryWhatWeDoTitle>
+          <ImageGalleryWhatWeDoTitle>SOLUÇÃO</ImageGalleryWhatWeDoTitle>
 
           <ImageGalleryWhatWeDoSubtitle>
-            Através de parceria <br /> estratégica entre cliente <br /> e
-            agência chegamos.
+            Em encontros com diferentes <br /> tons e objetivos, como <br />
+            workshops, energizers e provokes.
           </ImageGalleryWhatWeDoSubtitle>
         </div>
       </div>
@@ -94,11 +95,12 @@ export function ImageGalleryWhatWeDoMobile({
         </div>
 
         <div className="flex justify-between">
-          <ImageGalleryWhatWeDoTitle>Dolor</ImageGalleryWhatWeDoTitle>
+          <ImageGalleryWhatWeDoTitle>
+            APRENDIZADO GERA AUTONOMIA
+          </ImageGalleryWhatWeDoTitle>
 
           <ImageGalleryWhatWeDoSubtitle>
-            Através de parceria <br /> estratégica entre cliente <br /> e
-            agência chegamos.
+            Com reuniões de sprints e <br /> ferramentas de Design Thinking.
           </ImageGalleryWhatWeDoSubtitle>
         </div>
       </div>

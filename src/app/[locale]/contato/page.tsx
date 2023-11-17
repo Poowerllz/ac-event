@@ -11,9 +11,9 @@ export default function Contact() {
   const t = useTranslations('Contact')
 
   const titleKeys = [
-    t('firstSection.title.firstLine'),
-    t('firstSection.title.secondLine'),
-    t('firstSection.title.thirdLine')
+    t('firstSection.title.firstLine')
+    // t('firstSection.title.secondLine'),
+    // t('firstSection.title.thirdLine')
   ]
   const addressKeys = [
     t('firstSection.contacts.address.firstItem'),
