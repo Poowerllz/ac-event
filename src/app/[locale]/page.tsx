@@ -1,6 +1,7 @@
+import { AticlesHome } from '@/components/ArticlesGallery/AticlesHome'
+import { CasesGalleryContainer } from '@/components/CasesGallery/CasesGalleryContainer'
 import Carousel from '@/components/Swiper'
 import { Message } from '../../components/Message'
-import { ImageHomeGrid } from '@/components/ImageHomeGrid'
 
 export default function Home() {
   return (
@@ -13,7 +14,11 @@ export default function Home() {
         arrow={true}
       />
 
-      <ImageHomeGrid />
+      <section className="flex w-full flex-col gap-1 px-1 py-10 sm:mb-40 sm:gap-4 sm:px-4">
+        <CasesGalleryContainer isHomePage={true} />
+        <AticlesHome />
+      </section>
+
       <Message
         title={
           'Há três décadas construimos marcas que geram valor para o mundo'

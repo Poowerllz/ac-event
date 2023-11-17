@@ -25,7 +25,7 @@ export function CasesGallery({ cases }: CasesGalleryProps) {
       {cases?.map((item, itemIndex) => (
         <div
           key={String(itemIndex)}
-          className="grid min-h-[200vh] grid-cols-2 grid-rows-5 gap-4 sm:grid-rows-4"
+          className="grid min-h-[200vh] grid-cols-2 grid-rows-5 gap-1 sm:grid-rows-4 sm:gap-4"
         >
           {item?.map((post, postIndex) => (
             <Link

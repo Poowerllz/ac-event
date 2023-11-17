@@ -8,7 +8,13 @@ import { CasesGallery } from '.'
 import { FilterCases } from './FilterCases'
 import { Case, mockCases } from './common'
 
-export function CasesGalleryContainer() {
+interface CasesGalleryContainerProps {
+  isHomePage?: boolean
+}
+
+export function CasesGalleryContainer({
+  isHomePage = false
+}: CasesGalleryContainerProps) {
   const [caseToShow, setCaseToShow] = useState<Case[][]>([])
 
   const { loopThroughCases } = useFilterGallery()
@@ -30,16 +36,18 @@ export function CasesGalleryContainer() {
 
   return (
     <Fragment>
-      <FilterCases setPostToShow={setCaseToShow} />
+      {!isHomePage && <FilterCases setPostToShow={setCaseToShow} />}
 
       <CasesGallery cases={caseToShow} />
 
-      <button
-        className="flex items-center justify-center gap-2 self-center"
-        onClick={handleShowMoreCases}
-      >
-        <Image src={More} alt="More Icon" width={24} height={24} />
-      </button>
+      {!isHomePage && (
+        <button
+          className="flex items-center justify-center gap-2 self-center"
+          onClick={handleShowMoreCases}
+        >
+          <Image src={More} alt="More Icon" width={24} height={24} />
+        </button>
+      )}
     </Fragment>
   )
 }
