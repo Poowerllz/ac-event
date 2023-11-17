@@ -10,6 +10,7 @@ export default function Home() {
           'Somos feitos de propósito para transformar organizações e pessoas, alinhando marca, negócio e comunicação. Somos a anacouto.'
         }
         subTitle={'Quem somos'}
+        pathSubtitle="/quem-somos"
         arrow={true}
       />
 
@@ -20,6 +21,7 @@ export default function Home() {
         }
         subTitle={'O que fazemos'}
         arrow={false}
+        pathSubtitle="/quem-somos"
       />
       <Carousel
         images={[
