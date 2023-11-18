@@ -82,7 +82,7 @@ export default function WhoWeAre() {
       <section className="mb-4 w-full flex-col gap-10 px-2 sm:px-4 sm:py-10">
         <Typography
           as="h2"
-          className="py-24 md:text-[4.7rem] md:leading-[4.7rem]"
+          className="py-14 md:text-[4.7rem] md:leading-[4.7rem]"
           animation={false}
         >
           {t('fourthSection.title')}
