@@ -49,7 +49,10 @@ export function FooterContacts({
           {title[1]}
         </p>
 
-        <span className="text-xl font-normal">{subtitle}</span>
+        <input
+          className="bg-[transparent] text-xl font-normal text-white outline-0"
+          placeholder={`${subtitle}`}
+        />
         <hr className={cn('h-0.5 w-full border-0', 'bg-white')} />
       </div>
 

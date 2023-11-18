@@ -12,7 +12,7 @@ export default function WhoWeAre() {
 
   return (
     <Fragment>
-      <section className="relative flex w-full flex-col gap-10 px-6 py-10 sm:px-16 md:mb-40">
+      <section className="relative flex w-full flex-col gap-10 px-6 py-10 sm:px-16">
         <div className="absolute right-6 top-6 sm:right-16">
           <Image
             src={ArrowTop}
@@ -36,10 +36,10 @@ export default function WhoWeAre() {
         </p>
       </section>
 
-      <section className="relative flex w-full flex-col gap-10 px-6 py-10 sm:mb-20 sm:px-16">
+      <section className="relative flex w-full flex-col gap-10 px-6 py-10 sm:px-16">
         <hr className={cn('h-0.5 w-full border-0', 'bg-gray-300')} />
 
-        <div className="relative flex w-full flex-col justify-between gap-10 sm:mb-32 md:flex-row">
+        <div className="relative flex w-full flex-col justify-between gap-10 sm:mb-8 md:flex-row">
           <Typography as="h2">
             O futuro de uma
             <br />
@@ -82,7 +82,7 @@ export default function WhoWeAre() {
       <section className="mb-4 w-full flex-col gap-10 px-2 sm:px-4 sm:py-10">
         <Typography
           as="h2"
-          className="py-24 md:text-[4.7rem] md:leading-[4.7rem]"
+          className="py-14 md:text-[4.7rem] md:leading-[4.7rem]"
           animation={false}
         >
           {t('fourthSection.title')}

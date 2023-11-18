@@ -4,7 +4,7 @@ import { ImageGalleryExecutiveTeamTitle } from './ImageGalleryExecutiveTeamTitle
 
 export function ImageGalleryExecutiveTeamMobile() {
   return (
-    <div className="grid h-screen grid-cols-2 grid-rows-5 gap-2">
+    <div className="grid h-[200vh] grid-cols-2 grid-rows-[repeat(7,_minmax(0,_1fr))] gap-2">
       <div className="relative col-span-2">
         <div className="relative h-full w-full">
           <Image
@@ -128,6 +128,70 @@ export function ImageGalleryExecutiveTeamMobile() {
 
         <ImageGalleryExecutiveTeamTitle>
           Napoleon Fujisawa
+        </ImageGalleryExecutiveTeamTitle>
+      </div>
+
+      <div className="relative">
+        <div className="relative h-full w-full">
+          <Image
+            src="https://www.anacouto.com.br/wp-content/uploads/2022/07/RAFAEL_CROP_PB-1-250x300.png"
+            alt="Napoleon Fujisawa"
+            fill
+            style={{ height: '100%', width: '100%' }}
+            className="object-cover object-top"
+          />
+        </div>
+
+        <ImageGalleryExecutiveTeamTitle>
+          Rafael Torres
+        </ImageGalleryExecutiveTeamTitle>
+      </div>
+
+      <div className="relative row-start-6">
+        <div className="relative h-full w-full">
+          <Image
+            src="https://www.anacouto.com.br/wp-content/uploads/2022/07/HUGO_IMG_CROP_PB-250x300.png"
+            alt="Napoleon Fujisawa"
+            fill
+            style={{ height: '100%', width: '100%' }}
+            className="object-cover object-top"
+          />
+        </div>
+
+        <ImageGalleryExecutiveTeamTitle>
+          Luiz Felippe Netto
+        </ImageGalleryExecutiveTeamTitle>
+      </div>
+
+      <div className="relative">
+        <div className="relative h-full w-full">
+          <Image
+            src="https://www.anacouto.com.br/wp-content/uploads/2022/07/HUGO_IMG_CROP_PB-250x300.png"
+            alt="Napoleon Fujisawa"
+            fill
+            style={{ height: '100%', width: '100%' }}
+            className="object-cover object-top"
+          />
+        </div>
+
+        <ImageGalleryExecutiveTeamTitle>
+          Hugo Rafael
+        </ImageGalleryExecutiveTeamTitle>
+      </div>
+
+      <div className="relative row-start-[7]">
+        <div className="relative h-full w-full">
+          <Image
+            src="https://www.anacouto.com.br/wp-content/uploads/2022/07/MARCELLE_CROP_PB-250x300.png"
+            alt="Napoleon Fujisawa"
+            fill
+            style={{ height: '100%', width: '100%' }}
+            className="object-cover object-top"
+          />
+        </div>
+
+        <ImageGalleryExecutiveTeamTitle>
+          Marcelle Villar
         </ImageGalleryExecutiveTeamTitle>
       </div>
     </div>
