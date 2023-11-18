@@ -1,10 +1,10 @@
 'use client'
 import useMediaQuery from '@/hooks/useMediaQuery'
+import Link from 'next/link'
 import { AiOutlinePlusCircle } from 'react-icons/ai'
 import { ArrowMobile } from '../arrowMobile'
 import { Typography } from '../ui/Typography'
 import { MessageProps } from './type'
-import Link from 'next/link'
 
 export const Message = ({
   title,
@@ -57,7 +57,7 @@ export const Message = ({
         </>
       ) : (
         <>
-          <div className="relative flex h-auto  w-full flex-col justify-between px-16 py-52 ">
+          <div className="relative flex h-auto  w-full flex-col justify-between px-16 py-24 ">
             {/*py-32*/}
             {arrow ? (
               <div className="flex h-full w-full justify-between  align-top">

@@ -15,7 +15,7 @@ export default function Home() {
         arrow={true}
       />
 
-      <section className="flex w-full flex-col gap-1 px-1 py-10 sm:mb-40 sm:gap-4 sm:px-4">
+      <section className="flex w-full flex-col gap-1 px-1 py-10 sm:gap-4 sm:px-4">
         <CasesGalleryContainer isHomePage={true} />
         <AticlesHome />
       </section>
