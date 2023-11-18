@@ -23,7 +23,7 @@ export function ArticlesGallery({ posts }: ArticlesGalleryProps) {
 
   return (
     <Fragment>
-      {posts?.slice(1).map(
+      {posts.map(
         (item, itemIndex) =>
           item.length > 0 &&
           item.every(innerArray => innerArray.title) && (

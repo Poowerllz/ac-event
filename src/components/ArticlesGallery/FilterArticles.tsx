@@ -10,7 +10,7 @@ import { filterArticlesByCategory } from './common'
 
 interface FilterArticlesProps {
   galleries: GetPostsProps[][]
-  setGalleries: Dispatch<SetStateAction<GetPostsProps[][]>>
+  setGalleries: (opt: string) => void
 }
 
 export function FilterArticles({
@@ -27,6 +27,7 @@ export function FilterArticles({
 
   const handleOptionSelect = (option: string) => {
     setSelectedOption(option)
+    setGalleries(option)
     setIsMenuOpen(false)
   }
 

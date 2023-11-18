@@ -32,8 +32,7 @@ const backgroundsHeader: BackgroundsHeaderProps = {
   },
   '/contato': {
     mobile: 'background-contato-mobile.png',
-    desktop: 'background-contato-desktop.png',
-    invert: true
+    desktop: 'background-contato-desktop.png'
   }
 }
 

@@ -7,6 +7,12 @@ const nextConfig = {
   images: {
     remotePatterns: [
       {
+        protocol: 'http',
+        hostname: 'www.anacouto.com.br',
+        port: '',
+        pathname: '/**'
+      },
+      {
         protocol: 'https',
         hostname: 'www.anacouto.com.br',
         port: '',

@@ -3,26 +3,17 @@
 import { shimmer } from '@/common/utils/shimmer'
 import { toBase64 } from '@/common/utils/toBase64'
 import BackgroundPlaceholder from '@/images/png/background-placeholder.png'
-import { useGetAllPosts } from '@/service/posts/useGetAllPosts'
 import Image from 'next/image'
 import Link from 'next/link'
-import { Spinner } from '../ui/Spinner'
+import { mockArticles } from '../ArticlesGalleryV2'
 
 export function AticlesHome() {
-  const { homeData, loading } = useGetAllPosts()
   const divsClass = ['', '', 'hidden sm:flex', 'hidden sm:flex']
-
-  if (loading) {
-    return (
-      <div className="flex items-center justify-center">
-        <Spinner />
-      </div>
-    )
-  }
+  const posts = mockArticles.slice(0, 4)
 
   return (
     <div className="grid grid-cols-2 grid-rows-1 gap-1 sm:grid-cols-4 sm:gap-4">
-      {homeData?.map((post, index) => (
+      {posts?.map((post, index) => (
         <Link
           key={String(index)}
           href={`/artigos/${post?.slug ?? '#'}`}
