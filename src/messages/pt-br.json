@@ -1,9 +1,20 @@
 {
   "Home": {
-    "title": "em desenvolvimento..."
+    "sectionWhoWeAre": {
+      "text": "Somos feitos de propósito para transformar organizações e pessoas, alinhando marca, negócio e comunicação. Somos a anacouto.",
+      "button": "Quem somos"
+    },
+    "sectionWhatWeDo": {
+      "text": "Há 30 anos criamos o extraordinário para marcas que impactam o mundo com mais valor e amor.",
+      "button": "O que fazemos"
+    }
   },
-  "Articles": {},
-  "Cases": {},
+  "Articles": {
+    "sectionMessage": "Nossas ideias que transbordaram e se concretizaram em artigos e papers."
+  },
+  "Cases": {
+    "sectionMessage": "Criamos o extraordinário."
+  },
   "InternalCases": {},
   "Contact": {
     "firstSection": {

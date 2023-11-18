@@ -1,9 +1,22 @@
 {
   "Home": {
-    "title": "in development..."
+    "sectionWhoWeAre": {
+      "text": "We are purpose-built to transform organizations and people, aligning brand, business and communication. We are anacouto.",
+      "button": "Who we are"
+    },
+    "sectionWhatWeDo": {
+      "text": "For 30 years we have created the extraordinary for brands that impact the world with more value and love.",
+      "button": "What we do"
+    }
   },
-  "Articles": {},
-  "Cases": {},
+  "Articles": {
+    "sectionMessage": "Our ideas overflowed and came to fruition in articles and papers."
+  },
+  "Cases": {
+    "Cases": {
+      "sectionMessage": "We create the extraordinary."
+    }
+  },
   "InternalCases": {},
   "Contact": {
     "firstSection": {
