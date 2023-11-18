@@ -12,7 +12,7 @@ const videosHeader: VideosHeaderProps = {
     src: 'https://youtu.be/uYFVJNrOt9g'
   },
   '/cases': {
-    src: 'https://youtu.be/uYFVJNrOt9g'
+    src: '/images/header_placeholder.png'
   },
   '/cases/': {
     hasBackgroundColor: true,
