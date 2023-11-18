@@ -19,7 +19,7 @@ export const Message = ({
       {isMobile ? (
         <>
           {arrow ? (
-            <div className=" flex h-auto w-full flex-col items-center justify-between px-6 pb-80 pt-60">
+            <div className=" flex h-auto w-full flex-col items-center justify-between px-6 pb-44 pt-40">
               <Typography as="h1">{title}</Typography>
 
               <div className="relative flex h-full w-full flex-col  justify-between">
@@ -36,7 +36,7 @@ export const Message = ({
               </div>
             </div>
           ) : (
-            <div className="relative flex h-auto w-full flex-col items-center justify-between px-6 pb-96 pt-28">
+            <div className="relative flex h-auto w-full flex-col items-center justify-between px-6 pb-60 pt-40">
               <Typography as="h1">{title}</Typography>
 
               <div className="relative flex h-full w-full flex-col  justify-between">
