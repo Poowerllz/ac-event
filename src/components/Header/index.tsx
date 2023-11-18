@@ -7,6 +7,7 @@ import { MenuLogo } from './MenuLogo'
 import { pathVideoEn, pathVideoPtBr } from './common'
 import { useRef, useState } from 'react'
 import dynamic from 'next/dynamic'
+import Image from 'next/image'
 const ReactPlayer = dynamic(() => import('react-player'), { ssr: false })
 
 export default function Header() {
@@ -21,22 +22,37 @@ export default function Header() {
 
   return (
     <div className="relative flex h-screen w-full items-center justify-center overflow-hidden">
-      <ReactPlayer
-        url={'https://www.youtube.com/embed/uYFVJNrOt9g?si=KpthCpw7Eaqo9kgr'}
-        className="absolute left-0 h-full w-full object-cover"
-        controls={false}
-        width={'calc(100vw + 0px)'}
-        height={'calc(100vh + 120px)'}
-        playing={playing}
-      />
-      {!playing && (
-        <div
-          className="absolute z-50 h-[46vw] w-[46vw] cursor-pointer rounded-full"
-          onClick={() => {
-            setPlaying(true)
-            ;(hideButtonRef as any).current.click()
-          }}
+      {pathData.src.includes('png') ? (
+        <Image
+          src={pathData.src}
+          alt="Image of a bike"
+          width={1360}
+          height={1360}
+          quality={100}
+          className="absolute h-full w-full object-cover"
         />
+      ) : (
+        <>
+          <ReactPlayer
+            url={
+              'https://www.youtube.com/embed/uYFVJNrOt9g?si=KpthCpw7Eaqo9kgr'
+            }
+            className="absolute left-0 h-full w-full object-cover"
+            controls={false}
+            width={'calc(100vw + 0px)'}
+            height={'calc(100vh + 120px)'}
+            playing={playing}
+          />
+          {!playing && (
+            <div
+              className="absolute z-50 h-[46vw] w-[46vw] cursor-pointer rounded-full"
+              onClick={() => {
+                setPlaying(true)
+                ;(hideButtonRef as any).current.click()
+              }}
+            />
+          )}
+        </>
       )}
 
       <div className="relative flex h-full w-full  px-6 sm:px-16">

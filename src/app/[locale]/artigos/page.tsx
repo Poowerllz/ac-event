@@ -23,7 +23,7 @@ export default function Artigos() {
         </div>
       </section>
 
-      <section className="mb-40 flex w-full flex-col gap-10 px-1 py-10 sm:px-4">
+      <section className="mb-40 flex w-full flex-col  gap-4 px-1 py-10 sm:px-4">
         <ArticlesGalleryContainer />
       </section>
     </Fragment>

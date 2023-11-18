@@ -17,23 +17,18 @@ const videosHeader: VideosHeaderProps = {
   '/cases/': {
     hasBackgroundColor: true,
     color: 'bg-white',
-    src: 'https://youtu.be/uYFVJNrOt9g'
+    src: '/images/header_placeholder.png'
   },
   '/artigos': {
-    src: 'https://youtu.be/uYFVJNrOt9g'
+    src: '/images/header_placeholder.png'
   },
   '/artigos/': {
     hasBackgroundColor: true,
     color: 'bg-transparent',
-    src: ''
-  },
-  '/slug-artigo': {
-    hasBackgroundColor: true,
-    color: 'bg-primary',
-    src: 'https://youtu.be/uYFVJNrOt9g'
+    src: '/images/header_placeholder.png'
   },
   '/contato': {
-    src: 'https://youtu.be/uYFVJNrOt9g'
+    src: '/images/header_placeholder.png'
   }
 }
 

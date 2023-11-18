@@ -6,23 +6,66 @@ import { useTranslations } from 'next-intl'
 import Image from 'next/image'
 import { Fragment } from 'react'
 import { GallerySection } from './common'
+import Dropdown from '@/components/Dropdown'
 
 export default function WhatWeDo() {
   const t = useTranslations('WhatWeDo')
 
   const linksKeys = [
-    'thirdSection.links.firstItem',
-    'thirdSection.links.secondItem',
-    'thirdSection.links.thirdItem',
-    'thirdSection.links.fifthItem',
-    'thirdSection.links.sixItem'
-  ]
-  const hoverLinksKeys = [
-    'thirdSection.hoverLinks.firstItem',
-    'thirdSection.hoverLinks.secondItem',
-    'thirdSection.hoverLinks.thirdItem',
-    'thirdSection.hoverLinks.fifthItem',
-    'thirdSection.hoverLinks.sixItem'
+    {
+      title: 'thirdSection.links.firstItem',
+      items: [
+        'Estratégia Diagnóstico de Valor',
+        'Plataforma de Branding',
+        'Nome',
+        'Design de Marca',
+        'Universo Visual e Verbal',
+        'Toolkit de Branding',
+        'Gestão de Portfólio'
+      ]
+    },
+    {
+      title: 'thirdSection.links.secondItem',
+      items: [
+        'Jornada ON/OFF',
+        'PDV',
+        'Ambientação',
+        'Soluções digitais',
+        'Design System'
+      ]
+    },
+    {
+      title: 'thirdSection.links.thirdItem',
+      items: ['Planejamento', 'Midia', 'Criação', 'Produção', 'Social']
+    },
+    {
+      title: 'thirdSection.links.fourthItem',
+      items: [
+        'Transformação Cultural',
+        'EVP_Marca Empregadora',
+        'Desenvolvimento Liderança'
+      ]
+    },
+    {
+      title: 'thirdSection.links.fifthItem',
+      items: [
+        'Curso Branding Aplicado',
+        'Curso Branding Essencial',
+        'CBO',
+        'Comunidade',
+        'Newsletter',
+        'Tip Talks'
+      ]
+    },
+    {
+      title: 'thirdSection.links.sixItem',
+      items: [
+        'Tracking do Branding',
+        'Listening de social',
+        'Dashboard de OKR',
+        'Culturômetro'
+      ]
+    }
   ]
 
   return (
@@ -79,28 +122,9 @@ export default function WhatWeDo() {
         </div>
 
         <ul className="relative">
-          {linksKeys.map((key, index) => {
-            return (
-              <Fragment key={key}>
-                <li className="relative font-kernCompressed text-3xl font-bold text-white transition hover:text-primary hover:transition sm:text-6xl">
-                  {t(key)}
-
-                  <br />
-
-                  <span className="absolute bottom-0 right-2 text-[0.55rem] text-white sm:bottom-2 sm:text-xs">
-                    {t(hoverLinksKeys[index])}
-                  </span>
-                </li>
-
-                <hr
-                  className={cn(
-                    'mb-6 h-0.5 w-full border-0',
-                    'bg-gray-300 opacity-50'
-                  )}
-                />
-              </Fragment>
-            )
-          })}
+          {linksKeys.map((item, index) => (
+            <Dropdown key={index} items={item.items} title={t(item.title)} />
+          ))}
         </ul>
       </section>
 
