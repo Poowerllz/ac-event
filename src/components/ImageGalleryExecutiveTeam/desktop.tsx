@@ -109,6 +109,13 @@ export function ImageGalleryExecutiveTeamDesktop() {
             style={{ height: '100%', width: '100%' }}
             className="object-cover"
           />
+
+          <Image
+            src={'/images/quem-somos/fernanda_galluzi.jpeg'}
+            alt="placeholder"
+            style={{ height: '100%', width: '100%' }}
+            fill
+          />
         </div>
 
         <ImageGalleryExecutiveTeamTitle>

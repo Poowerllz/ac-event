@@ -104,9 +104,11 @@ export function ImageGalleryExecutiveTeamMobile() {
       <div className="relative row-start-5">
         <div className="relative h-full w-full">
           <Image
-            src={placeholder}
+            src={'/images/quem-somos/fernanda_galluzi.jpeg'}
             alt="placeholder"
             style={{ height: '100%', width: '100%' }}
+            className="object-cover"
+            fill
           />
         </div>
 

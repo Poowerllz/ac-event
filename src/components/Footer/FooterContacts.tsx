@@ -105,8 +105,24 @@ export function FooterContacts({
           <span className="text-sm font-semibold">© 2023 Ana Couto</span>
 
           <div className="flex flex-col gap-1">
-            <span className="text-sm">{copyright[0]}</span>
-            <span className="text-sm">{copyright[1]}</span>
+            <span
+              className="cursor-pointer text-sm underline"
+              onClick={() =>
+                window.open(
+                  'https://www.anacouto.com.br/wp-content/uploads/2021/03/ac-laje-politica-privacidade.pdf'
+                )
+              }
+            >
+              {copyright[0]}
+            </span>
+            <span
+              className="cursor-pointer text-sm underline"
+              onClick={() =>
+                window.open('https://www.anacouto.com.br/etica-e-compliance/')
+              }
+            >
+              {copyright[1]}
+            </span>
           </div>
         </div>
       </div>

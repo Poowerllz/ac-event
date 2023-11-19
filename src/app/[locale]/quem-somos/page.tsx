@@ -29,8 +29,8 @@ export default function WhoWeAre() {
         </Typography>
 
         <p className="w-auto max-w-[240px] self-end text-sm font-semibold sm:text-base lg:max-w-[360px] lg:text-lg xl:text-2xl">
-          Há 30 anos alinhamos marca, negócio e comunicação para fazer criações
-          icônicas através do nosso método proprietário. Usamos toda a nossa
+          Há 30 anos alinhamos marca, negócio e comunicação para fazer branding
+          icônicos através do nosso método proprietário. Usamos toda a nossa
           potência de propósito para impulsionar o valor de pessoas e
           organizações.
         </p>
@@ -41,17 +41,15 @@ export default function WhoWeAre() {
 
         <div className="relative flex w-full flex-col justify-between gap-10 sm:mb-8 md:flex-row">
           <Typography as="h2">
-            O futuro de uma
+            Como gerir o valor
             <br />
-            marca é feito
-            <br />
-            de propósito.
+            do seu Branding?
           </Typography>
 
           <p className="w-auto max-w-[240px] self-end text-sm font-semibold sm:text-base md:self-start lg:max-w-[360px] lg:text-lg xl:text-2xl">
-            As Ondas do Branding são um método proprietário anacouto para gerar
-            e gerir valor de marcas. A Onda 3 representa as que se diferenciam
-            na forma de relacionar com as pessoas.
+            As Ondas de Valor são um método proprietário anacouto para gerar e
+            gerir valor de marcas. A Onda 3 representa as que se diferenciam na
+            forma de relacionar com as pessoas.
           </p>
         </div>
 

@@ -85,8 +85,8 @@ export default function WhatWeDo() {
         </Typography>
 
         <p className="w-auto max-w-[220px] self-end text-sm font-semibold sm:text-base lg:max-w-[360px] lg:text-lg xl:text-2xl">
-          Há 30 anos alinhamos marca, negócio e comunicação para fazer criações
-          icônicas através do nosso método proprietário. Usamos toda a nossa
+          Há 30 anos alinhamos marca, negócio e comunicação para fazer branding
+          icônicos através do nosso método proprietário. Usamos toda a nossa
           potência de propósito para impulsionar o valor de pessoas e
           organizações.
         </p>
@@ -99,9 +99,9 @@ export default function WhatWeDo() {
         </div>
 
         <p className="absolute right-6 top-24 w-auto max-w-[220px] self-end text-sm font-semibold sm:right-16 sm:text-base lg:max-w-[360px] lg:text-lg xl:text-2xl">
-          Do estratégico ao tático. Do tático ao operacional. Somos o ciclo
-          completo e concreto de entregas a partir da nossa metodologia
-          proprietária.
+          Geramos e gerimos valor. Da estratégia a execução. Da execução a
+          gestão. Somos o ciclo completo e concreto de entregas a partir da
+          nossa metodologia proprietária.
         </p>
 
         <div className="relative h-auto w-full">
@@ -123,7 +123,12 @@ export default function WhatWeDo() {
 
         <ul className="relative">
           {linksKeys.map((item, index) => (
-            <Dropdown key={index} items={item.items} title={t(item.title)} />
+            <Dropdown
+              key={index}
+              items={item.items}
+              title={t(item.title)}
+              startsOpen={index === 0}
+            />
           ))}
         </ul>
       </section>
