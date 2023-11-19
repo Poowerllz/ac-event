@@ -16,8 +16,12 @@ export const useGetAllCategories = () => {
         return 'Array inválido ou vazio'
       }
 
-      const categories = res.data.map(objeto => objeto.name)
-      categories.unshift('Todas')
+      const categories: any = res.data.map(objeto => ({
+        name: objeto.name,
+        id: objeto.id
+      }))
+
+      categories.unshift({ name: 'Todas', id: 0 })
 
       setData(categories)
     } catch (error) {

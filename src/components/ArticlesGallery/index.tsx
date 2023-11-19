@@ -33,6 +33,7 @@ export function ArticlesGallery({ posts }: ArticlesGalleryProps) {
             >
               {item.map((post, index: number) => (
                 <Link
+                  id={JSON.stringify(post.categories)}
                   key={String(index)}
                   href={`/artigos/${post?.slug ?? '#'}`}
                   className={`relative flex flex-col items-start justify-between transition hover:grayscale ${divsClass[index]}`}

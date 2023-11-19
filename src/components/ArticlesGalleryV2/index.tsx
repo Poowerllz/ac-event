@@ -113,11 +113,27 @@ export const mockArticles: any[] = [
   }
 ]
 
+const FilterCategories = {
+  Downloads: 137,
+  Artigos: 5,
+  Matérias: 1,
+  Todas: 0,
+  'TIP Insights': 134
+}
+
 const ArticlesGalleryV2 = () => {
+  const defaultArticles = [mockArticles, [], []] as GetPostsProps[][]
   const [articles, setArticles] = useState({
-    data: [mockArticles, [], []] as GetPostsProps[][],
+    data: defaultArticles,
     isLoading: false
   })
+
+  const [dataToFilter, setDataToFilter] = useState<GetPostsProps[]>([])
+  useEffect(() => {
+    api
+      .get(`/posts?_embed&per_page=60&page=1`)
+      .then(data => setDataToFilter(data.data))
+  }, [])
 
   const HandleGetPosts = useCallback(() => {
     try {
@@ -139,9 +155,47 @@ const ArticlesGalleryV2 = () => {
     }
   }, [articles.data])
 
+  const handleFilter = (value: number) => {
+    if (value === undefined) return
+    if (value === 0) {
+      setArticles({
+        data: defaultArticles,
+        isLoading: false
+      })
+      return
+    }
+
+    const dataFiltered = dataToFilter.filter(post =>
+      post.categories.includes(value)
+    ) as GetPostsProps[]
+
+    const dataFormatted = dataFiltered.reduce(
+      (acc, item) => {
+        const lastItem = acc[acc.length - 1]
+        if (lastItem.length < 5) {
+          lastItem.push(item)
+          const accFiltered = acc.splice(0, acc.length - 1)
+          return [...accFiltered, lastItem]
+        }
+
+        return [...acc, [item]]
+      },
+      [[]] as GetPostsProps[][]
+    )
+
+    setArticles({
+      data: dataFormatted,
+      isLoading: false
+    })
+  }
+
   return (
     <>
-      <FilterArticles galleries={articles.data} setGalleries={console.log} />
+      <FilterArticles
+        galleries={articles.data}
+        setGalleries={handleFilter}
+        isLoading={dataToFilter.length <= 1}
+      />
 
       <ArticlesGallery posts={articles.data} />
 
