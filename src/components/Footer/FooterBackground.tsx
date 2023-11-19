@@ -16,13 +16,5 @@ export function FooterBackground() {
     return <div className={cn('absolute h-full w-full', pathData.color)} />
   }
 
-  return (
-    <Image
-      src={pathData.src as string}
-      alt="Background do footer"
-      fill
-      className="bg-cover opacity-80"
-      placeholder={`data:image/svg+xml;base64,${toBase64(shimmer(700, 475))}`}
-    />
-  )
+  return <></>
 }

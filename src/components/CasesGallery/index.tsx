@@ -13,7 +13,7 @@ interface CasesGalleryProps {
 
 export function CasesGallery({ cases }: CasesGalleryProps) {
   const divsClass = [
-    'col-span-2 h-[660px]',
+    'col-span-2',
     'max-[640px]:col-span-2 row-start-2 sm:row-span-2',
     'max-[640px]:col-span-2 sm:col-start-1 row-start-3 sm:row-start-4',
     'max-[640px]:col-span-2 sm:col-start-2 row-start-4 sm:row-start-2',

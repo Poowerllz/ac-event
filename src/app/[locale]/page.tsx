@@ -24,7 +24,7 @@ export default function Home() {
         title={t('sectionWhatWeDo.text')}
         subTitle={t('sectionWhatWeDo.button')}
         arrow={false}
-        pathSubtitle="/quem-somos"
+        pathSubtitle="/o-que-fazemos"
       />
       <Carousel
         images={[
