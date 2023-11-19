@@ -41,7 +41,7 @@ export const Typography = <E extends ElementType = TTypographyDefaultAsType>({
   const ref = useRef<HTMLDivElement>(null)
   const isVisible = useIsVisible(ref)
 
-  useEffect(() => {
+  /*   useEffect(() => {
     let temp = defaultConfig?.className + ' ' + props.className
 
     if (!animation) return
@@ -53,7 +53,7 @@ export const Typography = <E extends ElementType = TTypographyDefaultAsType>({
     if (!isVisible) {
       setConfig(temp + defaultConfig?.animationOutput)
     }
-  }, [isVisible])
+  }, [isVisible]) */
 
   if (!animation) {
     return (

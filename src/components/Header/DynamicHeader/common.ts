@@ -18,12 +18,12 @@ const backgroundsHeader: BackgroundsHeaderProps = {
   },
   '/artigos': {
     mobile: 'background-white-mobile.png',
-    desktop: 'background-white.png',
+    desktop: 'background-white-reduced.png',
     invert: true
   },
   '/cases': {
     mobile: 'background-white-mobile.png',
-    desktop: 'background-white.png',
+    desktop: 'background-white-reduced.png',
     invert: true
   },
   '/cases/': {

@@ -15,13 +15,18 @@ export default function Header() {
   const pathData = getPathData(rawPath, pathVideoPtBr, pathVideoEn)
   const hideButtonRef = useRef()
   const [playing, setPlaying] = useState(false)
+  const [isReduced, setIsReduced] = useState<boolean>()
 
   if (pathData.hasBackgroundColor) {
     return <MenuLogo bgColor={pathData.color || ''} />
   }
 
   return (
-    <div className="relative flex h-screen w-full items-center justify-center overflow-hidden">
+    <div
+      className={`relative flex ${
+        isReduced ? 'h-[70vh]' : 'h-screen'
+      }  w-full items-center justify-center `}
+    >
       {pathData.src.includes('png') ? (
         <Image
           src={pathData.src}
@@ -33,16 +38,22 @@ export default function Header() {
         />
       ) : (
         <>
-          <ReactPlayer
-            url={
-              'https://www.youtube.com/embed/uYFVJNrOt9g?si=KpthCpw7Eaqo9kgr'
-            }
-            className="absolute left-0 h-full w-full object-cover"
-            controls={false}
-            width={'calc(100vw + 0px)'}
-            height={'calc(100vh + 120px)'}
-            playing={playing}
-          />
+          <div
+            className={`absolute left-0 overflow-hidden  ${
+              isReduced ? 'h-[70vh]' : 'h-screen'
+            }  w-full`}
+          >
+            <ReactPlayer
+              url={
+                'https://www.youtube.com/embed/uYFVJNrOt9g?si=KpthCpw7Eaqo9kgr'
+              }
+              className=" h-full w-full object-cover"
+              controls={false}
+              width={'calc(100vw + 0px)'}
+              height={'calc(100vh + 120px)'}
+              playing={playing}
+            />
+          </div>
           {!playing && (
             <div
               className="absolute z-50 h-[46vw] w-[46vw] cursor-pointer rounded-full"
@@ -57,6 +68,7 @@ export default function Header() {
 
       <div className="relative flex h-full w-full  px-6 sm:px-16">
         <DynamicHeader
+          handleReduce={setIsReduced}
           videoPath={pathData.src}
           hideButtonRef={hideButtonRef}
           onPause={() => setPlaying(false)}

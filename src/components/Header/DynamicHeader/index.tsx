@@ -11,13 +11,14 @@ import iconArrowDonw from '../../../../public/arrowdown.svg'
 import Menu from '../Menu'
 import { pathImagesBr, pathImagesEn } from './common'
 import { BackgroundHeaderProps } from './type'
-import React, { useRef, useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 
 export type Props = {
   hideButtonRef: any
   videoPath: string
   onPause: () => void
+  handleReduce: (val: boolean) => void
 }
 
 const Path = (props: any) => (
@@ -30,7 +31,11 @@ const Path = (props: any) => (
   />
 )
 
-const DynamicHeader: React.FC<Props> = ({ hideButtonRef, onPause }) => {
+const DynamicHeader: React.FC<Props> = ({
+  hideButtonRef,
+  onPause,
+  handleReduce
+}) => {
   const [showBackground, setShowBackground] = useState(true)
   const isMobile = useMediaQuery('(max-width: 600px)')
   const MenuRef = useRef<any>()
@@ -41,6 +46,12 @@ const DynamicHeader: React.FC<Props> = ({ hideButtonRef, onPause }) => {
     pathImagesBr,
     pathImagesEn
   )
+
+  useEffect(() => {
+    handleReduce(
+      pathData[isMobile ? 'mobile' : 'desktop']?.includes('reduced') || false
+    )
+  }, [pathData, isMobile, handleReduce])
 
   return (
     <>
@@ -88,7 +99,9 @@ const DynamicHeader: React.FC<Props> = ({ hideButtonRef, onPause }) => {
         <div
           className="absolute right-6 top-16 z-10 cursor-pointer sm:right-16"
           style={{
-            filter: pathData.invert ? 'invert(0)' : 'invert(1)'
+            filter: pathData.invert
+              ? 'invert(0)'
+              : 'invert(100%) sepia(0%) saturate(7500%) hue-rotate(247deg) brightness(109%) contrast(103%)'
           }}
         >
           <svg width="23" height="23" viewBox="0 0 23 23">
@@ -123,8 +136,8 @@ const DynamicHeader: React.FC<Props> = ({ hideButtonRef, onPause }) => {
           src={logoAnaCouto}
           alt={'Imagem da logo'}
           className="absolute top-16 z-10 cursor-pointer"
-          height={100}
-          width={100}
+          height={110}
+          width={110}
           {...(pathData.invert && { style: { filter: 'invert(100%)' } })}
         />
       </Link>

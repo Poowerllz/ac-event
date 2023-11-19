@@ -1,12 +1,12 @@
 import { cn } from '@/common/utils/cn'
 import { Typography } from '@/components/ui/Typography'
 import ArrowTop from '@/images/svg/arrowtop.svg'
-import TitleLogo from '@/images/svg/titleLogo.svg'
 import { useTranslations } from 'next-intl'
 import Image from 'next/image'
 import { Fragment } from 'react'
 import { GallerySection } from './common'
 import Dropdown from '@/components/Dropdown'
+import TextAnimation from '@/components/TextAnimation'
 
 export default function WhatWeDo() {
   const t = useTranslations('WhatWeDo')
@@ -105,10 +105,20 @@ export default function WhatWeDo() {
         </p>
 
         <div className="relative h-auto w-full">
-          <Image
-            src={TitleLogo}
-            alt="Título: É Faz Comunicação"
-            style={{ height: 'auto', width: '100%' }}
+          <TextAnimation
+            newText="Marca"
+            startText="É"
+            className="mt-14 sm:mt-40"
+          />
+          <TextAnimation
+            newText="Negócio"
+            startText="FAZ"
+            className="mt-14 sm:mt-60"
+          />
+          <TextAnimation
+            newText="Comunicação"
+            startText="FALA"
+            className="mb-10 mt-14 sm:mb-20 sm:mt-60"
           />
         </div>
       </section>
