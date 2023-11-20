@@ -7,9 +7,3 @@ services:
       dockerfile: Dockerfile
     ports:
       - '3000:3000'
-    networks:
-      - nginx_proxy
-
-networks:
-  nginx_proxy:
-    external: true
