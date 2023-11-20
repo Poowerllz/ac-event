@@ -16,6 +16,7 @@ export function ImageGalleryWhoWeAreDesktop({
             style={{ height: 'auto', width: '100%' }}
             priority={false}
             loading="lazy"
+            objectFit="cover"
           />
         </div>
 
@@ -37,6 +38,7 @@ export function ImageGalleryWhoWeAreDesktop({
             style={{ height: 'auto', width: '100%' }}
             priority={false}
             loading="lazy"
+            objectFit="cover"
           />
         </div>
       </div>
@@ -50,6 +52,7 @@ export function ImageGalleryWhoWeAreDesktop({
             style={{ height: 'auto', width: '100%' }}
             priority={false}
             loading="lazy"
+            objectFit="cover"
           />
         </div>
       </div>
@@ -63,6 +66,7 @@ export function ImageGalleryWhoWeAreDesktop({
             style={{ height: 'auto', width: '100%' }}
             priority={false}
             loading="lazy"
+            objectFit="cover"
           />
         </div>
 

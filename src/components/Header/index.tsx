@@ -25,9 +25,9 @@ export default function Header() {
     <div
       className={`relative flex ${
         isReduced ? 'h-[70vh]' : 'h-screen'
-      }  w-full items-center justify-center `}
+      }  w-full items-center justify-center`}
     >
-      {pathData.src.includes('png') ? (
+      {pathData.src.includes('png') || pathData.src === '' ? (
         <Image
           src={pathData.src}
           alt="Image of a bike"
@@ -66,7 +66,7 @@ export default function Header() {
         </>
       )}
 
-      <div className="relative flex h-full w-full  px-6 sm:px-16">
+      <div className="relative flex h-full w-full overflow-hidden px-6 sm:px-16">
         <DynamicHeader
           handleReduce={setIsReduced}
           videoPath={pathData.src}

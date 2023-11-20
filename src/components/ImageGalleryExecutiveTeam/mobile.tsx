@@ -12,7 +12,7 @@ export function ImageGalleryExecutiveTeamMobile() {
       >
         <div className="relative h-full w-full">
           <Image
-            src="https://www.anacouto.com.br/wp-content/uploads/2022/07/ANA_IMG_CROP_PB-250x300.png"
+            src="/images/ana-couto.png"
             alt="Ana Couto"
             fill
             style={{ height: '100%', width: '100%' }}
@@ -107,7 +107,7 @@ export function ImageGalleryExecutiveTeamMobile() {
       >
         <div className="relative h-full w-full">
           <Image
-            src="https://www.anacouto.com.br/wp-content/uploads/2022/07/socios_pb_0001_fotos_site_0000_perfil_dan_banner-250x300.jpg"
+            src="/images/danilo-cid.png"
             alt="Danilo Cid"
             fill
             style={{ height: '100%', width: '100%' }}

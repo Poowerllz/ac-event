@@ -12,23 +12,23 @@ const videosHeader: VideosHeaderProps = {
     src: 'https://youtu.be/uYFVJNrOt9g'
   },
   '/cases': {
-    src: '/images/header_placeholder.png'
+    src: ''
   },
   '/cases/': {
     hasBackgroundColor: true,
     color: 'bg-white',
-    src: '/images/header_placeholder.png'
+    src: ''
   },
   '/artigos': {
-    src: '/images/header_placeholder.png'
+    src: ''
   },
   '/artigos/': {
     hasBackgroundColor: true,
     color: 'bg-transparent',
-    src: '/images/header_placeholder.png'
+    src: ''
   },
   '/contato': {
-    src: '/images/header_placeholder.png'
+    src: ''
   }
 }
 

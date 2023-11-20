@@ -19,6 +19,7 @@ export function ImageGalleryWhatWeDoDesktop({
             alt="Propósito engajador e de impacto"
             style={{ height: 'auto', width: '100%' }}
             className="mb-5"
+            objectFit="cover"
             priority={false}
             loading="lazy"
           />

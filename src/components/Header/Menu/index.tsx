@@ -34,7 +34,7 @@ const Menu: React.FC<Props> = ({ refOpen }) => {
     <>
       <button onClick={() => setMenuIsOpen(true)} ref={refOpen} />
 
-      <div className="absolute right-10 top-16 flex items-center justify-center sm:right-20">
+      <div className="fixed right-10 top-16 z-50 flex items-center justify-center sm:right-20">
         <AnimatePresence>
           {menuIsOpen && (
             <motion.div

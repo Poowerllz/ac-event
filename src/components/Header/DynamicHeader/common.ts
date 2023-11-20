@@ -8,22 +8,22 @@ const backgroundsHeader: BackgroundsHeaderProps = {
     showText: true
   },
   '/o-que-fazemos': {
-    mobile: 'background-black-mobile.png',
-    desktop: 'background-black.png'
+    mobile: 'mobile-oquefazemos.png',
+    desktop: 'oquefazemos.png',
+    invert: true
   },
   '/quem-somos': {
-    mobile: 'background-white-mobile.png',
-    desktop: 'background-white.png',
+    mobile: 'mobile-quemsomos.png',
+    desktop: 'quemsomos.png',
     invert: true
   },
   '/artigos': {
-    mobile: 'background-white-mobile.png',
-    desktop: 'background-white-reduced.png',
-    invert: true
+    mobile: 'mobile-artigos-reduced.png',
+    desktop: 'artigos-reduced.png'
   },
   '/cases': {
-    mobile: 'background-white-mobile.png',
-    desktop: 'background-white-reduced.png',
+    mobile: 'mobile-cases-reduced.png',
+    desktop: 'cases-reduced.png',
     invert: true
   },
   '/cases/': {
@@ -31,8 +31,8 @@ const backgroundsHeader: BackgroundsHeaderProps = {
     color: 'bg-primary'
   },
   '/contato': {
-    mobile: 'background-contato-mobile.png',
-    desktop: 'background-contato-desktop.png'
+    mobile: 'mobile-contato.png',
+    desktop: 'contatos.png'
   }
 }
 

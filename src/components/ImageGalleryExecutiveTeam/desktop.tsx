@@ -12,9 +12,10 @@ export function ImageGalleryExecutiveTeamDesktop() {
       >
         <div className="relative h-full w-full">
           <Image
-            src="https://www.anacouto.com.br/wp-content/uploads/2022/07/ANA_IMG_CROP_PB-250x300.png"
+            src="/images/ana-couto.png"
             alt="Ana Couto"
             fill
+            quality={100}
             style={{ height: '100%', width: '100%' }}
             className="object-cover"
           />
@@ -34,6 +35,7 @@ export function ImageGalleryExecutiveTeamDesktop() {
             src="https://www.anacouto.com.br/wp-content/uploads/2022/07/IGOR_FINAL2_CROP_PB-250x300.png"
             alt="Igor Cardoso"
             fill
+            quality={100}
             style={{ height: '100%', width: '100%' }}
             className="object-cover"
           />
@@ -53,6 +55,7 @@ export function ImageGalleryExecutiveTeamDesktop() {
             src="https://www.anacouto.com.br/wp-content/uploads/2022/07/JAMES_CROP_PB-250x300.png"
             alt="James Pereira"
             fill
+            quality={100}
             style={{ height: '100%', width: '100%' }}
             className="object-cover"
           />
@@ -72,6 +75,7 @@ export function ImageGalleryExecutiveTeamDesktop() {
             src="https://www.anacouto.com.br/wp-content/uploads/2022/07/socios_pb_0000_fotos_site_0001_perfil_erika_banner-1-250x300.jpg"
             alt="Erika Pinheiro"
             fill
+            quality={100}
             style={{ height: '100%', width: '100%' }}
             className="object-cover"
           />
@@ -91,6 +95,7 @@ export function ImageGalleryExecutiveTeamDesktop() {
             src="https://www.anacouto.com.br/wp-content/uploads/2022/07/ALINE_IMG_CROP_PB-250x300.png"
             alt="Aline Rubiano"
             fill
+            quality={100}
             style={{ height: '100%', width: '100%' }}
             className="object-cover"
           />
@@ -107,9 +112,10 @@ export function ImageGalleryExecutiveTeamDesktop() {
       >
         <div className="relative h-full w-full">
           <Image
-            src="https://www.anacouto.com.br/wp-content/uploads/2022/07/socios_pb_0001_fotos_site_0000_perfil_dan_banner-250x300.jpg"
+            src="/images/danilo-cid.png"
             alt="Danilo Cid"
             fill
+            quality={100}
             style={{ height: '100%', width: '100%' }}
             className="object-cover"
           />
@@ -132,10 +138,11 @@ export function ImageGalleryExecutiveTeamDesktop() {
           />
 
           <Image
-            src={'/images/quem-somos/fernanda_galluzi.jpeg'}
+            src={'/images/fernanda-galluzi.png'}
             alt="placeholder"
             style={{ height: '100%', width: '100%' }}
             className="object-cover"
+            quality={100}
             fill
           />
         </div>
@@ -155,6 +162,7 @@ export function ImageGalleryExecutiveTeamDesktop() {
             alt="Napoleon Fujisawa"
             fill
             style={{ height: '100%', width: '100%' }}
+            quality={100}
             className="object-cover"
           />
         </div>
@@ -174,6 +182,7 @@ export function ImageGalleryExecutiveTeamDesktop() {
             alt="Rafael Torres"
             fill
             style={{ height: '100%', width: '100%' }}
+            quality={100}
             className="object-cover"
           />
         </div>
@@ -193,6 +202,7 @@ export function ImageGalleryExecutiveTeamDesktop() {
             alt="Luiz Felippe Netto"
             fill
             style={{ height: '100%', width: '100%' }}
+            quality={100}
             className="object-cover"
           />
         </div>
@@ -212,6 +222,7 @@ export function ImageGalleryExecutiveTeamDesktop() {
             alt="placeholder"
             fill
             style={{ height: '100%', width: '100%' }}
+            quality={100}
             className="object-cover"
           />
         </div>
@@ -231,6 +242,7 @@ export function ImageGalleryExecutiveTeamDesktop() {
             alt="Marcelle Villar"
             fill
             style={{ height: '100%', width: '100%' }}
+            quality={100}
             className="object-cover"
           />
         </div>
