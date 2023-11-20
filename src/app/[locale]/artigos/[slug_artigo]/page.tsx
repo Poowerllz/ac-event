@@ -1,3 +1,5 @@
+import LegacySiteURL from '@/common/utils/variables'
+
 export default function Page({ params }: { params: { slug_artigo: string } }) {
   const { slug_artigo } = params
 
@@ -6,7 +8,7 @@ export default function Page({ params }: { params: { slug_artigo: string } }) {
   return (
     <section className="min-h-screen w-full">
       <iframe
-        src={`https://www.anacouto.com.br/${slug_artigo}`}
+        src={`${LegacySiteURL}/${slug_artigo}`}
         title={`${slug_artigo} Article`}
         style={{
           height: '100vh',

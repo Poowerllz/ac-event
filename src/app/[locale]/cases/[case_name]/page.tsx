@@ -1,3 +1,4 @@
+import LegacySiteURL from '@/common/utils/variables'
 import IframeResizer from 'iframe-resizer-react'
 import { headers } from 'next/headers'
 
@@ -8,7 +9,7 @@ export default function Page({ params }: { params: { case_name: string } }) {
   return (
     <section className="min-h-screen w-full">
       <iframe
-        src={`https://www.anacouto.com.br/cases/${case_name}/`}
+        src={`${LegacySiteURL}/cases/${case_name}/`}
         title={`${case_name} Case`}
         style={{
           height: '100vh',
