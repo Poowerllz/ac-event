@@ -8,6 +8,7 @@ import Image from 'next/image'
 import { Spinner } from '../ui/Spinner'
 import api from '@/service/api'
 import { FilterArticles } from '../ArticlesGallery/FilterArticles'
+import LegacySiteURL from '@/common/utils/variables'
 
 export const mockArticles: any[] = [
   {
@@ -20,8 +21,7 @@ export const mockArticles: any[] = [
           media_details: {
             sizes: {
               'full-width-horizontal': {
-                source_url:
-                  'http://www.anacouto.com.br/wp-content/uploads/2023/03/SITE-1.png'
+                source_url: `${LegacySiteURL}/wp-content/uploads/2023/03/SITE-1.png`
               }
             }
           }
@@ -39,8 +39,7 @@ export const mockArticles: any[] = [
           media_details: {
             sizes: {
               'full-width-horizontal': {
-                source_url:
-                  'https://www.anacouto.com.br/wp-content/uploads/2021/10/TIP-TALKS_21-2-site.png'
+                source_url: `${LegacySiteURL}/wp-content/uploads/2021/10/TIP-TALKS_21-2-site.png`
               }
             }
           }
@@ -61,8 +60,7 @@ export const mockArticles: any[] = [
           media_details: {
             sizes: {
               'full-width-horizontal': {
-                source_url:
-                  'https://www.anacouto.com.br/wp-content/uploads/2023/01/header_site-1.png'
+                source_url: `${LegacySiteURL}/wp-content/uploads/2023/01/header_site-1.png`
               }
             }
           }
@@ -83,8 +81,7 @@ export const mockArticles: any[] = [
           media_details: {
             sizes: {
               'full-width-horizontal': {
-                source_url:
-                  'https://www.anacouto.com.br/wp-content/uploads/2022/09/PAPER_capa_V02-1.png'
+                source_url: `${LegacySiteURL}/wp-content/uploads/2022/09/PAPER_capa_V02-1.png`
               }
             }
           }
@@ -102,8 +99,7 @@ export const mockArticles: any[] = [
           media_details: {
             sizes: {
               'full-width-horizontal': {
-                source_url:
-                  'http://www.anacouto.com.br/wp-content/uploads/2022/07/BB_banner_site_1-1.png'
+                source_url: `${LegacySiteURL}/wp-content/uploads/2022/07/BB_banner_site_1-1.png`
               }
             }
           }

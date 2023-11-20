@@ -1,3 +1,3 @@
-const LegacySiteURL = 'https://www.anacouto.com.br'
+const LegacySiteURL = 'https://www.legacy.anacouto.com.br'
 
 export default LegacySiteURL

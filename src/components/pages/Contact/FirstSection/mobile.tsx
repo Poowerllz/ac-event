@@ -3,6 +3,7 @@ import { Typography } from '@/components/ui/Typography'
 import Link from 'next/link'
 import { Fragment } from 'react'
 import { FirstSectionProps } from './types'
+import LegacySiteURL from '@/common/utils/variables'
 
 export function FirstSectionMobile({
   title,
@@ -148,7 +149,7 @@ export function FirstSectionMobile({
             className="cursor-pointer text-sm underline"
             onClick={() =>
               window.open(
-                'https://www.anacouto.com.br/wp-content/uploads/2021/03/ac-laje-politica-privacidade.pdf'
+                `${LegacySiteURL}/wp-content/uploads/2021/03/ac-laje-politica-privacidade.pdf`
               )
             }
           >
@@ -156,9 +157,7 @@ export function FirstSectionMobile({
           </span>
           <span
             className="cursor-pointer text-sm underline"
-            onClick={() =>
-              window.open('https://www.anacouto.com.br/etica-e-compliance/')
-            }
+            onClick={() => window.open(`${LegacySiteURL}/etica-e-compliance/`)}
           >
             {copyright[1]}
           </span>

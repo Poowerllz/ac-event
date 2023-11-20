@@ -17,6 +17,30 @@ const nextConfig = {
         hostname: 'www.anacouto.com.br',
         port: '',
         pathname: '/**'
+      },
+      {
+        protocol: 'http',
+        hostname: 'www.legacy.anacouto.com.br',
+        port: '',
+        pathname: '/**'
+      },
+      {
+        protocol: 'https',
+        hostname: 'www.legacy.anacouto.com.br',
+        port: '',
+        pathname: '/**'
+      },
+      {
+        protocol: 'http',
+        hostname: 'legacy.anacouto.com.br',
+        port: '',
+        pathname: '/**'
+      },
+      {
+        protocol: 'https',
+        hostname: 'legacy.anacouto.com.br',
+        port: '',
+        pathname: '/**'
       }
     ]
   }

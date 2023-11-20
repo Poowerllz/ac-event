@@ -7,6 +7,7 @@ import { usePathname } from 'next/navigation'
 import { AnaCoutoMascot } from '../AnaCoutoMascot'
 import { colorTextEn, colorTextPtBr } from './common'
 import { ColorTextBackground, FooterContactsProps } from './footer'
+import LegacySiteURL from '@/common/utils/variables'
 
 export function FooterContacts({
   title,
@@ -109,7 +110,7 @@ export function FooterContacts({
               className="cursor-pointer text-sm underline"
               onClick={() =>
                 window.open(
-                  'https://www.anacouto.com.br/wp-content/uploads/2021/03/ac-laje-politica-privacidade.pdf'
+                  `${LegacySiteURL}/wp-content/uploads/2021/03/ac-laje-politica-privacidade.pdf`
                 )
               }
             >
@@ -118,7 +119,7 @@ export function FooterContacts({
             <span
               className="cursor-pointer text-sm underline"
               onClick={() =>
-                window.open('https://www.anacouto.com.br/etica-e-compliance/')
+                window.open(`${LegacySiteURL}/etica-e-compliance/`)
               }
             >
               {copyright[1]}

@@ -32,7 +32,7 @@ export function ImageGalleryExecutiveTeamDesktop() {
       >
         <div className="relative h-full w-full">
           <Image
-            src="https://www.anacouto.com.br/wp-content/uploads/2022/07/IGOR_FINAL2_CROP_PB-250x300.png"
+            src={`${LegacySiteURL}/wp-content/uploads/2022/07/IGOR_FINAL2_CROP_PB-250x300.png`}
             alt="Igor Cardoso"
             fill
             quality={100}
@@ -52,7 +52,7 @@ export function ImageGalleryExecutiveTeamDesktop() {
       >
         <div className="relative h-full w-full">
           <Image
-            src="https://www.anacouto.com.br/wp-content/uploads/2022/07/JAMES_CROP_PB-250x300.png"
+            src={`${LegacySiteURL}/wp-content/uploads/2022/07/JAMES_CROP_PB-250x300.png`}
             alt="James Pereira"
             fill
             quality={100}
@@ -72,7 +72,7 @@ export function ImageGalleryExecutiveTeamDesktop() {
       >
         <div className="relative h-full w-full">
           <Image
-            src="https://www.anacouto.com.br/wp-content/uploads/2022/07/socios_pb_0000_fotos_site_0001_perfil_erika_banner-1-250x300.jpg"
+            src={`${LegacySiteURL}/wp-content/uploads/2022/07/socios_pb_0000_fotos_site_0001_perfil_erika_banner-1-250x300.jpg`}
             alt="Erika Pinheiro"
             fill
             quality={100}
@@ -92,7 +92,7 @@ export function ImageGalleryExecutiveTeamDesktop() {
       >
         <div className="relative h-full w-full">
           <Image
-            src="https://www.anacouto.com.br/wp-content/uploads/2022/07/ALINE_IMG_CROP_PB-250x300.png"
+            src={`${LegacySiteURL}/wp-content/uploads/2022/07/ALINE_IMG_CROP_PB-250x300.png`}
             alt="Aline Rubiano"
             fill
             quality={100}
@@ -158,7 +158,7 @@ export function ImageGalleryExecutiveTeamDesktop() {
       >
         <div className="relative h-full w-full">
           <Image
-            src="https://www.anacouto.com.br/wp-content/uploads/2022/07/NAPO_CROP_PB-250x300.png"
+            src={`${LegacySiteURL}/wp-content/uploads/2022/07/NAPO_CROP_PB-250x300.png`}
             alt="Napoleon Fujisawa"
             fill
             style={{ height: '100%', width: '100%' }}
@@ -178,7 +178,7 @@ export function ImageGalleryExecutiveTeamDesktop() {
       >
         <div className="relative h-full w-full">
           <Image
-            src="https://www.anacouto.com.br/wp-content/uploads/2022/07/RAFAEL_CROP_PB-1-250x300.png"
+            src={`${LegacySiteURL}/wp-content/uploads/2022/07/RAFAEL_CROP_PB-1-250x300.png`}
             alt="Rafael Torres"
             fill
             style={{ height: '100%', width: '100%' }}
@@ -198,7 +198,7 @@ export function ImageGalleryExecutiveTeamDesktop() {
       >
         <div className="relative h-full w-full">
           <Image
-            src="https://www.anacouto.com.br/wp-content/uploads/2022/07/LUIZ_IMG_CROP_PB-250x300.png"
+            src={`${LegacySiteURL}/wp-content/uploads/2022/07/LUIZ_IMG_CROP_PB-250x300.png`}
             alt="Luiz Felippe Netto"
             fill
             style={{ height: '100%', width: '100%' }}
@@ -218,7 +218,7 @@ export function ImageGalleryExecutiveTeamDesktop() {
       >
         <div className="relative h-full w-full">
           <Image
-            src="https://www.anacouto.com.br/wp-content/uploads/2022/07/HUGO_IMG_CROP_PB-250x300.png"
+            src={`${LegacySiteURL}/wp-content/uploads/2022/07/HUGO_IMG_CROP_PB-250x300.png`}
             alt="placeholder"
             fill
             style={{ height: '100%', width: '100%' }}
@@ -238,7 +238,7 @@ export function ImageGalleryExecutiveTeamDesktop() {
       >
         <div className="relative h-full w-full">
           <Image
-            src="https://www.anacouto.com.br/wp-content/uploads/2022/07/MARCELLE_CROP_PB-250x300.png"
+            src={`${LegacySiteURL}/wp-content/uploads/2022/07/MARCELLE_CROP_PB-250x300.png`}
             alt="Marcelle Villar"
             fill
             style={{ height: '100%', width: '100%' }}
