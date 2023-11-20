@@ -3,13 +3,13 @@ import { VideoHeaderProps, VideosHeaderProps } from './type'
 
 const videosHeader: VideosHeaderProps = {
   '/': {
-    src: 'https://youtu.be/uYFVJNrOt9g'
+    src: '/images/background-black.png'
   },
   '/quem-somos': {
-    src: 'https://youtu.be/uYFVJNrOt9g'
+    src: '/images/background-black.png'
   },
   '/o-que-fazemos': {
-    src: 'https://youtu.be/uYFVJNrOt9g'
+    src: '/images/background-black.png'
   },
   '/cases': {
     src: ''
