@@ -8,6 +8,7 @@ import { AnaCoutoMascot } from '../AnaCoutoMascot'
 import { colorTextEn, colorTextPtBr } from './common'
 import { ColorTextBackground, FooterContactsProps } from './footer'
 import LegacySiteURL from '@/common/utils/variables'
+import { useRouter } from 'next/navigation'
 
 export function FooterContacts({
   title,
@@ -18,6 +19,7 @@ export function FooterContacts({
 }: FooterContactsProps) {
   const rawPath = usePathname()
   const pathSegments = rawPath.split('/')
+  const navigate = useRouter()
 
   const shouldModifyPath = pathSegments.length > 2
   const path = shouldModifyPath ? `/${pathSegments[1]}/` : rawPath
@@ -51,7 +53,8 @@ export function FooterContacts({
         </p>
 
         <input
-          className="bg-[transparent] text-xl font-normal text-white outline-0"
+          onClick={() => navigate.push('contato')}
+          className="cursor-pointer bg-[transparent] text-xl font-normal text-white outline-0"
           placeholder={`${subtitle}`}
         />
         <hr className={cn('h-0.5 w-full border-0', 'bg-white')} />
