@@ -26,6 +26,7 @@ export default function Header() {
       className={`relative flex ${
         isReduced ? 'h-[70vh]' : 'h-screen'
       }  w-full items-center justify-center`}
+      id="header"
     >
       {pathData.src.includes('png') || pathData.src === '' ? (
         <Image

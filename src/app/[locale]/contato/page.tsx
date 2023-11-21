@@ -1,4 +1,5 @@
 import { ContactForm } from '@/components/ContactForm'
+import { ArrowMobile } from '@/components/arrowMobile'
 import { ContactSections } from '@/components/pages/Contact'
 import { Typography } from '@/components/ui/Typography'
 import ArrowTop from '@/images/svg/arrowtop.svg'
@@ -46,13 +47,12 @@ export default function Contact() {
 
   return (
     <Fragment>
-      <section className="relative flex w-full flex-col gap-10 px-6 py-10 max-[393px]:px-3 sm:mb-40 sm:px-16 min-[895px]:flex-row">
-        <div className="absolute right-6 top-6 sm:right-16">
-          <Image
-            src={ArrowTop}
-            alt="Jump To Top"
-            className="h-[34.92px] sm:h-[52.38px]"
-          />
+      <section
+        className="relative flex w-full flex-col gap-10 px-6 py-10 max-[393px]:px-3 sm:mb-40 sm:px-16 min-[895px]:flex-row"
+        id={'twoSection'}
+      >
+        <div className="absolute right-6 top-6 cursor-pointer sm:right-16">
+          <ArrowMobile name={ArrowTop} section={'header'} />
         </div>
 
         <ContactSections.First
@@ -64,8 +64,12 @@ export default function Contact() {
       </section>
 
       <section className="flex w-full flex-col items-center gap-10 bg-black px-6 py-10 text-white max-[393px]:px-3 sm:px-16">
-        <div className="flex  max-w-[1080px] flex-col gap-6 ">
-          <Typography as="h2" className="text-3xl" animation={false}>
+        <div className="flex max-w-[1080px] flex-col gap-6 ">
+          <Typography
+            as="h2"
+            className="w-full text-center text-3xl"
+            animation={false}
+          >
             {t('secondSection.form.title.firstLine')}
             <br />
             {t('secondSection.form.title.secondLine')}

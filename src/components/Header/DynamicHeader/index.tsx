@@ -7,12 +7,13 @@ import eFazEFala from '@/images/svg/eFazEFala.svg'
 import Image from 'next/image'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
-import iconArrowDonw from '../../../../public/arrowdown.svg'
+import iconArrowDonw from '@/images/svg/arrowdown.svg'
 import Menu from '../Menu'
 import { pathImagesBr, pathImagesEn } from './common'
 import { BackgroundHeaderProps } from './type'
 import React, { useEffect, useRef, useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
+import { Message } from '@/components/Message'
 
 export type Props = {
   hideButtonRef: any
@@ -46,6 +47,21 @@ const DynamicHeader: React.FC<Props> = ({
     pathImagesBr,
     pathImagesEn
   )
+
+  const [selectedCategory, setSelectedCategory] = useState<string>('')
+
+  const scrollToTop = (category: string) => {
+    setSelectedCategory(category)
+    const section = document.getElementById(category)
+    if (section)
+      section.scrollIntoView({
+        behavior: 'smooth'
+      })
+  }
+
+  const handleSelectChange = (selectValue: string) => {
+    scrollToTop(selectValue)
+  }
 
   useEffect(() => {
     handleReduce(
@@ -147,6 +163,8 @@ const DynamicHeader: React.FC<Props> = ({
         alt={'Imagem de uma seta'}
         className="absolute bottom-20 right-6 z-10 w-4 sm:right-16 sm:w-6"
         width={24}
+        style={{ cursor: 'pointer' }}
+        onClick={() => handleSelectChange('twoSection')}
         height={24}
         {...(pathData.invert && { style: { filter: 'invert(100%)' } })}
       />
