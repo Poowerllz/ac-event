@@ -1,13 +1,19 @@
 import { cn } from '@/common/utils/cn'
+import Dropdown from '@/components/Dropdown'
+import TextAnimation from '@/components/TextAnimation'
+import { WhoWeAreChart } from '@/components/WhoWeAreChart'
 import { Typography } from '@/components/ui/Typography'
 import ArrowTop from '@/images/svg/arrowtop.svg'
 import { useTranslations } from 'next-intl'
 import Image from 'next/image'
 import { Fragment } from 'react'
 import { GallerySection } from './common'
+<<<<<<< HEAD
 import Dropdown from '@/components/Dropdown'
 import TextAnimation from '@/components/TextAnimation'
 import { ArrowMobile } from '@/components/arrowMobile'
+=======
+>>>>>>> 36502e7b61619c0c84608c17996f89aefb223021
 
 export default function WhatWeDo() {
   const t = useTranslations('WhatWeDo')
@@ -90,6 +96,26 @@ export default function WhatWeDo() {
           potência de propósito para impulsionar o valor de pessoas e
           organizações.
         </p>
+      </section>
+
+      <section className="relative flex w-full flex-col gap-10 px-6 py-10 sm:px-16">
+        <hr className={cn('h-0.5 w-full border-0', 'bg-gray-300')} />
+
+        <div className="relative flex w-full flex-col justify-between gap-10 sm:mb-8 md:flex-row">
+          <Typography as="h2">
+            Como gerir o valor
+            <br />
+            do seu Branding?
+          </Typography>
+
+          <p className="w-auto max-w-[240px] self-end text-sm font-semibold sm:text-base md:self-start lg:max-w-[360px] lg:text-lg xl:text-2xl">
+            As Ondas de Valor são um método proprietário anacouto para gerar e
+            gerir valor de marcas. A Onda 3 representa as que se diferenciam na
+            forma de relacionar com as pessoas.
+          </p>
+        </div>
+
+        <WhoWeAreChart />
       </section>
 
       <section className="relative flex w-full flex-col gap-10 px-6 py-10 sm:mb-20 sm:px-16">

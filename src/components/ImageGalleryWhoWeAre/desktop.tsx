@@ -27,7 +27,7 @@ export function ImageGalleryWhoWeAreDesktop({
 
       <div className="flex flex-col gap-5 self-end">
         <span className="hidden text-2xl leading-none md:flex">
-          Propósito <br /> engajador <br /> e de impacto
+          Experiências <br /> memoráveis <br /> que fidelizam
         </span>
 
         <div className="relative h-auto w-full">
@@ -71,7 +71,7 @@ export function ImageGalleryWhoWeAreDesktop({
         </div>
 
         <span className="text-2xl leading-none">
-          Propósito <br /> engajador <br /> e de impacto
+          Narrativas <br /> que conectam <br /> com o seu <br /> público
         </span>
       </div>
     </div>
