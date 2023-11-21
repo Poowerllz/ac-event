@@ -26,7 +26,7 @@ export function ImageGalleryWhoWeAreMobile({
 
       <div className="flex flex-col justify-between gap-5">
         <span className="hidden text-sm font-extralight leading-none sm:text-2xl md:flex">
-          Propósito <br /> engajador <br /> e de impacto
+          Experiências <br /> memoráveis <br /> que fidelizam
         </span>
 
         <div className="relative h-auto w-full">
@@ -67,7 +67,7 @@ export function ImageGalleryWhoWeAreMobile({
         </div>
 
         <span className="text-sm font-extralight leading-none sm:text-2xl">
-          Propósito <br /> engajador <br /> e de impacto
+          Narrativas <br /> que conectam <br /> com o seu <br /> público
         </span>
       </div>
     </div>

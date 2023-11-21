@@ -1,6 +1,6 @@
+import LegacySiteURL from '@/common/utils/variables'
 import Image from 'next/image'
 import { ImageGalleryExecutiveTeamTitle } from './ImageGalleryExecutiveTeamTitle'
-import LegacySiteURL from '@/common/utils/variables'
 
 export function ImageGalleryExecutiveTeamMobile() {
   return (
@@ -49,25 +49,6 @@ export function ImageGalleryExecutiveTeamMobile() {
       >
         <div className="relative h-full w-full">
           <Image
-            src={`${LegacySiteURL}/wp-content/uploads/2022/07/JAMES_CROP_PB-250x300.png`}
-            alt="James Pereira"
-            fill
-            style={{ height: '100%', width: '100%' }}
-            className="object-cover"
-          />
-        </div>
-
-        <ImageGalleryExecutiveTeamTitle>
-          James Pereira
-        </ImageGalleryExecutiveTeamTitle>
-      </div>
-
-      <div
-        className="relative "
-        onClick={() => window.open(`${LegacySiteURL}/author/erika-pinheiro`)}
-      >
-        <div className="relative h-full w-full">
-          <Image
             src={`${LegacySiteURL}/wp-content/uploads/2022/07/socios_pb_0000_fotos_site_0001_perfil_erika_banner-1-250x300.jpg`}
             alt="Erika Pinheiro"
             fill
@@ -78,6 +59,25 @@ export function ImageGalleryExecutiveTeamMobile() {
 
         <ImageGalleryExecutiveTeamTitle>
           Erika Pinheiro
+        </ImageGalleryExecutiveTeamTitle>
+      </div>
+
+      <div
+        className="relative "
+        onClick={() => window.open(`${LegacySiteURL}/author/erika-pinheiro`)}
+      >
+        <div className="relative h-full w-full">
+          <Image
+            src={`${LegacySiteURL}/wp-content/uploads/2022/07/JAMES_CROP_PB-250x300.png`}
+            alt="James Pereira"
+            fill
+            style={{ height: '100%', width: '100%' }}
+            className="object-cover"
+          />
+        </div>
+
+        <ImageGalleryExecutiveTeamTitle>
+          James Pereira
         </ImageGalleryExecutiveTeamTitle>
       </div>
 
