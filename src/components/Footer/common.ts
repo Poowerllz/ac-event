@@ -12,7 +12,7 @@ import {
 const backgrounds: BackgroundsProps = {
   '/': {
     isImage: true,
-    src: BgHome
+    src: '/images/orange-background.png'
   },
   '/quem-somos': {
     isImage: true,
@@ -60,7 +60,7 @@ export const pathBackgroundEn: Record<string, Background> = createPath(
 const colorTextBackground: ColorTextBackgroundProps = {
   '/': {
     styles: {
-      color: 'text-white'
+      color: 'text-[#000000]'
     }
   },
   '/quem-somos': {

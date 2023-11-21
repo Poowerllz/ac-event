@@ -17,13 +17,14 @@ export function FooterBackground() {
   }
 
   return (
-    <></>
-    /*  <Image
-      src={pathData.src as string}
-      alt="Background do footer"
-      fill
-      className="bg-cover opacity-80"
-      placeholder={`data:image/svg+xml;base64,${toBase64(shimmer(700, 475))}`}
-    /> */
+    rawPath === '/' && (
+      <Image
+        src={pathData.src as string}
+        alt="Background do footer"
+        fill
+        className="bg-cover"
+        placeholder={`data:image/svg+xml;base64,${toBase64(shimmer(700, 475))}`}
+      />
+    )
   )
 }

@@ -34,6 +34,10 @@ export function FooterContacts({
     return <></>
   }
 
+  const pathSliced = pathData?.styles.color.slice(
+    pathData.styles.color.indexOf('-') + 1
+  )
+
   return (
     <div
       className={cn(
@@ -54,10 +58,12 @@ export function FooterContacts({
 
         <input
           onClick={() => navigate.push('contato')}
-          className="cursor-pointer bg-[transparent] text-xl font-normal text-white outline-0"
+          className={`cursor-pointer bg-[transparent] text-xl font-normal text-${pathSliced} ${
+            pathSliced.includes('#000') && 'placeholder-black'
+          } outline-0`}
           placeholder={`${subtitle}`}
         />
-        <hr className={cn('h-0.5 w-full border-0', 'bg-white')} />
+        <hr className={cn('h-0.5 w-full border-0', `bg-${pathSliced}`)} />
       </div>
 
       <div className="mr-24 flex flex-wrap justify-between gap-10 sm:mr-0 sm:h-2/4 sm:flex-row sm:gap-20">

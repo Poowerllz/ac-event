@@ -3,8 +3,8 @@ import { BackgroundHeaderProps, BackgroundsHeaderProps } from './type'
 
 const backgroundsHeader: BackgroundsHeaderProps = {
   '/': {
-    mobile: 'background-orange-mobile.png',
-    desktop: 'background-orange.png',
+    mobile: 'mobile-contato.png',
+    desktop: 'contatos.png',
     showText: true
   },
   '/o-que-fazemos': {

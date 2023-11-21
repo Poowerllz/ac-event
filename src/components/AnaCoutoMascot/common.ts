@@ -3,7 +3,7 @@ import { colorTypographicLogoProps, colorsTypographicLogoProps } from './type'
 
 const colors: colorsTypographicLogoProps = {
   '/': {
-    color: '#fff'
+    color: '#000'
   },
   '/quem-somos': {
     color: '#fff'
