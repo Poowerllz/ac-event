@@ -59,7 +59,7 @@ export function FooterContacts({
         <input
           onClick={() => navigate.push('contato')}
           className={`cursor-pointer bg-[transparent] text-xl font-normal text-${pathSliced} ${
-            pathSliced.includes('#000') && 'placeholder-black'
+            pathSliced?.includes('#000') && 'placeholder-black'
           } outline-0`}
           placeholder={`${subtitle}`}
         />
