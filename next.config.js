@@ -43,6 +43,20 @@ const nextConfig = {
         pathname: '/**'
       }
     ]
+  },
+  async redirects() {
+    return [
+      {
+        source: '/site',
+        destination: 'https://site.anacouto.com.br/',
+        permanent: true
+      },
+      {
+        source: '/app',
+        destination: 'https://laje-ac.com.br/app/',
+        permanent: true
+      }
+    ]
   }
 }
 
