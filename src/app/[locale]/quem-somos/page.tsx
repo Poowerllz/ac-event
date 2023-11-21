@@ -6,19 +6,19 @@ import { useTranslations } from 'next-intl'
 import Image from 'next/image'
 import { Fragment } from 'react'
 import { ExecutiveTeamSection, GallerySection } from './common'
+import { ArrowMobile } from '@/components/arrowMobile'
 
 export default function WhoWeAre() {
   const t = useTranslations('WhoWeAre')
 
   return (
     <Fragment>
-      <section className="relative flex w-full flex-col gap-10 px-6 py-10 sm:px-16">
-        <div className="absolute right-6 top-6 sm:right-16">
-          <Image
-            src={ArrowTop}
-            alt="Jump To Top"
-            className="h-[34.92px] sm:h-[52.38px]"
-          />
+      <section
+        className="relative flex w-full flex-col gap-10 px-6 py-10 sm:px-16"
+        id="twoSection"
+      >
+        <div className="absolute right-6 top-6 cursor-pointer sm:right-16">
+          <ArrowMobile name={ArrowTop} section={'header'} />
         </div>
 
         <Typography as="h1">

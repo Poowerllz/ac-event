@@ -8,7 +8,10 @@ export default function Cases() {
 
   return (
     <Fragment>
-      <section className="flex w-full flex-col gap-10 px-6 py-10 sm:mb-40 sm:px-16">
+      <section
+        className="flex w-full flex-col gap-10 px-6 py-10 sm:mb-40 sm:px-16"
+        id={'twoSection'}
+      >
         <Typography as="h1">{t('sectionMessage')}</Typography>
       </section>
 

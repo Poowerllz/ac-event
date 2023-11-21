@@ -7,6 +7,7 @@ import { Fragment } from 'react'
 import { GallerySection } from './common'
 import Dropdown from '@/components/Dropdown'
 import TextAnimation from '@/components/TextAnimation'
+import { ArrowMobile } from '@/components/arrowMobile'
 
 export default function WhatWeDo() {
   const t = useTranslations('WhatWeDo')
@@ -70,13 +71,12 @@ export default function WhatWeDo() {
 
   return (
     <Fragment>
-      <section className="relative flex w-full flex-col gap-10 px-6 py-10 sm:px-16 md:mb-40">
-        <div className="absolute right-6 top-6 sm:right-16">
-          <Image
-            src={ArrowTop}
-            alt="Jump To Top"
-            className="h-[34.92px] sm:h-[52.38px]"
-          />
+      <section
+        className="relative flex w-full flex-col gap-10 px-6 py-10 sm:px-16 md:mb-40"
+        id={'twoSection'}
+      >
+        <div className="absolute right-6 top-6 cursor-pointer sm:right-16">
+          <ArrowMobile name={ArrowTop} section={'header'} />
         </div>
 
         <Typography as="h1">
@@ -146,7 +146,7 @@ export default function WhatWeDo() {
       <section className="flex w-full flex-col items-center justify-center gap-10 px-2 py-10 text-black sm:px-4">
         <Typography
           as="h2"
-          className="self-start pl-4 sm:pb-14 sm:pl-10 md:text-[4.7rem] md:leading-[4.7rem]"
+          className="text-center sm:pb-14 md:text-[4.7rem] md:leading-[4.7rem]"
           animation={false}
         >
           Fazer junto para encantar e impulsionar.
