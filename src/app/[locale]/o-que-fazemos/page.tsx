@@ -8,12 +8,7 @@ import { useTranslations } from 'next-intl'
 import Image from 'next/image'
 import { Fragment } from 'react'
 import { GallerySection } from './common'
-<<<<<<< HEAD
-import Dropdown from '@/components/Dropdown'
-import TextAnimation from '@/components/TextAnimation'
 import { ArrowMobile } from '@/components/arrowMobile'
-=======
->>>>>>> 36502e7b61619c0c84608c17996f89aefb223021
 
 export default function WhatWeDo() {
   const t = useTranslations('WhatWeDo')
