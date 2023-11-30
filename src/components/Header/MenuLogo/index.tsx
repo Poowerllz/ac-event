@@ -2,12 +2,12 @@
 
 import { cn } from '@/common/utils/cn'
 import logoAnaCouto from '@/images/logo.png'
+import { motion } from 'framer-motion'
 import Image from 'next/image'
 import Link from 'next/link'
+import { useRef } from 'react'
 import Menu from '../Menu'
 import { MenuLogoProps } from './type'
-import { useRef } from 'react'
-import { motion } from 'framer-motion'
 
 const Path = (props: any) => (
   <motion.path
@@ -62,8 +62,9 @@ export function MenuLogo({ bgColor }: MenuLogoProps) {
           src={logoAnaCouto}
           alt={'Imagem da logo'}
           className="z-10 cursor-pointer"
-          height={100}
-          width={100}
+          quality={100}
+          height={150}
+          width={150}
         />
       </Link>
     </nav>
