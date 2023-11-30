@@ -1,13 +1,13 @@
 import { AticlesHome } from '@/components/ArticlesGallery/AticlesHome'
 import { CasesGalleryContainer } from '@/components/CasesGallery/CasesGalleryContainer'
 import Carousel from '@/components/Swiper'
-import { Message } from '../../components/Message'
-import { useTranslations } from 'next-intl'
-import { Typography } from '@/components/ui/Typography'
 import { ArrowMobile } from '@/components/arrowMobile'
+import { Typography } from '@/components/ui/Typography'
 import ArrowTop from '@/images/svg/arrowtop.svg'
+import { useTranslations } from 'next-intl'
 import Link from 'next/link'
 import { AiOutlinePlusCircle } from 'react-icons/ai'
+import { Message } from '../../components/Message'
 
 export default function Home() {
   const t = useTranslations('Home')
@@ -16,15 +16,6 @@ export default function Home() {
       className="block w-full flex-col items-center justify-between overflow-hidden font-kern font-bold"
       id={'twoSection'}
     >
-      {/* <Message
-          title={t('sectionWhoWeAre.text')}
-          subTitle={t('sectionWhoWeAre.button')}
-          pathSubtitle="/quem-somos"
-          arrow={true}
-          section={'header'}
-          top={false}
-        /> */}
-
       <div className="flex h-auto w-full items-start justify-between px-6 py-24 sm:px-16">
         <div className="sm:w-4/5 md:w-4/5 lg:w-4/6 ">
           <Typography as="h1">{t('sectionWhoWeAre.text')}</Typography>
