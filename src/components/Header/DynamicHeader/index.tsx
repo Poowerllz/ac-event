@@ -3,17 +3,16 @@
 import { getPathData } from '@/common/utils/getPathData'
 import useMediaQuery from '@/hooks/useMediaQuery'
 import logoAnaCouto from '@/images/logo.png'
+import iconArrowDonw from '@/images/svg/arrowdown.svg'
 import eFazEFala from '@/images/svg/eFazEFala.svg'
+import { AnimatePresence, motion } from 'framer-motion'
 import Image from 'next/image'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
-import iconArrowDonw from '@/images/svg/arrowdown.svg'
+import React, { useEffect, useRef, useState } from 'react'
 import Menu from '../Menu'
 import { pathImagesBr, pathImagesEn } from './common'
 import { BackgroundHeaderProps } from './type'
-import React, { useEffect, useRef, useState } from 'react'
-import { motion, AnimatePresence } from 'framer-motion'
-import { Message } from '@/components/Message'
 
 export type Props = {
   hideButtonRef: any
@@ -152,8 +151,9 @@ const DynamicHeader: React.FC<Props> = ({
           src={logoAnaCouto}
           alt={'Imagem da logo'}
           className="absolute top-16 z-10 cursor-pointer"
-          height={110}
-          width={110}
+          quality={100}
+          height={150}
+          width={150}
           {...(pathData.invert && { style: { filter: 'invert(100%)' } })}
         />
       </Link>
