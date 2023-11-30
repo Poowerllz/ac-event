@@ -1,10 +1,9 @@
+import { ArrowMobile } from '@/components/arrowMobile'
 import { Typography } from '@/components/ui/Typography'
 import ArrowTop from '@/images/svg/arrowtop.svg'
 import { useTranslations } from 'next-intl'
-import Image from 'next/image'
 import { Fragment } from 'react'
 import { ExecutiveTeamSection, GallerySection } from './common'
-import { ArrowMobile } from '@/components/arrowMobile'
 
 export default function WhoWeAre() {
   const t = useTranslations('WhoWeAre')
@@ -12,14 +11,14 @@ export default function WhoWeAre() {
   return (
     <Fragment>
       <section
-        className="relative flex w-full flex-col gap-10 px-6 py-10 sm:px-16"
+        className="relative flex h-screen w-full flex-col gap-10 px-6 sm:px-16 sm:py-10"
         id="twoSection"
       >
         <div className="absolute right-6 top-6 cursor-pointer sm:right-16">
           <ArrowMobile name={ArrowTop} section={'header'} />
         </div>
 
-        <Typography as="h1">
+        <Typography as="h1" className="pt-14">
           Somos a anacouto.
           <br />
           Somos branding
@@ -39,13 +38,6 @@ export default function WhoWeAre() {
           as="h2"
           className="py-24 text-center md:text-[4.7rem] md:leading-[4.7rem]"
         >
-          {/* {t('thirdSection.title.firstLine')}
-          <br />
-          {t('thirdSection.title.secondLine')}
-          <br />
-          {t('thirdSection.title.thirdLine')}
-          <br />
-          {t('thirdSection.title.fourthLine')} */}
           Fazemos a (r)evolução
           <br />
           que a sua organização
@@ -58,7 +50,7 @@ export default function WhoWeAre() {
       <section className="mb-4 w-full flex-col gap-10 px-2 sm:px-4 sm:py-10">
         <Typography
           as="h2"
-          className="py-14 md:text-[4.7rem] md:leading-[4.7rem]"
+          className="px-4 py-14 sm:px-12 md:text-[4.7rem] md:leading-[4.7rem]"
           animation={false}
         >
           {t('fourthSection.title')}
