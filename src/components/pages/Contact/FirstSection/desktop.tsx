@@ -22,12 +22,12 @@ export function FirstSectionDesktop({
       ]
     },
     {
-      area: 'Marketing e Assesoria',
+      area: 'Marketing e Growth',
       members: [
         {
           name: 'Bruno Assis',
           office: 'Gerente de Marketing',
-          email: 'xbassis@anacouto.com.br',
+          email: 'bassis@anacouto.com.br',
           tel: ''
         }
       ]
