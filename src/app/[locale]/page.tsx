@@ -17,9 +17,18 @@ export default function Home() {
       id={'twoSection'}
     >
       <div className="flex h-auto w-full items-start justify-between px-6 py-24 sm:px-16">
-        <div className="sm:w-4/5 md:w-4/5 lg:w-4/6 ">
-          <Typography as="h1">{t('sectionWhoWeAre.text')}</Typography>
-        </div>
+        <Typography
+          as="h1"
+          className="text-3xl sm:text-5xl lg:text-6xl xl:text-8xl"
+        >
+          {t('sectionWhoWeAre.text.lineOne')}
+          <br />
+          {t('sectionWhoWeAre.text.lineTwo')}
+          <br />
+          {t('sectionWhoWeAre.text.lineThree')}
+          <br />
+          {t('sectionWhoWeAre.text.lineFour')}
+        </Typography>
 
         <div className="relative flex min-h-[50%] w-1/6 flex-col items-end justify-between pb-20">
           <div className="flex h-full  transform cursor-pointer items-start justify-end">

@@ -1,7 +1,12 @@
 {
   "Home": {
     "sectionWhoWeAre": {
-      "text": "Somos feitos de propósito para transformar organizações e pessoas, alinhando marca, negócio e comunicação. Somos a anacouto.",
+      "text": {
+        "lineOne": "Somos feitos de propósito",
+        "lineTwo": "para transformar pessoas e",
+        "lineThree": "organizações, alinhando marca,",
+        "lineFour": "negócio e comunicação."
+      },
       "button": "Quem somos"
     },
     "sectionWhatWeDo": {
