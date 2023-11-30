@@ -2,13 +2,12 @@ import { cn } from '@/common/utils/cn'
 import Dropdown from '@/components/Dropdown'
 import TextAnimation from '@/components/TextAnimation'
 import { WhoWeAreChart } from '@/components/WhoWeAreChart'
+import { ArrowMobile } from '@/components/arrowMobile'
 import { Typography } from '@/components/ui/Typography'
 import ArrowTop from '@/images/svg/arrowtop.svg'
 import { useTranslations } from 'next-intl'
-import Image from 'next/image'
 import { Fragment } from 'react'
 import { GallerySection } from './common'
-import { ArrowMobile } from '@/components/arrowMobile'
 
 export default function WhatWeDo() {
   const t = useTranslations('WhatWeDo')
@@ -73,7 +72,7 @@ export default function WhatWeDo() {
   return (
     <Fragment>
       <section
-        className="relative flex w-full flex-col gap-10 px-6 py-10 sm:px-16 md:mb-40"
+        className="relative flex h-screen w-full flex-col gap-10 px-6 py-10 sm:px-16 md:mb-40"
         id={'twoSection'}
       >
         <div className="absolute right-6 top-6 cursor-pointer sm:right-16">
@@ -93,7 +92,7 @@ export default function WhatWeDo() {
         </p>
       </section>
 
-      <section className="relative flex w-full flex-col gap-10 px-6 py-10 sm:px-16">
+      <section className="relative flex h-screen w-full flex-col gap-10 bg-black px-6 py-10 text-white sm:px-16">
         <hr className={cn('h-0.5 w-full border-0', 'bg-gray-300')} />
 
         <div className="relative flex w-full flex-col justify-between gap-10 sm:mb-8 md:flex-row">
@@ -113,7 +112,7 @@ export default function WhatWeDo() {
         <WhoWeAreChart />
       </section>
 
-      <section className="relative flex w-full flex-col gap-10 px-6 py-10 sm:mb-20 sm:px-16">
+      <section className="relative flex h-screen w-full flex-col gap-10 px-6 py-10 sm:mb-20 sm:px-16">
         <div>
           <span className="font-extrabold">{t('secondSection.span')}</span>
           <hr className={cn('h-0.5 w-full border-0', 'bg-gray-300')} />
