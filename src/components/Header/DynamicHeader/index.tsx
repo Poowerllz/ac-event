@@ -11,6 +11,7 @@ import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import React, { useEffect, useRef, useState } from 'react'
 import Menu from '../Menu'
+import { NavbarSticky } from '../Navbar/NavbarSticky'
 import { pathImagesBr, pathImagesEn } from './common'
 import { BackgroundHeaderProps } from './type'
 
@@ -143,6 +144,8 @@ const DynamicHeader: React.FC<Props> = ({
           </svg>
         </div>
       </motion.nav>
+
+      <NavbarSticky invert={pathData.invert} />
 
       <Menu refOpen={MenuRef} />
 
