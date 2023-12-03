@@ -34,7 +34,7 @@ const Menu: React.FC<Props> = ({ refOpen }) => {
     <>
       <button onClick={() => setMenuIsOpen(true)} ref={refOpen} />
 
-      <div className="fixed right-10 top-16 z-50 flex h-screen items-center justify-center sm:right-20">
+      <div className="fixed right-10 top-16 z-50 flex items-center justify-center sm:right-20">
         <AnimatePresence>
           {menuIsOpen && (
             <motion.div
@@ -131,7 +131,7 @@ const Menu: React.FC<Props> = ({ refOpen }) => {
                     >
                       <h3
                         className={cn(
-                          'cursor-pointer font-kernCompressed text-6xl font-bold hover:text-primary sm:text-8xl',
+                          'cursor-pointer font-kernCompressed text-6xl font-bold hover:text-primary sm:text-[5.5rem]',
                           'text-off_white'
                         )}
                       >
