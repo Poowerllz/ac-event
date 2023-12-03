@@ -37,51 +37,51 @@ export function ImageGalleryExecutiveTeamMobile() {
       onClick: 'author/danilo-cid'
     },
     {
-      name: 'Erika Pinheiro',
-      src: `${LegacySiteURL}/wp-content/uploads/2022/07/socios_pb_0000_fotos_site_0001_perfil_erika_banner-1-250x300.jpg`,
-      class: 'col-start-3 row-start-3',
-      onClick: 'author/erika-pinheiro'
+      name: 'Rafael Torres',
+      src: `${LegacySiteURL}/wp-content/uploads/2022/07/RAFAEL_CROP_PB-1-250x300.png`,
+      class: 'row-start-4',
+      onClick: 'author/rafael-torres'
     },
     {
-      name: 'Fernanda Galluzi',
-      src: '/images/fernanda-galluzi.png',
-      class: 'col-span-2 col-start-2 row-start-4',
-      onClick: 'author/fernanda-galluzi'
+      name: 'Erika Pinheiro',
+      src: `${LegacySiteURL}/wp-content/uploads/2022/07/socios_pb_0000_fotos_site_0001_perfil_erika_banner-1-250x300.jpg`,
+      class: 'row-start-4',
+      onClick: 'author/erika-pinheiro'
     },
     {
       name: 'Napoleon Fujisawa',
       src: `${LegacySiteURL}/wp-content/uploads/2022/07/NAPO_CROP_PB-250x300.png`,
-      class: 'col-start-1 row-start-4',
+      class: 'row-start-4',
       onClick: 'author/napoleon-fujisawa'
     },
     {
-      name: 'Hugo Rafael',
-      src: `${LegacySiteURL}/wp-content/uploads/2022/07/HUGO_IMG_CROP_PB-250x300.png`,
-      class: 'col-span-2 row-start-5',
-      onClick: 'author/hugo-rafael'
-    },
-    {
-      name: 'Marcelle Villar',
-      src: `${LegacySiteURL}/wp-content/uploads/2022/07/MARCELLE_CROP_PB-250x300.png`,
-      class: 'col-start-3 row-start-5',
-      onClick: 'author/marcelle-villar'
-    },
-    {
-      name: 'Rafael Torres',
-      src: `${LegacySiteURL}/wp-content/uploads/2022/07/RAFAEL_CROP_PB-1-250x300.png`,
-      class: 'row-start-6',
-      onClick: 'author/rafael-torres'
+      name: 'Fernanda Galluzi',
+      src: '/images/fernanda-galluzi.png',
+      class: 'col-span-2 col-start-2 row-start-5',
+      onClick: 'author/fernanda-galluzi'
     },
     {
       name: 'Igor Cardoso',
       src: `${LegacySiteURL}/wp-content/uploads/2022/07/IGOR_FINAL2_CROP_PB-250x300.png`,
       class: 'col-start-3 row-start-6',
       onClick: 'author/igor-cardoso'
+    },
+    {
+      name: 'Marcelle Villar',
+      src: `${LegacySiteURL}/wp-content/uploads/2022/07/MARCELLE_CROP_PB-250x300.png`,
+      class: 'col-start-2 row-start-6',
+      onClick: 'author/marcelle-villar'
+    },
+    {
+      name: 'Hugo Rafael',
+      src: `${LegacySiteURL}/wp-content/uploads/2022/07/HUGO_IMG_CROP_PB-250x300.png`,
+      class: 'col-span-2 row-start-7',
+      onClick: 'author/hugo-rafael'
     }
   ]
 
   return (
-    <div className="grid h-[200vh] grid-cols-3 grid-rows-[repeat(6,_minmax(0,_1fr))] gap-2">
+    <div className="grid h-[200vh] grid-cols-3 grid-rows-[repeat(7,_minmax(0,_1fr))] gap-2">
       {executiveTeam.map(executive => {
         return (
           <div

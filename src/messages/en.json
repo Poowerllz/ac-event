@@ -1,7 +1,12 @@
 {
   "Home": {
     "sectionWhoWeAre": {
-      "text": "We are purpose-built to transform organizations and people, aligning brand, business and communication. We are anacouto.",
+      "text": {
+        "lineOne": "We are purpose-built",
+        "lineTwo": "to transform people and",
+        "lineThree": "organizations, aligning brand,",
+        "lineFour": "business and communication."
+      },
       "button": "Who we are"
     },
     "sectionWhatWeDo": {
@@ -10,7 +15,7 @@
     }
   },
   "Articles": {
-    "sectionMessage": "Our ideas overflowed and came to fruition in articles and papers."
+    "sectionMessage": "Ideas that overflow and come to fruition."
   },
   "Cases": {
     "Cases": {

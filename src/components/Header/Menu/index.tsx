@@ -2,10 +2,10 @@
 import { cn } from '@/common/utils/cn'
 import logoAnaCouto from '@/images/logo.png'
 import iconCloseButon from '@/images/svg/times.svg'
+import { AnimatePresence, motion } from 'framer-motion'
 import Image from 'next/image'
 import Link from 'next/link'
 import React, { useEffect, useState } from 'react'
-import { motion, AnimatePresence } from 'framer-motion'
 
 type Props = {
   refOpen: any
@@ -34,7 +34,7 @@ const Menu: React.FC<Props> = ({ refOpen }) => {
     <>
       <button onClick={() => setMenuIsOpen(true)} ref={refOpen} />
 
-      <div className="fixed right-10 top-16 z-50 flex items-center justify-center sm:right-20">
+      <div className="fixed right-10 top-16 z-50 flex h-screen items-center justify-center sm:right-20">
         <AnimatePresence>
           {menuIsOpen && (
             <motion.div
@@ -121,7 +121,7 @@ const Menu: React.FC<Props> = ({ refOpen }) => {
                   </div>
                 </div>
 
-                <div className="mt-12 flex w-full flex-col gap-4 sm:mt-24">
+                <div className="mt-8 flex w-full flex-col gap-3 sm:mt-20">
                   {items.map((item, idx) => (
                     <Link
                       key={idx}

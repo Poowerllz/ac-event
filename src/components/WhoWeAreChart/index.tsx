@@ -1,8 +1,8 @@
 'use client'
 
 import useMediaQuery from '@/hooks/useMediaQuery'
-import Chart from '@/images/svg/whoWeAreChart.svg'
-import ChartMobile from '@/images/svg/whoWeAreChartMobile.svg'
+import ChartMobile from '@/images/svg/whoWeAreChartMobileWhite.svg'
+import Chart from '@/images/svg/whoWeAreChartWhite.svg'
 import Image from 'next/image'
 
 export function WhoWeAreChart() {

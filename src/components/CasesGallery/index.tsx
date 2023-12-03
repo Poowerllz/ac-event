@@ -13,11 +13,11 @@ interface CasesGalleryProps {
 
 export function CasesGallery({ cases }: CasesGalleryProps) {
   const divsClass = [
-    'col-span-2',
-    'max-[640px]:col-span-2 row-start-2 sm:row-span-2',
-    'max-[640px]:col-span-2 sm:col-start-1 row-start-3 sm:row-start-4',
-    'max-[640px]:col-span-2 sm:col-start-2 row-start-4 sm:row-start-2',
-    'max-[640px]:col-span-2 sm:row-span-2 sm:col-start-2 row-start-5 sm:row-start-3'
+    'col-span-2 sm:h-[860px] h-[430px]',
+    'max-[640px]:col-span-2 row-start-2 sm:row-span-2 sm:h-[860px] h-[430px]',
+    'max-[640px]:col-span-2 sm:col-start-1 row-start-3 sm:row-start-4 h-[430px]',
+    'max-[640px]:col-span-2 sm:col-start-2 row-start-4 sm:row-start-2 h-[430px]',
+    'max-[640px]:col-span-2 sm:row-span-2 sm:col-start-2 row-start-5 sm:row-start-3 sm:h-[860px] h-[430px]'
   ]
 
   return (
@@ -25,7 +25,7 @@ export function CasesGallery({ cases }: CasesGalleryProps) {
       {cases?.map((item, itemIndex) => (
         <div
           key={String(itemIndex)}
-          className="grid min-h-[200vh] grid-cols-2 grid-rows-5 gap-1 sm:grid-rows-4 sm:gap-4"
+          className="grid grid-cols-2 gap-1 sm:gap-4"
         >
           {item?.map((post, postIndex) => (
             <Link
