@@ -92,7 +92,7 @@ export default function WhatWeDo() {
         </p>
       </section>
 
-      <section className="relative flex h-screen w-full flex-col gap-10 bg-black px-6 py-10 text-white sm:px-16">
+      <section className="relative flex w-full flex-col gap-10 bg-black px-6 py-10 text-white sm:px-16">
         <hr className={cn('h-0.5 w-full border-0', 'bg-gray-300')} />
 
         <div className="relative flex w-full flex-col justify-between gap-10 sm:mb-8 md:flex-row">
