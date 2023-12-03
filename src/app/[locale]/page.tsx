@@ -17,10 +17,7 @@ export default function Home() {
       id={'twoSection'}
     >
       <div className="flex h-auto w-full items-start justify-between px-6 py-24 sm:px-16">
-        <Typography
-          as="h1"
-          className="text-3xl sm:text-5xl lg:text-6xl xl:text-8xl"
-        >
+        <Typography as="h1" className="sm:!text-[5vw] md:!text-[6vw]">
           {t('sectionWhoWeAre.text.lineOne')}
           <br />
           {t('sectionWhoWeAre.text.lineTwo')}
