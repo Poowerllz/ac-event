@@ -11,20 +11,15 @@ type TNavbarSticky = {
 }
 
 export function NavbarSticky({ invert }: TNavbarSticky) {
-  const [isNavbarVisible, setIsNavbarVisible] = useState<boolean>(false)
   const pathaname = usePathname()
+
+  const [scrollPosition, setScrollPosition] = useState(0)
+  const [isMascotVisible, setIsMascotVisible] = useState(false)
+  const [isArrowVisible, setIsArrowVisible] = useState(false)
 
   useEffect(() => {
     const handleScroll = () => {
-      const scrollY = window.scrollY
-
-      const triggerHeight = 100
-
-      if (scrollY > triggerHeight && !isNavbarVisible) {
-        setIsNavbarVisible(true)
-      } else if (scrollY <= triggerHeight && isNavbarVisible) {
-        setIsNavbarVisible(false)
-      }
+      setScrollPosition(window.scrollY)
     }
 
     window.addEventListener('scroll', handleScroll)
@@ -32,35 +27,46 @@ export function NavbarSticky({ invert }: TNavbarSticky) {
     return () => {
       window.removeEventListener('scroll', handleScroll)
     }
-  }, [invert, isNavbarVisible])
+  }, [])
+
+  useEffect(() => {
+    setIsMascotVisible(scrollPosition > 100)
+  }, [scrollPosition])
+
+  useEffect(() => {
+    setIsArrowVisible(scrollPosition > 700)
+  }, [scrollPosition])
 
   return (
     <AnimatePresence>
-      {isNavbarVisible && (
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          exit={{ opacity: 0 }}
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        exit={{ opacity: 0 }}
+      >
+        <nav
+          className={cn(
+            'fixed z-10 flex w-[82%] items-start justify-between pt-14 opacity-100 transition sm:w-[92%]'
+          )}
         >
-          <nav
-            className={cn(
-              'fixed z-10 flex w-[92%] items-start justify-between pt-14 opacity-100 transition'
-            )}
-          >
+          {isMascotVisible && (
             <div className="relative mb-5 h-auto w-10">
               <AnaCoutoMascot
                 fill={invert ? '' : '#ffffff'}
                 className="shadow-2xl"
               />
             </div>
+          )}
+
+          {isArrowVisible && (
             <ArrowMobile
               name={ArrowTop}
               section={'header'}
               invert={pathaname === '/' ?? true}
             />
-          </nav>
-        </motion.div>
-      )}
+          )}
+        </nav>
+      </motion.div>
     </AnimatePresence>
   )
 }
