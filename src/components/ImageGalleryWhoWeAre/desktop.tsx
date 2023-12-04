@@ -1,10 +1,12 @@
 import Image from 'next/image'
 import { ImageGalleryWhoWeAreProps } from './type'
+import { useTranslations } from 'next-intl'
 
 export function ImageGalleryWhoWeAreDesktop({
   images,
   text
 }: ImageGalleryWhoWeAreProps) {
+  const t = useTranslations('WhoWeAre')
   return (
     <div className="grid h-full w-full grid-cols-4 content-stretch items-stretch justify-center gap-2 md:gap-4">
       <div className="flex flex-col gap-5 md:gap-0">
@@ -21,13 +23,13 @@ export function ImageGalleryWhoWeAreDesktop({
         </div>
 
         <span className="text-2xl leading-none">
-          Propósito <br /> engajador <br /> e de impacto
+          {t('secondSection.gallery.titleOne')}
         </span>
       </div>
 
       <div className="flex flex-col gap-5 self-end">
         <span className="hidden text-2xl leading-none md:flex">
-          Experiências <br /> memoráveis <br /> que fidelizam
+          {t('secondSection.gallery.titleTwo')}
         </span>
 
         <div className="relative h-auto w-full">
@@ -71,7 +73,7 @@ export function ImageGalleryWhoWeAreDesktop({
         </div>
 
         <span className="text-2xl leading-none">
-          Narrativas <br /> que conectam <br /> com o seu <br /> público
+          {t('secondSection.gallery.titleThree')}
         </span>
       </div>
     </div>

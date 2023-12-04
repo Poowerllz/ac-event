@@ -101,61 +101,95 @@
   },
   "WhoWeAre": {
     "firstSection": {
-      "title": "Lorem ipsum in graphic design and publishing is standard text.",
-      "subtitle": "We develop Brand and Advertising Strategies to create a perfect alignment between Brand, Business, Communication and Culture."
+      "title": " Somos a anacouto. Somos branding e comunicação.",
+      "subtitle": "Há 30 anos alinhamos marca, negócio e comunicação para fazer branding icônicos através do nosso método proprietário. Usamos toda a nossa potência de propósito para impulsionar o valor de pessoas e organizações."
     },
     "secondSection": {
-      "title": "The future of a brand lies in its purpose today",
-      "subtitle": "The Brands that generate the most value for the business are at the wave 3 level and differentiate themselves in the way they relate to people."
+      "title": "Fazemos a (r)evolução que a sua organização precisa",
+      "gallery": {
+        "titleOne": "Propósito engajador e de impacto",
+        "titleTwo": "Experiências memoráveis que fidelizam",
+        "titleThree": "Narrativas que conectam com o seu público00000"
+      }
     },
     "thirdSection": {
       "title": {
-        "firstLine": "We can help",
-        "secondLine": "your organization evolve",
-        "thirdLine": " at the speed",
-        "fourthLine": "it needs"
+        "firstLine": "Podemos ajudar",
+        "secondLine": "sua organização a",
+        "thirdLine": "evoluir na velocidade",
+        "fourthLine": "que precisa"
       },
-      "phrase": "Engaging and impactful purpose"
+      "phrase": "Propósito engajador e de impacto"
     },
     "fourthSection": {
-      "title": "Executive Team"
+      "title": "Time executivo que faz de propósito"
     }
   },
   "WhatWeDo": {
     "firstSection": {
-      "title": "Lorem ipsum in graphic design and publishing is standard text.",
-      "subtitle": "We develop Brand and Advertising Strategies to create a perfect alignment between Brand, Business, Communication and Culture."
+      "title": "Somos a anacouto. Somos branding e comunicação.",
+      "subtitle": "Há 30 anos alinhamos marca, negócio e comunicação para fazer branding icônicos através do nosso método proprietário. Usamos toda a nossa potência de propósito para impulsionar o valor de pessoas e organizações."
     },
     "secondSection": {
-      "title": "É FAZ Comunicação",
-      "span": "Methodology",
-      "subtitle": "From strategic to tactical. From tactical to operational. Our service offering is built on a proprietary methodology based on three strategic pillars."
+      "title": "Como gerir o valor do seu Branding?",
+      "subtitle": "As Ondas de Valor são um método proprietário anacouto para gerar e gerir valor de marcas. A Onda 3 representa as que se diferenciam na forma de relacionar com as pessoas."
     },
     "thirdSection": {
-      "span": "Specialties",
+      "title": {
+        "One": {
+          "newText": "Marca",
+          "startText": "É"
+        },
+        "Two": {
+          "newText": "Negócio",
+          "startText": "FAZ"
+        },
+        "Three": {
+          "newText": "Comunicação",
+          "startText": "FALA"
+        }
+      },
+      "span": "Metodologia",
+      "subtitle": "Geramos e gerimos valor. Da estratégia a execução. Da execução a gestão. Somos o ciclo completo e concreto de entregas a partir da nossa metodologia proprietária."
+    },
+    "fourthSection": {
+      "span": "Especialidades",
       "links": {
-        "firstItem": "Brand",
-        "secondItem": "Business",
-        "thirdItem": "Communication",
-        "fourthItem": "Culture",
-        "fifthItem": "Innovation",
+        "firstItem": {
+          "title": "Marca"
+        },
+        "secondItem": "Negócio",
+        "thirdItem": "Comunicação",
+        "fourthItem": "Cultura",
+        "fifthItem": "Inovação",
         "sixItem": "Valometry"
       },
       "hoverLinks": {
         "firstItem": "Example",
         "secondItem": "Example",
-        "thirdItem": "Planning, Media, Creation, Production, Social.",
+        "thirdItem": "Planejamento, Mídia, Criação, Produção, Social.",
         "fourthItem": "Example",
         "fifthItem": "Example",
         "sixItem": "Example"
       }
     },
-    "fourthSection": {
-      "title": {
-        "firstLine": "We can help",
-        "secondLine": "your organization evolve",
-        "thirdLine": " at the speed",
-        "fourthLine": "it needs"
+    "fifthSection": {
+      "title": "Fazer junto para encantar e impulsionar.",
+      "firstLine": {
+        "title": "Cocriação",
+        "text": "Através de parceria estratégica entre cliente e agência, chegamo às perguntas certas para desenhar cada solução."
+      },
+      "secondLine": {
+        "title": "Agilidade",
+        "text": "Com a aplicação de metodologias ágeis e reuniões de sprints."
+      },
+      "thirdLine": {
+        "title": "Solução",
+        "text": "Em encontros com diferentes tons e objetivos, como workshops, senergizers e provokes."
+      },
+      "fourthLline": {
+        "title": "Aprendizado gera autonomia",
+        "text": "Com reuniões de sprints e ferramentas de Design Thinking."
       }
     }
   },

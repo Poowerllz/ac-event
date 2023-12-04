@@ -19,17 +19,11 @@ export default function WhoWeAre() {
         </div>
 
         <Typography as="h1" className="pt-14">
-          Somos a anacouto.
-          <br />
-          Somos branding
-          <br />e comunicação.
+          {t('firstSection.title')}
         </Typography>
 
         <p className="w-auto max-w-[240px] self-end text-sm font-semibold sm:text-base lg:max-w-[360px] lg:text-lg xl:text-2xl">
-          Há 30 anos alinhamos marca, negócio e comunicação para fazer branding
-          icônicos através do nosso método proprietário. Usamos toda a nossa
-          potência de propósito para impulsionar o valor de pessoas e
-          organizações.
+          {t('firstSection.subtitle')}
         </p>
       </section>
 
@@ -38,11 +32,7 @@ export default function WhoWeAre() {
           as="h2"
           className="py-24 text-center md:text-[4.7rem] md:leading-[4.7rem]"
         >
-          Fazemos a (r)evolução
-          <br />
-          que a sua organização
-          <br />
-          precisa
+          {t('secondSection.title')}
         </Typography>
         <GallerySection />
       </section>

@@ -4,11 +4,14 @@ import Image from 'next/image'
 import { ImageGalleryWhatWeDoSubtitle } from './ImageGalleryWhatWeDoSubtitle'
 import { ImageGalleryWhatWeDoTitle } from './ImageGalleryWhatWeDoTitle'
 import { ImageGalleryWhatWeDoProps } from './type'
+import { useTranslations } from 'next-intl'
 
 export function ImageGalleryWhatWeDoMobile({
   images,
   text
 }: ImageGalleryWhatWeDoProps) {
+  const t = useTranslations('WhatWeDo')
+
   return (
     <div className="flex h-full w-full flex-col content-stretch items-stretch justify-center gap-2 md:gap-4">
       <div className="mt-5 flex flex-col justify-between gap-5">
@@ -25,12 +28,12 @@ export function ImageGalleryWhatWeDoMobile({
         </div>
 
         <div className="flex justify-between">
-          <ImageGalleryWhatWeDoTitle>Cocriação</ImageGalleryWhatWeDoTitle>
+          <ImageGalleryWhatWeDoTitle>
+            {t('fifthSection.firstLine.title')}
+          </ImageGalleryWhatWeDoTitle>
 
           <ImageGalleryWhatWeDoSubtitle>
-            Através da parceria <br /> estratégica entre cliente
-            <br /> e agência, chegamos <br /> às perguntas certas <br />
-            para desenhar cada solução.
+            {t('fifthSection.firstLine.text')}
           </ImageGalleryWhatWeDoSubtitle>
         </div>
       </div>
@@ -49,11 +52,13 @@ export function ImageGalleryWhatWeDoMobile({
         </div>
 
         <div className="flex justify-between">
-          <ImageGalleryWhatWeDoTitle>Agilidade</ImageGalleryWhatWeDoTitle>
+          <ImageGalleryWhatWeDoTitle>
+            {' '}
+            {t('fifthSection.secondLine.title')}
+          </ImageGalleryWhatWeDoTitle>
 
           <ImageGalleryWhatWeDoSubtitle>
-            Com a aplicação de metodologias
-            <br /> ágeis e reuniões de sprints.
+            {t('fifthSection.secondLine.text')}
           </ImageGalleryWhatWeDoSubtitle>
         </div>
       </div>
@@ -72,11 +77,13 @@ export function ImageGalleryWhatWeDoMobile({
         </div>
 
         <div className="flex justify-between">
-          <ImageGalleryWhatWeDoTitle>Solução</ImageGalleryWhatWeDoTitle>
+          <ImageGalleryWhatWeDoTitle>
+            {' '}
+            {t('fifthSection.thirdLine.title')}
+          </ImageGalleryWhatWeDoTitle>
 
           <ImageGalleryWhatWeDoSubtitle>
-            Em encontros com diferentes <br /> tons e objetivos, como <br />
-            workshops, energizers e provokes.
+            {t('fifthSection.thirdLine.text')}
           </ImageGalleryWhatWeDoSubtitle>
         </div>
       </div>
@@ -96,11 +103,11 @@ export function ImageGalleryWhatWeDoMobile({
 
         <div className="flex justify-between">
           <ImageGalleryWhatWeDoTitle>
-            Aprendizado gera autonomia
+            {t('fifthSection.fourthLline.title')}
           </ImageGalleryWhatWeDoTitle>
 
           <ImageGalleryWhatWeDoSubtitle>
-            Com reuniões de sprints e <br /> ferramentas de Design Thinking.
+            {t('fifthSection.fourthLline.text')}
           </ImageGalleryWhatWeDoSubtitle>
         </div>
       </div>
