@@ -41,20 +41,6 @@ export const Typography = <E extends ElementType = TTypographyDefaultAsType>({
   const ref = useRef<HTMLDivElement>(null)
   const isVisible = useIsVisible(ref)
 
-  /*   useEffect(() => {
-    let temp = defaultConfig?.className + ' ' + props.className
-
-    if (!animation) return
-
-    if (isVisible) {
-      setConfig(temp + defaultConfig?.animationInput)
-    }
-
-    if (!isVisible) {
-      setConfig(temp + defaultConfig?.animationOutput)
-    }
-  }, [isVisible]) */
-
   if (!animation) {
     return (
       <Tag className={config || ''} {...restProps}>

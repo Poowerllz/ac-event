@@ -4,18 +4,12 @@ import { ContactSections } from '@/components/pages/Contact'
 import { Typography } from '@/components/ui/Typography'
 import ArrowTop from '@/images/svg/arrowtop.svg'
 import { useTranslations } from 'next-intl'
-import Image from 'next/image'
-import Script from 'next/script'
 import { Fragment } from 'react'
 
 export default function Contact() {
   const t = useTranslations('Contact')
 
-  const titleKeys = [
-    t('firstSection.title.firstLine')
-    // t('firstSection.title.secondLine'),
-    // t('firstSection.title.thirdLine')
-  ]
+  const titleKeys = [t('firstSection.title.firstLine')]
   const addressKeys = [
     t('firstSection.contacts.address.firstItem'),
     t('firstSection.contacts.address.secondItem'),

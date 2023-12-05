@@ -99,12 +99,27 @@
   },
   "WhoWeAre": {
     "firstSection": {
-      "title": "Lorem ipsum em design gráfico e editoração é um texto padrão.",
-      "subtitle": "Desenvolvemos Estratégias de Marca e Publicidade para criar um alinhamento perfeito entre Marca, Negócio, Comunicação e Cultura."
+      "titleOne": "Somos a anacouto.",
+      "titleTwo": "Somos branding e",
+      "titleThree": "comunicação.",
+      "subtitle": "Há 30 anos alinhamos marca, negócio e comunicação para fazer branding icônicos através do nosso método proprietário. Usamos toda a nossa potência de propósito para impulsionar o valor de pessoas e organizações."
     },
     "secondSection": {
-      "title": "O futuro de uma marca está em seu propósito hoje",
-      "subtitle": "As Marcas que mais geram valor para o negócio estão no patamar da onda 3 e se diferenciam na forma como se relacionam com as pessoas."
+      "titleOne": "Fazemos a (r)evolução",
+      "titleTwo": "que a sua organização",
+      "titleThree": "precisa.",
+      "gallery": {
+        "titleOne1": "Propósito",
+        "titleOne2": "engajador ",
+        "titleOne3": "e de impacto",
+        "titleTwo1": "Experiências",
+        "titleTwo2": "memoráveis",
+        "titleTwo3": "que fidelizam",
+        "titleThree1": "Narrativas",
+        "titleThree2": "que conectam ",
+        "titleThree3": "com o seu",
+        "titleThree4": "público"
+      }
     },
     "thirdSection": {
       "title": {
@@ -121,23 +136,85 @@
   },
   "WhatWeDo": {
     "firstSection": {
-      "title": "Lorem ipsum em design gráfico e editoração é um texto padrão.",
-      "subtitle": "Desenvolvemos Estratégias de Marca e Publicidade para criar um alinhamento perfeito entre Marca, Negócio, Comunicação e Cultura."
+      "titleOne": "Somos a anacouto.",
+      "titleTwo": "Somos branding e",
+      "titleThree": "comunicação.",
+      "subtitle": "Há 30 anos alinhamos marca, negócio e comunicação para fazer branding icônicos através do nosso método proprietário. Usamos toda a nossa potência de propósito para impulsionar o valor de pessoas e organizações."
     },
     "secondSection": {
-      "title": "É FAZ Comunicação",
+      "titleOne": "Como gerir o valor",
+      "titleTwo": "do seu Branding?",
+      "subtitle": "As Ondas de Valor são um método proprietário anacouto para gerar e gerir valor de marcas. A Onda 3 representa as que se diferenciam na forma de relacionar com as pessoas."
+    },
+    "thirdSection": {
+      "title": {
+        "One": {
+          "newText": "Marca",
+          "startText": "É"
+        },
+        "Two": {
+          "newText": "Negócio",
+          "startText": "FAZ"
+        },
+        "Three": {
+          "newText": "Comunicação",
+          "startText": "FALA"
+        }
+      },
       "span": "Metodologia",
       "subtitle": "Geramos e gerimos valor. Da estratégia a execução. Da execução a gestão. Somos o ciclo completo e concreto de entregas a partir da nossa metodologia proprietária."
     },
-    "thirdSection": {
+    "fourthSection": {
       "span": "Especialidades",
       "links": {
-        "firstItem": "Marca",
-        "secondItem": "Negócio",
-        "thirdItem": "Comunicação",
-        "fourthItem": "Cultura",
-        "fifthItem": "Inovação",
-        "sixItem": "Valometry"
+        "firstItem": {
+          "title": "Marca",
+          "textOne": "Estratégia Diagnóstico de Valor",
+          "textTwo": "Plataforma de Branding",
+          "textThree": "Nome",
+          "textFour": "Design de Marca",
+          "textFive": "Universo Visual e Verbal",
+          "textSix": "Toolkit de Branding",
+          "textSeven": "Gestão de Portfólio"
+        },
+        "secondItem": {
+          "title": "Negócio",
+          "textOne": "Jornada ON/OFF",
+          "textTwo": "PDV",
+          "textThree": "Ambientação",
+          "textFour": "Soluções digitais",
+          "textFive": "Design System"
+        },
+        "thirdItem": {
+          "title": "Comunicação",
+          "textOne": "Planejamento",
+          "textTwo": "Midia",
+          "textThree": "Criação",
+          "textFour": "Produção",
+          "textFive": "Social"
+        },
+        "fourthItem": {
+          "title": "Cultura",
+          "textOne": "Transformação Cultural",
+          "textTwo": "EVP_Marca Empregadora",
+          "textThree": "Desenvolvimento Liderança"
+        },
+        "fifthItem": {
+          "title": "Inovação",
+          "textOne": "Curso Branding Aplicado",
+          "textTwo": "Curso Branding Essencial",
+          "textThree": "CBO",
+          "textFour": "Comunidade",
+          "textFive": "Newsletter",
+          "textSix": "Tip Talks"
+        },
+        "sixItem": {
+          "title": "Valometry",
+          "textOne": "Tracking do Branding",
+          "textTwo": "Listening de social",
+          "textThree": "Dashboard de OKR",
+          "textFour": "Culturômetro"
+        }
       },
       "hoverLinks": {
         "firstItem": "Example",
@@ -148,12 +225,23 @@
         "sixItem": "Example"
       }
     },
-    "fourthSection": {
-      "title": {
-        "firstLine": "Podemos ajudar",
-        "secondLine": "sua organização a",
-        "thirdLine": "evoluir na velocidade",
-        "fourthLine": "que precisa"
+    "fifthSection": {
+      "title": "Fazer junto para encantar e impulsionar.",
+      "firstLine": {
+        "title": "Cocriação",
+        "text": "Através de parceria estratégica entre cliente e agência, chegamo às perguntas certas para desenhar cada solução."
+      },
+      "secondLine": {
+        "title": "Agilidade",
+        "text": "Com a aplicação de metodologias ágeis e reuniões de sprints."
+      },
+      "thirdLine": {
+        "title": "Solução",
+        "text": "Em encontros com diferentes tons e objetivos, como workshops, senergizers e provokes."
+      },
+      "fourthLline": {
+        "title": "Aprendizado gera autonomia",
+        "text": "Com reuniões de sprints e ferramentas de Design Thinking."
       }
     }
   },

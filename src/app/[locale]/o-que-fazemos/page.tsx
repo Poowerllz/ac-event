@@ -14,57 +14,63 @@ export default function WhatWeDo() {
 
   const linksKeys = [
     {
-      title: 'thirdSection.links.firstItem',
+      title: 'fourthSection.links.firstItem.title',
       items: [
-        'Estratégia Diagnóstico de Valor',
-        'Plataforma de Branding',
-        'Nome',
-        'Design de Marca',
-        'Universo Visual e Verbal',
-        'Toolkit de Branding',
-        'Gestão de Portfólio'
+        t('fourthSection.links.firstItem.textOne'),
+        t('fourthSection.links.firstItem.textTwo'),
+        t('fourthSection.links.firstItem.textThree'),
+        t('fourthSection.links.firstItem.textFour'),
+        t('fourthSection.links.firstItem.textFive'),
+        t('fourthSection.links.firstItem.textSix'),
+        t('fourthSection.links.firstItem.textSeven')
       ]
     },
     {
-      title: 'thirdSection.links.secondItem',
+      title: 'fourthSection.links.secondItem.title',
       items: [
-        'Jornada ON/OFF',
-        'PDV',
-        'Ambientação',
-        'Soluções digitais',
-        'Design System'
+        t('fourthSection.links.secondItem.textOne'),
+        t('fourthSection.links.secondItem.textTwo'),
+        t('fourthSection.links.secondItem.textThree'),
+        t('fourthSection.links.secondItem.textFour'),
+        t('fourthSection.links.secondItem.textFive')
       ]
     },
     {
-      title: 'thirdSection.links.thirdItem',
-      items: ['Planejamento', 'Midia', 'Criação', 'Produção', 'Social']
-    },
-    {
-      title: 'thirdSection.links.fourthItem',
+      title: 'fourthSection.links.thirdItem.title',
       items: [
-        'Transformação Cultural',
-        'EVP_Marca Empregadora',
-        'Desenvolvimento Liderança'
+        t('fourthSection.links.thirdItem.textOne'),
+        t('fourthSection.links.thirdItem.textTwo'),
+        t('fourthSection.links.thirdItem.textThree'),
+        t('fourthSection.links.thirdItem.textFour'),
+        t('fourthSection.links.thirdItem.textFive')
       ]
     },
     {
-      title: 'thirdSection.links.fifthItem',
+      title: 'fourthSection.links.fourthItem.title',
       items: [
-        'Curso Branding Aplicado',
-        'Curso Branding Essencial',
-        'CBO',
-        'Comunidade',
-        'Newsletter',
-        'Tip Talks'
+        t('fourthSection.links.fourthItem.textOne'),
+        t('fourthSection.links.fourthItem.textTwo'),
+        t('fourthSection.links.fourthItem.textThree')
       ]
     },
     {
-      title: 'thirdSection.links.sixItem',
+      title: 'fourthSection.links.fifthItem.title',
       items: [
-        'Tracking do Branding',
-        'Listening de social',
-        'Dashboard de OKR',
-        'Culturômetro'
+        t('fourthSection.links.fifthItem.textOne'),
+        t('fourthSection.links.fifthItem.textTwo'),
+        t('fourthSection.links.fifthItem.textThree'),
+        t('fourthSection.links.fifthItem.textFour'),
+        t('fourthSection.links.fifthItem.textFive'),
+        t('fourthSection.links.fifthItem.textSix')
+      ]
+    },
+    {
+      title: 'fourthSection.links.sixItem.title',
+      items: [
+        t('fourthSection.links.sixItem.textOne'),
+        t('fourthSection.links.sixItem.textTwo'),
+        t('fourthSection.links.sixItem.textThree'),
+        t('fourthSection.links.sixItem.textFour')
       ]
     }
   ]
@@ -80,15 +86,16 @@ export default function WhatWeDo() {
         </div>
 
         <Typography as="h1">
-          Somos a anacouto. <br />
-          Somos branding <br />e comunicação.
+          {' '}
+          {t('firstSection.titleOne')}
+          <br />
+          {t('firstSection.titleTwo')}
+          <br />
+          {t('firstSection.titleThree')}
         </Typography>
 
         <p className="w-auto max-w-[220px] self-end text-sm font-semibold sm:text-base lg:max-w-[360px] lg:text-lg xl:text-2xl">
-          Há 30 anos alinhamos marca, negócio e comunicação para fazer branding
-          icônicos através do nosso método proprietário. Usamos toda a nossa
-          potência de propósito para impulsionar o valor de pessoas e
-          organizações.
+          {t('firstSection.subtitle')}
         </p>
       </section>
 
@@ -97,15 +104,13 @@ export default function WhatWeDo() {
 
         <div className="relative flex w-full flex-col justify-between gap-10 sm:mb-8 md:flex-row">
           <Typography as="h2">
-            Como gerir o valor
+            {t('secondSection.titleOne')}
             <br />
-            do seu Branding?
+            {t('secondSection.titleTwo')}
           </Typography>
 
           <p className="w-auto max-w-[240px] self-end text-sm font-semibold sm:text-base md:self-start lg:max-w-[360px] lg:text-lg xl:text-2xl">
-            As Ondas de Valor são um método proprietário anacouto para gerar e
-            gerir valor de marcas. A Onda 3 representa as que se diferenciam na
-            forma de relacionar com as pessoas.
+            {t('secondSection.subtitle')}
           </p>
         </div>
 
@@ -114,30 +119,28 @@ export default function WhatWeDo() {
 
       <section className="relative flex h-screen w-full flex-col gap-10 px-6 py-10 sm:mb-20 sm:px-16">
         <div>
-          <span className="font-extrabold">{t('secondSection.span')}</span>
+          <span className="font-extrabold">{t('thirdSection.span')}</span>
           <hr className={cn('h-0.5 w-full border-0', 'bg-gray-300')} />
         </div>
 
         <p className="absolute right-6 top-24 w-auto max-w-[220px] self-end text-sm font-semibold sm:right-16 sm:text-base lg:max-w-[360px] lg:text-lg xl:text-2xl">
-          Geramos e gerimos valor. Da estratégia a execução. Da execução a
-          gestão. Somos o ciclo completo e concreto de entregas a partir da
-          nossa metodologia proprietária.
+          {t('thirdSection.subtitle')}
         </p>
 
         <div className="relative h-auto w-full">
           <TextAnimation
-            newText="Marca"
-            startText="É"
+            newText={t('thirdSection.title.One.newText')}
+            startText={t('thirdSection.title.One.startText')}
             className="mt-14 sm:mt-40"
           />
           <TextAnimation
-            newText="Negócio"
-            startText="FAZ"
+            newText={t('thirdSection.title.Two.newText')}
+            startText={t('thirdSection.title.Two.startText')}
             className="mt-14 sm:mt-60"
           />
           <TextAnimation
-            newText="Comunicação"
-            startText="FALA"
+            newText={t('thirdSection.title.Three.newText')}
+            startText={t('thirdSection.title.Three.startText')}
             className="mb-10 mt-14 sm:mb-20 sm:mt-60"
           />
         </div>
@@ -146,7 +149,7 @@ export default function WhatWeDo() {
       <section className="relative flex w-full flex-col gap-10 bg-black px-6 py-10 sm:mb-20 sm:px-16">
         <div>
           <span className="font-extrabold text-white">
-            {t('thirdSection.span')}
+            {t('fourthSection.span')}
           </span>
           <hr className={cn('h-0.5 w-full border-0', 'bg-white')} />
         </div>
@@ -169,7 +172,7 @@ export default function WhatWeDo() {
           className="text-center sm:pb-14 md:text-[4.7rem] md:leading-[4.7rem]"
           animation={false}
         >
-          Fazer junto para encantar e impulsionar.
+          {t('fifthSection.title')}
         </Typography>
 
         <GallerySection />

@@ -1,5 +1,4 @@
-'use client'
-
+import { useTranslations } from 'next-intl'
 import Image from 'next/image'
 import { ImageGalleryWhatWeDoSubtitle } from './ImageGalleryWhatWeDoSubtitle'
 import { ImageGalleryWhatWeDoTitle } from './ImageGalleryWhatWeDoTitle'
@@ -9,6 +8,7 @@ export function ImageGalleryWhatWeDoDesktop({
   images,
   text
 }: ImageGalleryWhatWeDoProps) {
+  const t = useTranslations('WhatWeDo')
   return (
     <div className="grid h-full w-full grid-cols-4 content-stretch items-stretch justify-center gap-2 md:gap-4">
       <div className="flex flex-col justify-between gap-5">
@@ -24,24 +24,27 @@ export function ImageGalleryWhatWeDoDesktop({
             loading="lazy"
           />
 
-          <ImageGalleryWhatWeDoTitle>Cocriação</ImageGalleryWhatWeDoTitle>
+          <ImageGalleryWhatWeDoTitle>
+            {t('fifthSection.firstLine.title')}
+          </ImageGalleryWhatWeDoTitle>
         </div>
 
         <ImageGalleryWhatWeDoSubtitle>
-          Através de parceria <br /> estratégica entre cliente <br /> e agência,
-          chegamos às perguntas <br />
-          certas para desenhar cada solução.
+          {t('fifthSection.firstLine.text')}
         </ImageGalleryWhatWeDoSubtitle>
       </div>
 
       <div className="flex flex-col gap-5 self-end">
         <div className="flex flex-col justify-between gap-2 lg:flex-row lg:gap-4">
           <div className="mt-auto">
-            <ImageGalleryWhatWeDoTitle>Agilidade</ImageGalleryWhatWeDoTitle>
+            <ImageGalleryWhatWeDoTitle>
+              {' '}
+              {t('fifthSection.secondLine.title')}
+            </ImageGalleryWhatWeDoTitle>
           </div>
 
           <ImageGalleryWhatWeDoSubtitle>
-            Com a aplicação de metodologias <br /> ágeis e reuniões de sprints.
+            {t('fifthSection.secondLine.text')}
           </ImageGalleryWhatWeDoSubtitle>
         </div>
 
@@ -59,13 +62,13 @@ export function ImageGalleryWhatWeDoDesktop({
 
       <div className="flex flex-col justify-between gap-12 self-end">
         <ImageGalleryWhatWeDoSubtitle>
-          Em encontros com diferentes <br />
-          tons e objetivos, como workshops, <br />
-          senergizers e provokes.
+          {t('fifthSection.thirdLine.text')}
         </ImageGalleryWhatWeDoSubtitle>
 
         <div className="relative h-auto w-full">
-          <ImageGalleryWhatWeDoTitle>Solução</ImageGalleryWhatWeDoTitle>
+          <ImageGalleryWhatWeDoTitle>
+            {t('fifthSection.thirdLine.title')}
+          </ImageGalleryWhatWeDoTitle>
 
           <Image
             property="true"
@@ -92,13 +95,12 @@ export function ImageGalleryWhatWeDoDesktop({
           />
 
           <ImageGalleryWhatWeDoSubtitle>
-            Com reuniões de sprints e <br />
-            ferramentas de Design Thinking.
+            {t('fifthSection.fourthLline.title')}
           </ImageGalleryWhatWeDoSubtitle>
         </div>
 
         <ImageGalleryWhatWeDoTitle>
-          Aprendizado gera autonomia
+          {t('fifthSection.fourthLline.text')}
         </ImageGalleryWhatWeDoTitle>
       </div>
     </div>

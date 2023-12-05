@@ -1,10 +1,11 @@
 import Image from 'next/image'
 import { ImageGalleryWhoWeAreProps } from './type'
-
+import { useTranslations } from 'next-intl'
 export function ImageGalleryWhoWeAreMobile({
   images,
   text
 }: ImageGalleryWhoWeAreProps) {
+  const t = useTranslations('WhoWeAre')
   return (
     <div className="flex h-full w-full flex-col content-stretch items-stretch justify-center gap-2 md:gap-4">
       <div className="flex flex-col justify-between gap-5">
@@ -20,13 +21,21 @@ export function ImageGalleryWhoWeAreMobile({
         </div>
 
         <span className="text-sm font-extralight leading-none sm:text-2xl">
-          Propósito <br /> engajador <br /> e de impacto
+          {t('secondSection.gallery.titleOne1')}
+          <br />
+          {t('secondSection.gallery.titleOne2')}
+          <br />
+          {t('secondSection.gallery.titleOne3')}
         </span>
       </div>
 
       <div className="flex flex-col justify-between gap-5">
         <span className="hidden text-sm font-extralight leading-none sm:text-2xl md:flex">
-          Experiências <br /> memoráveis <br /> que fidelizam
+          {t('secondSection.gallery.titleTwo1')}
+          <br />
+          {t('secondSection.gallery.titleTwo2')}
+          <br />
+          {t('secondSection.gallery.titleTwo3')}
         </span>
 
         <div className="relative h-auto w-full">
@@ -67,7 +76,13 @@ export function ImageGalleryWhoWeAreMobile({
         </div>
 
         <span className="text-sm font-extralight leading-none sm:text-2xl">
-          Narrativas <br /> que conectam <br /> com o seu <br /> público
+          {t('secondSection.gallery.titleThree1')}
+          <br />
+          {t('secondSection.gallery.titleThree2')}
+          <br />
+          {t('secondSection.gallery.titleThree3')}
+          <br />
+          {t('secondSection.gallery.titleThree4')}
         </span>
       </div>
     </div>

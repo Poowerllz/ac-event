@@ -101,61 +101,149 @@
   },
   "WhoWeAre": {
     "firstSection": {
-      "title": "Lorem ipsum in graphic design and publishing is standard text.",
-      "subtitle": "We develop Brand and Advertising Strategies to create a perfect alignment between Brand, Business, Communication and Culture."
+      "titleOne": "We are an Anacouto.",
+      "titleTwo": "We are branding and",
+      "titleThree": "communication.",
+      "subtitle": "For 30 years we have aligned brand, business and communication to create iconic branding through our proprietary method. We use all our power on purpose to drive the value of people and organizations."
     },
     "secondSection": {
-      "title": "The future of a brand lies in its purpose today",
-      "subtitle": "The Brands that generate the most value for the business are at the wave 3 level and differentiate themselves in the way they relate to people."
+      "titleOne": "We make (r)evolution",
+      "titleTwo": "that your organization",
+      "titleThree": "it needs.",
+      "gallery": {
+        "titleOne1": "Purpose",
+        "titleOne2": "engaging ",
+        "titleOne3": "and impact",
+        "titleTwo1": "Experiences",
+        "titleTwo2": "memorable",
+        "titleTwo3": "that build loyalty",
+        "titleThree1": "Narratives",
+        "titleThree2": "that connect",
+        "titleThree3": "With your",
+        "titleThree4": "public."
+      }
     },
     "thirdSection": {
       "title": {
         "firstLine": "We can help",
-        "secondLine": "your organization evolve",
-        "thirdLine": " at the speed",
-        "fourthLine": "it needs"
+        "secondLine": "your organization to",
+        "thirdLine": "evolve at speed",
+        "fourthLine": "what you need."
       },
-      "phrase": "Engaging and impactful purpose"
+      "phrase": "Engaging and impactful purpose."
     },
     "fourthSection": {
-      "title": "Executive Team"
+      "title": "Executive team that does it on purpose."
     }
   },
   "WhatWeDo": {
     "firstSection": {
-      "title": "Lorem ipsum in graphic design and publishing is standard text.",
-      "subtitle": "We develop Brand and Advertising Strategies to create a perfect alignment between Brand, Business, Communication and Culture."
+      "titleOne": "We are an Anacouto.",
+      "titleTwo": "We are branding and",
+      "titleThree": "communication.",
+      "subtitle": "For 30 years we have aligned brand, business and communication to create iconic branding through our proprietary method. We use all our power on purpose to drive the value of people and organizations."
     },
     "secondSection": {
-      "title": "É FAZ Comunicação",
-      "span": "Methodology",
-      "subtitle": "From strategic to tactical. From tactical to operational. Our service offering is built on a proprietary methodology based on three strategic pillars."
+      "titleOne": "How to manage value",
+      "titleTwo": "of your Branding?",
+      "subtitle": "Value Waves are an Anacouto proprietary method for generating and managing brand value. Wave 3 represents those who differ in the way they relate to people."
     },
     "thirdSection": {
+      "title": {
+        "One": {
+          "newText": "Brand",
+          "startText": "É"
+        },
+        "Two": {
+          "newText": "Business",
+          "startText": "FAZ"
+        },
+        "Three": {
+          "newText": "Communication",
+          "startText": "FALA"
+        }
+      },
+      "span": "Methodology",
+      "subtitle": "We generate and manage value. From strategy to execution. From execution to management. We are the complete and concrete delivery cycle based on our proprietary methodology."
+    },
+    "fourthSection": {
       "span": "Specialties",
       "links": {
-        "firstItem": "Brand",
-        "secondItem": "Business",
-        "thirdItem": "Communication",
-        "fourthItem": "Culture",
-        "fifthItem": "Innovation",
-        "sixItem": "Valometry"
+        "firstItem": {
+          "title": "Brand",
+          "textOne": "Value Diagnosis Strategy",
+          "textTwo": "Branding Platform",
+          "textThree": "Name",
+          "textFour": "Brand Design",
+          "textFive": "Visual and Verbal Universe",
+          "textSix": "Branding Toolkit",
+          "textSeven": "Portfolio Management"
+        },
+        "secondItem": {
+          "title": "Business",
+          "textOne": "ON/OFF Journey",
+          "textTwo": "POV",
+          "textThree": "Atmosphere",
+          "textFour": "Digital solutions",
+          "textFive": "Design System"
+        },
+        "thirdItem": {
+          "title": "Communication",
+          "textOne": "Planning",
+          "textTwo": "Media",
+          "textThree": "Creation",
+          "textFour": "Production",
+          "textFive": "Social"
+        },
+        "fourthItem": {
+          "title": "Culture",
+          "textOne": "Cultural Transformation",
+          "textTwo": "EVP_Employer Brand",
+          "textThree": "Leadership Development"
+        },
+        "fifthItem": {
+          "title": "Innovation",
+          "textOne": "Applied Branding Course",
+          "textTwo": "Essential Branding Course",
+          "textThree": "CBO",
+          "textFour": "Community",
+          "textFive": "Newsletter",
+          "textSix": "Tip Talks"
+        },
+        "sixItem": {
+          "title": "Valometry",
+          "textOne": "Branding Tracking",
+          "textTwo": "Social listening",
+          "textThree": "OKR Dashboard",
+          "textFour": "Culturometer"
+        }
       },
       "hoverLinks": {
         "firstItem": "Example",
         "secondItem": "Example",
-        "thirdItem": "Planning, Media, Creation, Production, Social.",
+        "thirdItem": "Planejamento, Mídia, Criação, Produção, Social.",
         "fourthItem": "Example",
         "fifthItem": "Example",
         "sixItem": "Example"
       }
     },
-    "fourthSection": {
-      "title": {
-        "firstLine": "We can help",
-        "secondLine": "your organization evolve",
-        "thirdLine": " at the speed",
-        "fourthLine": "it needs"
+    "fifthSection": {
+      "title": "Do it together to delight and boost.",
+      "firstLine": {
+        "title": "Co-creation",
+        "text": "Através de parceria estratégica entre cliente e agência, chegamo às perguntas certas para desenhar cada solução."
+      },
+      "secondLine": {
+        "title": "Agility",
+        "text": "With the application of agile methodologies and sprint meetings."
+      },
+      "thirdLine": {
+        "title": "Solution",
+        "text": "In meetings with different tones and objectives, such as workshops, senergizers and provokes."
+      },
+      "fourthLline": {
+        "title": "Learning generates autonomy",
+        "text": "With sprint meetings and Design Thinking tools."
       }
     }
   },

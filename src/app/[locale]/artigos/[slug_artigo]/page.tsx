@@ -3,8 +3,6 @@ import LegacySiteURL from '@/common/utils/variables'
 export default function Page({ params }: { params: { slug_artigo: string } }) {
   const { slug_artigo } = params
 
-  console.log('articles', slug_artigo)
-
   return (
     <section className="min-h-screen w-full">
       <iframe
