@@ -22,7 +22,7 @@ export default function Header({
   const [isReduced, setIsReduced] = useState<boolean>()
 
   if (pathData.hasBackgroundColor) {
-    return <MenuLogo bgColor={pathData.color || ''} />
+    return <MenuLogo menu={menu} bgColor={pathData.color || ''} />
   }
 
   return (

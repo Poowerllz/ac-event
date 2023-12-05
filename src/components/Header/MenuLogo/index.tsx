@@ -19,12 +19,12 @@ const Path = (props: any) => (
   />
 )
 
-export function MenuLogo({ bgColor }: MenuLogoProps) {
+export function MenuLogo({ bgColor, menu }: MenuLogoProps) {
   const OpenMenu = useRef<any>()
 
   return (
     <nav className={cn('flex w-full items-center p-16', bgColor)}>
-      <Menu refOpen={OpenMenu} />
+      <Menu menuOptions={menu} refOpen={OpenMenu} />
 
       <motion.nav
         initial={false}
