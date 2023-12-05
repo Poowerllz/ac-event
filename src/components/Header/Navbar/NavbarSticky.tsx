@@ -34,7 +34,7 @@ export function NavbarSticky({ invert }: TNavbarSticky) {
   }, [scrollPosition])
 
   useEffect(() => {
-    setIsArrowVisible(scrollPosition > 700)
+    setIsArrowVisible(scrollPosition > 1000)
   }, [scrollPosition])
 
   return (
