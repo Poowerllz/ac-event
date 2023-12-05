@@ -21,6 +21,8 @@ export function ArticlesGallery({ posts }: ArticlesGalleryProps) {
     'max-[640px]:col-span-2 sm:row-span-2 sm:col-start-2 row-start-5 sm:row-start-3'
   ]
 
+  console.log('->', posts)
+
   return (
     <Fragment>
       {posts.map(

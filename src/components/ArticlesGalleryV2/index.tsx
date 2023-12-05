@@ -151,8 +151,6 @@ const ArticlesGalleryV2 = () => {
     }
   }, [articles.data])
 
-  console.log(articles)
-
   const handleFilter = (value: number) => {
     if (value === undefined) return
     if (value === 0) {
