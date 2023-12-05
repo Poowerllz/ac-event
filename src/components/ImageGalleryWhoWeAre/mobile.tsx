@@ -21,13 +21,21 @@ export function ImageGalleryWhoWeAreMobile({
         </div>
 
         <span className="text-sm font-extralight leading-none sm:text-2xl">
-          {t('secondSection.gallery.titleOne')}
+          {t('secondSection.gallery.titleOne1')}
+          <br />
+          {t('secondSection.gallery.titleOne2')}
+          <br />
+          {t('secondSection.gallery.titleOne3')}
         </span>
       </div>
 
       <div className="flex flex-col justify-between gap-5">
         <span className="hidden text-sm font-extralight leading-none sm:text-2xl md:flex">
-          {t('secondSection.gallery.titleTwo')}
+          {t('secondSection.gallery.titleTwo1')}
+          <br />
+          {t('secondSection.gallery.titleTwo2')}
+          <br />
+          {t('secondSection.gallery.titleTwo3')}
         </span>
 
         <div className="relative h-auto w-full">
@@ -68,7 +76,13 @@ export function ImageGalleryWhoWeAreMobile({
         </div>
 
         <span className="text-sm font-extralight leading-none sm:text-2xl">
-          {t('secondSection.gallery.titleThree')}
+          {t('secondSection.gallery.titleThree1')}
+          <br />
+          {t('secondSection.gallery.titleThree2')}
+          <br />
+          {t('secondSection.gallery.titleThree3')}
+          <br />
+          {t('secondSection.gallery.titleThree4')}
         </span>
       </div>
     </div>

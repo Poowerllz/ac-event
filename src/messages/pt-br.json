@@ -99,15 +99,26 @@
   },
   "WhoWeAre": {
     "firstSection": {
-      "title": " Somos a anacouto. Somos branding e comunicação.",
+      "titleOne": "Somos a anacouto.",
+      "titleTwo": "Somos branding e",
+      "titleThree": "comunicação.",
       "subtitle": "Há 30 anos alinhamos marca, negócio e comunicação para fazer branding icônicos através do nosso método proprietário. Usamos toda a nossa potência de propósito para impulsionar o valor de pessoas e organizações."
     },
     "secondSection": {
-      "title": "Fazemos a (r)evolução que a sua organização precisa",
+      "titleOne": "Fazemos a (r)evolução",
+      "titleTwo": "que a sua organização",
+      "titleThree": "precisa.",
       "gallery": {
-        "titleOne": "Propósito engajador e de impacto",
-        "titleTwo": "Experiências memoráveis que fidelizam",
-        "titleThree": "Narrativas que conectam com o seu público00000"
+        "titleOne1": "Propósito",
+        "titleOne2": "engajador ",
+        "titleOne3": "e de impacto",
+        "titleTwo1": "Experiências",
+        "titleTwo2": "memoráveis",
+        "titleTwo3": "que fidelizam",
+        "titleThree1": "Narrativas",
+        "titleThree2": "que conectam ",
+        "titleThree3": "com o seu",
+        "titleThree4": "público"
       }
     },
     "thirdSection": {
@@ -125,11 +136,14 @@
   },
   "WhatWeDo": {
     "firstSection": {
-      "title": "Somos a anacouto. Somos branding e comunicação.",
+      "titleOne": "Somos a anacouto.",
+      "titleTwo": "Somos branding e",
+      "titleThree": "comunicação.",
       "subtitle": "Há 30 anos alinhamos marca, negócio e comunicação para fazer branding icônicos através do nosso método proprietário. Usamos toda a nossa potência de propósito para impulsionar o valor de pessoas e organizações."
     },
     "secondSection": {
-      "title": "Como gerir o valor do seu Branding?",
+      "titleOne": "Como gerir o valor",
+      "titleTwo": "do seu Branding?",
       "subtitle": "As Ondas de Valor são um método proprietário anacouto para gerar e gerir valor de marcas. A Onda 3 representa as que se diferenciam na forma de relacionar com as pessoas."
     },
     "thirdSection": {

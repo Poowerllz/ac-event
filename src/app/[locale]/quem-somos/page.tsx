@@ -19,7 +19,11 @@ export default function WhoWeAre() {
         </div>
 
         <Typography as="h1" className="pt-14">
-          {t('firstSection.title')}
+          {t('firstSection.titleOne')}
+          <br />
+          {t('firstSection.titleTwo')}
+          <br />
+          {t('firstSection.titleThree')}
         </Typography>
 
         <p className="w-auto max-w-[240px] self-end text-sm font-semibold sm:text-base lg:max-w-[360px] lg:text-lg xl:text-2xl">
@@ -32,7 +36,11 @@ export default function WhoWeAre() {
           as="h2"
           className="py-24 text-center md:text-[4.7rem] md:leading-[4.7rem]"
         >
-          {t('secondSection.title')}
+          {t('secondSection.titleOne')}
+          <br />
+          {t('secondSection.titleTwo')}
+          <br />
+          {t('secondSection.titleThree')}
         </Typography>
         <GallerySection />
       </section>

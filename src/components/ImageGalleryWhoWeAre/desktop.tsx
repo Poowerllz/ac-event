@@ -23,13 +23,21 @@ export function ImageGalleryWhoWeAreDesktop({
         </div>
 
         <span className="text-2xl leading-none">
-          {t('secondSection.gallery.titleOne')}
+          {t('secondSection.gallery.titleOne1')}
+          <br />
+          {t('secondSection.gallery.titleOne2')}
+          <br />
+          {t('secondSection.gallery.titleOne3')}
         </span>
       </div>
 
       <div className="flex flex-col gap-5 self-end">
         <span className="hidden text-2xl leading-none md:flex">
-          {t('secondSection.gallery.titleTwo')}
+          {t('secondSection.gallery.titleTwo1')}
+          <br />
+          {t('secondSection.gallery.titleTwo2')}
+          <br />
+          {t('secondSection.gallery.titleTwo3')}
         </span>
 
         <div className="relative h-auto w-full">
@@ -73,7 +81,13 @@ export function ImageGalleryWhoWeAreDesktop({
         </div>
 
         <span className="text-2xl leading-none">
-          {t('secondSection.gallery.titleThree')}
+          {t('secondSection.gallery.titleThree1')}
+          <br />
+          {t('secondSection.gallery.titleThree2')}
+          <br />
+          {t('secondSection.gallery.titleThree3')}
+          <br />
+          {t('secondSection.gallery.titleThree4')}
         </span>
       </div>
     </div>

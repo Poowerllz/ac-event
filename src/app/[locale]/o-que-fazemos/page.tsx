@@ -36,7 +36,7 @@ export default function WhatWeDo() {
       ]
     },
     {
-      title: 'thirdSection.links.fourthItem.title',
+      title: 'fourthSection.links.thirdItem.title',
       items: [
         t('fourthSection.links.thirdItem.textOne'),
         t('fourthSection.links.thirdItem.textTwo'),
@@ -46,7 +46,7 @@ export default function WhatWeDo() {
       ]
     },
     {
-      title: 'thirdSection.links.fourthItem.title',
+      title: 'fourthSection.links.fourthItem.title',
       items: [
         t('fourthSection.links.fourthItem.textOne'),
         t('fourthSection.links.fourthItem.textTwo'),
@@ -54,7 +54,7 @@ export default function WhatWeDo() {
       ]
     },
     {
-      title: 'thirdSection.links.fifthItem.title',
+      title: 'fourthSection.links.fifthItem.title',
       items: [
         t('fourthSection.links.fifthItem.textOne'),
         t('fourthSection.links.fifthItem.textTwo'),
@@ -65,12 +65,12 @@ export default function WhatWeDo() {
       ]
     },
     {
-      title: 'thirdSection.links.sixItem.title',
+      title: 'fourthSection.links.sixItem.title',
       items: [
+        t('fourthSection.links.sixItem.textOne'),
         t('fourthSection.links.sixItem.textTwo'),
         t('fourthSection.links.sixItem.textThree'),
-        t('fourthSection.links.sixItem.textFour'),
-        t('fourthSection.links.sixItem.textFive')
+        t('fourthSection.links.sixItem.textFour')
       ]
     }
   ]
@@ -85,7 +85,14 @@ export default function WhatWeDo() {
           <ArrowMobile name={ArrowTop} section={'header'} />
         </div>
 
-        <Typography as="h1">{t('firstSection.title')}</Typography>
+        <Typography as="h1">
+          {' '}
+          {t('firstSection.titleOne')}
+          <br />
+          {t('firstSection.titleTwo')}
+          <br />
+          {t('firstSection.titleThree')}
+        </Typography>
 
         <p className="w-auto max-w-[220px] self-end text-sm font-semibold sm:text-base lg:max-w-[360px] lg:text-lg xl:text-2xl">
           {t('firstSection.subtitle')}
@@ -96,7 +103,11 @@ export default function WhatWeDo() {
         <hr className={cn('h-0.5 w-full border-0', 'bg-gray-300')} />
 
         <div className="relative flex w-full flex-col justify-between gap-10 sm:mb-8 md:flex-row">
-          <Typography as="h2">{t('secondSection.title')}</Typography>
+          <Typography as="h2">
+            {t('secondSection.titleOne')}
+            <br />
+            {t('secondSection.titleTwo')}
+          </Typography>
 
           <p className="w-auto max-w-[240px] self-end text-sm font-semibold sm:text-base md:self-start lg:max-w-[360px] lg:text-lg xl:text-2xl">
             {t('secondSection.subtitle')}

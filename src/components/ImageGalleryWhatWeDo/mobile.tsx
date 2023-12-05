@@ -31,7 +31,7 @@ export function ImageGalleryWhatWeDoMobile({
           </ImageGalleryWhatWeDoTitle>
 
           <ImageGalleryWhatWeDoSubtitle>
-            {t('fifthSection.firstLine.text')}
+            <p className="w-5/12">{t('fifthSection.firstLine.text')}</p>
           </ImageGalleryWhatWeDoSubtitle>
         </div>
       </div>
@@ -56,7 +56,7 @@ export function ImageGalleryWhatWeDoMobile({
           </ImageGalleryWhatWeDoTitle>
 
           <ImageGalleryWhatWeDoSubtitle>
-            {t('fifthSection.secondLine.text')}
+            <p className="w-5/12">{t('fifthSection.secondLine.text')}</p>
           </ImageGalleryWhatWeDoSubtitle>
         </div>
       </div>
@@ -81,7 +81,7 @@ export function ImageGalleryWhatWeDoMobile({
           </ImageGalleryWhatWeDoTitle>
 
           <ImageGalleryWhatWeDoSubtitle>
-            {t('fifthSection.thirdLine.text')}
+            <p className="w-5/12"> {t('fifthSection.thirdLine.text')}</p>
           </ImageGalleryWhatWeDoSubtitle>
         </div>
       </div>
@@ -105,7 +105,7 @@ export function ImageGalleryWhatWeDoMobile({
           </ImageGalleryWhatWeDoTitle>
 
           <ImageGalleryWhatWeDoSubtitle>
-            {t('fifthSection.fourthLline.text')}
+            <p className="w-6/12">{t('fifthSection.fourthLline.text')}</p>
           </ImageGalleryWhatWeDoSubtitle>
         </div>
       </div>

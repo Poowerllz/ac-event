@@ -101,68 +101,122 @@
   },
   "WhoWeAre": {
     "firstSection": {
-      "title": " Somos a anacouto. Somos branding e comunicação.",
-      "subtitle": "Há 30 anos alinhamos marca, negócio e comunicação para fazer branding icônicos através do nosso método proprietário. Usamos toda a nossa potência de propósito para impulsionar o valor de pessoas e organizações."
+      "titleOne": "We are an Anacouto.",
+      "titleTwo": "We are branding and",
+      "titleThree": "communication.",
+      "subtitle": "For 30 years we have aligned brand, business and communication to create iconic branding through our proprietary method. We use all our power on purpose to drive the value of people and organizations."
     },
     "secondSection": {
-      "title": "Fazemos a (r)evolução que a sua organização precisa",
+      "titleOne": "We make (r)evolution",
+      "titleTwo": "that your organization",
+      "titleThree": "it needs.",
       "gallery": {
-        "titleOne": "Propósito engajador e de impacto",
-        "titleTwo": "Experiências memoráveis que fidelizam",
-        "titleThree": "Narrativas que conectam com o seu público00000"
+        "titleOne1": "Purpose",
+        "titleOne2": "engaging ",
+        "titleOne3": "and impact",
+        "titleTwo1": "Experiences",
+        "titleTwo2": "memorable",
+        "titleTwo3": "that build loyalty",
+        "titleThree1": "Narratives",
+        "titleThree2": "that connect",
+        "titleThree3": "With your",
+        "titleThree4": "public."
       }
     },
     "thirdSection": {
       "title": {
-        "firstLine": "Podemos ajudar",
-        "secondLine": "sua organização a",
-        "thirdLine": "evoluir na velocidade",
-        "fourthLine": "que precisa"
+        "firstLine": "We can help",
+        "secondLine": "your organization to",
+        "thirdLine": "evolve at speed",
+        "fourthLine": "what you need."
       },
-      "phrase": "Propósito engajador e de impacto"
+      "phrase": "Engaging and impactful purpose."
     },
     "fourthSection": {
-      "title": "Time executivo que faz de propósito"
+      "title": "Executive team that does it on purpose."
     }
   },
   "WhatWeDo": {
     "firstSection": {
-      "title": "Somos a anacouto. Somos branding e comunicação.",
-      "subtitle": "Há 30 anos alinhamos marca, negócio e comunicação para fazer branding icônicos através do nosso método proprietário. Usamos toda a nossa potência de propósito para impulsionar o valor de pessoas e organizações."
+      "titleOne": "We are an Anacouto.",
+      "titleTwo": "We are branding and",
+      "titleThree": "communication.",
+      "subtitle": "For 30 years we have aligned brand, business and communication to create iconic branding through our proprietary method. We use all our power on purpose to drive the value of people and organizations."
     },
     "secondSection": {
-      "title": "Como gerir o valor do seu Branding?",
-      "subtitle": "As Ondas de Valor são um método proprietário anacouto para gerar e gerir valor de marcas. A Onda 3 representa as que se diferenciam na forma de relacionar com as pessoas."
+      "titleOne": "How to manage value",
+      "titleTwo": "of your Branding?",
+      "subtitle": "Value Waves are an Anacouto proprietary method for generating and managing brand value. Wave 3 represents those who differ in the way they relate to people."
     },
     "thirdSection": {
       "title": {
         "One": {
-          "newText": "Marca",
+          "newText": "Brand",
           "startText": "É"
         },
         "Two": {
-          "newText": "Negócio",
+          "newText": "Business",
           "startText": "FAZ"
         },
         "Three": {
-          "newText": "Comunicação",
+          "newText": "Communication",
           "startText": "FALA"
         }
       },
-      "span": "Metodologia",
-      "subtitle": "Geramos e gerimos valor. Da estratégia a execução. Da execução a gestão. Somos o ciclo completo e concreto de entregas a partir da nossa metodologia proprietária."
+      "span": "Methodology",
+      "subtitle": "We generate and manage value. From strategy to execution. From execution to management. We are the complete and concrete delivery cycle based on our proprietary methodology."
     },
     "fourthSection": {
-      "span": "Especialidades",
+      "span": "Specialties",
       "links": {
         "firstItem": {
-          "title": "Marca"
+          "title": "Brand",
+          "textOne": "Value Diagnosis Strategy",
+          "textTwo": "Branding Platform",
+          "textThree": "Name",
+          "textFour": "Brand Design",
+          "textFive": "Visual and Verbal Universe",
+          "textSix": "Branding Toolkit",
+          "textSeven": "Portfolio Management"
         },
-        "secondItem": "Negócio",
-        "thirdItem": "Comunicação",
-        "fourthItem": "Cultura",
-        "fifthItem": "Inovação",
-        "sixItem": "Valometry"
+        "secondItem": {
+          "title": "Business",
+          "textOne": "ON/OFF Journey",
+          "textTwo": "POV",
+          "textThree": "Atmosphere",
+          "textFour": "Digital solutions",
+          "textFive": "Design System"
+        },
+        "thirdItem": {
+          "title": "Communication",
+          "textOne": "Planning",
+          "textTwo": "Media",
+          "textThree": "Creation",
+          "textFour": "Production",
+          "textFive": "Social"
+        },
+        "fourthItem": {
+          "title": "Culture",
+          "textOne": "Cultural Transformation",
+          "textTwo": "EVP_Employer Brand",
+          "textThree": "Leadership Development"
+        },
+        "fifthItem": {
+          "title": "Innovation",
+          "textOne": "Applied Branding Course",
+          "textTwo": "Essential Branding Course",
+          "textThree": "CBO",
+          "textFour": "Community",
+          "textFive": "Newsletter",
+          "textSix": "Tip Talks"
+        },
+        "sixItem": {
+          "title": "Valometry",
+          "textOne": "Branding Tracking",
+          "textTwo": "Social listening",
+          "textThree": "OKR Dashboard",
+          "textFour": "Culturometer"
+        }
       },
       "hoverLinks": {
         "firstItem": "Example",
@@ -174,22 +228,22 @@
       }
     },
     "fifthSection": {
-      "title": "Fazer junto para encantar e impulsionar.",
+      "title": "Do it together to delight and boost.",
       "firstLine": {
-        "title": "Cocriação",
+        "title": "Co-creation",
         "text": "Através de parceria estratégica entre cliente e agência, chegamo às perguntas certas para desenhar cada solução."
       },
       "secondLine": {
-        "title": "Agilidade",
-        "text": "Com a aplicação de metodologias ágeis e reuniões de sprints."
+        "title": "Agility",
+        "text": "With the application of agile methodologies and sprint meetings."
       },
       "thirdLine": {
-        "title": "Solução",
-        "text": "Em encontros com diferentes tons e objetivos, como workshops, senergizers e provokes."
+        "title": "Solution",
+        "text": "In meetings with different tones and objectives, such as workshops, senergizers and provokes."
       },
       "fourthLline": {
-        "title": "Aprendizado gera autonomia",
-        "text": "Com reuniões de sprints e ferramentas de Design Thinking."
+        "title": "Learning generates autonomy",
+        "text": "With sprint meetings and Design Thinking tools."
       }
     }
   },

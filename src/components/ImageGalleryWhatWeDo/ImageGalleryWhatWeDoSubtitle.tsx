@@ -6,6 +6,8 @@ export function ImageGalleryWhatWeDoSubtitle({
   children: ReactNode
 }) {
   return (
-    <p className="text-sm font-light leading-none sm:text-lg">{children}</p>
+    <p className="flex justify-end text-sm font-light leading-none sm:text-lg">
+      {children}
+    </p>
   )
 }

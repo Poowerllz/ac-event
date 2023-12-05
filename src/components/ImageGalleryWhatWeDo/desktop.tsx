@@ -62,7 +62,7 @@ export function ImageGalleryWhatWeDoDesktop({
 
       <div className="flex flex-col justify-between gap-12 self-end">
         <ImageGalleryWhatWeDoSubtitle>
-          {t('fifthSection.thirdLine.title')}
+          {t('fifthSection.thirdLine.text')}
         </ImageGalleryWhatWeDoSubtitle>
 
         <div className="relative h-auto w-full">
