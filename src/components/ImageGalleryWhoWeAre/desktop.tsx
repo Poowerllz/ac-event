@@ -1,6 +1,6 @@
+import { useTranslations } from 'next-intl'
 import Image from 'next/image'
 import { ImageGalleryWhoWeAreProps } from './type'
-import { useTranslations } from 'next-intl'
 
 export function ImageGalleryWhoWeAreDesktop({
   images,
@@ -8,7 +8,7 @@ export function ImageGalleryWhoWeAreDesktop({
 }: ImageGalleryWhoWeAreProps) {
   const t = useTranslations('WhoWeAre')
   return (
-    <div className="grid h-full w-full grid-cols-4 content-stretch items-stretch justify-center gap-2 md:gap-4">
+    <div className="hidden h-full w-full grid-cols-4 content-stretch items-stretch justify-center gap-2 sm:grid md:gap-4">
       <div className="flex flex-col gap-5 md:gap-0">
         <div className="relative mb-4 h-auto w-full">
           <Image

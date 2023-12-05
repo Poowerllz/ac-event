@@ -1,5 +1,6 @@
 'use client'
 import { cn } from '@/common/utils/cn'
+import { SelectLanguage } from '@/components/SelectLanguage'
 import logoAnaCouto from '@/images/logo.png'
 import iconCloseButon from '@/images/svg/times.svg'
 import { AnimatePresence, motion } from 'framer-motion'
@@ -86,6 +87,7 @@ const Menu: React.FC<Props> = ({ refOpen }) => {
                   </Link>
 
                   <div className="flex items-center gap-4 sm:gap-10">
+                    <SelectLanguage />
                     <h2
                       onClick={() =>
                         (window.location.href = 'http://www.laje-ac.com.br/')

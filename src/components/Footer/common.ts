@@ -1,5 +1,4 @@
 import { createPath } from '@/common/utils/createPathImages'
-import BgHome from '@/images/png/home.png'
 import BgWhatWeDo from '@/images/png/whatWeDo.png'
 import BgWhoWeAre from '@/images/png/whoWeAre.png'
 import {
@@ -11,8 +10,8 @@ import {
 
 const backgrounds: BackgroundsProps = {
   '/': {
-    isImage: true,
-    src: '/images/orange-background.png'
+    isImage: false,
+    color: 'bg-primary'
   },
   '/quem-somos': {
     isImage: true,

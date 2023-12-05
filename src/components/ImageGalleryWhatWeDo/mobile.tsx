@@ -11,7 +11,7 @@ export function ImageGalleryWhatWeDoMobile({
   const t = useTranslations('WhatWeDo')
 
   return (
-    <div className="flex h-full w-full flex-col content-stretch items-stretch justify-center gap-2 md:gap-4">
+    <div className="flex h-full w-full flex-col content-stretch items-stretch justify-center gap-2 sm:hidden md:gap-4">
       <div className="mt-5 flex flex-col justify-between gap-5">
         <div className="relative h-auto w-full">
           <Image
