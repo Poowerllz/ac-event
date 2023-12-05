@@ -12,6 +12,7 @@ import LegacySiteURL from '@/common/utils/variables'
 
 export const mockArticles: any[] = [
   {
+    id: 12515,
     slug: 'paper-branding-trends-2023',
     title: { rendered: 'PAPER BRANDING TRENDS 2023' },
     _embedded: {
@@ -30,6 +31,7 @@ export const mockArticles: any[] = [
     }
   },
   {
+    id: 0,
     slug: 'branding-na-cadeira-do-ceo',
     title: { rendered: 'BRANDING NA CADEIRA DO CEO' },
     _embedded: {
@@ -49,6 +51,7 @@ export const mockArticles: any[] = [
   },
 
   {
+    id: 0,
     slug: 'calendario-2023/',
     title: {
       rendered: 'ORGANIZAÇÃO E IDEIAS EM AÇÃO: BAIXE O SEU CALENDÁRIO 2023'
@@ -69,6 +72,7 @@ export const mockArticles: any[] = [
     }
   },
   {
+    id: 0,
     slug: 'proposito-decodificado-um-olhar-renovador-sobre-um-tema-cansado/',
     title: {
       rendered:
@@ -90,6 +94,7 @@ export const mockArticles: any[] = [
     }
   },
   {
+    id: 0,
     slug: 'proposito-decodificado-um-olhar-renovador-sobre-um-tema-cansado/',
     title: { rendered: 'BRANDING BRASIL – O VALOR QUE O PAÍS GERA' },
     _embedded: {
