@@ -9,7 +9,7 @@ export default function Page({ params }: { params: { case_name: string } }) {
   return (
     <section className="min-h-screen w-full">
       <iframe
-        src={`${LegacySiteURL}/cases/${case_name}/`}
+        src={`${LegacySiteURL}?cases=/${case_name}/`}
         title={`${case_name} Case`}
         style={{
           height: '100vh',
