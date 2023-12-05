@@ -1,16 +1,20 @@
 'use client'
 
 import { getPathData } from '@/common/utils/getPathData'
+import dynamic from 'next/dynamic'
+import Image from 'next/image'
 import { usePathname } from 'next/navigation'
+import { useRef, useState } from 'react'
 import DynamicHeader from './DynamicHeader'
 import { MenuLogo } from './MenuLogo'
 import { pathVideoEn, pathVideoPtBr } from './common'
-import { useRef, useState } from 'react'
-import dynamic from 'next/dynamic'
-import Image from 'next/image'
 const ReactPlayer = dynamic(() => import('react-player'), { ssr: false })
 
-export default function Header() {
+export default function Header({
+  menu
+}: {
+  menu: { label: string; path: string }[]
+}) {
   const rawPath: string = usePathname()
   const pathData = getPathData(rawPath, pathVideoPtBr, pathVideoEn)
   const hideButtonRef = useRef()
@@ -18,7 +22,7 @@ export default function Header() {
   const [isReduced, setIsReduced] = useState<boolean>()
 
   if (pathData.hasBackgroundColor) {
-    return <MenuLogo bgColor={pathData.color || ''} />
+    return <MenuLogo menu={menu} bgColor={pathData.color || ''} />
   }
 
   return (
@@ -69,6 +73,7 @@ export default function Header() {
 
       <div className="relative flex h-full w-full overflow-hidden px-6 sm:px-16">
         <DynamicHeader
+          menu={menu}
           handleReduce={setIsReduced}
           videoPath={pathData.src}
           hideButtonRef={hideButtonRef}

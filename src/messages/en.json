@@ -270,6 +270,13 @@
           "secondItem": "Ethics and Compliance"
         }
       }
+    },
+    "Menu": {
+      "whoWeAre": "Who We Are",
+      "whatWeDo": "What We Do",
+      "cases": "Cases",
+      "articles": "Articles",
+      "contact": "Contact"
     }
   }
 }
