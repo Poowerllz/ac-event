@@ -1,10 +1,9 @@
-'use client'
-
+'use strite'
+import { useTranslations } from 'next-intl'
 import Image from 'next/image'
 import { ImageGalleryWhatWeDoSubtitle } from './ImageGalleryWhatWeDoSubtitle'
 import { ImageGalleryWhatWeDoTitle } from './ImageGalleryWhatWeDoTitle'
 import { ImageGalleryWhatWeDoProps } from './type'
-import { useTranslations } from 'next-intl'
 
 export function ImageGalleryWhatWeDoDesktop({
   images,

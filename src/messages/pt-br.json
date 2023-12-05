@@ -154,13 +154,53 @@
       "span": "Especialidades",
       "links": {
         "firstItem": {
-          "title": "Marca"
+          "title": "Marca",
+          "textOne": "Estratégia Diagnóstico de Valor",
+          "textTwo": "Plataforma de Branding",
+          "textThree": "Nome",
+          "textFour": "Design de Marca",
+          "textFive": "Universo Visual e Verbal",
+          "textSix": "Toolkit de Branding",
+          "textSeven": "Gestão de Portfólio"
         },
-        "secondItem": "Negócio",
-        "thirdItem": "Comunicação",
-        "fourthItem": "Cultura",
-        "fifthItem": "Inovação",
-        "sixItem": "Valometry"
+        "secondItem": {
+          "title": "Negócio",
+          "textOne": "Jornada ON/OFF",
+          "textTwo": "PDV",
+          "textThree": "Ambientação",
+          "textFour": "Soluções digitais",
+          "textFive": "Design System"
+        },
+        "thirdItem": {
+          "title": "Comunicação",
+          "textOne": "Planejamento",
+          "textTwo": "Midia",
+          "textThree": "Criação",
+          "textFour": "Produção",
+          "textFive": "Social"
+        },
+        "fourthItem": {
+          "title": "Cultura",
+          "textOne": "Transformação Cultural",
+          "textTwo": "EVP_Marca Empregadora",
+          "textThree": "Desenvolvimento Liderança"
+        },
+        "fifthItem": {
+          "title": "Inovação",
+          "textOne": "Curso Branding Aplicado",
+          "textTwo": "Curso Branding Essencial",
+          "textThree": "CBO",
+          "textFour": "Comunidade",
+          "textFive": "Newsletter",
+          "textSix": "Tip Talks"
+        },
+        "sixItem": {
+          "title": "Valometry",
+          "textOne": "Tracking do Branding",
+          "textTwo": "Listening de social",
+          "textThree": "Dashboard de OKR",
+          "textFour": "Culturômetro"
+        }
       },
       "hoverLinks": {
         "firstItem": "Example",

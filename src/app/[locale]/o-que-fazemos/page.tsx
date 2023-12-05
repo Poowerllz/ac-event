@@ -14,57 +14,63 @@ export default function WhatWeDo() {
 
   const linksKeys = [
     {
-      title: 'fourthSection.links.firstItem',
+      title: 'fourthSection.links.firstItem.title',
       items: [
-        'Estratégia Diagnóstico de Valor',
-        'Plataforma de Branding',
-        'Nome',
-        'Design de Marca',
-        'Universo Visual e Verbal',
-        'Toolkit de Branding',
-        'Gestão de Portfólio'
+        t('fourthSection.links.firstItem.textOne'),
+        t('fourthSection.links.firstItem.textTwo'),
+        t('fourthSection.links.firstItem.textThree'),
+        t('fourthSection.links.firstItem.textFour'),
+        t('fourthSection.links.firstItem.textFive'),
+        t('fourthSection.links.firstItem.textSix'),
+        t('fourthSection.links.firstItem.textSeven')
       ]
     },
     {
-      title: 'thirdSection.links.secondItem',
+      title: 'fourthSection.links.secondItem.title',
       items: [
-        'Jornada ON/OFF',
-        'PDV',
-        'Ambientação',
-        'Soluções digitais',
-        'Design System'
+        t('fourthSection.links.secondItem.textOne'),
+        t('fourthSection.links.secondItem.textTwo'),
+        t('fourthSection.links.secondItem.textThree'),
+        t('fourthSection.links.secondItem.textFour'),
+        t('fourthSection.links.secondItem.textFive')
       ]
     },
     {
-      title: 'thirdSection.links.thirdItem',
-      items: ['Planejamento', 'Midia', 'Criação', 'Produção', 'Social']
-    },
-    {
-      title: 'thirdSection.links.fourthItem',
+      title: 'thirdSection.links.fourthItem.title',
       items: [
-        'Transformação Cultural',
-        'EVP_Marca Empregadora',
-        'Desenvolvimento Liderança'
+        t('fourthSection.links.thirdItem.textOne'),
+        t('fourthSection.links.thirdItem.textTwo'),
+        t('fourthSection.links.thirdItem.textThree'),
+        t('fourthSection.links.thirdItem.textFour'),
+        t('fourthSection.links.thirdItem.textFive')
       ]
     },
     {
-      title: 'thirdSection.links.fifthItem',
+      title: 'thirdSection.links.fourthItem.title',
       items: [
-        'Curso Branding Aplicado',
-        'Curso Branding Essencial',
-        'CBO',
-        'Comunidade',
-        'Newsletter',
-        'Tip Talks'
+        t('fourthSection.links.fourthItem.textOne'),
+        t('fourthSection.links.fourthItem.textTwo'),
+        t('fourthSection.links.fourthItem.textThree')
       ]
     },
     {
-      title: 'thirdSection.links.sixItem',
+      title: 'thirdSection.links.fifthItem.title',
       items: [
-        'Tracking do Branding',
-        'Listening de social',
-        'Dashboard de OKR',
-        'Culturômetro'
+        t('fourthSection.links.fifthItem.textOne'),
+        t('fourthSection.links.fifthItem.textTwo'),
+        t('fourthSection.links.fifthItem.textThree'),
+        t('fourthSection.links.fifthItem.textFour'),
+        t('fourthSection.links.fifthItem.textFive'),
+        t('fourthSection.links.fifthItem.textSix')
+      ]
+    },
+    {
+      title: 'thirdSection.links.sixItem.title',
+      items: [
+        t('fourthSection.links.sixItem.textTwo'),
+        t('fourthSection.links.sixItem.textThree'),
+        t('fourthSection.links.sixItem.textFour'),
+        t('fourthSection.links.sixItem.textFive')
       ]
     }
   ]
@@ -79,11 +85,7 @@ export default function WhatWeDo() {
           <ArrowMobile name={ArrowTop} section={'header'} />
         </div>
 
-        <Typography as="h1">
-          {t('firstSection.title')}
-          {/* Somos a anacouto. <br />
-          Somos branding <br />e comunicação. */}
-        </Typography>
+        <Typography as="h1">{t('firstSection.title')}</Typography>
 
         <p className="w-auto max-w-[220px] self-end text-sm font-semibold sm:text-base lg:max-w-[360px] lg:text-lg xl:text-2xl">
           {t('firstSection.subtitle')}
@@ -94,12 +96,7 @@ export default function WhatWeDo() {
         <hr className={cn('h-0.5 w-full border-0', 'bg-gray-300')} />
 
         <div className="relative flex w-full flex-col justify-between gap-10 sm:mb-8 md:flex-row">
-          <Typography as="h2">
-            {t('secondSection.title')}
-            {/* Como gerir o valor
-            <br />
-            do seu Branding? */}
-          </Typography>
+          <Typography as="h2">{t('secondSection.title')}</Typography>
 
           <p className="w-auto max-w-[240px] self-end text-sm font-semibold sm:text-base md:self-start lg:max-w-[360px] lg:text-lg xl:text-2xl">
             {t('secondSection.subtitle')}
@@ -155,11 +152,6 @@ export default function WhatWeDo() {
               startsOpen={index === 0}
             />
           ))}
-          {/* {t('WhatWeDo.fourthSection.links.firstItem.items', {
-            returnObjects: true
-          }).map((item, key) => (
-            <li key={key}>{item}</li>
-          ))} */}
         </ul>
       </section>
 
