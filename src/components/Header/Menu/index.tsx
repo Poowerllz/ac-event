@@ -1,4 +1,5 @@
 'use client'
+
 import { cn } from '@/common/utils/cn'
 import { SelectLanguage } from '@/components/SelectLanguage'
 import logoAnaCouto from '@/images/logo.png'
@@ -10,18 +11,11 @@ import React, { useEffect, useState } from 'react'
 
 type Props = {
   refOpen: any
+  menuOptions: { label: string; path: string }[]
 }
 
-const Menu: React.FC<Props> = ({ refOpen }) => {
+const Menu: React.FC<Props> = ({ refOpen, menuOptions }) => {
   const [menuIsOpen, setMenuIsOpen] = useState(false)
-
-  const items = [
-    { label: 'Quem somos', path: 'quem-somos' },
-    { label: 'O que fazemos', path: 'o-que-fazemos' },
-    { label: 'Cases', path: '/cases' },
-    { label: 'Artigos', path: '/artigos' },
-    { label: 'Contato', path: '/contato' }
-  ]
 
   useEffect(() => {
     if (menuIsOpen) {
@@ -124,7 +118,7 @@ const Menu: React.FC<Props> = ({ refOpen }) => {
                 </div>
 
                 <div className="mt-8 flex w-full flex-col gap-3 sm:mt-20">
-                  {items.map((item, idx) => (
+                  {menuOptions.map((item, idx) => (
                     <Link
                       key={idx}
                       href={item.path}

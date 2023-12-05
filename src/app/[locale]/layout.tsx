@@ -6,15 +6,16 @@ import './globals.css'
 
 import Header from '@/components/Header'
 
-import 'swiper/css/free-mode'
+import Analytics from '@/components/GoogleTag'
+import { useTranslations } from 'next-intl'
+import Script from 'next/script'
+import { Suspense } from 'react'
 import 'swiper/css'
+import 'swiper/css/free-mode'
+import 'swiper/css/grid'
 import 'swiper/css/navigation'
 import 'swiper/css/pagination'
 import 'swiper/css/scrollbar'
-import 'swiper/css/grid'
-import Script from 'next/script'
-import { Suspense } from 'react'
-import Analytics from '@/components/GoogleTag'
 
 const locales = ['pt-br', 'en']
 
@@ -33,6 +34,15 @@ export default function LocaleLayout({
   const isValidLocale = locales.some(cur => cur === locale)
   if (!isValidLocale) notFound()
 
+  const t = useTranslations('Components.Menu')
+  const menus = [
+    { label: t('whoWeAre'), path: 'quem-somos' },
+    { label: t('whatWeDo'), path: 'o-que-fazemos' },
+    { label: t('cases'), path: '/cases' },
+    { label: t('articles'), path: '/artigos' },
+    { label: t('contact'), path: '/contato' }
+  ]
+
   return (
     <html
       lang={locale}
@@ -47,7 +57,7 @@ export default function LocaleLayout({
           type="text/javascript"
           src="https://d335luupugsy2.cloudfront.net/js/rdstation-forms/stable/rdstation-forms.min.js"
         />
-        <Header />
+        <Header menu={menus} />
         <main className="h-full w-full">{children}</main>
         <Footer />
       </body>

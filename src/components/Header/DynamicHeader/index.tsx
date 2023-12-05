@@ -20,6 +20,7 @@ export type Props = {
   videoPath: string
   onPause: () => void
   handleReduce: (val: boolean) => void
+  menu: { label: string; path: string }[]
 }
 
 const Path = (props: any) => (
@@ -35,7 +36,8 @@ const Path = (props: any) => (
 const DynamicHeader: React.FC<Props> = ({
   hideButtonRef,
   onPause,
-  handleReduce
+  handleReduce,
+  menu
 }) => {
   const [showBackground, setShowBackground] = useState(true)
   const isMobile = useMediaQuery('(max-width: 600px)')
@@ -147,7 +149,7 @@ const DynamicHeader: React.FC<Props> = ({
 
       <NavbarSticky invert={pathData.invert} />
 
-      <Menu refOpen={MenuRef} />
+      <Menu refOpen={MenuRef} menuOptions={menu} />
 
       <Link href={'/'} scroll={false}>
         <Image
