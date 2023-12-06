@@ -75,7 +75,7 @@ export function ImageGalleryExecutiveTeamDesktop() {
     {
       name: 'Hugo Rafael',
       src: `${LegacySiteURL}/wp-content/uploads/2022/07/HUGO_IMG_CROP_PB-250x300.png`,
-      class: 'col-span-2 col-start-2 row-start-5',
+      class: 'col-span-2 col-start-1 row-start-5',
       onClick: 'author/hugo-rafael'
     }
   ]
@@ -91,6 +91,9 @@ export function ImageGalleryExecutiveTeamDesktop() {
               'relative cursor-pointer transition-opacity hover:opacity-80 hover:transition-opacity'
             )}
             onClick={() => window.open(`${LegacySiteURL}/${executive.onClick}`)}
+            onKeyDown={() =>
+              window.open(`${LegacySiteURL}/${executive.onClick}`)
+            }
           >
             <div className="relative h-full w-full">
               <Image
