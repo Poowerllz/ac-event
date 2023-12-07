@@ -1,7 +1,7 @@
 import { cn } from '@/common/utils/cn'
 import { AnaCoutoMascot } from '@/components/AnaCoutoMascot'
-import { ArrowMobile } from '@/components/arrowMobile'
-import ArrowTop from '@/images/svg/arrowtop.svg'
+import { ArrowIcon } from '@/components/ui/Icon'
+import useMediaQuery from '@/hooks/useMediaQuery'
 import { AnimatePresence, motion } from 'framer-motion'
 import { usePathname } from 'next/navigation'
 import { useEffect, useState } from 'react'
@@ -11,11 +11,21 @@ type TNavbarSticky = {
 }
 
 export function NavbarSticky({ invert }: TNavbarSticky) {
+  const isMobile = useMediaQuery('(max-width: 600px)')
   const pathaname = usePathname()
 
   const [scrollPosition, setScrollPosition] = useState(0)
   const [isMascotVisible, setIsMascotVisible] = useState(false)
   const [isArrowVisible, setIsArrowVisible] = useState(false)
+
+  const handleScrollTop = (selectValue: string) => {
+    const section = document.getElementById(selectValue)
+
+    if (section)
+      section.scrollIntoView({
+        behavior: 'smooth'
+      })
+  }
 
   useEffect(() => {
     const handleScroll = () => {
@@ -34,7 +44,7 @@ export function NavbarSticky({ invert }: TNavbarSticky) {
   }, [scrollPosition])
 
   useEffect(() => {
-    setIsArrowVisible(scrollPosition > 1000)
+    setIsArrowVisible(scrollPosition > 100)
   }, [scrollPosition])
 
   return (
@@ -46,23 +56,26 @@ export function NavbarSticky({ invert }: TNavbarSticky) {
       >
         <nav
           className={cn(
-            'fixed z-10 flex w-[82%] items-start justify-between pt-14 opacity-100 transition sm:w-[92%]'
+            'fixed z-10 flex w-[80%] items-start justify-between pt-14 opacity-100 transition sm:w-[90%]'
           )}
         >
           {isMascotVisible && (
             <div className="relative mb-5 h-auto w-10">
               <AnaCoutoMascot
                 fill={invert ? '' : '#ffffff'}
-                className="shadow-2xl"
+                className="stroke-black stroke-[0.2px] shadow-2xl"
               />
             </div>
           )}
 
           {isArrowVisible && (
-            <ArrowMobile
-              name={ArrowTop}
-              section={'header'}
+            <ArrowIcon
               invert={pathaname === '/' ?? true}
+              className={cn(
+                'h-auto cursor-pointer fill-white stroke-black stroke-[0.5px]',
+                isMobile ? 'w-3' : 'w-6'
+              )}
+              onclick={() => handleScrollTop('header')}
             />
           )}
         </nav>
@@ -70,3 +83,9 @@ export function NavbarSticky({ invert }: TNavbarSticky) {
     </AnimatePresence>
   )
 }
+
+// ;<ArrowMobile
+//   name={ArrowTop}
+//   section={'header'}
+//   invert={pathaname === '/' ?? true}
+// />
