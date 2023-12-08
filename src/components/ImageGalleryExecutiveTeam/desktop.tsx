@@ -1,6 +1,7 @@
 import { cn } from '@/common/utils/cn'
 import LegacySiteURL from '@/common/utils/variables'
 import Image from 'next/image'
+import { Fragment } from 'react'
 import { ImageGalleryExecutiveTeamTitle } from './ImageGalleryExecutiveTeamTitle'
 import { ExecutiveTeam } from './type'
 
@@ -75,43 +76,82 @@ export function ImageGalleryExecutiveTeamDesktop() {
     {
       name: 'Hugo Rafael',
       src: `${LegacySiteURL}/wp-content/uploads/2022/07/HUGO_IMG_CROP_PB-250x300.png`,
-      class: 'col-span-2 col-start-1 row-start-5',
+      class: '',
       onClick: '?author=11'
     }
   ]
 
   return (
-    <div className="grid h-[300vh] grid-cols-5 grid-rows-5 gap-1 text-xs sm:gap-4 sm:text-lg">
-      {executiveTeam.map(executive => {
-        return (
-          <div
-            key={executive.name}
-            className={cn(
-              executive.class,
-              'relative cursor-pointer transition-opacity hover:opacity-80 hover:transition-opacity'
-            )}
-            onClick={() => window.open(`${LegacySiteURL}/${executive.onClick}`)}
-            onKeyDown={() =>
-              window.open(`${LegacySiteURL}/${executive.onClick}`)
-            }
-          >
-            <div className="relative h-full w-full">
-              <Image
-                src={executive.src}
-                alt={executive.name}
-                fill
-                quality={100}
-                style={{ height: '100%', width: '100%' }}
-                className="object-cover"
-              />
-            </div>
+    <Fragment>
+      <div className="grid h-[300vh] grid-cols-5 grid-rows-4 gap-1 text-xs sm:gap-4 sm:text-lg">
+        {executiveTeam.map((executive, index, array) => {
+          const isLastItem = index === array.length - 1
 
-            <ImageGalleryExecutiveTeamTitle>
-              {executive.name}
-            </ImageGalleryExecutiveTeamTitle>
+          if (isLastItem) return
+
+          return (
+            <div
+              key={executive.name}
+              className={cn(
+                executive.class,
+                'relative cursor-pointer transition-opacity hover:opacity-80 hover:transition-opacity'
+              )}
+              onClick={() =>
+                window.open(`${LegacySiteURL}/${executive.onClick}`)
+              }
+              onKeyDown={() =>
+                window.open(`${LegacySiteURL}/${executive.onClick}`)
+              }
+            >
+              <div className="relative h-full w-full">
+                <Image
+                  src={executive.src}
+                  alt={executive.name}
+                  fill
+                  quality={100}
+                  style={{ height: '100%', width: '100%' }}
+                  className="object-cover"
+                />
+              </div>
+
+              <ImageGalleryExecutiveTeamTitle>
+                {executive.name}
+              </ImageGalleryExecutiveTeamTitle>
+            </div>
+          )
+        })}
+      </div>
+
+      <div className="mt-[1rem] flex h-[50vh] items-center justify-center">
+        <div
+          key={executiveTeam[11].name}
+          className={cn(
+            executiveTeam[11].class,
+            'relative h-full w-[745.99px] cursor-pointer transition-opacity hover:opacity-80 hover:transition-opacity'
+          )}
+          onClick={() =>
+            window.open(`${LegacySiteURL}/${executiveTeam[11].onClick}`)
+          }
+          onKeyDown={() =>
+            window.open(`${LegacySiteURL}/${executiveTeam[11].onClick}`)
+          }
+        >
+          <div className="relative h-full w-full">
+            <Image
+              src={executiveTeam[11].src}
+              alt={executiveTeam[11].name}
+              fill
+              quality={100}
+              style={{ height: '100%', width: '100%' }}
+              className="object-cover"
+            />
           </div>
-        )
-      })}
-    </div>
+
+          <ImageGalleryExecutiveTeamTitle>
+            {executiveTeam[11].name}
+          </ImageGalleryExecutiveTeamTitle>
+        </div>
+      </div>
+    </Fragment>
   )
 }

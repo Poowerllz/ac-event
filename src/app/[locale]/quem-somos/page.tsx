@@ -45,7 +45,7 @@ export default function WhoWeAre() {
         <GallerySection />
       </section>
 
-      <section className="mb-4 w-full flex-col gap-10 px-2 sm:px-4 sm:py-10">
+      <section className="mb-2 w-full flex-col gap-10 px-2 sm:px-4 sm:py-10">
         <Typography
           as="h2"
           className="px-4 py-14 sm:px-12 md:text-[4.7rem] md:leading-[4.7rem]"
