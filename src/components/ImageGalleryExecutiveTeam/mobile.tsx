@@ -10,73 +10,73 @@ export function ImageGalleryExecutiveTeamMobile() {
       name: 'Ana Couto',
       src: '/images/ana-couto.png',
       class: 'col-span-2',
-      onClick: 'author/ana-couto'
+      onClick: '?=authorana-couto'
     },
     {
       name: 'Luiz Felippe Netto',
       src: `${LegacySiteURL}/wp-content/uploads/2022/07/LUIZ_IMG_CROP_PB-250x300.png`,
       class: 'col-start-3',
-      onClick: 'author/luis-felippe'
+      onClick: '?=authorluis-felippe'
     },
     {
       name: 'Aline Rubiano',
       src: `${LegacySiteURL}/wp-content/uploads/2022/07/ALINE_IMG_CROP_PB-250x300.png`,
       class: 'col-span-2 col-start-2 row-start-2',
-      onClick: 'author/aline-rubiano'
+      onClick: '?=authoraline-rubiano'
     },
     {
       name: 'James Pereira',
       src: `${LegacySiteURL}/wp-content/uploads/2022/07/JAMES_CROP_PB-250x300.png`,
       class: 'col-start-1 row-start-2',
-      onClick: 'author/james-pereira'
+      onClick: '?=authorjames-pereira'
     },
     {
       name: 'Danilo Cid',
       src: '/images/danilo-cid.png',
       class: 'col-span-2 row-start-3',
-      onClick: 'author/danilo-cid'
+      onClick: '?=authordanilo-cid'
     },
     {
       name: 'Rafael Torres',
       src: `${LegacySiteURL}/wp-content/uploads/2022/07/RAFAEL_CROP_PB-1-250x300.png`,
       class: 'row-start-4',
-      onClick: 'author/rafael-torres'
+      onClick: '?=authorrafael-torres'
     },
     {
       name: 'Erika Pinheiro',
       src: `${LegacySiteURL}/wp-content/uploads/2022/07/socios_pb_0000_fotos_site_0001_perfil_erika_banner-1-250x300.jpg`,
       class: 'row-start-4',
-      onClick: 'author/erika-pinheiro'
+      onClick: '?=authorerika-pinheiro'
     },
     {
       name: 'Napoleon Fujisawa',
       src: `${LegacySiteURL}/wp-content/uploads/2022/07/NAPO_CROP_PB-250x300.png`,
       class: 'row-start-4',
-      onClick: 'author/napoleon-fujisawa'
+      onClick: '?=authornapoleon-fujisawa'
     },
     {
       name: 'Fernanda Galluzi',
       src: '/images/fernanda-galluzi.png',
       class: 'col-span-2 col-start-2 row-start-5',
-      onClick: 'author/fernanda-galluzi'
+      onClick: '?=authorfernanda-galluzi'
     },
     {
       name: 'Igor Cardoso',
       src: `${LegacySiteURL}/wp-content/uploads/2022/07/IGOR_FINAL2_CROP_PB-250x300.png`,
       class: 'col-start-3 row-start-6',
-      onClick: 'author/igor-cardoso'
+      onClick: '?=authorigor-cardoso'
     },
     {
       name: 'Marcelle Villar',
       src: `${LegacySiteURL}/wp-content/uploads/2022/07/MARCELLE_CROP_PB-250x300.png`,
       class: 'col-start-2 row-start-6',
-      onClick: 'author/marcelle-villar'
+      onClick: '?=authormarcelle-villar'
     },
     {
       name: 'Hugo Rafael',
       src: `${LegacySiteURL}/wp-content/uploads/2022/07/HUGO_IMG_CROP_PB-250x300.png`,
       class: 'col-span-2 row-start-7',
-      onClick: 'author/hugo-rafael'
+      onClick: '?=authorhugo-rafael'
     }
   ]
 
@@ -111,7 +111,7 @@ export function ImageGalleryExecutiveTeamMobile() {
 
       {/* <div
         className="relative row-start-2 "
-        onClick={() => window.open(`${LegacySiteURL}/author/igor-cardoso`)}
+        onClick={() => window.open(`${LegacySiteURL}/authorigor-cardoso`)}
       >
         <div className="relative h-full w-full">
           <Image
@@ -130,7 +130,7 @@ export function ImageGalleryExecutiveTeamMobile() {
 
       <div
         className="relative row-start-2 "
-        onClick={() => window.open(`${LegacySiteURL}/author/james-pereira`)}
+        onClick={() => window.open(`${LegacySiteURL}/authorjames-pereira`)}
       >
         <div className="relative h-full w-full">
           <Image
@@ -149,7 +149,7 @@ export function ImageGalleryExecutiveTeamMobile() {
 
       <div
         className="relative "
-        onClick={() => window.open(`${LegacySiteURL}/author/erika-pinheiro`)}
+        onClick={() => window.open(`${LegacySiteURL}/authorerika-pinheiro`)}
       >
         <div className="relative h-full w-full">
           <Image
