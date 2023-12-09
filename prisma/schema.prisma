@@ -1,0 +1,990 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+model acb_actionscheduler_actions {
+  action_id            BigInt   @id @default(autoincrement()) @db.UnsignedBigInt
+  hook                 String
+  status               String   @db.VarChar(20)
+  scheduled_date_gmt   DateTime @default(dbgenerated("('0000-00-00 00:00:00')")) @db.DateTime(0)
+  scheduled_date_local DateTime @default(dbgenerated("('0000-00-00 00:00:00')")) @db.DateTime(0)
+  args                 String?
+  schedule             String?  @db.LongText
+  group_id             BigInt   @default(0) @db.UnsignedBigInt
+  attempts             Int      @default(0)
+  last_attempt_gmt     DateTime @default(dbgenerated("('0000-00-00 00:00:00')")) @db.DateTime(0)
+  last_attempt_local   DateTime @default(dbgenerated("('0000-00-00 00:00:00')")) @db.DateTime(0)
+  claim_id             BigInt   @default(0) @db.UnsignedBigInt
+  extended_args        String?  @db.VarChar(8000)
+
+  @@index([args], map: "args")
+  @@index([claim_id], map: "claim_id")
+  @@index([claim_id, status, scheduled_date_gmt], map: "claim_id_status_scheduled_date_gmt")
+  @@index([group_id], map: "group_id")
+  @@index([hook], map: "hook")
+  @@index([last_attempt_gmt], map: "last_attempt_gmt")
+  @@index([scheduled_date_gmt], map: "scheduled_date_gmt")
+  @@index([status], map: "status")
+}
+
+model acb_actionscheduler_claims {
+  claim_id         BigInt   @id @default(autoincrement()) @db.UnsignedBigInt
+  date_created_gmt DateTime @default(dbgenerated("('0000-00-00 00:00:00')")) @db.DateTime(0)
+
+  @@index([date_created_gmt], map: "date_created_gmt")
+}
+
+model acb_actionscheduler_groups {
+  group_id BigInt @id @default(autoincrement()) @db.UnsignedBigInt
+  slug     String @db.VarChar(255)
+
+  @@index([slug(length: 191)], map: "slug")
+}
+
+model acb_commentmeta {
+  meta_id    BigInt  @id @default(autoincrement()) @db.UnsignedBigInt
+  comment_id BigInt  @default(0) @db.UnsignedBigInt
+  meta_key   String? @db.VarChar(255)
+  meta_value String? @db.LongText
+
+  @@index([comment_id], map: "comment_id")
+  @@index([meta_key(length: 191)], map: "meta_key")
+}
+
+model acb_comments {
+  comment_ID           BigInt   @id @default(autoincrement()) @db.UnsignedBigInt
+  comment_post_ID      BigInt   @default(0) @db.UnsignedBigInt
+  comment_author       String   @db.TinyText
+  comment_author_email String   @default("") @db.VarChar(100)
+  comment_author_url   String   @default("") @db.VarChar(200)
+  comment_author_IP    String   @default("") @db.VarChar(100)
+  comment_date         DateTime @default(dbgenerated("('0000-00-00 00:00:00')")) @db.DateTime(0)
+  comment_date_gmt     DateTime @default(dbgenerated("('0000-00-00 00:00:00')")) @db.DateTime(0)
+  comment_content      String   @db.Text
+  comment_karma        Int      @default(0)
+  comment_approved     String   @default("1") @db.VarChar(20)
+  comment_agent        String   @default("") @db.VarChar(255)
+  comment_type         String   @default("comment") @db.VarChar(20)
+  comment_parent       BigInt   @default(0) @db.UnsignedBigInt
+  user_id              BigInt   @default(0) @db.UnsignedBigInt
+
+  @@index([comment_approved, comment_date_gmt], map: "comment_approved_date_gmt")
+  @@index([comment_author_email(length: 10)], map: "comment_author_email")
+  @@index([comment_date_gmt], map: "comment_date_gmt")
+  @@index([comment_parent], map: "comment_parent")
+  @@index([comment_post_ID], map: "comment_post_ID")
+}
+
+model acb_e_events {
+  id         BigInt   @id @default(autoincrement()) @db.UnsignedBigInt
+  event_data String?  @db.Text
+  created_at DateTime @db.DateTime(0)
+
+  @@index([created_at], map: "created_at_index")
+}
+
+/// This model or at least one of its fields has comments in the database, and requires an additional setup for migrations: Read more: https://pris.ly/d/database-comments
+model acb_e_submissions {
+  id                      BigInt   @id @default(autoincrement()) @db.UnsignedBigInt
+  type                    String?  @db.VarChar(60)
+  hash_id                 String   @unique(map: "hash_id_unique_index") @db.VarChar(60)
+  main_meta_id            BigInt   @db.UnsignedBigInt
+  post_id                 BigInt   @db.UnsignedBigInt
+  referer                 String   @db.VarChar(500)
+  referer_title           String?  @db.VarChar(300)
+  element_id              String   @db.VarChar(20)
+  form_name               String   @db.VarChar(60)
+  campaign_id             BigInt   @db.UnsignedBigInt
+  user_id                 BigInt?  @db.UnsignedBigInt
+  user_ip                 String   @db.VarChar(46)
+  user_agent              String   @db.Text
+  actions_count           Int?     @default(0)
+  actions_succeeded_count Int?     @default(0)
+  status                  String   @db.VarChar(20)
+  is_read                 Boolean  @default(false)
+  meta                    String?  @db.Text
+  created_at_gmt          DateTime @db.DateTime(0)
+  updated_at_gmt          DateTime @db.DateTime(0)
+  created_at              DateTime @db.DateTime(0)
+  updated_at              DateTime @db.DateTime(0)
+
+  @@index([campaign_id], map: "campaign_id_index")
+  @@index([created_at_gmt], map: "created_at_gmt_index")
+  @@index([created_at], map: "created_at_index")
+  @@index([element_id], map: "element_id_index")
+  @@index([hash_id], map: "hash_id_index")
+  @@index([is_read], map: "is_read_index")
+  @@index([main_meta_id], map: "main_meta_id_index")
+  @@index([post_id], map: "post_id_index")
+  @@index([referer(length: 191)], map: "referer_index")
+  @@index([referer_title(length: 191)], map: "referer_title_index")
+  @@index([status], map: "status_index")
+  @@index([type], map: "type_index")
+  @@index([updated_at_gmt], map: "updated_at_gmt_index")
+  @@index([updated_at], map: "updated_at_index")
+  @@index([user_id], map: "user_id_index")
+  @@index([user_ip], map: "user_ip_index")
+}
+
+model acb_e_submissions_actions_log {
+  id             BigInt   @id @default(autoincrement()) @db.UnsignedBigInt
+  submission_id  BigInt   @db.UnsignedBigInt
+  action_name    String   @db.VarChar(60)
+  action_label   String?  @db.VarChar(60)
+  status         String   @db.VarChar(20)
+  log            String?  @db.Text
+  created_at_gmt DateTime @db.DateTime(0)
+  updated_at_gmt DateTime @db.DateTime(0)
+  created_at     DateTime @db.DateTime(0)
+  updated_at     DateTime @db.DateTime(0)
+
+  @@index([action_name], map: "action_name_index")
+  @@index([created_at_gmt], map: "created_at_gmt_index")
+  @@index([created_at], map: "created_at_index")
+  @@index([status], map: "status_index")
+  @@index([submission_id], map: "submission_id_index")
+  @@index([updated_at_gmt], map: "updated_at_gmt_index")
+  @@index([updated_at], map: "updated_at_index")
+}
+
+model acb_e_submissions_values {
+  id            BigInt  @id @default(autoincrement()) @db.UnsignedBigInt
+  submission_id BigInt  @default(0) @db.UnsignedBigInt
+  key           String? @db.VarChar(60)
+  value         String? @db.LongText
+
+  @@index([key], map: "key_index")
+  @@index([submission_id], map: "submission_id_index")
+}
+
+model acb_gglcptch_allowlist {
+  id          Int       @id @default(autoincrement()) @db.UnsignedInt
+  ip          String    @unique(map: "ip") @db.Char(31)
+  ip_from_int BigInt?
+  ip_to_int   BigInt?
+  add_time    DateTime? @db.DateTime(0)
+}
+
+model acb_icl_background_task {
+  task_id         BigInt    @id @default(autoincrement()) @db.UnsignedBigInt
+  task_type       String    @db.VarChar(500)
+  task_status     Int       @default(0) @db.UnsignedSmallInt
+  starting_date   DateTime? @db.DateTime(0)
+  total_count     Int       @default(0) @db.UnsignedInt
+  completed_count Int       @default(0) @db.UnsignedInt
+  completed_ids   String?   @db.Text
+  payload         String?   @db.Text
+  retry_count     Int       @default(0) @db.UnsignedSmallInt
+}
+
+model acb_icl_cms_nav_cache {
+  id        BigInt   @id @default(autoincrement())
+  cache_key String   @db.VarChar(128)
+  type      String   @db.VarChar(128)
+  data      String   @db.Text
+  timestamp DateTime @default(now()) @db.Timestamp(0)
+}
+
+model acb_icl_content_status {
+  rid       BigInt   @id
+  nid       BigInt
+  timestamp DateTime @db.DateTime(0)
+  md5       String   @db.VarChar(32)
+
+  @@index([nid], map: "nid")
+}
+
+model acb_icl_core_status {
+  id          BigInt  @id @default(autoincrement())
+  rid         BigInt
+  module      String  @db.VarChar(16)
+  origin      String  @db.VarChar(64)
+  target      String  @db.VarChar(64)
+  status      Int     @db.SmallInt
+  tp_revision Int     @default(1)
+  ts_status   String? @db.Text
+
+  @@index([rid], map: "rid")
+}
+
+model acb_icl_flags {
+  id            Int    @id @default(autoincrement())
+  lang_code     String @unique(map: "lang_code") @db.VarChar(10)
+  flag          String @db.VarChar(32)
+  from_template Int    @default(0) @db.TinyInt
+}
+
+model acb_icl_languages {
+  id             Int     @id @default(autoincrement())
+  code           String  @unique(map: "code") @db.VarChar(7)
+  english_name   String  @unique(map: "english_name") @db.VarChar(128)
+  major          Int     @default(0) @db.TinyInt
+  active         Int     @db.TinyInt
+  default_locale String? @db.VarChar(35)
+  tag            String? @db.VarChar(35)
+  encode_url     Boolean @default(false)
+  country        String? @db.VarChar(10)
+}
+
+model acb_icl_languages_translations {
+  id                    Int    @id @default(autoincrement())
+  language_code         String @db.VarChar(7)
+  display_language_code String @db.VarChar(7)
+  name                  String @db.VarChar(255)
+
+  @@unique([language_code, display_language_code], map: "language_code")
+}
+
+/// The underlying table does not contain a valid unique identifier and can therefore currently not be handled by Prisma Client.
+model acb_icl_locale_map {
+  l_code         Int    @map("l.code")
+  m_locale       String @map("m.locale") @db.MediumText
+  default_locale String @db.MediumText
+
+  @@ignore
+}
+
+model acb_icl_message_status {
+  id            BigInt   @id @default(autoincrement()) @db.UnsignedBigInt
+  rid           BigInt   @unique(map: "rid") @db.UnsignedBigInt
+  object_id     BigInt   @db.UnsignedBigInt
+  from_language String   @db.VarChar(10)
+  to_language   String   @db.VarChar(10)
+  timestamp     DateTime @default(now()) @db.Timestamp(0)
+  md5           String   @db.VarChar(32)
+  object_type   String   @db.VarChar(64)
+  status        Int      @db.SmallInt
+
+  @@index([object_id], map: "object_id")
+}
+
+model acb_icl_mo_files_domains {
+  id             Int                                     @id @default(autoincrement())
+  file_path      String                                  @db.VarChar(250)
+  file_path_md5  String                                  @unique(map: "file_path_md5_UNIQUE") @db.VarChar(32)
+  domain         String                                  @db.VarChar(45)
+  status         String                                  @default("not_imported") @db.VarChar(20)
+  num_of_strings Int                                     @default(0)
+  last_modified  Int
+  component_type acb_icl_mo_files_domains_component_type @default(other)
+  component_id   String?                                 @db.VarChar(100)
+}
+
+model acb_icl_node {
+  nid         BigInt @id
+  md5         String @db.VarChar(32)
+  links_fixed Int    @default(0) @db.TinyInt
+}
+
+model acb_icl_reminders {
+  id         BigInt @id
+  message    String @db.Text
+  url        String @db.Text
+  can_delete Int    @db.TinyInt
+  show       Int    @db.TinyInt
+}
+
+model acb_icl_string_pages {
+  id        BigInt @id @default(autoincrement()) @db.UnsignedBigInt
+  string_id BigInt
+  url_id    BigInt
+
+  @@index([url_id], map: "string_to_url_id")
+}
+
+model acb_icl_string_positions {
+  id               BigInt @id @default(autoincrement()) @db.UnsignedBigInt
+  string_id        BigInt
+  kind             Int?   @db.TinyInt
+  position_in_page String @db.VarChar(255)
+
+  @@index([string_id], map: "string_id")
+}
+
+model acb_icl_string_status {
+  id                    BigInt   @id @default(autoincrement()) @db.UnsignedBigInt
+  rid                   BigInt
+  string_translation_id BigInt
+  timestamp             DateTime @default(now()) @db.Timestamp(0)
+  md5                   String   @db.VarChar(32)
+
+  @@index([string_translation_id], map: "string_translation_id")
+}
+
+model acb_icl_string_translations {
+  id                  BigInt   @id @default(autoincrement()) @db.UnsignedBigInt
+  string_id           BigInt   @db.UnsignedBigInt
+  language            String   @db.VarChar(10)
+  status              Int      @db.TinyInt
+  value               String?  @db.LongText
+  mo_string           String?  @db.LongText
+  translator_id       BigInt?  @db.UnsignedBigInt
+  translation_service String   @default("") @db.VarChar(16)
+  batch_id            Int      @default(0)
+  translation_date    DateTime @default(now()) @db.Timestamp(0)
+
+  @@unique([string_id, language], map: "string_language")
+  @@index([status], map: "status")
+}
+
+model acb_icl_string_urls {
+  id       BigInt  @id @default(autoincrement()) @db.UnsignedBigInt
+  language String? @db.VarChar(7)
+  url      String? @db.VarChar(255)
+
+  @@unique([language, url(length: 191)], map: "string_string_lang_url")
+}
+
+model acb_icl_strings {
+  id                      BigInt  @id @default(autoincrement()) @db.UnsignedBigInt
+  language                String  @db.VarChar(7)
+  context                 String  @db.VarChar(160)
+  name                    String  @db.VarChar(160)
+  value                   String  @db.LongText
+  string_package_id       BigInt? @db.UnsignedBigInt
+  location                BigInt? @db.UnsignedBigInt
+  wrap_tag                String  @db.VarChar(16)
+  type                    String  @default("LINE") @db.VarChar(40)
+  title                   String? @db.VarChar(160)
+  status                  Int     @db.TinyInt
+  gettext_context         String  @db.Text
+  domain_name_context_md5 String  @unique(map: "uc_domain_name_context_md5") @db.VarChar(32)
+  word_count              Int?    @db.UnsignedInt
+
+  @@index([context], map: "context")
+  @@index([name], map: "icl_strings_name")
+  @@index([language, context], map: "language_context")
+  @@index([string_package_id], map: "string_package_id")
+}
+
+model acb_icl_translate_job {
+  job_id         BigInt    @id @default(autoincrement()) @db.UnsignedBigInt
+  rid            BigInt    @db.UnsignedBigInt
+  translator_id  Int       @db.UnsignedInt
+  translated     Int       @default(0) @db.UnsignedTinyInt
+  manager_id     Int       @db.UnsignedInt
+  revision       Int?      @db.UnsignedInt
+  title          String?   @db.VarChar(160)
+  deadline_date  DateTime? @db.DateTime(0)
+  completed_date DateTime? @db.DateTime(0)
+  editor         String?   @db.VarChar(16)
+  automatic      Int       @default(0) @db.UnsignedTinyInt
+  ate_sync_count Int?      @default(0) @db.UnsignedInt
+  editor_job_id  BigInt?   @db.UnsignedBigInt
+
+  @@index([rid, translator_id], map: "rid")
+}
+
+model acb_icl_translation_batches {
+  id          Int       @id @default(autoincrement())
+  batch_name  String    @db.Text
+  tp_id       Int?
+  ts_url      String?   @db.Text
+  last_update DateTime? @db.DateTime(0)
+}
+
+model acb_icl_translation_downloads {
+  editor_job_id  BigInt @id @db.UnsignedBigInt
+  download_url   String @db.VarChar(2000)
+  lock_timestamp Int?   @db.UnsignedInt
+}
+
+model acb_icl_translation_status {
+  rid                  BigInt                                    @id @default(autoincrement())
+  translation_id       BigInt                                    @unique(map: "translation_id")
+  status               Int                                       @db.TinyInt
+  translator_id        BigInt
+  needs_update         Int                                       @db.TinyInt
+  md5                  String                                    @db.VarChar(32)
+  translation_service  String                                    @db.VarChar(16)
+  batch_id             Int                                       @default(0)
+  translation_package  String                                    @db.LongText
+  timestamp            DateTime                                  @default(now()) @db.Timestamp(0)
+  links_fixed          Int                                       @default(0) @db.TinyInt
+  prevstate            String?                                   @map("_prevstate") @db.LongText
+  uuid                 String?                                   @db.VarChar(36)
+  review_status        acb_icl_translation_status_review_status?
+  ate_comm_retry_count Int?                                      @default(0) @db.UnsignedInt
+  tp_id                Int?
+  tp_revision          Int                                       @default(1)
+  ts_status            String?                                   @db.Text
+}
+
+model acb_icl_translations {
+  translation_id       BigInt  @id @default(autoincrement())
+  element_type         String  @default("post_post") @db.VarChar(60)
+  element_id           BigInt?
+  trid                 BigInt
+  language_code        String  @db.VarChar(7)
+  source_language_code String? @db.VarChar(7)
+
+  @@unique([element_type, element_id], map: "el_type_id")
+  @@unique([trid, language_code], map: "trid_lang")
+  @@index([element_id, element_type, language_code], map: "id_type_language")
+  @@index([trid], map: "trid")
+}
+
+model acb_links {
+  link_id          BigInt   @id @default(autoincrement()) @db.UnsignedBigInt
+  link_url         String   @default("") @db.VarChar(255)
+  link_name        String   @default("") @db.VarChar(255)
+  link_image       String   @default("") @db.VarChar(255)
+  link_target      String   @default("") @db.VarChar(25)
+  link_description String   @default("") @db.VarChar(255)
+  link_visible     String   @default("Y") @db.VarChar(20)
+  link_owner       BigInt   @default(1) @db.UnsignedBigInt
+  link_rating      Int      @default(0)
+  link_updated     DateTime @default(dbgenerated("('0000-00-00 00:00:00')")) @db.DateTime(0)
+  link_rel         String   @default("") @db.VarChar(255)
+  link_notes       String   @db.MediumText
+  link_rss         String   @default("") @db.VarChar(255)
+
+  @@index([link_visible], map: "link_visible")
+}
+
+model acb_nextend2_image_storage {
+  id    Int    @id @default(autoincrement())
+  hash  String @unique(map: "hash") @db.VarChar(32)
+  image String @db.Text
+  value String @db.MediumText
+}
+
+model acb_nextend2_section_storage {
+  id           Int    @id @default(autoincrement())
+  application  String @db.VarChar(20)
+  section      String @db.VarChar(128)
+  referencekey String @db.VarChar(128)
+  value        String @db.MediumText
+  system       Int    @default(0)
+  editable     Int    @default(1)
+
+  @@index([application, section(length: 50), referencekey(length: 50)], map: "application")
+  @@index([application, section(length: 50)], map: "application_2")
+  @@index([editable], map: "editable")
+  @@index([system], map: "system")
+}
+
+model acb_nextend2_smartslider3_generators {
+  id     Int    @id @default(autoincrement())
+  group  String @db.VarChar(254)
+  type   String @db.VarChar(254)
+  params String @db.Text
+}
+
+model acb_nextend2_smartslider3_sliders {
+  id        Int      @id @default(autoincrement())
+  alias     String?  @db.VarChar(255)
+  title     String   @db.VarChar(100)
+  type      String   @db.VarChar(30)
+  params    String   @db.MediumText
+  status    String   @default("published") @db.VarChar(50)
+  time      DateTime @db.DateTime(0)
+  thumbnail String   @db.VarChar(255)
+  ordering  Int      @default(0)
+
+  @@index([status], map: "status")
+  @@index([time], map: "time")
+}
+
+model acb_nextend2_smartslider3_sliders_xref {
+  group_id  Int
+  slider_id Int
+  ordering  Int @default(0)
+
+  @@id([group_id, slider_id])
+  @@index([ordering], map: "ordering")
+}
+
+model acb_nextend2_smartslider3_slides {
+  id           Int      @id @default(autoincrement())
+  title        String   @db.VarChar(200)
+  slider       Int
+  publish_up   DateTime @default(dbgenerated("('1970-01-01 00:00:00')")) @db.DateTime(0)
+  publish_down DateTime @default(dbgenerated("('1970-01-01 00:00:00')")) @db.DateTime(0)
+  published    Boolean
+  first        Int
+  slide        String?  @db.LongText
+  description  String   @db.Text
+  thumbnail    String   @db.VarChar(255)
+  params       String   @db.Text
+  ordering     Int
+  generator_id Int
+
+  @@index([generator_id], map: "generator_id")
+  @@index([ordering], map: "ordering")
+  @@index([publish_down], map: "publish_down")
+  @@index([publish_up], map: "publish_up")
+  @@index([published], map: "published")
+  @@index([slider], map: "slider")
+  @@index([thumbnail(length: 100)], map: "thumbnail")
+}
+
+model acb_ngg_album {
+  id             BigInt  @id @default(autoincrement())
+  name           String  @db.VarChar(255)
+  slug           String  @db.VarChar(255)
+  previewpic     BigInt  @default(0)
+  albumdesc      String? @db.MediumText
+  sortorder      String  @db.LongText
+  pageid         BigInt  @default(0)
+  extras_post_id BigInt  @default(0)
+
+  @@index([extras_post_id], map: "extras_post_id_key")
+}
+
+model acb_ngg_gallery {
+  gid            BigInt  @id @default(autoincrement())
+  name           String  @db.VarChar(255)
+  slug           String  @db.VarChar(255)
+  path           String? @db.MediumText
+  title          String? @db.MediumText
+  galdesc        String? @db.MediumText
+  pageid         BigInt  @default(0)
+  previewpic     BigInt  @default(0)
+  author         BigInt  @default(0)
+  extras_post_id BigInt  @default(0)
+
+  @@index([extras_post_id], map: "extras_post_id_key")
+}
+
+model acb_ngg_pictures {
+  pid            BigInt   @id @default(autoincrement())
+  image_slug     String   @db.VarChar(255)
+  post_id        BigInt   @default(0)
+  galleryid      BigInt   @default(0)
+  filename       String   @db.VarChar(255)
+  description    String?  @db.MediumText
+  alttext        String?  @db.MediumText
+  imagedate      DateTime @default(dbgenerated("('0000-00-00 00:00:00')")) @db.DateTime(0)
+  exclude        Int?     @default(0) @db.TinyInt
+  sortorder      BigInt   @default(0)
+  meta_data      String?  @db.LongText
+  extras_post_id BigInt   @default(0)
+  updated_at     BigInt?
+
+  @@index([extras_post_id], map: "extras_post_id_key")
+}
+
+model acb_options {
+  option_id    BigInt @id @default(autoincrement()) @db.UnsignedBigInt
+  option_name  String @unique(map: "option_name") @default("")
+  option_value String @db.LongText
+  autoload     String @default("yes") @db.VarChar(20)
+
+  @@index([autoload], map: "autoload")
+}
+
+model acb_postmeta {
+  meta_id    BigInt  @id @default(autoincrement()) @db.UnsignedBigInt
+  post_id    BigInt  @default(0) @db.UnsignedBigInt
+  meta_key   String? @db.VarChar(255)
+  meta_value String? @db.LongText
+
+  @@index([meta_key(length: 191)], map: "meta_key")
+  @@index([post_id], map: "post_id")
+}
+
+model acb_posts {
+  ID                    BigInt   @id @default(autoincrement()) @db.UnsignedBigInt
+  post_author           BigInt   @default(0) @db.UnsignedBigInt
+  post_date             DateTime @default(dbgenerated("('0000-00-00 00:00:00')")) @db.DateTime(0)
+  post_date_gmt         DateTime @default(dbgenerated("('0000-00-00 00:00:00')")) @db.DateTime(0)
+  post_content          String   @db.LongText
+  post_title            String   @db.Text
+  post_excerpt          String   @db.Text
+  post_status           String   @default("publish") @db.VarChar(20)
+  comment_status        String   @default("open") @db.VarChar(20)
+  ping_status           String   @default("open") @db.VarChar(20)
+  post_password         String   @default("") @db.VarChar(255)
+  post_name             String   @default("") @db.VarChar(200)
+  to_ping               String   @db.Text
+  pinged                String   @db.Text
+  post_modified         DateTime @default(dbgenerated("('0000-00-00 00:00:00')")) @db.DateTime(0)
+  post_modified_gmt     DateTime @default(dbgenerated("('0000-00-00 00:00:00')")) @db.DateTime(0)
+  post_content_filtered String   @db.LongText
+  post_parent           BigInt   @default(0) @db.UnsignedBigInt
+  guid                  String   @default("") @db.VarChar(255)
+  menu_order            Int      @default(0)
+  post_type             String   @default("post") @db.VarChar(20)
+  post_mime_type        String   @default("") @db.VarChar(100)
+  comment_count         BigInt   @default(0)
+
+  @@index([post_author], map: "post_author")
+  @@index([post_name(length: 191)], map: "post_name")
+  @@index([post_parent], map: "post_parent")
+  @@index([post_type, post_status, post_date, ID], map: "type_status_date")
+}
+
+model acb_prli_clicks {
+  id          Int      @id @default(autoincrement())
+  ip          String?  @db.VarChar(255)
+  browser     String?  @db.VarChar(255)
+  btype       String?  @db.VarChar(255)
+  bversion    String?  @db.VarChar(255)
+  os          String?  @db.VarChar(255)
+  referer     String?  @db.VarChar(255)
+  host        String?  @db.VarChar(255)
+  uri         String?  @db.VarChar(255)
+  robot       Int?     @default(0) @db.TinyInt
+  first_click Int?     @default(0) @db.TinyInt
+  created_at  DateTime @db.DateTime(0)
+  link_id     Int?
+  vuid        String?  @db.VarChar(25)
+
+  @@index([browser(length: 191)], map: "browser")
+  @@index([btype(length: 191)], map: "btype")
+  @@index([bversion(length: 191)], map: "bversion")
+  @@index([first_click], map: "first_click")
+  @@index([host(length: 191)], map: "host")
+  @@index([ip(length: 191)], map: "ip")
+  @@index([link_id], map: "link_id")
+  @@index([os(length: 191)], map: "os")
+  @@index([referer(length: 191)], map: "referer")
+  @@index([robot], map: "robot")
+  @@index([uri(length: 191)], map: "uri")
+  @@index([vuid], map: "vuid")
+}
+
+model acb_prli_link_metas {
+  id         Int      @id @default(autoincrement())
+  meta_key   String?  @db.VarChar(255)
+  meta_value String?  @db.LongText
+  meta_order Int?     @default(0)
+  link_id    Int
+  created_at DateTime @db.DateTime(0)
+
+  @@index([link_id], map: "link_id")
+  @@index([meta_key(length: 191)], map: "meta_key")
+}
+
+model acb_prli_links {
+  id               Int       @id @default(autoincrement())
+  name             String?   @db.VarChar(255)
+  description      String?   @db.Text
+  url              String?   @db.Text
+  slug             String?   @db.VarChar(255)
+  nofollow         Boolean?  @default(false)
+  sponsored        Boolean?  @default(false)
+  track_me         Boolean?  @default(true)
+  param_forwarding String?   @db.VarChar(255)
+  param_struct     String?   @db.VarChar(255)
+  redirect_type    String?   @default("307") @db.VarChar(255)
+  link_status      String?   @default("enabled") @db.VarChar(64)
+  created_at       DateTime  @db.DateTime(0)
+  updated_at       DateTime? @db.DateTime(0)
+  group_id         Int?
+  link_cpt_id      Int?      @default(0)
+
+  @@index([created_at], map: "created_at")
+  @@index([group_id], map: "group_id")
+  @@index([link_cpt_id], map: "link_cpt_id")
+  @@index([link_status], map: "link_status")
+  @@index([nofollow], map: "nofollow")
+  @@index([param_forwarding(length: 191)], map: "param_forwarding")
+  @@index([redirect_type(length: 191)], map: "redirect_type")
+  @@index([slug(length: 191)], map: "slug")
+  @@index([sponsored], map: "sponsored")
+  @@index([track_me], map: "track_me")
+  @@index([updated_at], map: "updated_at")
+}
+
+model acb_redirection_404 {
+  id             Int      @id @default(autoincrement()) @db.UnsignedInt
+  created        DateTime @db.DateTime(0)
+  url            String   @db.MediumText
+  domain         String?  @db.VarChar(255)
+  agent          String?  @db.VarChar(255)
+  referrer       String?  @db.VarChar(255)
+  http_code      Int      @default(0) @db.UnsignedInt
+  request_method String?  @db.VarChar(10)
+  request_data   String?  @db.MediumText
+  ip             String?  @db.VarChar(45)
+
+  @@index([created], map: "created")
+  @@index([ip], map: "ip")
+  @@index([referrer(length: 191)], map: "referrer")
+}
+
+model acb_redirection_groups {
+  id        Int                           @id @default(autoincrement()) @db.UnsignedInt
+  name      String                        @db.VarChar(50)
+  tracking  Int                           @default(1)
+  module_id Int                           @default(0) @db.UnsignedInt
+  status    acb_redirection_groups_status @default(enabled)
+  position  Int                           @default(0) @db.UnsignedInt
+
+  @@index([module_id], map: "module_id")
+  @@index([status], map: "status")
+}
+
+model acb_redirection_items {
+  id          Int                          @id @default(autoincrement()) @db.UnsignedInt
+  url         String                       @db.MediumText
+  match_url   String?                      @db.VarChar(2000)
+  match_data  String?                      @db.Text
+  regex       Int                          @default(0) @db.UnsignedInt
+  position    Int                          @default(0) @db.UnsignedInt
+  last_count  Int                          @default(0) @db.UnsignedInt
+  last_access DateTime                     @default(dbgenerated("('1970-01-01 00:00:00')")) @db.DateTime(0)
+  group_id    Int                          @default(0)
+  status      acb_redirection_items_status @default(enabled)
+  action_type String                       @db.VarChar(20)
+  action_code Int                          @db.UnsignedInt
+  action_data String?                      @db.MediumText
+  match_type  String                       @db.VarChar(20)
+  title       String?                      @db.Text
+
+  @@index([group_id], map: "group")
+  @@index([group_id, position], map: "group_idpos")
+  @@index([match_url(length: 191)], map: "match_url")
+  @@index([regex], map: "regex")
+  @@index([status], map: "status")
+  @@index([url(length: 191)], map: "url")
+}
+
+model acb_redirection_logs {
+  id             Int      @id @default(autoincrement()) @db.UnsignedInt
+  created        DateTime @db.DateTime(0)
+  url            String   @db.MediumText
+  domain         String?  @db.VarChar(255)
+  sent_to        String?  @db.MediumText
+  agent          String?  @db.MediumText
+  referrer       String?  @db.MediumText
+  http_code      Int      @default(0) @db.UnsignedInt
+  request_method String?  @db.VarChar(10)
+  request_data   String?  @db.MediumText
+  redirect_by    String?  @db.VarChar(50)
+  redirection_id Int?     @db.UnsignedInt
+  ip             String?  @db.VarChar(45)
+
+  @@index([created], map: "created")
+  @@index([ip], map: "ip")
+  @@index([redirection_id], map: "redirection_id")
+}
+
+model acb_smush_dir_images {
+  id         Int      @unique(map: "id") @default(autoincrement()) @db.MediumInt
+  path       String   @unique(map: "path", length: 191) @db.Text
+  resize     String?  @db.VarChar(55)
+  lossy      String?  @db.VarChar(55)
+  error      String?  @db.VarChar(55)
+  image_size Int?     @db.UnsignedInt
+  orig_size  Int?     @db.UnsignedInt
+  file_time  Int?     @db.UnsignedInt
+  last_scan  DateTime @default(dbgenerated("('0000-00-00 00:00:00')")) @db.Timestamp(0)
+  meta       String?  @db.Text
+  path_hash  String?  @unique(map: "path_hash") @db.Char(32)
+
+  @@index([image_size], map: "image_size")
+}
+
+model acb_statistics_exclusions {
+  ID     BigInt   @id @default(autoincrement())
+  date   DateTime @db.Date
+  reason String?  @db.VarChar(180)
+  count  BigInt
+
+  @@index([date], map: "date")
+  @@index([reason], map: "reason")
+}
+
+model acb_statistics_historical {
+  ID       BigInt @id @default(autoincrement())
+  category String @db.VarChar(25)
+  page_id  BigInt @unique(map: "page_id")
+  uri      String @unique(map: "uri") @db.VarChar(190)
+  value    BigInt
+
+  @@index([category], map: "category")
+}
+
+model acb_statistics_pages {
+  page_id BigInt   @id @default(autoincrement())
+  uri     String   @db.VarChar(190)
+  type    String   @db.VarChar(180)
+  date    DateTime @db.Date
+  count   Int
+  id      Int
+
+  @@unique([date, uri], map: "date_2")
+  @@index([date], map: "date")
+  @@index([id], map: "id")
+  @@index([uri, count, id], map: "uri")
+  @@index([uri], map: "url")
+}
+
+model acb_statistics_search {
+  ID           BigInt   @id @default(autoincrement())
+  last_counter DateTime @db.Date
+  engine       String   @db.VarChar(64)
+  host         String?  @db.VarChar(190)
+  words        String?  @db.VarChar(190)
+  visitor      BigInt?
+
+  @@index([engine], map: "engine")
+  @@index([host], map: "host")
+  @@index([last_counter], map: "last_counter")
+}
+
+model acb_statistics_useronline {
+  ID        BigInt   @id @default(autoincrement())
+  ip        String   @db.VarChar(60)
+  created   Int?
+  timestamp Int
+  date      DateTime @db.DateTime(0)
+  referred  String   @db.Text
+  agent     String   @db.VarChar(255)
+  platform  String?  @db.VarChar(255)
+  version   String?  @db.VarChar(255)
+  location  String?  @db.VarChar(10)
+  user_id   BigInt
+  page_id   BigInt
+  type      String   @db.VarChar(100)
+
+  @@index([ip], map: "ip")
+}
+
+model acb_statistics_visit {
+  ID           BigInt   @id @default(autoincrement())
+  last_visit   DateTime @db.DateTime(0)
+  last_counter DateTime @unique(map: "unique_date") @db.Date
+  visit        Int
+}
+
+model acb_statistics_visitor {
+  ID           BigInt   @id @default(autoincrement())
+  last_counter DateTime @db.Date
+  referred     String   @db.Text
+  agent        String   @db.VarChar(180)
+  platform     String?  @db.VarChar(180)
+  version      String?  @db.VarChar(180)
+  device       String?  @db.VarChar(180)
+  model        String?  @db.VarChar(180)
+  UAString     String?  @db.VarChar(190)
+  ip           String   @db.VarChar(60)
+  location     String?  @db.VarChar(10)
+  user_id      BigInt
+  hits         Int?
+  honeypot     Int?
+
+  @@unique([last_counter, ip, agent(length: 50), platform(length: 50), version(length: 50)], map: "date_ip_agent")
+  @@index([agent], map: "agent")
+  @@index([device], map: "device")
+  @@index([ip], map: "ip")
+  @@index([location], map: "location")
+  @@index([model], map: "model")
+  @@index([platform], map: "platform")
+  @@index([version], map: "version")
+}
+
+model acb_statistics_visitor_relationships {
+  ID         BigInt   @id @default(autoincrement())
+  visitor_id BigInt
+  page_id    BigInt
+  date       DateTime @db.DateTime(0)
+
+  @@index([page_id], map: "page_id")
+  @@index([visitor_id], map: "visitor_id")
+}
+
+model acb_term_relationships {
+  object_id        BigInt @default(0) @db.UnsignedBigInt
+  term_taxonomy_id BigInt @default(0) @db.UnsignedBigInt
+  term_order       Int    @default(0)
+
+  @@id([object_id, term_taxonomy_id])
+  @@index([term_taxonomy_id], map: "term_taxonomy_id")
+}
+
+model acb_term_taxonomy {
+  term_taxonomy_id BigInt @id @default(autoincrement()) @db.UnsignedBigInt
+  term_id          BigInt @default(0) @db.UnsignedBigInt
+  taxonomy         String @default("") @db.VarChar(32)
+  description      String @db.LongText
+  parent           BigInt @default(0) @db.UnsignedBigInt
+  count            BigInt @default(0)
+
+  @@unique([term_id, taxonomy], map: "term_id_taxonomy")
+  @@index([taxonomy], map: "taxonomy")
+}
+
+model acb_termmeta {
+  meta_id    BigInt  @id @default(autoincrement()) @db.UnsignedBigInt
+  term_id    BigInt  @default(0) @db.UnsignedBigInt
+  meta_key   String? @db.VarChar(255)
+  meta_value String? @db.LongText
+
+  @@index([meta_key(length: 191)], map: "meta_key")
+  @@index([term_id], map: "term_id")
+}
+
+model acb_terms {
+  term_id    BigInt @id @default(autoincrement()) @db.UnsignedBigInt
+  name       String @default("") @db.VarChar(200)
+  slug       String @default("") @db.VarChar(200)
+  term_group BigInt @default(0)
+
+  @@index([name(length: 191)], map: "name")
+  @@index([slug(length: 191)], map: "slug")
+}
+
+model acb_usermeta {
+  umeta_id   BigInt  @id @default(autoincrement()) @db.UnsignedBigInt
+  user_id    BigInt  @default(0) @db.UnsignedBigInt
+  meta_key   String? @db.VarChar(255)
+  meta_value String? @db.LongText
+
+  @@index([meta_key(length: 191)], map: "meta_key")
+  @@index([user_id], map: "user_id")
+}
+
+model acb_users {
+  ID                  BigInt   @id @default(autoincrement()) @db.UnsignedBigInt
+  user_login          String   @default("") @db.VarChar(60)
+  user_pass           String   @default("") @db.VarChar(255)
+  user_nicename       String   @default("") @db.VarChar(50)
+  user_email          String   @default("") @db.VarChar(100)
+  user_url            String   @default("") @db.VarChar(100)
+  user_registered     DateTime @default(dbgenerated("('0000-00-00 00:00:00')")) @db.DateTime(0)
+  user_activation_key String   @default("") @db.VarChar(255)
+  user_status         Int      @default(0)
+  display_name        String   @default("") @db.VarChar(250)
+
+  @@index([user_email], map: "user_email")
+  @@index([user_login], map: "user_login_key")
+  @@index([user_nicename], map: "user_nicename")
+}
+
+model acb_wpmailsmtp_tasks_meta {
+  id     BigInt   @id @default(autoincrement())
+  action String   @db.VarChar(255)
+  data   String   @db.LongText
+  date   DateTime @db.DateTime(0)
+}
+
+enum acb_redirection_groups_status {
+  enabled
+  disabled
+}
+
+enum acb_icl_mo_files_domains_component_type {
+  plugin
+  theme
+  other
+}
+
+enum acb_redirection_items_status {
+  enabled
+  disabled
+}
+
+enum acb_icl_translation_status_review_status {
+  NEEDS_REVIEW
+  EDITING
+  ACCEPTED
+}

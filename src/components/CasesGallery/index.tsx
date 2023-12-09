@@ -30,7 +30,7 @@ export function CasesGallery({ cases }: CasesGalleryProps) {
           {item?.map((post, postIndex) => (
             <Link
               key={String(postIndex)}
-              href={`/${post?.href ?? '#'}`}
+              href={`/cases/${post?.href ?? '#'}`}
               className={`relative flex flex-col items-start justify-between transition hover:grayscale ${divsClass[postIndex]}`}
             >
               <span className="m-4 rounded-md bg-white px-2 py-[0.1rem] font-bold sm:top-5 sm:flex">
