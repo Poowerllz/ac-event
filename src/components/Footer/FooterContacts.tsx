@@ -128,7 +128,7 @@ export function FooterContacts({
             <span
               className="cursor-pointer text-sm underline"
               onClick={() =>
-                window.open(`${LegacySiteURL}/etica-e-compliance/`)
+                window.open(`https://web.anacouto.com.br/?page_id=10149`)
               }
             >
               {copyright[1]}
