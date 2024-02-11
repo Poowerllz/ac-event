@@ -1,6 +1,7 @@
 'use client'
 
 import { strapi_api } from '@/service/api_strapi'
+import axios from 'axios'
 import React, { useContext, useEffect, useState } from 'react'
 
 export type ContactProps = {
@@ -16,10 +17,10 @@ interface Props {
 const DataContextProvider = ({ children }: Props) => {
   const [data, setData] = useState<any>({ test: 'test' })
 
-  console.log(process.env.STRAPI_API_TOKEN)
-
   useEffect(() => {
-    strapi_api.get('home/?populate=*').then(({ data }) => setData(data.data))
+    axios
+      .post('api/strapi', { query: 'home/?populate=*' })
+      .then(({ data }) => setData(data))
   }, [])
 
   return (
