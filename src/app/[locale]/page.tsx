@@ -8,9 +8,11 @@ import { useTranslations } from 'next-intl'
 import Link from 'next/link'
 import { AiOutlinePlusCircle } from 'react-icons/ai'
 import { Message } from '../../components/Message'
+import HomeFirstText from '@/components/HomeFirstText'
 
 export default function Home() {
   const t = useTranslations('Home')
+
   return (
     <main
       className="block w-full flex-col items-center justify-between overflow-hidden font-kern font-bold"
@@ -18,13 +20,12 @@ export default function Home() {
     >
       <div className="flex h-auto w-full items-start justify-between px-6 py-24 sm:px-16">
         <Typography as="h1" className="sm:!text-[5vw] md:!text-[6vw]">
-          {t('sectionWhoWeAre.text.lineOne')}
-          <br />
-          {t('sectionWhoWeAre.text.lineTwo')}
-          <br />
-          {t('sectionWhoWeAre.text.lineThree')}
-          <br />
-          {t('sectionWhoWeAre.text.lineFour')}
+          <HomeFirstText
+            lineFour={t('sectionWhoWeAre.text.lineFour')}
+            lineOne={t('sectionWhoWeAre.text.lineOne')}
+            lineThree={t('sectionWhoWeAre.text.lineThree')}
+            lineTwo={t('sectionWhoWeAre.text.lineTwo')}
+          />
         </Typography>
 
         <div className="relative flex min-h-[50%] w-1/6 flex-col items-end justify-between pb-20">

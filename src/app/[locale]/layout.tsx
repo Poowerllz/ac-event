@@ -16,6 +16,7 @@ import 'swiper/css/grid'
 import 'swiper/css/navigation'
 import 'swiper/css/pagination'
 import 'swiper/css/scrollbar'
+import DataContextProvider from '@/contexts/DataContext'
 
 const locales = ['pt-br', 'en']
 
@@ -57,9 +58,11 @@ export default function LocaleLayout({
           type="text/javascript"
           src="https://d335luupugsy2.cloudfront.net/js/rdstation-forms/stable/rdstation-forms.min.js"
         />
-        <Header menu={menus} />
-        <main className="h-full w-full">{children}</main>
-        <Footer />
+        <DataContextProvider>
+          <Header menu={menus} />
+          <main className="h-full w-full">{children}</main>
+          <Footer />
+        </DataContextProvider>
       </body>
     </html>
   )
