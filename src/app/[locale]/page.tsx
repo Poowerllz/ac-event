@@ -51,6 +51,7 @@ export default function Home() {
 
       <Message
         title={t('sectionWhatWeDo.text')}
+        titlePath="years"
         subTitle={t('sectionWhatWeDo.button')}
         arrow={false}
         pathSubtitle="/o-que-fazemos"

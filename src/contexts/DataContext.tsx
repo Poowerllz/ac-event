@@ -1,7 +1,7 @@
 'use client'
 
-import { strapi_api } from '@/service/api_strapi'
 import axios from 'axios'
+import { usePathname, useRouter } from 'next/navigation'
 import React, { useContext, useEffect, useState } from 'react'
 
 export type ContactProps = {
@@ -12,16 +12,30 @@ export const DataContext = React.createContext({} as ContactProps)
 
 interface Props {
   children: React.ReactNode
+  locale: string
 }
 
-const DataContextProvider = ({ children }: Props) => {
-  const [data, setData] = useState<any>({ test: 'test' })
+const DataContextProvider = ({ children, locale }: Props) => {
+  const path = usePathname()
+  const [data, setData] = useState<any>()
 
   useEffect(() => {
     axios
-      .post('api/strapi', { query: 'home/?populate=*' })
-      .then(({ data }) => setData(data))
-  }, [])
+      .post('api/strapi', {
+        query: `${
+          path.replaceAll('en', '') === '/'
+            ? 'home'
+            : path.replaceAll('/', '').replaceAll('en', '')
+        }/?locale=all`
+      })
+      .then(({ data }) =>
+        setData(
+          data.find(
+            (data: any) => data.attributes.locale === locale.replace('-br', '')
+          )
+        )
+      )
+  }, [locale])
 
   return (
     <DataContext.Provider value={{ data }}>{children}</DataContext.Provider>

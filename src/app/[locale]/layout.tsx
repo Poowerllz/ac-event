@@ -58,7 +58,7 @@ export default function LocaleLayout({
           type="text/javascript"
           src="https://d335luupugsy2.cloudfront.net/js/rdstation-forms/stable/rdstation-forms.min.js"
         />
-        <DataContextProvider>
+        <DataContextProvider locale={locale}>
           <Header menu={menus} />
           <main className="h-full w-full">{children}</main>
           <Footer />

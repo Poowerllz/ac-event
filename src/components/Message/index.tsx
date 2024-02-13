@@ -5,20 +5,22 @@ import { AiOutlinePlusCircle } from 'react-icons/ai'
 import { ArrowMobile } from '../arrowMobile'
 import { Typography } from '../ui/Typography'
 import { MessageProps } from './type'
-import { useState } from 'react'
+import { useContext, useState } from 'react'
 import ArrowTop from '@/images/svg/arrowtop.svg'
+import { DataContext } from '@/contexts/DataContext'
 
 export const Message = ({
   title,
+  titlePath,
   subTitle,
+  subTitlePath,
   arrow,
   pathSubtitle,
-  section,
-  top
+  section
 }: MessageProps) => {
   const isMobile = useMediaQuery('(max-width: 600px)')
-
   const [selectedCategory, setSelectedCategory] = useState<string>('')
+  const { data } = useContext(DataContext)
 
   const scrollToTop = (category: string) => {
     setSelectedCategory(category)
@@ -39,7 +41,9 @@ export const Message = ({
         <>
           {arrow ? (
             <div className=" flex h-auto w-full flex-col items-center justify-between px-6 pb-44 pt-40">
-              <Typography as="h1">{title}</Typography>
+              <Typography as="h1">
+                {(titlePath && data?.attributes[titlePath]) || title}
+              </Typography>
 
               <div className="relative flex h-full w-full flex-col  justify-between">
                 <div className="absolute -top-72  h-full w-full -rotate-180 transform cursor-pointer">
@@ -80,7 +84,9 @@ export const Message = ({
             {/*py-32*/}
             {arrow ? (
               <div className="flex h-full w-full justify-between  align-top">
-                <Typography as="h1">{title}</Typography>
+                <Typography as="h1">
+                  {(titlePath && data?.attributes[titlePath]) || title}
+                </Typography>
 
                 <div className="-rotate-360 flex h-full w-full transform items-end pr-80">
                   <div
@@ -93,7 +99,9 @@ export const Message = ({
               </div>
             ) : (
               <div className=" flex h-full w-full justify-between pr-80 align-top">
-                <Typography as="h1">{title}</Typography>
+                <Typography as="h1">
+                  {(titlePath && data?.attributes[titlePath]) || title}
+                </Typography>
               </div>
             )}
 
