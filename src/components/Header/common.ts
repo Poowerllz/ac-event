@@ -27,7 +27,7 @@ const videosHeader: VideosHeaderProps = {
     color: 'bg-transparent',
     src: ''
   },
-  '/contato': {
+  '/contatos': {
     src: ''
   }
 }

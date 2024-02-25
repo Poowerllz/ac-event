@@ -30,7 +30,7 @@ const backgroundsHeader: BackgroundsHeaderProps = {
     hasBackgroundColor: true,
     color: 'bg-primary'
   },
-  '/contato': {
+  '/contatos': {
     mobile: 'mobile-cases-reduced.png',
     desktop: 'cases-reduced.png',
     invert: true

@@ -13,6 +13,18 @@ const nextConfig = {
         pathname: '/**'
       },
       {
+        protocol: 'http',
+        hostname: '35.171.120.104',
+        port: '1337',
+        pathname: '/**'
+      },
+      {
+        protocol: 'https',
+        hostname: '35.171.120.104',
+        port: '1337',
+        pathname: '/**'
+      },
+      {
         protocol: 'https',
         hostname: 'www.anacouto.com.br',
         port: '',

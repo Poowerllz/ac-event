@@ -1,7 +1,7 @@
 'use client'
 
 import axios from 'axios'
-import { usePathname, useRouter } from 'next/navigation'
+import { usePathname } from 'next/navigation'
 import React, { useContext, useEffect, useState } from 'react'
 
 export type ContactProps = {
@@ -20,22 +20,24 @@ const DataContextProvider = ({ children, locale }: Props) => {
   const [data, setData] = useState<any>()
 
   useEffect(() => {
+    const newPath = path.replaceAll('/', '').replaceAll('en', '')
+
     axios
       .post('api/strapi', {
         query: `${
           path.replaceAll('en', '') === '/'
             ? 'home'
-            : path.replaceAll('/', '').replaceAll('en', '')
-        }/?locale=all`
+            : newPath.substring(0, newPath.length - 1)
+        }/?locale=all&populate=*`
       })
-      .then(({ data }) =>
+      .then(({ data }) => {
         setData(
           data.find(
             (data: any) => data.attributes.locale === locale.replace('-br', '')
           )
         )
-      )
-  }, [locale])
+      })
+  }, [locale, path])
 
   return (
     <DataContext.Provider value={{ data }}>{children}</DataContext.Provider>

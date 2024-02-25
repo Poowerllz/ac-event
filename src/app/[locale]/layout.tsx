@@ -41,7 +41,7 @@ export default function LocaleLayout({
     { label: t('whatWeDo'), path: 'o-que-fazemos' },
     { label: t('cases'), path: '/cases' },
     { label: t('articles'), path: '/artigos' },
-    { label: t('contact'), path: '/contato' }
+    { label: t('contact'), path: '/contatos' }
   ]
 
   return (

@@ -29,7 +29,7 @@ const backgrounds: BackgroundsProps = {
     isImage: false,
     color: 'bg-black'
   },
-  '/contato': {
+  '/contatos': {
     isImage: false,
     color: 'bg-black'
   },
@@ -82,7 +82,7 @@ const colorTextBackground: ColorTextBackgroundProps = {
       color: 'text-black'
     }
   },
-  '/contato': {
+  '/contatos': {
     styles: {
       color: 'text-white',
       minHeight: 'min-h-[auto]'

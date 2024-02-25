@@ -10,7 +10,7 @@ export function createPath(language: string, common: Record<string, any>) {
     [`/${language}/quem-somos`]: common['/quem-somos'],
     [`/${language}/cases`]: common['/cases'],
     [`/${language}/cases/`]: common['/cases/'],
-    [`/${language}/contato`]: common['/contato'],
+    [`/${language}/contatos`]: common['/contatos'],
     [`/${language}/artigos`]: common['/artigos'],
     [`/${language}/slug-artigo`]: common['/slug-artigo']
   }

@@ -26,7 +26,7 @@ const colors: colorsTypographicLogoProps = {
   '/slug-artigo': {
     color: '#000'
   },
-  '/contato': {
+  '/contatos': {
     color: '#fff'
   }
 }

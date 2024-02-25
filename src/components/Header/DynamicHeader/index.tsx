@@ -9,11 +9,12 @@ import { AnimatePresence, motion } from 'framer-motion'
 import Image from 'next/image'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
-import React, { useEffect, useRef, useState } from 'react'
+import React, { useContext, useEffect, useRef, useState } from 'react'
 import Menu from '../Menu'
 import { NavbarSticky } from '../Navbar/NavbarSticky'
 import { pathImagesBr, pathImagesEn } from './common'
 import { BackgroundHeaderProps } from './type'
+import { DataContext } from '@/contexts/DataContext'
 
 export type Props = {
   hideButtonRef: any
@@ -42,6 +43,9 @@ const DynamicHeader: React.FC<Props> = ({
   const [showBackground, setShowBackground] = useState(true)
   const isMobile = useMediaQuery('(max-width: 600px)')
   const MenuRef = useRef<any>()
+  const { data } = useContext(DataContext)
+
+  console.log(data)
 
   const rawPath: string = usePathname()
   const pathData: BackgroundHeaderProps = getPathData(
@@ -71,6 +75,9 @@ const DynamicHeader: React.FC<Props> = ({
     )
   }, [pathData, isMobile, handleReduce])
 
+  const imageType = isMobile ? 'banner_mobile' : 'banner_desktop'
+  const imagePath = `${process.env.NEXT_PUBLIC_STRAPI_BUCKET_URL}${data?.attributes[imageType]?.data?.attributes.url}`
+
   return (
     <>
       <button
@@ -91,13 +98,15 @@ const DynamicHeader: React.FC<Props> = ({
             }}
             exit={{ opacity: 0 }}
           >
-            <Image
-              src={`/images/home/${pathData[isMobile ? 'mobile' : 'desktop']}`}
-              className="absolute top-0 h-full w-full object-cover"
-              alt="Background of Ana Couto"
-              quality={100}
-              fill
-            />
+            {!imagePath.includes('undefined') && (
+              <Image
+                src={`${process.env.NEXT_PUBLIC_STRAPI_BUCKET_URL}${data?.attributes[imageType]?.data?.attributes.url}`}
+                className="absolute top-0 h-full w-full object-cover"
+                alt="Background of Ana Couto"
+                quality={100}
+                fill
+              />
+            )}
           </motion.div>
         )}
       </AnimatePresence>

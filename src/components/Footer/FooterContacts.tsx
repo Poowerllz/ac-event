@@ -30,7 +30,7 @@ export function FooterContacts({
     colorTextEn
   )
 
-  if (path === '/contato') {
+  if (path === '/contatos') {
     return <></>
   }
 
