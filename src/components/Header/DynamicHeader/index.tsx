@@ -78,6 +78,8 @@ const DynamicHeader: React.FC<Props> = ({
   const imageType = isMobile ? 'banner_mobile' : 'banner_desktop'
   const imagePath = `${process.env.NEXT_PUBLIC_STRAPI_BUCKET_URL}${data?.attributes[imageType]?.data?.attributes.url}`
 
+  console.log('BG ->', imagePath)
+
   return (
     <>
       <button
@@ -100,7 +102,7 @@ const DynamicHeader: React.FC<Props> = ({
           >
             {!imagePath.includes('undefined') && (
               <Image
-                src={`${process.env.NEXT_PUBLIC_STRAPI_BUCKET_URL}${data?.attributes[imageType]?.data?.attributes.url}`}
+                src={imagePath}
                 className="absolute top-0 h-full w-full object-cover"
                 alt="Background of Ana Couto"
                 quality={100}
