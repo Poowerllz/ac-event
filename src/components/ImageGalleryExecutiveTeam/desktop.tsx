@@ -13,12 +13,7 @@ export function ImageGalleryExecutiveTeamDesktop() {
       class: 'col-span-2 col-start-2',
       onClick: '?author=2'
     },
-    {
-      name: 'Luiz Felippe Netto',
-      src: `${LegacySiteURL}/wp-content/uploads/2022/07/LUIZ_IMG_CROP_PB-250x300.png`,
-      class: 'col-start-4',
-      onClick: '?author=21'
-    },
+
     {
       name: 'Aline Rubiano',
       src: `${LegacySiteURL}/wp-content/uploads/2022/07/ALINE_IMG_CROP_PB-250x300.png`,
@@ -122,7 +117,7 @@ export function ImageGalleryExecutiveTeamDesktop() {
         })}
       </div>
 
-      <div className="mt-[1rem] flex h-[50vh] items-center justify-center">
+      {/*       <div className="mt-[1rem] flex h-[50vh] items-center justify-center">
         <div
           key={executiveTeam[11].name}
           className={cn(
@@ -151,7 +146,7 @@ export function ImageGalleryExecutiveTeamDesktop() {
             {executiveTeam[11].name}
           </ImageGalleryExecutiveTeamTitle>
         </div>
-      </div>
+      </div> */}
     </Fragment>
   )
 }

@@ -41,11 +41,7 @@ export const executiveTeam = [
     name: 'James Pereira',
     office: 'Sócio-Diretor de Inteligência de Negócios'
   },
-  {
-    img: `${LegacySiteURL}/wp-content/uploads/2022/07/LUIZ_IMG_CROP_PB-250x300.png`,
-    name: 'Luiz Felippe Netto',
-    office: 'Sócio-Diretor de Growth'
-  },
+
   {
     img: `${LegacySiteURL}/wp-content/uploads/2022/07/MARCELLE_CROP_PB-250x300.png`,
     name: 'Marcelle Villar',

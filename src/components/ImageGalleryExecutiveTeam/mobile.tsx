@@ -12,12 +12,7 @@ export function ImageGalleryExecutiveTeamMobile() {
       class: 'col-span-2',
       onClick: '?=authorana-couto'
     },
-    {
-      name: 'Luiz Felippe Netto',
-      src: `${LegacySiteURL}/wp-content/uploads/2022/07/LUIZ_IMG_CROP_PB-250x300.png`,
-      class: 'col-start-3',
-      onClick: '?=authorluis-felippe'
-    },
+
     {
       name: 'Aline Rubiano',
       src: `${LegacySiteURL}/wp-content/uploads/2022/07/ALINE_IMG_CROP_PB-250x300.png`,
