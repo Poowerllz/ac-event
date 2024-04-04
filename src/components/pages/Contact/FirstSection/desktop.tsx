@@ -22,17 +22,6 @@ export function FirstSectionDesktop({
       ]
     },
     {
-      area: 'Marketing e Growth',
-      members: [
-        {
-          name: 'Bruno Assis',
-          office: 'Gerente de Marketing',
-          email: 'bassis@anacouto.com.br',
-          tel: ''
-        }
-      ]
-    },
-    {
       area: 'Mídia',
       members: [
         {
