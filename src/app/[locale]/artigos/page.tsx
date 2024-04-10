@@ -1,4 +1,5 @@
 import { ArticlesGalleryContainer } from '@/components/ArticlesGallery/ArticlesGalleryContainer'
+import StrapiTypography from '@/components/StrapiTypography'
 import { ArrowMobile } from '@/components/arrowMobile'
 import { Typography } from '@/components/ui/Typography'
 import ArrowTop from '@/images/svg/arrowtop.svg'
@@ -16,7 +17,9 @@ export default function Artigos() {
       >
         <div className="flex w-full items-start justify-between">
           <div className="w-full sm:w-4/5 md:w-4/5 lg:w-4/6 xl:w-1/2">
-            <Typography as="h1">{t('sectionMessage')}</Typography>
+            <StrapiTypography dataKey="ideas" as="h1">
+              {t('sectionMessage')}
+            </StrapiTypography>
           </div>
 
           <div className="relative flex h-full items-start">

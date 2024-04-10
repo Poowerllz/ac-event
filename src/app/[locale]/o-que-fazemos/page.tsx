@@ -8,6 +8,7 @@ import ArrowTop from '@/images/svg/arrowtop.svg'
 import { useTranslations } from 'next-intl'
 import { Fragment } from 'react'
 import { GallerySection } from './common'
+import StrapiTypography from '@/components/StrapiTypography'
 
 export default function WhatWeDo() {
   const t = useTranslations('WhatWeDo')
@@ -85,33 +86,41 @@ export default function WhatWeDo() {
           <ArrowMobile name={ArrowTop} section={'header'} />
         </div>
 
-        <Typography as="h1">
-          {' '}
+        <StrapiTypography dataKey="slogan" as="h1">
           {t('firstSection.titleOne')}
           <br />
           {t('firstSection.titleTwo')}
           <br />
           {t('firstSection.titleThree')}
-        </Typography>
+        </StrapiTypography>
 
-        <p className="w-auto max-w-[220px] self-end text-sm font-semibold sm:text-base lg:max-w-[360px] lg:text-lg xl:text-2xl">
+        <StrapiTypography
+          as={'p'}
+          dataKey="years"
+          boxClass="flex justify-end"
+          className="w-auto max-w-[220px] self-end text-sm font-semibold sm:text-base lg:max-w-[360px] lg:text-lg xl:text-2xl"
+        >
           {t('firstSection.subtitle')}
-        </p>
+        </StrapiTypography>
       </section>
 
       <section className="relative flex w-full flex-col gap-10 bg-black px-6 py-10 text-white sm:px-16">
         <hr className={cn('h-0.5 w-full border-0', 'bg-gray-300')} />
 
         <div className="relative flex w-full flex-col justify-between gap-10 sm:mb-8 md:flex-row">
-          <Typography as="h2">
+          <StrapiTypography dataKey="how_to_manage" as="h2">
             {t('secondSection.titleOne')}
             <br />
             {t('secondSection.titleTwo')}
-          </Typography>
+          </StrapiTypography>
 
-          <p className="w-auto max-w-[240px] self-end text-sm font-semibold sm:text-base md:self-start lg:max-w-[360px] lg:text-lg xl:text-2xl">
+          <StrapiTypography
+            as={'p'}
+            dataKey="waves_of_value"
+            className="w-auto max-w-[240px] self-end text-sm font-semibold sm:text-base md:self-start lg:max-w-[360px] lg:text-lg xl:text-2xl"
+          >
             {t('secondSection.subtitle')}
-          </p>
+          </StrapiTypography>
         </div>
 
         <WhoWeAreChart />
@@ -167,13 +176,14 @@ export default function WhatWeDo() {
       </section>
 
       <section className="flex w-full flex-col items-center justify-center gap-10 px-2 py-10 text-black sm:px-4">
-        <Typography
+        <StrapiTypography
           as="h2"
+          dataKey="end_section_text"
           className="text-center sm:pb-14 md:text-[4.7rem] md:leading-[4.7rem]"
           animation={false}
         >
           {t('fifthSection.title')}
-        </Typography>
+        </StrapiTypography>
 
         <GallerySection />
       </section>

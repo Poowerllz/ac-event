@@ -1,6 +1,7 @@
 import { useTranslations } from 'next-intl'
 import Image from 'next/image'
 import { ImageGalleryWhoWeAreProps } from './type'
+import StrapiTypography from '../StrapiTypography'
 
 export function ImageGalleryWhoWeAreDesktop({
   images,
@@ -22,23 +23,26 @@ export function ImageGalleryWhoWeAreDesktop({
           />
         </div>
 
-        <span className="text-2xl leading-none">
+        <StrapiTypography dataKey="proposit" className="text-2xl leading-none">
           {t('secondSection.gallery.titleOne1')}
           <br />
           {t('secondSection.gallery.titleOne2')}
           <br />
           {t('secondSection.gallery.titleOne3')}
-        </span>
+        </StrapiTypography>
       </div>
 
       <div className="flex flex-col gap-5 self-end">
-        <span className="hidden text-2xl leading-none md:flex">
+        <StrapiTypography
+          dataKey="experience"
+          className="hidden text-2xl leading-none md:flex"
+        >
           {t('secondSection.gallery.titleTwo1')}
           <br />
           {t('secondSection.gallery.titleTwo2')}
           <br />
           {t('secondSection.gallery.titleTwo3')}
-        </span>
+        </StrapiTypography>
 
         <div className="relative h-auto w-full">
           <Image
@@ -80,7 +84,10 @@ export function ImageGalleryWhoWeAreDesktop({
           />
         </div>
 
-        <span className="text-2xl leading-none">
+        <StrapiTypography
+          dataKey="narratives"
+          className="text-2xl leading-none"
+        >
           {t('secondSection.gallery.titleThree1')}
           <br />
           {t('secondSection.gallery.titleThree2')}
@@ -88,7 +95,7 @@ export function ImageGalleryWhoWeAreDesktop({
           {t('secondSection.gallery.titleThree3')}
           <br />
           {t('secondSection.gallery.titleThree4')}
-        </span>
+        </StrapiTypography>
       </div>
     </div>
   )

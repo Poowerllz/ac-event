@@ -1,4 +1,5 @@
 type TypographiesConfig = {
+  boxClass?: string
   className: string
   animationInput?: string
   animationOutput?: string

@@ -36,7 +36,7 @@ export const Typography = <E extends ElementType = TTypographyDefaultAsType>({
   const [config, setConfig] = useState<string>(
     defaultConfig?.className + ' ' + props.className
   )
-  const { className, ...restProps } = props
+  const { className, boxClass, ...restProps } = props
 
   const ref = useRef<HTMLDivElement>(null)
   const isVisible = useIsVisible(ref)
@@ -50,7 +50,10 @@ export const Typography = <E extends ElementType = TTypographyDefaultAsType>({
   }
 
   return (
-    <div ref={ref} className="relative h-auto w-auto overflow-hidden">
+    <div
+      ref={ref}
+      className={`relative h-auto w-auto overflow-hidden ${boxClass}`}
+    >
       <Tag className={config.trim() || ''} {...restProps}>
         {children}
       </Tag>
